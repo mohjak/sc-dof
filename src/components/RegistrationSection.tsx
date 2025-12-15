@@ -67,14 +67,8 @@ const RegistrationSection = () => {
                   size={200}
                   level="H"
                   includeMargin={false}
-                  fgColor="#1a5c29"
+                  fgColor="#086562"
                   bgColor="#ffffff"
-                  imageSettings={{
-                    src: "/placeholder.svg",
-                    height: 0,
-                    width: 0,
-                    excavate: false,
-                  }}
                 />
               </div>
               
