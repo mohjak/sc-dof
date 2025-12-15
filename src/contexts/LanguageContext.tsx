@@ -16,8 +16,8 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.subtitle': 'ذكرى لا تموت',
     'hero.tagline': 'احتفال بذكرى تحرير سوريا، لنعيد الفرح ونجدد العهد ونكمل المسيرة',
     'hero.discoverMore': 'اكتشف المزيد',
-    'hero.date': '8 يناير 2025',
-    'hero.day': 'الأربعاء',
+    'hero.date': '20 ديسمبر 2025',
+    'hero.day': 'الأحد',
     
     // Details
     'details.title': 'تفاصيل الحفل',
@@ -25,6 +25,7 @@ const translations: Record<Language, Record<string, string>> = {
     'details.time': 'الوقت',
     'details.location': 'المكان',
     'details.evening': 'مساءً',
+    'details.viewMap': 'عرض الخريطة',
     
     // Why
     'why.title': 'لماذا الاحتفال؟',
@@ -81,8 +82,8 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.subtitle': 'A Memory That Never Dies',
     'hero.tagline': 'Celebrating Syria\'s liberation, renewing our commitment and continuing the journey',
     'hero.discoverMore': 'Discover More',
-    'hero.date': 'January 8, 2025',
-    'hero.day': 'Wednesday',
+    'hero.date': 'December 20, 2025',
+    'hero.day': 'Sunday',
     
     // Details
     'details.title': 'Event Details',
@@ -90,6 +91,7 @@ const translations: Record<Language, Record<string, string>> = {
     'details.time': 'Time',
     'details.location': 'Location',
     'details.evening': 'Evening',
+    'details.viewMap': 'View Map',
     
     // Why
     'why.title': 'Why Celebrate?',
@@ -146,8 +148,8 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.subtitle': 'Asla Ölmeyen Bir Anı',
     'hero.tagline': 'Suriye\'nin kurtuluşunu kutluyoruz, taahhüdümüzü yeniliyoruz ve yolculuğa devam ediyoruz',
     'hero.discoverMore': 'Daha Fazlasını Keşfet',
-    'hero.date': '8 Ocak 2025',
-    'hero.day': 'Çarşamba',
+    'hero.date': '20 Aralık 2025',
+    'hero.day': 'Pazar',
     
     // Details
     'details.title': 'Etkinlik Detayları',
@@ -155,6 +157,7 @@ const translations: Record<Language, Record<string, string>> = {
     'details.time': 'Saat',
     'details.location': 'Konum',
     'details.evening': 'Akşam',
+    'details.viewMap': 'Haritayı Görüntüle',
     
     // Why
     'why.title': 'Neden Kutluyoruz?',

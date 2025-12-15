@@ -4,15 +4,16 @@ export const eventData = {
   englishTitle: "Liberation Day",
   tagline: "احتفال بذكرى تحرير سوريا، لنعيد الفرح ونجدد العهد ونكمل المسيرة",
   
-  date: "2025-01-08",
-  dateFormatted: "8 يناير 2025",
-  dayName: "الأربعاء",
+  date: "2025-12-20",
+  dateFormatted: "20 ديسمبر 2025",
+  dayName: "الأحد",
   time: "18:00 - 22:00",
   
   venue: {
     name: "قاعة الاحتفالات",
     address: "إسطنبول، تركيا",
     details: "القاعة الرئيسية",
+    googleMapsUrl: "https://maps.app.goo.gl/N2qrooLY1HSj9D7Z8",
     coordinates: {
       lat: 41.0082,
       lng: 28.9784

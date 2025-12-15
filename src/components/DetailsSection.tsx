@@ -42,14 +42,20 @@ const DetailsSection = () => {
           </div>
           
           {/* Location Card */}
-          <div className="group bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all text-center">
+          <a 
+            href="https://maps.app.goo.gl/N2qrooLY1HSj9D7Z8" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all text-center cursor-pointer"
+          >
             <div className="w-14 h-14 rounded-xl bg-primary-foreground/20 mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
               <MapPin className="w-7 h-7" />
             </div>
             <h3 className="text-lg font-bold mb-2">{t('details.location')}</h3>
             <p className="text-xl font-bold text-accent">{t('venue.name')}</p>
             <p className="text-primary-foreground/70 mt-1">{t('venue.address')}</p>
-          </div>
+            <p className="text-sm text-accent mt-2 underline">{t('details.viewMap')}</p>
+          </a>
         </div>
       </div>
     </section>
