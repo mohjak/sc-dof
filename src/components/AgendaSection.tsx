@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const agendaIcons = ['🎬', '🎭', '🎵', '🎤', '🪘', '🎉'];
+const agendaIcons = ['🎬', '🎤', '🎭', '🎵', '🤝', '🪘', '🎉'];
 
 const AgendaSection = () => {
   const { t } = useLanguage();
@@ -12,6 +12,7 @@ const AgendaSection = () => {
     { time: t('agenda.4.time'), title: t('agenda.4.title'), description: t('agenda.4.description'), icon: agendaIcons[3] },
     { time: t('agenda.5.time'), title: t('agenda.5.title'), description: t('agenda.5.description'), icon: agendaIcons[4] },
     { time: t('agenda.6.time'), title: t('agenda.6.title'), description: t('agenda.6.description'), icon: agendaIcons[5] },
+    { time: t('agenda.7.time'), title: t('agenda.7.title'), description: t('agenda.7.description'), icon: agendaIcons[6] },
   ];
   
   return (
