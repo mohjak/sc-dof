@@ -23,8 +23,8 @@ const Footer = () => {
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-1 flex">
         <div className="flex-1 bg-syrian-green" />
-        <div className="flex-1 bg-card" />
-        <div className="flex-1 bg-syrian-red" />
+        <div className="flex-1 bg-white" />
+        <div className="flex-1 bg-black" />
       </div>
       
       <div className="container mx-auto px-4">
