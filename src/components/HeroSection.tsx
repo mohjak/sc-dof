@@ -53,7 +53,7 @@ const HeroSection = () => {
         </h2>
         
         {/* Tagline */}
-        <p className="text-lg sm:text-xl text-foreground/90 mb-8 max-w-3xl mx-auto animate-fade-up delay-200 leading-relaxed">
+        <p className="text-lg sm:text-xl text-foreground font-medium mb-8 max-w-3xl mx-auto animate-fade-up delay-200 leading-relaxed bg-background/60 backdrop-blur-sm px-6 py-3 rounded-xl">
           {t('hero.tagline')}
         </p>
         
