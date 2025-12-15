@@ -11,8 +11,8 @@ export const eventData = {
   
   venue: {
     name: "Gökkuşağı Tesisleri",
-    address: "باشاكشهير، إسطنبول، تركيا",
-    details: "Başakşehir, Istanbul",
+    address: "Başak, 34480 Başakşehir/İstanbul",
+    details: "باشاكشهير، إسطنبول",
     googleMapsUrl: "https://maps.app.goo.gl/N2qrooLY1HSj9D7Z8",
     coordinates: {
       lat: 41.0982,
