@@ -1,7 +1,8 @@
 import { useLanguage, Language } from '@/contexts/LanguageContext';
+import syrianFlag from '@/assets/syrian-flag.png';
 
-const languages: { code: Language; label: string; flag: string }[] = [
-  { code: 'ar', label: 'العربية', flag: '🇸🇾' },
+const languages: { code: Language; label: string; flag: string | null }[] = [
+  { code: 'ar', label: 'العربية', flag: null },
   { code: 'en', label: 'English', flag: '🇬🇧' },
   { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
 ];
@@ -21,7 +22,11 @@ const LanguageSwitcher = () => {
               : 'hover:bg-syrian-green/20 text-foreground'
           }`}
         >
-          <span>{lang.flag}</span>
+          {lang.flag ? (
+            <span>{lang.flag}</span>
+          ) : (
+            <img src={syrianFlag} alt="علم سوريا الحرة" className="w-5 h-3 rounded-sm object-cover" />
+          )}
           <span className="hidden sm:inline">{lang.label}</span>
         </button>
       ))}
