@@ -10,13 +10,13 @@ export const eventData = {
   time: "18:00 - 22:00",
   
   venue: {
-    name: "قاعة الاحتفالات",
-    address: "إسطنبول، تركيا",
-    details: "القاعة الرئيسية",
+    name: "Gökkuşağı Tesisleri",
+    address: "باشاكشهير، إسطنبول، تركيا",
+    details: "Başakşehir, Istanbul",
     googleMapsUrl: "https://maps.app.goo.gl/N2qrooLY1HSj9D7Z8",
     coordinates: {
-      lat: 41.0082,
-      lng: 28.9784
+      lat: 41.0982,
+      lng: 28.8015
     }
   },
   

@@ -60,6 +60,15 @@ const Footer = () => {
             >
               Mohjak.com
             </a>
+            <span>•</span>
+            <a 
+              href="https://github.com/mohjak/sc-dof" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-syrian-green transition-colors"
+            >
+              GitHub
+            </a>
           </div>
         </div>
       </div>
