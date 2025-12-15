@@ -11,12 +11,8 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-syrian-green/90 via-background/70 to-syrian-red/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
       </div>
-      
-      {/* Animated Flag Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-1/3 bg-syrian-green opacity-20" />
-      <div className="absolute bottom-0 left-0 w-full h-1/4 bg-syrian-red opacity-20" />
       
       {/* Decorative Confetti */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
