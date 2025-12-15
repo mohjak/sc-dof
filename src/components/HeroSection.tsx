@@ -76,7 +76,7 @@ const HeroSection = () => {
           <span className="text-3xl">🗓️</span>
           <div className="text-center">
             <p className="text-xl sm:text-2xl font-bold text-foreground">{t('hero.date')}</p>
-            <p className="text-sm text-muted-foreground">{t('hero.day')} | 18:00 - 22:00</p>
+            <p className="text-sm text-muted-foreground">{t('hero.day')} | {t('event.time')}</p>
           </div>
         </div>
         
