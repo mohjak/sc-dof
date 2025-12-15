@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import communityLogo from '@/assets/community-logo.png';
 import syrianEagle from '@/assets/syrian-eagle.webp';
+import ryadahLogo from '@/assets/ryadah-academy-logo.png';
 
 const OrganizersSection = () => {
   const { t, language } = useLanguage();
@@ -102,17 +103,24 @@ const OrganizersSection = () => {
           </div>
           
           {/* Academy */}
-          <div className="bg-gradient-to-br from-secondary/20 to-accent/10 rounded-3xl p-6 sm:p-8 border border-border hover:border-syrian-green/50 transition-colors">
-            <div className="text-center">
-              <div className="w-20 h-20 rounded-2xl gradient-gold mx-auto mb-4 flex items-center justify-center shadow-lg">
-                <span className="text-3xl">🎓</span>
+          <div className="bg-card rounded-3xl p-6 sm:p-8 shadow-xl border border-border hover:border-syrian-green/50 transition-colors">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-shrink-0">
+                <img 
+                  src={ryadahLogo} 
+                  alt={organizers[1].name} 
+                  className="w-32 h-32 sm:w-40 sm:h-40 object-contain"
+                />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
-                {organizers[1].name}
-              </h3>
-              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                {organizers[1].description}
-              </p>
+              
+              <div className="text-center md:text-start">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
+                  {organizers[1].name}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {organizers[1].description}
+                </p>
+              </div>
             </div>
           </div>
         </div>
