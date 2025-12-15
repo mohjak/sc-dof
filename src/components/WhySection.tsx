@@ -24,8 +24,8 @@ const WhySection = () => {
           {/* Syrian Flag Colors Divider */}
           <div className="flex h-2 rounded-full overflow-hidden max-w-md mx-auto shadow-lg">
             <div className="flex-1 bg-syrian-green" />
-            <div className="flex-1 bg-card" />
-            <div className="flex-1 bg-syrian-red" />
+            <div className="flex-1 bg-white" />
+            <div className="flex-1 bg-black" />
           </div>
         </div>
       </div>
