@@ -15,7 +15,7 @@ const AgendaSection = () => {
   ];
   
   return (
-    <section className="py-16 sm:py-24 bg-muted">
+    <section id="agenda" className="py-16 sm:py-24 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <span className="inline-block text-4xl mb-4">📋</span>
