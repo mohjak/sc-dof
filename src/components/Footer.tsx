@@ -51,6 +51,15 @@ const Footer = () => {
             <span>© {currentYear}</span>
             <span>•</span>
             <span>{t('footer.rights')}</span>
+            <span>•</span>
+            <a 
+              href="https://mohjak.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-syrian-green transition-colors"
+            >
+              Mohjak.com
+            </a>
           </div>
         </div>
       </div>
