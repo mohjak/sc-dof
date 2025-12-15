@@ -2,7 +2,7 @@ import heroImage from '@/assets/hero-celebration.jpg';
 import syrianEagle from '@/assets/syrian-eagle.webp';
 import syrianFlag from '@/assets/syrian-flag.png';
 import { useLanguage } from '@/contexts/LanguageContext';
-
+import CountdownTimer from './CountdownTimer';
 const HeroSection = () => {
   const { t } = useLanguage();
   
@@ -64,6 +64,11 @@ const HeroSection = () => {
             alt="علم سوريا الحرة" 
             className="w-40 sm:w-56 mx-auto rounded-lg shadow-xl border-2 border-card/50"
           />
+        </div>
+        
+        {/* Countdown Timer */}
+        <div className="mb-8 animate-fade-up delay-400">
+          <CountdownTimer />
         </div>
         
         {/* Date Badge */}
