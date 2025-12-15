@@ -27,7 +27,7 @@ const DetailsSection = () => {
               <Calendar className="w-7 h-7" />
             </div>
             <h3 className="text-lg font-bold mb-2">{t('details.date')}</h3>
-            <p className="text-2xl font-bold text-accent">{t('hero.date')}</p>
+            <p className="text-2xl font-bold text-yellow-300">{t('hero.date')}</p>
             <p className="text-primary-foreground/70 mt-1">{t('hero.day')}</p>
           </div>
           
@@ -37,7 +37,7 @@ const DetailsSection = () => {
               <Clock className="w-7 h-7" />
             </div>
             <h3 className="text-lg font-bold mb-2">{t('details.time')}</h3>
-            <p className="text-2xl font-bold text-accent">18:00 - 22:00</p>
+            <p className="text-2xl font-bold text-yellow-300">18:00 - 22:00</p>
             <p className="text-primary-foreground/70 mt-1">{t('details.evening')}</p>
           </div>
           
@@ -52,9 +52,9 @@ const DetailsSection = () => {
               <MapPin className="w-7 h-7" />
             </div>
             <h3 className="text-lg font-bold mb-2">{t('details.location')}</h3>
-            <p className="text-xl font-bold text-accent">{t('venue.name')}</p>
+            <p className="text-xl font-bold text-yellow-300">{t('venue.name')}</p>
             <p className="text-primary-foreground/70 mt-1">{t('venue.address')}</p>
-            <p className="text-sm text-accent mt-2 underline">{t('details.viewMap')}</p>
+            <p className="text-sm text-yellow-300 mt-2 underline">{t('details.viewMap')}</p>
           </a>
         </div>
       </div>
