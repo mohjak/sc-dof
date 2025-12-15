@@ -4,7 +4,7 @@ import syrianFlag from '@/assets/syrian-flag.png';
 
 const DetailsSection = () => {
   return (
-    <section id="details" className="py-16 sm:py-24 gradient-hero text-primary-foreground relative overflow-hidden">
+    <section id="details" className="py-16 sm:py-24 bg-syrian-green text-primary-foreground relative overflow-hidden">
       {/* Decorative Flag */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10">
         <img src={syrianFlag} alt="" className="w-96 blur-sm" />
