@@ -1,25 +1,28 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import syrianEagle from '@/assets/syrian-eagle.webp';
+import revolutionFlag from '@/assets/revolution-flag.jpg';
 
 const WhySection = () => {
   const { t } = useLanguage();
   
   return (
-    <section id="why" className="py-16 sm:py-24 bg-muted relative overflow-hidden">
-      {/* Decorative Eagle */}
-      <div className="absolute top-10 left-10 opacity-5">
-        <img src={syrianEagle} alt="" className="w-64 h-64" />
-      </div>
+    <section id="why" className="py-16 sm:py-24 relative overflow-hidden min-h-[60vh] flex items-center">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${revolutionFlag})` }}
+      />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/70" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <span className="inline-block text-5xl mb-6 animate-pulse-glow">🕊️</span>
           
-          <h2 className="text-3xl sm:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6 drop-shadow-lg">
             {t('why.title')}
           </h2>
           
-          <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed mb-12">
+          <p className="text-xl sm:text-2xl text-white/90 leading-relaxed mb-12 drop-shadow-md">
             {t('why.description')}
           </p>
           
