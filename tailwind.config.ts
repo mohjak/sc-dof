@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        cairo: ['Cairo', 'sans-serif'],
+        koufiya: ['Bahij Koufiya', 'Cairo', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
