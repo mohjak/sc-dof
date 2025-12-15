@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         koufiya: ['Bahij Koufiya', 'Cairo', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

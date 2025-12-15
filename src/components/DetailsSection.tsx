@@ -37,7 +37,7 @@ const DetailsSection = () => {
               <Clock className="w-7 h-7" />
             </div>
             <h3 className="text-lg font-bold mb-2">{t('details.time')}</h3>
-            <p className="text-2xl font-bold text-yellow-300">18:00 - 22:00</p>
+            <p className="text-2xl font-bold text-yellow-300">{t('event.time')}</p>
             <p className="text-primary-foreground/70 mt-1">{t('details.evening')}</p>
           </div>
           

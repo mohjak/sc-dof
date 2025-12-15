@@ -10,10 +10,13 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const AppContent = () => {
-  const { isRTL } = useLanguage();
+  const { isRTL, language } = useLanguage();
+  
+  // Use Koufiya for Arabic, Roboto for English and Turkish
+  const fontClass = language === 'ar' ? 'font-koufiya' : 'font-roboto';
   
   return (
-    <div dir={isRTL ? 'rtl' : 'ltr'} className={isRTL ? 'font-cairo' : ''}>
+    <div dir={isRTL ? 'rtl' : 'ltr'} className={fontClass}>
       <Toaster />
       <Sonner />
       <BrowserRouter>

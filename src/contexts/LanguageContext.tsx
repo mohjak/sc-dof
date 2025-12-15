@@ -35,6 +35,7 @@ const translations: Record<Language, Record<string, string>> = {
     'details.location': 'المكان',
     'details.evening': 'مساءً',
     'details.viewMap': 'عرض الخريطة',
+    'event.time': '4:00 - 7:00 مساءً',
     
     // Why
     'why.title': 'لماذا الاحتفال؟',
@@ -114,6 +115,7 @@ const translations: Record<Language, Record<string, string>> = {
     'details.location': 'Location',
     'details.evening': 'Evening',
     'details.viewMap': 'View Map',
+    'event.time': '4:00 PM - 7:00 PM',
     
     // Why
     'why.title': 'Why Celebrate?',
@@ -193,6 +195,7 @@ const translations: Record<Language, Record<string, string>> = {
     'details.location': 'Konum',
     'details.evening': 'Akşam',
     'details.viewMap': 'Haritayı Görüntüle',
+    'event.time': '16:00 - 19:00',
     
     // Why
     'why.title': 'Neden Kutluyoruz?',
