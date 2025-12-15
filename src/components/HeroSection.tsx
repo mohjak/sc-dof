@@ -1,9 +1,11 @@
 import heroImage from '@/assets/hero-celebration.jpg';
 import syrianEagle from '@/assets/syrian-eagle.webp';
 import syrianFlag from '@/assets/syrian-flag.png';
-import { eventData } from '@/data/eventData';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -43,16 +45,16 @@ const HeroSection = () => {
         
         {/* Main Title */}
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-foreground mb-2 animate-fade-up drop-shadow-lg">
-          {eventData.title}
+          {t('hero.title')}
         </h1>
         
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-primary mb-6 animate-fade-up delay-100">
-          {eventData.subtitle}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-syrian-green mb-6 animate-fade-up delay-100">
+          {t('hero.subtitle')}
         </h2>
         
         {/* Tagline */}
         <p className="text-lg sm:text-xl text-foreground/90 mb-8 max-w-3xl mx-auto animate-fade-up delay-200 leading-relaxed">
-          {eventData.tagline}
+          {t('hero.tagline')}
         </p>
         
         {/* Syrian Flag */}
@@ -67,9 +69,9 @@ const HeroSection = () => {
         {/* Date Badge */}
         <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl glass border border-border shadow-xl animate-fade-up delay-400">
           <span className="text-3xl">🗓️</span>
-          <div className="text-right">
-            <p className="text-xl sm:text-2xl font-bold text-foreground">{eventData.dateFormatted}</p>
-            <p className="text-sm text-muted-foreground">{eventData.dayName} | {eventData.time}</p>
+          <div className="text-center">
+            <p className="text-xl sm:text-2xl font-bold text-foreground">{t('hero.date')}</p>
+            <p className="text-sm text-muted-foreground">{t('hero.day')} | 18:00 - 22:00</p>
           </div>
         </div>
         
@@ -79,7 +81,7 @@ const HeroSection = () => {
             href="#why"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full gradient-gold text-accent-foreground font-bold text-lg shadow-xl hover:scale-105 transition-transform duration-300 glow-gold"
           >
-            <span>اكتشف المزيد</span>
+            <span>{t('hero.discoverMore')}</span>
             <span className="text-xl">↓</span>
           </a>
         </div>

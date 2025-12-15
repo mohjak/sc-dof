@@ -5,10 +5,12 @@ import DetailsSection from '@/components/DetailsSection';
 import AgendaSection from '@/components/AgendaSection';
 import OrganizersSection from '@/components/OrganizersSection';
 import Footer from '@/components/Footer';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const Index = () => {
   return (
     <main className="min-h-screen overflow-x-hidden">
+      <LanguageSwitcher />
       <HeroSection />
       <WhySection />
       <GoalsSection />
