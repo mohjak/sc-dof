@@ -1,0 +1,19 @@
+{
+  "name": "ذكرى التحرير - الجالية السورية",
+  "short_name": "ذكرى التحرير",
+  "description": "احتفال ذكرى التحرير - الجالية السورية",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#CE1126",
+  "theme_color": "#CE1126",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
