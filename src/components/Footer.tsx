@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import syrianEagle from '@/assets/syrian-eagle.webp';
 import syrianFlag from '@/assets/syrian-flag.png';
+import communityLogo from '@/assets/community-logo-white.png';
 
 const Footer = () => {
   const { t, language } = useLanguage();
@@ -29,6 +30,9 @@ const Footer = () => {
       
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-6">
+          {/* Community Logo */}
+          <img src={communityLogo} alt="الجالية السورية" className="h-24 object-contain" />
+          
           {/* Eagle & Flag */}
           <div className="flex items-center gap-6">
             <img src={syrianEagle} alt="العقاب السوري" className="w-16 h-16 opacity-80" />
