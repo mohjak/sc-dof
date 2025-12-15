@@ -33,7 +33,7 @@ const LanguageSwitcher = ({ variant = 'floating' }: LanguageSwitcherProps) => {
           ) : (
             <img src={syrianFlag} alt="علم سوريا الحرة" className="w-5 h-3 rounded-sm object-cover" />
           )}
-          <span className="hidden sm:inline">{lang.label}</span>
+          <span className={`hidden sm:inline ${lang.code !== 'ar' ? 'font-roboto' : ''}`}>{lang.label}</span>
         </button>
       ))}
     </div>
