@@ -52,8 +52,8 @@ const DetailsSection = () => {
               <MapPin className="w-7 h-7" />
             </div>
             <h3 className="text-lg font-bold mb-2">{t('details.location')}</h3>
-            <p className="text-xl font-bold text-yellow-300">{t('venue.name')}</p>
-            <p className="text-primary-foreground/70 mt-1">{t('venue.address')}</p>
+            <p className="text-xl font-bold text-yellow-300 font-roboto">{t('venue.name')}</p>
+            <p className="text-primary-foreground/70 mt-1 font-roboto">{t('venue.address')}</p>
             <p className="text-sm text-yellow-300 mt-2 underline">{t('details.viewMap')}</p>
           </a>
         </div>
