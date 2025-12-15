@@ -46,7 +46,7 @@ const OrganizersSection = () => {
   ];
   
   return (
-    <section className="py-16 sm:py-24 bg-background relative overflow-hidden">
+    <section id="organizers" className="py-16 sm:py-24 bg-background relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <img src={syrianEagle} alt="" className="absolute top-10 right-10 w-40 h-40" />

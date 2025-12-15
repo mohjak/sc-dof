@@ -23,6 +23,7 @@ const Navbar = () => {
     { href: '#details', label: t('nav.details') },
     { href: '#agenda', label: t('nav.agenda') },
     { href: '#speakers', label: t('nav.speakers') },
+    { href: '#organizers', label: t('nav.organizers') },
     { href: '#registration', label: t('nav.register') },
   ];
 

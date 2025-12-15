@@ -18,6 +18,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.details': 'التفاصيل',
     'nav.agenda': 'البرنامج',
     'nav.speakers': 'المتحدثون',
+    'nav.organizers': 'المنظمون',
     'nav.register': 'التسجيل',
     
     // Hero
@@ -98,6 +99,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.details': 'Details',
     'nav.agenda': 'Program',
     'nav.speakers': 'Speakers',
+    'nav.organizers': 'Organizers',
     'nav.register': 'Register',
     
     // Hero
@@ -178,6 +180,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.details': 'Detaylar',
     'nav.agenda': 'Program',
     'nav.speakers': 'Konuşmacılar',
+    'nav.organizers': 'Organizatörler',
     'nav.register': 'Kayıt',
     
     // Hero
