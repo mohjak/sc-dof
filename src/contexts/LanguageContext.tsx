@@ -11,6 +11,15 @@ interface LanguageContextType {
 
 const translations: Record<Language, Record<string, string>> = {
   ar: {
+    // Nav
+    'nav.home': 'الرئيسية',
+    'nav.why': 'لماذا؟',
+    'nav.goals': 'الأهداف',
+    'nav.details': 'التفاصيل',
+    'nav.agenda': 'البرنامج',
+    'nav.speakers': 'المتحدثون',
+    'nav.register': 'التسجيل',
+    
     // Hero
     'hero.title': 'ذكرى التحرير',
     'hero.subtitle': 'ذكرى لا تموت',
@@ -64,6 +73,10 @@ const translations: Record<Language, Record<string, string>> = {
     'agenda.6.title': 'أغاني الانتصار',
     'agenda.6.description': 'أغاني الانتصار والفرح',
     
+    // Speakers
+    'speakers.title': 'المتحدثون والمشاركون',
+    'speakers.subtitle': 'نخبة من الشخصيات المميزة تشارك في إحياء هذه الذكرى',
+    
     // Organizers
     'organizers.title': 'المنظمون',
     'organizers.subtitle': 'الجهات المنظمة للحفل',
@@ -77,10 +90,19 @@ const translations: Record<Language, Record<string, string>> = {
     'venue.address': 'Başak, 34480 Başakşehir/İstanbul',
   },
   en: {
+    // Nav
+    'nav.home': 'Home',
+    'nav.why': 'Why?',
+    'nav.goals': 'Goals',
+    'nav.details': 'Details',
+    'nav.agenda': 'Program',
+    'nav.speakers': 'Speakers',
+    'nav.register': 'Register',
+    
     // Hero
     'hero.title': 'Liberation Day',
     'hero.subtitle': 'A Memory That Never Dies',
-    'hero.tagline': 'Celebrating Syria\'s liberation, renewing our commitment and continuing the journey',
+    'hero.tagline': "Celebrating Syria's liberation, renewing our commitment and continuing the journey",
     'hero.discoverMore': 'Discover More',
     'hero.date': 'December 20, 2025',
     'hero.day': 'Sunday',
@@ -100,7 +122,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Goals
     'goals.title': 'Event Goals',
     'goals.1.title': 'Remembering the Past',
-    'goals.1.description': 'Remembering Assad\'s actions so people understand the importance of the revolution',
+    'goals.1.description': "Remembering Assad's actions so people understand the importance of the revolution",
     'goals.2.title': 'Showing Transformation',
     'goals.2.description': 'Showing Syria before and after (economically, politically, religiously, and socially)',
     'goals.3.title': 'Honoring Memories',
@@ -116,7 +138,7 @@ const translations: Record<Language, Record<string, string>> = {
     'agenda.1.description': 'Videos documenting the Assad era until Liberation Day',
     'agenda.2.time': 'Segment 2',
     'agenda.2.title': 'Theatrical Performances',
-    'agenda.2.description': 'Comedy and tragedy performances depicting Syria\'s reality',
+    'agenda.2.description': "Comedy and tragedy performances depicting Syria's reality",
     'agenda.3.time': 'Segment 3',
     'agenda.3.title': 'Musical Band',
     'agenda.3.description': 'Live music and national songs',
@@ -129,6 +151,10 @@ const translations: Record<Language, Record<string, string>> = {
     'agenda.6.time': 'Segment 6',
     'agenda.6.title': 'Victory Songs',
     'agenda.6.description': 'Songs of victory and celebration',
+    
+    // Speakers
+    'speakers.title': 'Speakers & Participants',
+    'speakers.subtitle': 'Distinguished personalities participating in this commemoration',
     
     // Organizers
     'organizers.title': 'Organizers',
@@ -143,10 +169,19 @@ const translations: Record<Language, Record<string, string>> = {
     'venue.address': 'Başak, 34480 Başakşehir/İstanbul',
   },
   tr: {
+    // Nav
+    'nav.home': 'Ana Sayfa',
+    'nav.why': 'Neden?',
+    'nav.goals': 'Hedefler',
+    'nav.details': 'Detaylar',
+    'nav.agenda': 'Program',
+    'nav.speakers': 'Konuşmacılar',
+    'nav.register': 'Kayıt',
+    
     // Hero
     'hero.title': 'Kurtuluş Günü',
     'hero.subtitle': 'Asla Ölmeyen Bir Anı',
-    'hero.tagline': 'Suriye\'nin kurtuluşunu kutluyoruz, taahhüdümüzü yeniliyoruz ve yolculuğa devam ediyoruz',
+    'hero.tagline': "Suriye'nin kurtuluşunu kutluyoruz, taahhüdümüzü yeniliyoruz ve yolculuğa devam ediyoruz",
     'hero.discoverMore': 'Daha Fazlasını Keşfet',
     'hero.date': '20 Aralık 2025',
     'hero.day': 'Pazar',
@@ -166,9 +201,9 @@ const translations: Record<Language, Record<string, string>> = {
     // Goals
     'goals.title': 'Etkinlik Hedefleri',
     'goals.1.title': 'Geçmişi Hatırlamak',
-    'goals.1.description': 'İnsanların devrimin önemini anlaması için Esad\'ın eylemlerini hatırlatmak',
+    'goals.1.description': "İnsanların devrimin önemini anlaması için Esad'ın eylemlerini hatırlatmak",
     'goals.2.title': 'Dönüşümü Göstermek',
-    'goals.2.description': 'Suriye\'nin öncesi ve sonrasını göstermek (ekonomik, politik, dini ve sosyal olarak)',
+    'goals.2.description': "Suriye'nin öncesi ve sonrasını göstermek (ekonomik, politik, dini ve sosyal olarak)",
     'goals.3.title': 'Anıları Onurlandırmak',
     'goals.3.description': 'Şehitleri, tutukluları ve yetimleri anmak',
     'goals.4.title': 'Yolculuğa Devam',
@@ -182,7 +217,7 @@ const translations: Record<Language, Record<string, string>> = {
     'agenda.1.description': 'Esad döneminden Kurtuluş Gününe kadar olan belgesel videolar',
     'agenda.2.time': 'Bölüm 2',
     'agenda.2.title': 'Tiyatro Gösterileri',
-    'agenda.2.description': 'Suriye\'nin gerçekliğini anlatan komedi ve trajedi gösterileri',
+    'agenda.2.description': "Suriye'nin gerçekliğini anlatan komedi ve trajedi gösterileri",
     'agenda.3.time': 'Bölüm 3',
     'agenda.3.title': 'Müzik Grubu',
     'agenda.3.description': 'Canlı müzik ve milli şarkılar',
@@ -195,6 +230,10 @@ const translations: Record<Language, Record<string, string>> = {
     'agenda.6.time': 'Bölüm 6',
     'agenda.6.title': 'Zafer Şarkıları',
     'agenda.6.description': 'Zafer ve kutlama şarkıları',
+    
+    // Speakers
+    'speakers.title': 'Konuşmacılar ve Katılımcılar',
+    'speakers.subtitle': 'Bu anmaya katılan seçkin kişilikler',
     
     // Organizers
     'organizers.title': 'Organizatörler',

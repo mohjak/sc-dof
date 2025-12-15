@@ -7,11 +7,17 @@ const languages: { code: Language; label: string; flag: string | null }[] = [
   { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
 ];
 
-const LanguageSwitcher = () => {
+interface LanguageSwitcherProps {
+  variant?: 'floating' | 'navbar';
+}
+
+const LanguageSwitcher = ({ variant = 'floating' }: LanguageSwitcherProps) => {
   const { language, setLanguage } = useLanguage();
 
+  const isFloating = variant === 'floating';
+
   return (
-    <div className="fixed top-4 left-4 z-50 flex gap-1 bg-card/90 backdrop-blur-sm rounded-full p-1 shadow-lg border border-border">
+    <div className={`flex gap-1 ${isFloating ? 'fixed top-4 left-4 z-50 bg-card/90 backdrop-blur-sm shadow-lg border border-border' : 'bg-transparent'} rounded-full p-1`}>
       {languages.map((lang) => (
         <button
           key={lang.code}
