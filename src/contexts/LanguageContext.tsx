@@ -73,8 +73,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.madeWith': 'صنع بـ ❤️ للجالية السورية',
     
     // Venue
-    'venue.name': 'قاعة الاحتفالات',
-    'venue.address': 'إسطنبول، تركيا',
+    'venue.name': 'Gökkuşağı Tesisleri',
+    'venue.address': 'Başak, 34480 Başakşehir/İstanbul',
   },
   en: {
     // Hero
@@ -139,8 +139,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.madeWith': 'Made with ❤️ for the Syrian Community',
     
     // Venue
-    'venue.name': 'Celebration Hall',
-    'venue.address': 'Istanbul, Turkey',
+    'venue.name': 'Gökkuşağı Tesisleri',
+    'venue.address': 'Başak, 34480 Başakşehir/İstanbul',
   },
   tr: {
     // Hero
@@ -205,8 +205,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.madeWith': 'Suriye Topluluğu için ❤️ ile yapıldı',
     
     // Venue
-    'venue.name': 'Kutlama Salonu',
-    'venue.address': 'İstanbul, Türkiye',
+    'venue.name': 'Gökkuşağı Tesisleri',
+    'venue.address': 'Başak, 34480 Başakşehir/İstanbul',
   }
 };
 
