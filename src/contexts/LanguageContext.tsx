@@ -27,7 +27,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.tagline': 'احتفال بذكرى تحرير سوريا، لنعيد الفرح ونجدد العهد ونكمل مسيرة بناء الإنسان',
     'hero.discoverMore': 'اكتشف المزيد',
     'hero.date': '20 ديسمبر 2025',
-    'hero.day': 'الأحد',
+    'hero.day': 'السبت',
     
     // Details
     'details.title': 'تفاصيل الحفل',
@@ -111,7 +111,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.tagline': "Celebrating Syria's liberation, renewing our commitment and continuing the journey",
     'hero.discoverMore': 'Discover More',
     'hero.date': 'December 20, 2025',
-    'hero.day': 'Sunday',
+    'hero.day': 'Saturday',
     
     // Details
     'details.title': 'Event Details',
@@ -195,7 +195,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.tagline': "Suriye'nin kurtuluşunu kutluyoruz, taahhüdümüzü yeniliyoruz ve yolculuğa devam ediyoruz",
     'hero.discoverMore': 'Daha Fazlasını Keşfet',
     'hero.date': '20 Aralık 2025',
-    'hero.day': 'Pazar',
+    'hero.day': 'Cumartesi',
     
     // Details
     'details.title': 'Etkinlik Detayları',
