@@ -101,9 +101,9 @@ const speakers: Speaker[] = [
     name: 'م. ممدوح الديري',
     nameEn: 'Eng. Mamdouh Al-Dairi',
     nameTr: 'Müh. Mamdouh Al-Dairi',
-    role: 'مهندس مدني - رئيس المجلس الاستشاري في الجالية السورية',
-    roleEn: 'Civil Engineer - Advisory Council Chairman of Syrian Community',
-    roleTr: 'İnşaat Mühendisi - Suriye Topluluğu Danışma Kurulu Başkanı',
+    role: 'مهندس مدني ورئيس المجلس الاستشاري للاتحاد العربي للأسر المنتجة - رئيس المجلس الاستشاري في الجالية السورية',
+    roleEn: 'Civil Engineer & Chairman of Arab Union for Productive Families Advisory Council - Advisory Council Chairman of Syrian Community',
+    roleTr: 'İnşaat Mühendisi ve Arap Üretken Aileler Birliği Danışma Kurulu Başkanı - Suriye Topluluğu Danışma Kurulu Başkanı',
     image: mamdouhAldairiImg,
   },
   {
