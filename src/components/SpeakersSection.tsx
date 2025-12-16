@@ -39,6 +39,15 @@ const speakers: Speaker[] = [
   },
   {
     id: 2,
+    name: 'قارئ القرآن الكريم',
+    nameEn: 'Quran Reciter',
+    nameTr: 'Kuran Okuyucusu',
+    role: 'تلاوة القرآن الكريم',
+    roleEn: 'Holy Quran Recitation',
+    roleTr: 'Kuran-ı Kerim Tilaveti',
+  },
+  {
+    id: 3,
     name: 'د. منال النجار',
     nameEn: 'Dr. Manal Al-Najjar',
     nameTr: 'Dr. Manal Al-Najjar',
@@ -48,7 +57,7 @@ const speakers: Speaker[] = [
     image: manalAlnajjarImg,
   },
   {
-    id: 3,
+    id: 4,
     name: 'أ. مصطفى تيت',
     nameEn: 'Mustafa Tit',
     nameTr: 'Mustafa Tit',
@@ -58,7 +67,7 @@ const speakers: Speaker[] = [
     image: mustafaTitImg,
   },
   {
-    id: 4,
+    id: 5,
     name: 'م. صفوان خباز',
     nameEn: 'Eng. Safwan Khabbaz',
     nameTr: 'Müh. Safwan Khabbaz',
@@ -68,7 +77,7 @@ const speakers: Speaker[] = [
     image: safwanKhabbazImg,
   },
   {
-    id: 5,
+    id: 6,
     name: 'أ. حسان الجاجة',
     nameEn: 'Hassan Al-Jaja',
     nameTr: 'Hassan Al-Jaja',
@@ -78,7 +87,7 @@ const speakers: Speaker[] = [
     image: hassanAljjajaImg,
   },
   {
-    id: 6,
+    id: 7,
     name: 'د. محمد رمضان',
     nameEn: 'Dr. Mohammad Ramadan',
     nameTr: 'Dr. Mohammad Ramadan',
@@ -88,7 +97,7 @@ const speakers: Speaker[] = [
     image: mohammadRamadanImg,
   },
   {
-    id: 7,
+    id: 8,
     name: 'د. محمد حيدر',
     nameEn: 'Dr. Mohammad Haidar',
     nameTr: 'Dr. Mohammad Haidar',
@@ -97,7 +106,7 @@ const speakers: Speaker[] = [
     roleTr: 'Adam Holding Şirketi Yönetim Kurulu Başkanı',
   },
   {
-    id: 8,
+    id: 9,
     name: 'م. ممدوح الديري',
     nameEn: 'Eng. Mamdouh Al-Dairi',
     nameTr: 'Müh. Mamdouh Al-Dairi',
@@ -107,7 +116,7 @@ const speakers: Speaker[] = [
     image: mamdouhAldairiImg,
   },
   {
-    id: 9,
+    id: 10,
     name: 'م. محمود رمضان',
     nameEn: 'Eng. Mahmoud Ramadan',
     nameTr: 'Müh. Mahmoud Ramadan',
@@ -117,7 +126,7 @@ const speakers: Speaker[] = [
     image: mahmoudRamadanImg,
   },
   {
-    id: 10,
+    id: 11,
     name: 'عبد القادر السكري',
     nameEn: 'Abdulqader Al-Sukari',
     nameTr: 'Abdulqader Al-Sukari',
@@ -127,7 +136,7 @@ const speakers: Speaker[] = [
     image: abdulqaderAlsukariImg,
   },
   {
-    id: 11,
+    id: 12,
     name: 'أ. محمد البيك',
     nameEn: 'Mohammad Al-Beik',
     nameTr: 'Mohammad Al-Beik',
@@ -137,7 +146,7 @@ const speakers: Speaker[] = [
     image: mohammadAlbeikImg,
   },
   {
-    id: 12,
+    id: 13,
     name: 'نمر نبهان',
     nameEn: 'Nemr Nabhan',
     nameTr: 'Nemr Nabhan',
@@ -147,7 +156,7 @@ const speakers: Speaker[] = [
     image: nemrNabhanImg,
   },
   {
-    id: 13,
+    id: 14,
     name: 'سعيد دالي',
     nameEn: 'Saeed Dali',
     nameTr: 'Saeed Dali',
@@ -157,7 +166,7 @@ const speakers: Speaker[] = [
     image: saadAldaliImg,
   },
   {
-    id: 14,
+    id: 15,
     name: 'د. أحمد رمضان',
     nameEn: 'Dr. Ahmad Ramadan',
     nameTr: 'Dr. Ahmad Ramadan',
