@@ -11,6 +11,9 @@ import nemrNabhanImg from '@/assets/speakers/nemr-nabhan.jpeg';
 import saadAldaliImg from '@/assets/speakers/saad-aldali.jpeg';
 import mohammadAlbeikImg from '@/assets/speakers/mohammad-albeik.jpeg';
 import ahmadRamadanImg from '@/assets/speakers/ahmad-ramadan.jpeg';
+import manalAlnajjarImg from '@/assets/speakers/manal-alnajjar.jpeg';
+import abdulqaderAlsukariImg from '@/assets/speakers/abdulqader-alsukari.jpeg';
+import mamdouhAldairiImg from '@/assets/speakers/mamdouh-aldairi.jpeg';
 
 interface Speaker {
   id: number;
@@ -123,6 +126,36 @@ const speakers: Speaker[] = [
     roleEn: 'Artist & Music Band Leader',
     roleTr: 'Sanatçı ve Müzik Grubu Lideri',
     image: saadAldaliImg,
+  },
+  {
+    id: 11,
+    name: 'د. منال النجار',
+    nameEn: 'Dr. Manal Al-Najjar',
+    nameTr: 'Dr. Manal Al-Najjar',
+    role: 'رئيس أكاديمية الريادة للتنمية المستدامة',
+    roleEn: 'President of Ryadah Academy for Sustainable Development',
+    roleTr: 'Ryadah Sürdürülebilir Kalkınma Akademisi Başkanı',
+    image: manalAlnajjarImg,
+  },
+  {
+    id: 12,
+    name: 'عبد القادر السكري',
+    nameEn: 'Abdulqader Al-Sukari',
+    nameTr: 'Abdulqader Al-Sukari',
+    role: 'رجل أعمال - عضو الهيئة الإدارية في الجالية السورية',
+    roleEn: 'Businessman - Administrative Board Member of Syrian Community',
+    roleTr: 'İş Adamı - Suriye Topluluğu Yönetim Kurulu Üyesi',
+    image: abdulqaderAlsukariImg,
+  },
+  {
+    id: 13,
+    name: 'م. ممدوح الديري',
+    nameEn: 'Eng. Mamdouh Al-Dairi',
+    nameTr: 'Müh. Mamdouh Al-Dairi',
+    role: 'مهندس مدني - رئيس المجلس الاستشاري في الجالية السورية',
+    roleEn: 'Civil Engineer - Advisory Council Chairman of Syrian Community',
+    roleTr: 'İnşaat Mühendisi - Suriye Topluluğu Danışma Kurulu Başkanı',
+    image: mamdouhAldairiImg,
   },
 ];
 
