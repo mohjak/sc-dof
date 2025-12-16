@@ -147,6 +147,16 @@ const speakers: Speaker[] = [
     roleTr: 'Sanatçı ve Müzik Grubu Lideri',
     image: saadAldaliImg,
   },
+  {
+    id: 13,
+    name: 'د. أحمد رمضان',
+    nameEn: 'Dr. Ahmad Ramadan',
+    nameTr: 'Dr. Ahmad Ramadan',
+    role: 'رئيس حركة العمل الوطني ورئيس مؤسسة مدى للرؤية الاستراتيجية',
+    roleEn: 'President of National Action Movement & Mada Strategic Vision Foundation',
+    roleTr: 'Ulusal Eylem Hareketi ve Mada Stratejik Vizyon Vakfı Başkanı',
+    image: ahmadRamadanImg,
+  },
 ];
 
 const SpeakersSection = () => {
