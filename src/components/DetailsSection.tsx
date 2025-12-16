@@ -43,7 +43,7 @@ const DetailsSection = () => {
           
           {/* Location Card */}
           <a 
-            href="https://maps.app.goo.gl/N2qrooLY1HSj9D7Z8" 
+            href="https://maps.app.goo.gl/rUKx2mjTGYrHpPi89" 
             target="_blank" 
             rel="noopener noreferrer"
             className="group bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all text-center cursor-pointer"
