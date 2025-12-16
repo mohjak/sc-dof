@@ -57,6 +57,22 @@ const DetailsSection = () => {
             <p className="text-sm text-yellow-300 mt-2 underline">{t('details.viewMap')}</p>
           </a>
         </div>
+        
+        {/* Embedded Map */}
+        <div className="mt-10 max-w-4xl mx-auto">
+          <div className="rounded-2xl overflow-hidden border border-primary-foreground/20 shadow-lg">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.5446033892003!2d28.8088594!3d41.1007957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caaf0bde370313%3A0x434f2122d5ad81ba!2sBasaksehir%20Cinar%20College%20Campus!5e0!3m2!1sen!2str!4v1765871116608!5m2!1sen!2str" 
+              width="100%" 
+              height="350" 
+              style={{ border: 0 }} 
+              allowFullScreen 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Event Location Map"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
