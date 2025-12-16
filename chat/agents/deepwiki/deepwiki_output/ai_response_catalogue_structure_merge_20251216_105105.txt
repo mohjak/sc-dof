@@ -1,0 +1,810 @@
+[
+  {
+    "title": "component-architecture",
+    "name": "Component Architecture",
+    "dependent_file": [
+      "src/App.tsx",
+      "src/pages/Index.tsx",
+      "src/components/*.tsx",
+      "src/components/ui/*.tsx"
+    ],
+    "prompt": "Develop detailed content for the component architecture section, focusing on the hierarchical structure and composition patterns used throughout the application. Explain how the App component serves as the root container with providers for QueryClient, LanguageProvider, and TooltipProvider. Describe how the Index page composes high-level section components like HeroSection, AgendaSection, and SpeakersSection. Detail the relationship between custom components and the ShadCN UI library components they consume. Illustrate component composition patterns with examples from the codebase, such as how Navbar uses Button and DropdownMenu components. Address common issues in component communication and state propagation, and provide best practices for component organization and reusability.",
+    "has_children": "YES",
+    "children": [
+      {
+        "title": "component-hierarchy",
+        "name": "Component Hierarchy and Composition",
+        "dependent_file": [
+          "src/App.tsx",
+          "src/pages/Index.tsx"
+        ],
+        "prompt": "Develop detailed content for the component hierarchy section, focusing on the application's structural composition. Explain how the App component serves as the root container with providers for QueryClient, LanguageProvider, and TooltipProvider, establishing global state and services. Describe how AppContent wraps the routing system with BrowserRouter and conditionally applies RTL direction and font classes based on language context. Detail how the Index page orchestrates the main UI layout by composing high-level section components in a sequential flow: Navbar, HeroSection, WhySection, GoalsSection, DetailsSection, AgendaSection, SpeakersSection, RegistrationSection, OrganizersSection, Footer, and ScrollToTop. Illustrate the parent-child relationship between App → AppContent → Index → Section Components. Provide examples of how changes in context (e.g., language) propagate through the entire component tree. Address common issues such as context initialization order, routing conflicts, and layout overflow management.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      },
+      {
+        "title": "core-section-components",
+        "name": "Core Section Components",
+        "dependent_file": [
+          "src/components/HeroSection.tsx",
+          "src/components/WhySection.tsx",
+          "src/components/GoalsSection.tsx",
+          "src/components/DetailsSection.tsx",
+          "src/components/AgendaSection.tsx",
+          "src/components/SpeakersSection.tsx",
+          "src/components/OrganizersSection.tsx",
+          "src/components/RegistrationSection.tsx",
+          "src/components/Footer.tsx"
+        ],
+        "prompt": "Develop detailed content for the core section components that define the event website's primary content flow. Explain the purpose and implementation of each section: HeroSection (main landing with event branding), WhySection (event motivation), GoalsSection (objectives), DetailsSection (date, time, location with Google Maps integration), AgendaSection (schedule display), SpeakersSection (participant profiles), OrganizersSection (team information), RegistrationSection (call-to-action), and Footer (navigation and credits). Describe how each section consumes data from eventData.ts and uses translation via the t() function from LanguageContext. Include examples of responsive layout techniques using Tailwind CSS, such as grid and flexbox arrangements. Address common issues like content overflow, image loading, and ensuring accessibility across sections. Provide best practices for modifying or extending these components when adapting the template for future events.",
+        "has_children": "YES",
+        "children": [
+          {
+            "title": "hero-section",
+            "name": "Hero Section",
+            "dependent_file": [
+              "src/components/HeroSection.tsx",
+              "src/components/CountdownTimer.tsx"
+            ],
+            "prompt": "Develop detailed content for the HeroSection component that serves as the primary landing experience for the event website. Explain its implementation using a full-viewport layout with background imagery, gradient overlays, and decorative confetti animation. Document how it integrates the CountdownTimer component and displays multilingual content through the t() translation function. Describe the responsive design techniques using Tailwind CSS for text scaling and layout adjustments across breakpoints. Include examples of the component's animation patterns (fade-up, float) and visual effects (drop-shadow, backdrop-blur). Address common issues like background image optimization, accessibility for screen readers, and performance considerations for animations. Provide guidance on customizing the hero content, images, and styling for future events.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "why-section",
+            "name": "Why Section",
+            "dependent_file": [
+              "src/components/WhySection.tsx"
+            ],
+            "prompt": "Develop detailed content for the WhySection component that communicates the event's purpose and motivation. Explain its implementation with a full-bleed background image of the revolution flag, dark overlay for text readability, and centered content layout. Document how it uses the t() function for multilingual display of the title and description. Describe the visual elements including the peace dove emoji animation and the Syrian flag colors divider that reinforces national identity. Include details on responsive behavior across screen sizes and accessibility considerations for color contrast. Address common issues like background image loading and text legibility. Provide guidance on modifying the section's message and visual elements for different event themes.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "goals-section",
+            "name": "Goals Section",
+            "dependent_file": [
+              "src/components/GoalsSection.tsx"
+            ],
+            "prompt": "Develop detailed content for the GoalsSection component that presents the event's objectives through a grid of interactive cards. Explain its implementation using four goal cards with distinct icons (Target, Eye, Heart, Compass) and color gradients that enhance visual appeal. Document how it maps translation strings to dynamic goal objects and renders them in a responsive grid layout (1-column on mobile, 4-column on large screens). Describe the interactive effects including hover scaling, color transitions, and shadow elevation. Include details on the component's use of Tailwind's group-hover utilities and animation patterns. Address common issues like content overflow in cards and icon loading. Provide guidance on adding or modifying goals and their associated icons and styles.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "details-section",
+            "name": "Details Section",
+            "dependent_file": [
+              "src/components/DetailsSection.tsx"
+            ],
+            "prompt": "Develop detailed content for the DetailsSection component that displays essential event information (date, time, location) through three interactive cards. Explain its implementation with a green background theme, decorative Syrian flag watermark, and responsive grid layout. Document how each card uses Lucide React icons (Calendar, Clock, MapPin) and displays translated content via the t() function. Describe the location card's integration with Google Maps through an external link and its visual treatment with hover effects. Include details on accessibility features like proper link semantics and responsive text sizing. Address common issues like external link handling and ensuring the map link opens correctly on mobile devices. Provide guidance on updating event details and customizing the section's color scheme.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "agenda-section",
+            "name": "Agenda Section",
+            "dependent_file": [
+              "src/components/AgendaSection.tsx"
+            ],
+            "prompt": "Develop detailed content for the AgendaSection component that presents the event schedule in a visually engaging card grid. Explain its implementation using an array of agenda items with time, title, description, and emoji icons that represent different event types. Document how it maps translation strings to agenda data and renders cards in a responsive grid (1-2-3 column layout). Describe the visual design elements including the floating gradient accent on hover and z-index management for layered effects. Include details on the component's use of relative positioning and decorative elements to enhance visual hierarchy. Address common issues like text truncation in cards and ensuring emoji consistency across platforms. Provide guidance on modifying the agenda items, adding new time slots, and customizing the visual design.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "speakers-section",
+            "name": "Speakers Section",
+            "dependent_file": [
+              "src/components/SpeakersSection.tsx"
+            ],
+            "prompt": "Develop detailed content for the SpeakersSection component that showcases event participants through a responsive grid of profile cards. Explain its implementation with a typed Speaker interface, multilingual name and role handling through language-specific properties, and conditional image rendering. Document how it uses the getName and getRole helper functions to display content based on the current language context. Describe the responsive grid layout (1-2-3-4 columns) and animation sequence where cards fade in with staggered delays. Include details on the card design with circular image containers, hover effects, and ring decorations. Address common issues like missing speaker images and text overflow in role descriptions. Provide guidance on adding new speakers, managing image assets, and customizing the section's layout and animations.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "organizers-section",
+            "name": "Organizers Section",
+            "dependent_file": [
+              "src/components/OrganizersSection.tsx"
+            ],
+            "prompt": "Develop detailed content for the OrganizersSection component that highlights the event's organizing institutions with detailed information cards. Explain its implementation using language-specific data arrays for dynamic content rendering based on the current language context. Document the two-tier structure with the Syrian Community card (featuring mission statement and activity tags) and the Leadership Academy card. Describe the visual design with logo integration, decorative Syrian eagle motifs, and hover effects on card borders. Include details on the responsive layout with image-text alignment on larger screens and stacked layout on mobile. Address common issues like content translation consistency and tag rendering for activities. Provide guidance on updating organizer information, adding new organizations, and customizing the visual presentation.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "registration-section",
+            "name": "Registration Section",
+            "dependent_file": [
+              "src/components/RegistrationSection.tsx"
+            ],
+            "prompt": "Develop detailed content for the RegistrationSection component that facilitates event sign-up through both QR code and direct link. Explain its implementation with a centered layout, decorative background blurs, and a prominent QR code generated using qrcode.react. Document how it handles multilingual display of title, subtitle, and button text through language-specific conditional rendering. Describe the visual design elements including the custom-styled button with hover effects, scale transformation, and shadow elevation, as well as the QR code card with corner decorations and glow effects. Include details on the external link integration with proper security attributes (noopener noreferrer). Address common issues like QR code scanning reliability and responsive layout on different devices. Provide guidance on updating the registration URL and customizing the section's colors and styling.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "footer",
+            "name": "Footer",
+            "dependent_file": [
+              "src/components/Footer.tsx"
+            ],
+            "prompt": "Develop detailed content for the Footer component that provides site credits, social links, and navigation. Explain its implementation with a dark theme, three-column responsive layout, and decorative tricolor top border representing the Syrian flag. Document the center-aligned national symbols (Syrian eagle and flag) and the right-aligned community logo. Describe the social media integration with custom TikTok icon component and standard Lucide icons for Instagram and YouTube, including hover effects and accessibility attributes. Include details on the bottom bar with copyright information, developer credit, and GitHub link. Address common issues like logo asset management and ensuring external links open correctly. Provide guidance on updating social media URLs, modifying copyright information, and customizing the footer's visual elements.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          }
+        ],
+        "children_plan": "The module contains multiple features such as section components, each with distinct functionality, and needs to be described in detail in the subsections."
+      },
+      {
+        "title": "ui-component-library",
+        "name": "UI Component Library Integration",
+        "dependent_file": [
+          "src/components/ui/*.tsx",
+          "src/lib/utils.ts",
+          "components.json"
+        ],
+        "prompt": "Create comprehensive documentation for the ShadCN UI component library integration, which is built on Radix UI primitives and styled with Tailwind CSS. Explain how the project leverages pre-built accessible components like Button, Card, Dialog, DropdownMenu, and Form to ensure consistency and reduce development time. Detail the utility function 'cn' from utils.ts that combines Tailwind classes with conditional logic. Describe how components are extended through composition rather than inheritance, using props to customize appearance and behavior. Illustrate usage patterns with concrete examples, such as how Navbar uses Button and DropdownMenu for language switching, or how Forms are constructed with Label, Input, and Checkbox components. Address common issues like component styling conflicts, version mismatches, and accessibility compliance. Provide guidance on adding new UI components using the ShadCN CLI and maintaining design system consistency.",
+        "has_children": "YES",
+        "children_plan": "The feature is too complex and contains multiple sub-components; further subdivision is needed to cover individual component usage patterns and integration details."
+      },
+      {
+        "title": "navigation-and-layout-components",
+        "name": "Navigation and Layout Components",
+        "dependent_file": [
+          "src/components/Navbar.tsx",
+          "src/components/NavLink.tsx",
+          "src/components/ScrollToTop.tsx",
+          "src/components/LanguageSwitcher.tsx"
+        ],
+        "prompt": "Develop detailed content for navigation and layout utility components that enhance user experience. Explain how Navbar provides top-level navigation with responsive behavior on mobile devices, integrating NavLink for active state handling and LanguageSwitcher for multilingual support. Describe how ScrollToTop enables smooth scrolling to the top of the page, particularly useful on long-form event sites. Detail the implementation of NavLink with React Router's useMatch hook for active link styling. Illustrate how LanguageSwitcher interacts with LanguageContext to update the application language and trigger RTL layout changes. Include examples of event-driven navigation patterns and scroll position management. Address common issues such as mobile menu toggle bugs, incorrect active link states, and scroll restoration after language changes. Provide optimization tips for rendering performance and accessibility compliance.",
+        "has_children": "YES",
+        "children": [
+          {
+            "title": "navbar-component",
+            "name": "Navbar Component",
+            "dependent_file": [
+              "src/components/Navbar.tsx"
+            ],
+            "prompt": "Develop detailed content for the Navbar component that serves as the primary navigation hub for the event platform. Explain how it implements a responsive design with a mobile-first approach, using state management to toggle visibility of the mobile menu. Detail the integration of scroll detection to dynamically change the navbar's appearance when scrolling down the page. Describe the implementation of smooth scrolling to section anchors via the scrollToSection function and how it prevents default anchor behavior. Illustrate how the Navbar integrates with the LanguageSwitcher component and responds to RTL layout changes through the isRTL flag from LanguageContext. Include code examples showing event handling for mobile menu toggling and navigation link clicks. Address common issues such as scroll event memory leaks, incorrect mobile menu state management, and accessibility concerns with ARIA labels. Provide performance optimization tips for reducing re-renders using useCallback and minimizing DOM listeners.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "navlink-component",
+            "name": "NavLink Component",
+            "dependent_file": [
+              "src/components/NavLink.tsx"
+            ],
+            "prompt": "Develop detailed content for the NavLink component that provides enhanced routing functionality with active state styling. Explain how it wraps React Router's NavLink to support className composition via the cn utility function, enabling dynamic class assignment based on isActive and isPending states. Detail the implementation of the forwardRef pattern to ensure proper DOM ref forwarding and maintain accessibility. Describe the interface extension pattern used in NavLinkCompatProps to preserve React Router's original props while adding support for activeClassName and pendingClassName. Illustrate how this component enables visual feedback for current navigation sections, improving user experience. Include practical usage examples demonstrating custom styling for active links within navigation menus. Address common issues such as broken ref forwarding, incorrect active state propagation, and style conflicts with Tailwind's JIT engine. Provide guidance on extending the component for additional states and integrating with animation libraries.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "language-switcher",
+            "name": "Language Switcher",
+            "dependent_file": [
+              "src/components/LanguageSwitcher.tsx"
+            ],
+            "prompt": "Develop detailed content for the LanguageSwitcher component that enables multilingual functionality across the application. Explain how it consumes the LanguageContext to access the current language state and setLanguage function, triggering re-renders across all translated components. Detail the implementation of dual presentation modes (floating and navbar) through the variant prop, adapting styling and positioning for different layouts. Describe the rendering logic for language options including emoji flags for English and Turkish, and a custom Syrian flag image for Arabic with appropriate RTL handling. Illustrate how clicking a language button updates the context state and automatically applies RTL layout when Arabic is selected. Include examples of integrating the switcher in different UI regions and styling considerations for accessibility and touch targets. Address common issues such as image loading failures, context update delays, and layout shifts during language change. Provide optimization tips for memoizing language options and lazy-loading flag assets.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "scroll-to-top",
+            "name": "Scroll To Top Utility",
+            "dependent_file": [
+              "src/components/ScrollToTop.tsx"
+            ],
+            "prompt": "Develop detailed content for the ScrollToTop utility component that enhances navigation on long-scrolling event pages. Explain how it uses scroll event listeners to detect user position and conditionally display a floating action button when the user scrolls beyond 300px. Detail the implementation of smooth scrolling behavior using window.scrollTo with 'smooth' behavior parameter. Describe the CSS transition system that controls opacity and transform states for entrance/exit animations, including pointer-events management to prevent interaction when hidden. Illustrate how the component unmounts event listeners during cleanup to prevent memory leaks. Include examples of customizing the button's position, appearance, and scroll threshold. Address common issues such as janky animations on low-end devices, incorrect visibility state after page reload, and conflicts with other fixed-position elements. Provide performance optimization strategies like debouncing scroll events and using passive listeners.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          }
+        ],
+        "children_plan": "The module contains multiple distinct features (navigation, language switching, scroll control), each requiring detailed explanation in dedicated subsections."
+      }
+    ],
+    "children_plan": "The module contains multiple features such as feature1, feature2, etc., and needs to be described in detail in the subsections."
+  },
+  {
+    "title": "internationalization-system",
+    "name": "Internationalization System",
+    "dependent_file": [
+      "src/contexts/LanguageContext.tsx",
+      "src/components/LanguageSwitcher.tsx",
+      "src/App.tsx"
+    ],
+    "prompt": "Create comprehensive content for the internationalization system focused on the multilingual capabilities of the sc-dof platform. Explain the implementation of the LanguageContext that manages language state and provides the translation function (t) to all components. Detail how the LanguageSwitcher component enables users to switch between Arabic, English, and Turkish with proper flag indicators and visual feedback. Describe the RTL support mechanism that dynamically sets the document direction based on the selected language. Document the font switching logic between Koufiya (Arabic) and Roboto (English/Turkish). Include practical examples showing how components consume translations and respond to language changes. Address common i18n issues like text alignment in mixed-language layouts and provide troubleshooting guidance for translation loading problems.",
+    "has_children": "YES",
+    "children": [
+      {
+        "title": "language-context-implementation",
+        "name": "Language Context Implementation",
+        "dependent_file": [
+          "src/contexts/LanguageContext.tsx"
+        ],
+        "prompt": "Develop detailed content for the LanguageContext implementation focused on the sc-dof platform's state management for multilingual functionality. Thoroughly explain how the LanguageContext is created using React's createContext and useContext hooks, with the LanguageContextType interface defining the structure of the context (language, setLanguage, t function, and isRTL flag). Document the initial language state set to 'ar' (Arabic) and how the setLanguage function updates this state. Explain the translation function (t) that retrieves localized strings from the nested translations object based on the current language, including fallback behavior when a key is not found. Detail how the isRTL boolean is derived from the current language to support right-to-left layout for Arabic. Provide concrete examples from the code showing how components consume the context via useLanguage hook. Address common issues such as context not being available outside the provider and provide solutions. Include performance considerations around re-renders and best practices for using the context efficiently across the application.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      },
+      {
+        "title": "translation-system",
+        "name": "Translation System",
+        "dependent_file": [
+          "src/contexts/LanguageContext.tsx",
+          "src/components/LanguageSwitcher.tsx"
+        ],
+        "prompt": "Develop detailed content for the translation system focused on the multilingual content management in the sc-dof platform. Thoroughly explain the implementation of the translations object in LanguageContext.tsx, which contains a comprehensive dictionary of localized strings for Arabic, English, and Turkish, organized by functional areas (navigation, hero, details, agenda, etc.) using a dot-notation key structure. Document how the t() function serves as the primary interface for components to retrieve translated strings, including its fallback mechanism that returns the key itself if a translation is missing. Explain the process of adding new translation keys and maintaining consistency across languages. Provide concrete examples from the codebase showing translation keys in use, such as 'nav.home', 'hero.title', and 'agenda.1.title'. Describe how the LanguageSwitcher component triggers language changes that automatically update all translated content throughout the application. Address common issues like missing translations, inconsistent terminology, and handling dynamic content within translations. Include best practices for organizing translation keys, maintaining linguistic consistency, and ensuring complete coverage across all languages.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      },
+      {
+        "title": "rtl-support",
+        "name": "RTL Support",
+        "dependent_file": [
+          "src/contexts/LanguageContext.tsx",
+          "src/components/LanguageSwitcher.tsx",
+          "src/App.tsx"
+        ],
+        "prompt": "Develop detailed content for the RTL (Right-to-Left) support system focused on Arabic language rendering in the sc-dof platform. Thoroughly explain how the isRTL flag is derived from the current language state in LanguageContext, returning true when the language is set to 'ar' (Arabic). Document how this flag is consumed throughout the application to dynamically adjust layout direction, including text alignment, component positioning, and navigation flow. Explain the integration between the LanguageContext and the root App component that ensures the entire application responds to directionality changes. Detail how the LanguageSwitcher component handles font switching between Koufiya (Arabic) and Roboto (English/Turkish) through conditional CSS classes, ensuring proper typography for each language. Provide concrete examples from the code showing the font-roboto class being applied conditionally. Address common RTL layout issues such as mixed-direction text, icon positioning, and form element alignment. Include best practices for testing RTL layouts, ensuring accessibility compliance, and maintaining visual consistency across LTR and RTL modes.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      }
+    ],
+    "children_plan": "The module contains multiple features such as language context implementation, translation system, and RTL support, and needs to be described in detail in the subsections."
+  },
+  {
+    "title": "styling-strategy",
+    "name": "Styling Strategy",
+    "dependent_file": [
+      "tailwind.config.ts",
+      "src/index.css",
+      "src/lib/utils.ts",
+      "src/components/ui/*.tsx"
+    ],
+    "prompt": "Develop detailed content for the styling strategy focused on the Tailwind CSS implementation and design system. Explain how the tailwind.config.ts file extends the default theme with custom colors, fonts, and plugins like tailwindcss-animate. Describe the utility-first approach used throughout the components and how the cn() utility function from utils.ts enables conditional class composition. Detail the responsive design implementation using Tailwind's breakpoint system and how components adapt to mobile and desktop views. Include examples of complex styling patterns from the codebase, such as the floating language switcher's backdrop blur effect or the card component's shadow and border styling. Address common styling issues and provide optimization tips for reducing CSS bundle size.",
+    "has_children": "YES",
+    "children": [
+      {
+        "title": "tailwind-configuration",
+        "name": "Tailwind Configuration",
+        "dependent_file": [
+          "tailwind.config.ts",
+          "src/index.css"
+        ],
+        "prompt": "Develop detailed content for the Tailwind configuration focused on the custom theme extension in tailwind.config.ts. Explain how the theme extends default colors with Syrian community-specific palette (syrian-red, syrian-green, gold, cream) and custom fonts (Bahij Koufiya, Roboto). Detail the CSS variables defined in index.css that power the dynamic theming system and how they integrate with Tailwind's hsl() color functions. Describe the container configuration, border radius scaling, and keyframe animations for accordions. Document the integration of the tailwindcss-animate plugin and its role in providing smooth transitions. Include examples from the codebase showing how components leverage these custom configurations, such as the use of --gradient-hero in the HeroSection. Address common configuration issues like font loading strategies and provide optimization tips for reducing unused CSS.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      },
+      {
+        "title": "theme-customization",
+        "name": "Theme Customization",
+        "dependent_file": [
+          "src/index.css",
+          "tailwind.config.ts",
+          "src/lib/utils.ts"
+        ],
+        "prompt": "Develop detailed content for theme customization focused on the CSS variables and utility classes system. Explain how the :root CSS variables in index.css enable dynamic theming with light/dark mode support and how they're referenced in Tailwind classes via hsl(var(--color)) syntax. Detail the custom utility classes like .glass, .gradient-hero, and animation utilities (.animate-float, .animate-pulse-glow) that extend Tailwind's capabilities. Describe how the cn() utility function from utils.ts enables conditional class composition for theme variations. Provide examples from components like LanguageSwitcher that use backdrop-blur effects or cards with custom shadows. Include guidance on adding new theme colors, modifying gradients, and creating custom animation patterns while maintaining design consistency.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      },
+      {
+        "title": "responsive-design",
+        "name": "Responsive Design",
+        "dependent_file": [
+          "tailwind.config.ts",
+          "src/index.css",
+          "src/components/ui/*.tsx",
+          "src/hooks/use-mobile.tsx"
+        ],
+        "prompt": "Develop detailed content for responsive design implementation using Tailwind's breakpoint system. Explain how the configuration in tailwind.config.ts defines responsive containers and how components adapt across mobile, tablet, and desktop views. Detail the use of Tailwind's responsive prefixes (sm:, md:, lg:, xl:) in components like Navbar, Sidebar, and Grid layouts to create adaptive interfaces. Describe how the use-mobile.tsx hook complements CSS-based responsiveness with JavaScript detection for conditional rendering. Illustrate with examples from the codebase such as the mobile drawer navigation versus desktop sidebar, or responsive typography scaling with font-koufiya. Address common responsive design challenges like viewport scaling on mobile devices and provide solutions for ensuring consistent layout behavior across different screen sizes.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      }
+    ],
+    "children_plan": "The module contains multiple features such as Tailwind configuration, theme customization, and responsive design, and needs to be described in detail in the subsections."
+  },
+  {
+    "title": "state-management",
+    "name": "State Management",
+    "dependent_file": [
+      "src/App.tsx",
+      "src/contexts/LanguageContext.tsx",
+      "src/hooks/use-mobile.tsx",
+      "src/hooks/use-toast.ts"
+    ],
+    "prompt": "Create comprehensive content for the state management system focused on the application's approach to managing global and local state. Explain how React Context API is used through the LanguageProvider to share language preferences across components. Detail the integration of React Query for server state management and data synchronization. Describe the custom hooks like use-mobile and use-toast that encapsulate reusable stateful logic. Illustrate how these state management solutions work together in components, such as how the mobile detection affects UI rendering. Include practical examples from the codebase showing state updates and re-renders. Address common state management issues like unnecessary re-renders and provide performance optimization strategies.",
+    "has_children": "YES",
+    "children": [
+      {
+        "title": "context-api-implementation",
+        "name": "Context API Implementation",
+        "dependent_file": [
+          "src/contexts/LanguageContext.tsx",
+          "src/App.tsx"
+        ],
+        "prompt": "Develop detailed content for the Context API implementation focused on the LanguageProvider and useLanguage hook. Explain how the LanguageContext is created with React.createContext and initialized with the LanguageContextType interface. Detail the state management within LanguageProvider, including the language state, translation function (t), and RTL detection. Illustrate how the provider wraps the application in App.tsx using the QueryClientProvider and TooltipProvider. Provide concrete examples from the codebase showing how components consume the context via useLanguage to access language, setLanguage, t, and isRTL values. Document the error handling in useLanguage that ensures the hook is used within a provider. Address common issues such as context re-renders and performance optimization using memoization if applicable. Explain integration patterns with other providers and how context values affect global UI behavior like font selection and text direction.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      },
+      {
+        "title": "react-query-integration",
+        "name": "React Query Integration",
+        "dependent_file": [
+          "src/App.tsx"
+        ],
+        "prompt": "Create comprehensive content for the React Query integration focused on client-side state management and data synchronization. Explain how the QueryClient is instantiated and provided at the root level via QueryClientProvider in App.tsx. Describe the role of React Query in managing server state, caching, and background data fetching even though no explicit queries are currently implemented. Illustrate how this setup prepares the application for future data-fetching needs such as dynamic event data or registration forms. Include usage patterns for useQuery and useMutation hooks with practical examples relevant to the event platform. Address configuration options like cache time, stale time, and refetching strategies. Provide guidance on debugging with React Query Devtools and optimizing performance through query keys and prefetching. Discuss error handling, loading states, and how React Query integrates with the existing Context API for a cohesive state management strategy.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      },
+      {
+        "title": "custom-hooks-management",
+        "name": "Custom Hooks for State Management",
+        "dependent_file": [
+          "src/hooks/use-mobile.tsx",
+          "src/hooks/use-toast.ts"
+        ],
+        "prompt": "Develop detailed content for the custom hooks used in state management, focusing on useIsMobile and useToast. For useIsMobile, explain the implementation using window.matchMedia to detect screen size changes at the 768px breakpoint, the useState initialization, and the useEffect cleanup to prevent memory leaks. Provide examples of how components use this hook to conditionally render mobile-specific UI elements. For useToast, document the reducer-based state management pattern, action types (ADD_TOAST, DISMISS_TOAST, etc.), and toast queue mechanics with timeout handling. Explain how the toast function generates unique IDs, dispatches actions, and returns dismiss/update methods. Illustrate integration with UI components like Toaster and Sonner in AppContent. Address performance considerations such as event listener cleanup, memory management of toast timeouts, and preventing unnecessary re-renders. Include troubleshooting tips for common issues like toasts not appearing or mobile detection failing on resize.",
+        "has_children": "YES",
+        "children": [
+          {
+            "title": "use-mobile-hook",
+            "name": "useIsMobile Hook",
+            "dependent_file": [
+              "src/hooks/use-mobile.tsx"
+            ],
+            "prompt": "Develop detailed content for the useIsMobile custom hook, focusing on its implementation using window.matchMedia to detect screen size changes at the 768px breakpoint. Explain the useState initialization with undefined default state and how it transitions to a boolean value after mount. Detail the useEffect setup that adds and removes the 'change' event listener to prevent memory leaks. Provide concrete examples of how components like Navbar and Sidebar use this hook to conditionally render mobile-specific navigation patterns such as drawers or collapsible menus. Illustrate the responsive design integration with Tailwind's breakpoint system. Address performance considerations including efficient event listener management and prevention of unnecessary re-renders through memoization. Include troubleshooting guidance for common issues such as incorrect mobile detection on initial load, failure to update on window resize, and hydration mismatches in SSR environments. Document best practices for testing this hook using Jest and React Testing Library with mocked matchMedia.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "use-toast-hook",
+            "name": "useToast Hook",
+            "dependent_file": [
+              "src/hooks/use-toast.ts"
+            ],
+            "prompt": "Create comprehensive documentation for the useToast custom hook, detailing its reducer-based state management architecture. Explain the core state structure (ToasterToast) with fields like id, title, description, action, and open status. Document the four action types (ADD_TOAST, UPDATE_TOAST, DISMISS_TOAST, REMOVE_TOAST) and their role in managing toast lifecycle. Describe the singleton pattern using memoryState and global listeners array to enable toast functionality without React context. Explain the toast() function's role in generating unique IDs via genId(), dispatching ADD_TOAST actions, and returning dismiss/update methods for imperative control. Detail the timeout mechanism in addToRemoveQueue that automatically removes toasts after TOAST_REMOVE_DELAY. Illustrate integration with UI components such as Toaster and Sonner in the component tree. Provide usage examples for success/error toasts in form submissions. Address performance considerations including memory management of timeout references, prevention of toast queue overflow via TOAST_LIMIT, and efficient state updates. Include troubleshooting tips for issues like toasts not disappearing, duplicate toasts appearing, or memory leaks from uncleaned timeouts. Document testing strategies for this hook using Jest timers and mock dispatch verification.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          }
+        ],
+        "children_plan": "The module contains multiple features such as useIsMobile and useToast, and needs to be described in detail in the subsections."
+      }
+    ],
+    "children_plan": "The module contains multiple features such as Context API usage and React Query integration, and needs to be described in detail in the subsections."
+  },
+  {
+    "title": "routing-navigation",
+    "name": "Routing \u0026 Navigation",
+    "dependent_file": [
+      "src/App.tsx",
+      "src/components/Navbar.tsx",
+      "src/components/ScrollToTop.tsx"
+    ],
+    "prompt": "Develop detailed content for the routing and navigation system focused on how users move through the application. Explain the React Router DOM implementation in App.tsx with route definitions for the main Index page and NotFound fallback. Describe the Navbar component's navigation links and how they enable smooth scrolling to different sections of the page. Detail the ScrollToTop component's functionality in returning users to the top of the page when triggered. Include examples of navigation patterns from the codebase and how they work with the single-page application architecture. Address common navigation issues like hash routing conflicts and provide solutions for accessibility compliance in navigation elements.",
+    "has_children": "YES",
+    "children": [
+      {
+        "title": "react-router-implementation",
+        "name": "React Router Implementation",
+        "dependent_file": [
+          "src/App.tsx",
+          "src/pages/Index.tsx",
+          "src/pages/NotFound.tsx"
+        ],
+        "prompt": "Create comprehensive content for the React Router DOM implementation in the application. Explain how BrowserRouter wraps the application to enable client-side routing, and detail the route definitions in App.tsx with the root '/' route rendering the Index page and the catch-all '*' route directing to the NotFound component. Describe the role of Routes and Route components in declarative routing, and how this setup supports the single-page application (SPA) architecture by preventing full page reloads. Include practical examples from the codebase showing route configuration and fallback handling. Discuss integration with other providers such as LanguageProvider and QueryClientProvider, and address common issues like route ordering, nested routing considerations, and accessibility implications of dynamic content loading. Provide guidance on extending the routing system with new routes and handling route parameters if needed in future enhancements.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      },
+      {
+        "title": "navigation-components",
+        "name": "Navigation Components",
+        "dependent_file": [
+          "src/components/Navbar.tsx",
+          "src/components/ScrollToTop.tsx"
+        ],
+        "prompt": "Develop detailed content for the navigation components including Navbar and ScrollToTop. Describe the Navbar's responsive design with desktop and mobile menu states, its integration with the LanguageSwitcher, and how it uses hash-based navigation via scrollIntoView to navigate to page sections. Explain the implementation of smooth scrolling with preventDefault and the scrollToSection utility function. Detail the mobile menu toggle functionality using state and click handlers, and the visual feedback through Lucide icons (Menu/X). For ScrollToTop, explain the visibility logic based on scroll position (300px threshold), the smooth scrolling behavior, and the animated appearance/disappearance using Tailwind classes and transform transitions. Include examples of event handling, state management with useState and useEffect, and a11y practices like aria-labels. Address common issues such as scroll position conflicts, mobile touch interactions, and performance of scroll event listeners, providing optimization tips like debouncing if necessary.",
+        "has_children": "YES",
+        "children": [
+          {
+            "title": "navbar-component",
+            "name": "Navbar Component",
+            "dependent_file": [
+              "src/components/Navbar.tsx"
+            ],
+            "prompt": "Develop detailed content for the Navbar component, focusing on its responsive design and integration with the internationalization system. Explain how the component uses React hooks (useState and useEffect) to manage mobile menu state and scroll-based visual effects. Detail the implementation of hash-based navigation using scrollIntoView with smooth behavior and preventDefault to enable in-page section navigation. Describe the conditional rendering of desktop vs. mobile navigation layouts using Tailwind's responsive classes (md:flex vs. md:hidden). Cover the integration with LanguageSwitcher, including its placement in both desktop and mobile views and how it inherits directionality (RTL/LTR) from the LanguageContext. Document the use of Lucide icons (Menu/X) for mobile menu toggling and accessibility features such as aria-labels. Include examples of event handling, state transitions, and styling logic using Tailwind CSS classes. Address common issues like scroll position conflicts, mobile touch behavior, and performance of scroll event listeners, suggesting optimizations like debouncing if needed. Provide code snippets from the actual implementation to illustrate key patterns.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "scroll-to-top-component",
+            "name": "ScrollToTop Component",
+            "dependent_file": [
+              "src/components/ScrollToTop.tsx"
+            ],
+            "prompt": "Create comprehensive documentation for the ScrollToTop component, explaining its purpose in enhancing user experience by providing quick navigation to the top of the page. Detail the implementation of visibility logic using useState and useEffect, where the button appears only when the user scrolls beyond 300px. Describe the smooth scrolling behavior achieved through window.scrollTo with 'smooth' behavior and the use of the ArrowUp Lucide icon for visual indication. Explain the animated appearance and disappearance using conditional Tailwind classes that control opacity and transform (translate-y) states, along with pointer-events-none to prevent interaction when hidden. Cover accessibility considerations such as aria-label and keyboard navigation support. Include practical examples of event listener setup and cleanup in useEffect to prevent memory leaks. Discuss performance implications of scroll event listeners and recommend best practices like throttling or debouncing for high-frequency events. Provide real code examples from the component to demonstrate implementation patterns and integration with the global scroll state.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          }
+        ],
+        "children_plan": "The module contains multiple features such as Navbar and ScrollToTop components, and needs to be described in detail in the subsections."
+      }
+    ],
+    "children_plan": "The module contains multiple features such as React Router implementation and navigation components, and needs to be described in detail in the subsections."
+  },
+  {
+    "title": "data-management",
+    "name": "Data Management",
+    "dependent_file": [
+      "src/data/eventData.ts",
+      "src/contexts/LanguageContext.tsx"
+    ],
+    "prompt": "Create comprehensive content for the data management system focused on how event information and translations are structured and accessed. Detail the eventData.ts file as the central data model containing all event details like date, location, agenda items, and speaker information. Explain how this data is consumed by various components throughout the application. Describe the translation data structure within LanguageContext and how it supports multilingual content. Include examples of data flow from the source files to UI components, showing how speakers data is mapped to the SpeakersSection. Address common data management issues like stale data and provide strategies for future extensibility, such as loading data from external APIs.",
+    "has_children": "YES",
+    "children": [
+      {
+        "title": "event-data-structure",
+        "name": "Event Data Structure",
+        "dependent_file": [
+          "src/data/eventData.ts"
+        ],
+        "prompt": "Create comprehensive data model documentation for the eventData object defined in eventData.ts. Detail each field including title, subtitle, date, venue, goals, agenda, organizers, and highlights. Explain the structure of nested objects such as venue with coordinates and Google Maps URL, agenda items with time, title, and icon, and organizers with mission statements and activities. Provide examples of how this data is consumed by components like HeroSection, DetailsSection, GoalsSection, AgendaSection, and OrganizersSection. Include guidance on updating or extending the data structure for future events, ensuring type safety with TypeScript. Address common issues such as missing fields or incorrect date formats and provide validation strategies.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      },
+      {
+        "title": "translation-system",
+        "name": "Translation System",
+        "dependent_file": [
+          "src/contexts/LanguageContext.tsx"
+        ],
+        "prompt": "Develop detailed content for the translation system implemented in LanguageContext.tsx. Thoroughly explain the translations object structure with language-specific key-value pairs for UI strings across multiple sections (navigation, hero, details, agenda, etc.). Document the t() function's role in retrieving translations and handling missing keys. Explain how the LanguageProvider uses React Context to manage language state (ar, en, tr) and propagate it throughout the application. Describe the isRTL flag and its impact on layout direction for Arabic language. Provide code examples showing how components consume translations via the useLanguage hook. Address common issues such as untranslated keys, performance implications of large translation objects, and strategies for adding new languages or managing dynamic content translations.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      },
+      {
+        "title": "data-flow-integration",
+        "name": "Data Flow and Integration",
+        "dependent_file": [
+          "src/data/eventData.ts",
+          "src/contexts/LanguageContext.tsx",
+          "src/components/HeroSection.tsx",
+          "src/components/AgendaSection.tsx",
+          "src/components/SpeakersSection.tsx"
+        ],
+        "prompt": "Create architectural documentation for the data flow between eventData.ts and LanguageContext.tsx and their integration into UI components. Describe how static event data and dynamic translation data are combined to render multilingual content. Illustrate the data pathway from source files to components like HeroSection (using eventData.title and t('hero.title')), AgendaSection (mapping agenda items with translated labels), and SpeakersSection (potential future integration). Explain the role of React's rendering lifecycle in updating content when language changes. Include diagrams showing component hierarchy and data dependencies. Address challenges such as data consistency, handling asynchronous updates if data moves to external APIs, and optimizing re-renders when switching languages.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      }
+    ],
+    "children_plan": "The module contains multiple features such as event data structure and data flow, and needs to be described in detail in the subsections."
+  },
+  {
+    "title": "customization-guide",
+    "name": "Customization Guide",
+    "dependent_file": [
+      "tailwind.config.ts",
+      "src/contexts/LanguageContext.tsx",
+      "src/data/eventData.ts"
+    ],
+    "prompt": "Develop detailed content for the customization guide focused on extending and modifying the sc-dof platform. Explain how to customize the theme by modifying tailwind.config.ts with new colors, fonts, or breakpoints. Detail the process of adding new languages by extending the LanguageContext and translation objects. Describe how to update event content by modifying eventData.ts with new agenda items, speakers, or organizational information. Include practical examples from the codebase showing where changes should be made. Address common customization challenges like maintaining RTL compatibility when adding new content and provide best practices for ensuring consistency across modifications.",
+    "has_children": "YES",
+    "children": [
+      {
+        "title": "theme-customization",
+        "name": "Theme Customization",
+        "dependent_file": [
+          "tailwind.config.ts"
+        ],
+        "prompt": "Develop detailed content for theme customization focused on modifying the sc-dof platform's visual appearance using Tailwind CSS. Explain how to extend the theme configuration in tailwind.config.ts by adding custom colors (such as syrian-red, syrian-green), fonts (Bahij Koufiya, Roboto), and breakpoints. Detail the process of integrating CSS variables for dynamic theming and dark mode support via the 'hsl(var(--color))' syntax. Provide practical examples from the codebase showing how the 'syrian' color palette and 'gold' accents are defined and applied across components. Address common issues such as ensuring RTL compatibility when styling Arabic text and maintaining responsive design across breakpoints. Include best practices for organizing custom styles, leveraging container queries, and extending utility classes without breaking existing UI components.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      },
+      {
+        "title": "content-updates",
+        "name": "Content Updates",
+        "dependent_file": [
+          "src/data/eventData.ts"
+        ],
+        "prompt": "Develop detailed content for updating event content within the sc-dof platform by modifying the eventData.ts data model. Explain the structure of the eventData object including key sections such as title, date, venue, agenda, goals, and organizers. Provide step-by-step instructions on how to update event details like date, time, location, and agenda items with proper formatting and icon usage. Demonstrate how to add or modify speaker entries, organizational information, and highlight features using the existing JSON structure. Include practical examples from the codebase showing how agenda items use time, title, description, and emoji icons. Address common challenges such as maintaining consistency in multilingual content and ensuring proper data typing when extending the schema. Offer best practices for validating changes and testing content updates in development before deployment.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      },
+      {
+        "title": "adding-new-languages",
+        "name": "Adding New Languages",
+        "dependent_file": [
+          "src/contexts/LanguageContext.tsx"
+        ],
+        "prompt": "Develop detailed content for adding new languages to the sc-dof platform by extending the LanguageContext system. Explain the process of adding a new language option to the Language type union ('ar' | 'en' | 'tr') and expanding the translations object with a new language key and corresponding translation strings. Provide a step-by-step guide on how to ensure RTL support is properly handled when adding right-to-left languages. Demonstrate how to integrate the new language into the LanguageSwitcher component and maintain consistency across all UI elements using the t() translation function. Use practical examples from the codebase showing how Arabic (ar), English (en), and Turkish (tr) are currently implemented. Address common issues such as missing translation keys, fallback behavior, and maintaining UI alignment when switching languages. Include best practices for organizing translation keys, testing language switching functionality, and preserving accessibility standards across all language versions.",
+        "has_children": "NO",
+        "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+      }
+    ],
+    "children_plan": "The module contains multiple features such as theme customization, content updates, and adding new languages, and needs to be described in detail in the subsections."
+  },
+  {
+    "title": "component-reference",
+    "name": "Component Reference",
+    "dependent_file": [
+      "src/components/*.tsx",
+      "src/components/ui/*.tsx"
+    ],
+    "prompt": "Create comprehensive content for the component reference focused on documenting all reusable UI components in the application. Detail both the custom application components like HeroSection, CountdownTimer, and RegistrationSection, as well as the ShadCN UI library components built on Radix UI primitives. For each component, document its props, events, and usage patterns with code examples from the actual implementation. Explain the visual appearance, behavior, and accessibility features of each component. Include guidelines for responsive design and theming support. Address common implementation issues and provide performance optimization tips for component usage.",
+    "has_children": "YES",
+    "children": [
+      {
+        "title": "custom-components",
+        "name": "Custom Components",
+        "dependent_file": [
+          "src/components/AgendaSection.tsx",
+          "src/components/CountdownTimer.tsx",
+          "src/components/DetailsSection.tsx",
+          "src/components/Footer.tsx",
+          "src/components/GoalsSection.tsx",
+          "src/components/HeroSection.tsx",
+          "src/components/LanguageSwitcher.tsx",
+          "src/components/NavLink.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/OrganizersSection.tsx",
+          "src/components/RegistrationSection.tsx",
+          "src/components/ScrollToTop.tsx",
+          "src/components/SpeakersSection.tsx",
+          "src/components/WhySection.tsx"
+        ],
+        "prompt": "Create comprehensive content for the custom components used in the application. Focus on components such as HeroSection, AgendaSection, SpeakersSection, and RegistrationSection that are specific to the event platform. Document each component's purpose, props interface, and integration with the global state (especially language context). Provide real-world usage examples from the Index page, explain how data flows from eventData.ts into these components, and detail their responsive behavior across devices. Include accessibility considerations, animation patterns, and internationalization support (RTL for Arabic). Address common implementation issues such as language context propagation, scroll-to-top integration, and mobile responsiveness. Highlight performance optimization techniques like lazy loading or memoization if applicable.",
+        "has_children": "YES",
+        "children": [
+          {
+            "title": "hero-section",
+            "name": "Hero Section",
+            "dependent_file": [
+              "src/components/HeroSection.tsx"
+            ],
+            "prompt": "Create comprehensive documentation for the HeroSection component, which serves as the primary landing view of the event platform. Explain its role in displaying the event's main branding elements including the Syrian eagle emblem, flag, title, and tagline with multilingual support via the useLanguage hook. Detail how it integrates the CountdownTimer component and uses animated entrance effects (fade-up, float) for visual engagement. Document its responsive layout using Tailwind's grid and spacing utilities, background image handling with overlay gradients, and decorative confetti animation system. Include how RTL layout is managed through the language context, and describe the CTA button's scroll navigation behavior to the 'why' section. Provide examples of how translation keys like 'hero.title' and 'hero.date' are resolved from the i18n system, and explain performance considerations such as image loading and animation optimization.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "agenda-section",
+            "name": "Agenda Section",
+            "dependent_file": [
+              "src/components/AgendaSection.tsx"
+            ],
+            "prompt": "Develop detailed documentation for the AgendaSection component that displays the event schedule in a responsive card grid. Explain how it sources agenda items from translation files using the t() function for time, title, and description, and maps them with corresponding icons from agendaIcons. Describe the component's responsive design using Tailwind's grid system (1 column on mobile, 2 on tablet, 3 on desktop) and its interactive hover effects including shadow elevation, translation, and gradient accent animations. Document the structure of each agenda card, including time badges with Syrian green styling, hierarchical typography, and icon integration. Address accessibility considerations such as proper heading levels and focus states, and explain how the component adapts to RTL layouts when Arabic is selected. Include guidance on adding new agenda items and ensuring consistent translation key naming.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "speakers-section",
+            "name": "Speakers Section",
+            "dependent_file": [
+              "src/components/SpeakersSection.tsx"
+            ],
+            "prompt": "Create comprehensive documentation for the SpeakersSection component that showcases event participants. Detail how it retrieves speaker data from a centralized speakers array and dynamically selects name and role based on the current language (Arabic, English, Turkish) using the getName and getRole helper functions. Explain the responsive grid layout that adapts from 1 to 4 columns based on screen size, and document the card design including circular image containers with ring effects, hover interactions, and fade-up animations with staggered delays. Describe the fallback avatar system for speakers without images and accessibility features like proper alt text generation. Address internationalization challenges in name rendering and provide examples of how speaker data should be structured in the source file. Include performance tips for image optimization and lazy loading if implemented.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "registration-section",
+            "name": "Registration Section",
+            "dependent_file": [
+              "src/components/RegistrationSection.tsx"
+            ],
+            "prompt": "Develop detailed documentation for the RegistrationSection component that facilitates user sign-up through QR code and direct link. Explain how it handles multilingual text rendering for title, subtitle, and button text using conditional logic based on the current language state from useLanguage. Document the visual design including the gradient background, decorative blur effects, and the prominent QR code generated using QRCodeSVG with custom styling (size 200, dark green foreground). Describe the registration card's decorative elements such as corner borders and glow effects, and explain the Button component's integration with an external link using asChild and proper accessibility attributes (target='_blank', rel='noopener'). Include the REGISTRATION_URL constant usage and security considerations for external navigation. Provide guidance on updating the registration URL and ensuring QR code readability across different devices.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "language-switcher",
+            "name": "Language Switcher",
+            "dependent_file": [
+              "src/components/LanguageSwitcher.tsx"
+            ],
+            "prompt": "Create comprehensive documentation for the LanguageSwitcher component that enables users to change the interface language between Arabic, English, and Turkish. Explain its two display variants (floating and navbar) controlled by the variant prop, and how it uses the useLanguage hook to access and update the current language state. Document the component's visual design including language buttons with flag emojis or Syrian flag image, active state highlighting with Syrian green background, and hover effects. Describe the conditional rendering of text labels (hidden on small screens) and font application (Roboto for non-Arabic languages). Explain the onClick handler that calls setLanguage and triggers re-rendering of all components using translation functions. Address RTL implications when Arabic is selected and provide implementation examples for both floating (fixed position) and embedded (navbar) usage patterns.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "navbar",
+            "name": "Navigation Bar",
+            "dependent_file": [
+              "src/components/Navbar.tsx"
+            ],
+            "prompt": "Develop detailed documentation for the Navbar component that provides primary site navigation and houses the language switcher. Explain its fixed positioning and scroll-sensitive styling that transitions from transparent to blurred background when scrolling past 50px. Document the responsive design with desktop menu (flex layout) and mobile hamburger menu (conditional rendering with X/Menu icons). Describe the navLinks array construction using translated labels from the i18n system and the scrollToSection function that enables smooth in-page navigation via element scrolling. Explain the integration of LanguageSwitcher in both desktop and mobile views, and how RTL layout is applied through the dir attribute based on isRTL from context. Detail accessibility features including ARIA labels, keyboard navigation support, and proper focus management. Include the state management for mobile menu toggling and cleanup of scroll event listeners in useEffect.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          }
+        ],
+        "children_plan": "The module contains multiple features such as feature1, feature2, etc., and needs to be described in detail in the subsections."
+      },
+      {
+        "title": "ui-component-library",
+        "name": "UI Component Library",
+        "dependent_file": [
+          "src/components/ui/accordion.tsx",
+          "src/components/ui/alert-dialog.tsx",
+          "src/components/ui/alert.tsx",
+          "src/components/ui/aspect-ratio.tsx",
+          "src/components/ui/avatar.tsx",
+          "src/components/ui/badge.tsx",
+          "src/components/ui/breadcrumb.tsx",
+          "src/components/ui/button.tsx",
+          "src/components/ui/calendar.tsx",
+          "src/components/ui/card.tsx",
+          "src/components/ui/carousel.tsx",
+          "src/components/ui/chart.tsx",
+          "src/components/ui/checkbox.tsx",
+          "src/components/ui/collapsible.tsx",
+          "src/components/ui/command.tsx",
+          "src/components/ui/context-menu.tsx",
+          "src/components/ui/dialog.tsx",
+          "src/components/ui/drawer.tsx",
+          "src/components/ui/dropdown-menu.tsx",
+          "src/components/ui/form.tsx",
+          "src/components/ui/hover-card.tsx",
+          "src/components/ui/input-otp.tsx",
+          "src/components/ui/input.tsx",
+          "src/components/ui/label.tsx",
+          "src/components/ui/menubar.tsx",
+          "src/components/ui/navigation-menu.tsx",
+          "src/components/ui/pagination.tsx",
+          "src/components/ui/popover.tsx",
+          "src/components/ui/progress.tsx",
+          "src/components/ui/radio-group.tsx",
+          "src/components/ui/resizable.tsx",
+          "src/components/ui/scroll-area.tsx",
+          "src/components/ui/select.tsx",
+          "src/components/ui/separator.tsx",
+          "src/components/ui/sheet.tsx",
+          "src/components/ui/sidebar.tsx",
+          "src/components/ui/skeleton.tsx",
+          "src/components/ui/slider.tsx",
+          "src/components/ui/sonner.tsx",
+          "src/components/ui/switch.tsx",
+          "src/components/ui/table.tsx",
+          "src/components/ui/tabs.tsx",
+          "src/components/ui/textarea.tsx",
+          "src/components/ui/toast.tsx",
+          "src/components/ui/toaster.tsx",
+          "src/components/ui/toggle-group.tsx",
+          "src/components/ui/toggle.tsx",
+          "src/components/ui/tooltip.tsx",
+          "src/components/ui/use-toast.ts"
+        ],
+        "prompt": "Create detailed documentation for the ShadCN UI component library implementation in the project. These components are built on Radix UI primitives and styled with Tailwind CSS. For each component, document its props, events, and accessibility features. Explain how they integrate with the application's theme and RTL layout system. Provide usage examples from the actual codebase, such as how Button, Card, and Dialog are used in section components. Detail the utility function 'cn' from lib/utils.ts used for conditional class composition. Address common issues like focus management, keyboard navigation, and screen reader compatibility. Include performance considerations such as component bundling and tree-shaking via components.json. Highlight customization patterns through Tailwind variants and theme extensions.",
+        "has_children": "YES",
+        "children": [
+          {
+            "title": "ui-button",
+            "name": "Button Component",
+            "dependent_file": [
+              "src/components/ui/button.tsx"
+            ],
+            "prompt": "Create detailed documentation for the Button UI component. Explain its implementation using Radix UI primitives and Tailwind CSS styling. Document all props including variant (primary, secondary, outline, ghost, link), size (default, sm, lg, icon), and loading states. Include usage examples from the codebase such as in RegistrationSection and Navbar. Detail accessibility features like proper ARIA labels and keyboard focus handling. Explain integration with the global theme and RTL layout via cn utility and context providers. Address common issues such as inconsistent styling across browsers and provide solutions. Include performance tips like avoiding inline onClick functions to prevent re-renders.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "ui-card",
+            "name": "Card Component",
+            "dependent_file": [
+              "src/components/ui/card.tsx"
+            ],
+            "prompt": "Develop detailed content for the Card component used in SpeakersSection, AgendaSection, and OrganizersSection. Describe its composition pattern with CardHeader, CardTitle, CardDescription, and CardContent. Document how it integrates with Tailwind’s utility classes for consistent spacing and shadows. Provide real code examples showing how event data is rendered within cards. Explain responsive behavior on mobile and desktop layouts. Address accessibility by ensuring semantic HTML structure and proper contrast ratios. Highlight customization options through className overrides and theme extensions. Include troubleshooting guidance for layout overflow issues in different viewport sizes.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "ui-dialog-drawer",
+            "name": "Dialog \u0026 Drawer Components",
+            "dependent_file": [
+              "src/components/ui/dialog.tsx",
+              "src/components/ui/drawer.tsx"
+            ],
+            "prompt": "Create comprehensive documentation for Dialog and Drawer components, which are used for registration forms and mobile navigation. Explain their underlying Radix UI primitives and how they handle focus trapping, keyboard navigation (Esc to close, Tab loop), and screen reader announcements. Document props like open, onOpenChange, and modal behavior. Differentiate use cases: Dialog for desktop modals, Drawer for swipeable mobile sheets. Provide integration examples from RegistrationSection and mobile menus. Detail RTL support for drawer positioning. Address common issues like scroll lock not working or backdrop clicks not closing the modal, with debugging steps. Include performance considerations around lazy mounting and animation smoothness.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "ui-form",
+            "name": "Form Component",
+            "dependent_file": [
+              "src/components/ui/form.tsx"
+            ],
+            "prompt": "Create API documentation for the Form component built on React Hook Form and Zod validation. Document its composition with FormField, FormItem, FormLabel, FormControl, FormMessage. Explain how it integrates with the application's validation strategy and error handling. Provide usage examples from potential registration or contact forms. Detail accessibility features like automatic labeling, error messaging with aria-invalid, and focus management on submission. Include configuration options for default values, revalidation modes, and async validation. Address common issues such as uncontrolled input state mismatches and provide solutions. Highlight performance benefits of uncontrolled components and efficient re-renders.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "ui-navigation",
+            "name": "Navigation Components",
+            "dependent_file": [
+              "src/components/ui/navigation-menu.tsx",
+              "src/components/ui/sidebar.tsx",
+              "src/components/ui/tabs.tsx",
+              "src/components/ui/breadcrumb.tsx"
+            ],
+            "prompt": "Develop detailed content for navigation-related components including NavigationMenu, Sidebar, Tabs, and Breadcrumb. Explain their role in site structure: NavigationMenu in Navbar, Sidebar for responsive off-canvas menus, Tabs for section switching, Breadcrumb for hierarchy tracking. Document keyboard navigation, focus indicators, and ARIA roles (menu, tablist, etc.). Show integration with React Router via NavLink. Provide real examples from the Navbar and mobile layout. Address RTL layout flipping for Arabic navigation. Include customization through Tailwind variants and theme-aware icons. Troubleshoot common issues like touch swipe conflicts or tab activation problems.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "ui-overlay",
+            "name": "Overlay Components",
+            "dependent_file": [
+              "src/components/ui/alert.tsx",
+              "src/components/ui/alert-dialog.tsx",
+              "src/components/ui/popover.tsx",
+              "src/components/ui/toast.tsx",
+              "src/components/ui/toaster.tsx",
+              "src/components/ui/sonner.tsx",
+              "src/components/ui/tooltip.tsx"
+            ],
+            "prompt": "Create architectural documentation for overlay components that provide feedback and contextual information. Cover Alert for status messages, AlertDialog for confirmations, Popover for tooltips and dropdowns, Toast/Toaster/Sonner for notifications, and Tooltip for helper text. Explain their shared patterns: portal rendering, escape key dismissal, click-outside closing, and animation via Tailwind transitions. Document accessibility requirements like live regions for screen readers and focus management. Provide usage examples: Alert for registration feedback, Toast for language switch confirmation. Address z-index stacking issues and mobile responsiveness. Include performance tips like limiting toast duration and using requestAnimationFrame for smooth animations.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "ui-input",
+            "name": "Input Components",
+            "dependent_file": [
+              "src/components/ui/input.tsx",
+              "src/components/ui/textarea.tsx",
+              "src/components/ui/input-otp.tsx",
+              "src/components/ui/checkbox.tsx",
+              "src/components/ui/radio-group.tsx",
+              "src/components/ui/select.tsx",
+              "src/components/ui/switch.tsx",
+              "src/components/ui/slider.tsx",
+              "src/components/ui/date-picker.tsx"
+            ],
+            "prompt": "Create comprehensive data model documentation for input components that capture user data. Detail each component's props, validation states, and interaction patterns. Explain how Input, Textarea, and InputOTP handle text entry with support for RTL languages. Document Checkbox, RadioGroup, Select, Switch, and Slider for boolean and numeric inputs. Describe integration with form systems and state management. Provide examples from registration forms. Address accessibility: label association, error messaging, keyboard operability. Include internationalization considerations for date pickers and number formatting. Troubleshoot common issues like IME composition in Arabic and touch input on mobile sliders.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "ui-layout",
+            "name": "Layout Components",
+            "dependent_file": [
+              "src/components/ui/accordion.tsx",
+              "src/components/ui/aspect-ratio.tsx",
+              "src/components/ui/collapsible.tsx",
+              "src/components/ui/resizable.tsx",
+              "src/components/ui/scroll-area.tsx",
+              "src/components/ui/skeleton.tsx"
+            ],
+            "prompt": "Create detailed documentation for layout utility components that structure content. Explain Accordion for collapsible sections (e.g., FAQ), AspectRatio for media containers, Collapsible for expandable content, Resizable for draggable splitters, ScrollArea for custom scrollable regions, and Skeleton for loading states. Document their implementation with Radix primitives and Tailwind styling. Provide usage examples: AspectRatio in speaker images, Skeleton in loading states during language switch. Highlight accessibility features like aria-expanded and role=\"region\". Address responsive behavior and RTL compatibility. Include performance optimization tips such as lazy loading content within collapsible sections and preventing layout shifts with skeleton placeholders.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "ui-data-display",
+            "name": "Data Display Components",
+            "dependent_file": [
+              "src/components/ui/table.tsx",
+              "src/components/ui/chart.tsx",
+              "src/components/ui/badge.tsx",
+              "src/components/ui/avatar.tsx",
+              "src/components/ui/progress.tsx",
+              "src/components/ui/calendar.tsx"
+            ],
+            "prompt": "Develop detailed content for components that visualize data. Cover Table for structured information (e.g., agenda), Chart for metrics, Badge for status tags, Avatar for participant images, Progress for countdowns or completion, and Calendar for date visualization. Explain how they integrate with eventData.ts and support multilingual dates via date-fns. Document accessibility: table headers, ARIA labels for charts, alt text for avatars. Provide styling customization through Tailwind classes and theme variables. Show real examples: Badge for speaker roles, Avatar in SpeakersSection, Progress in CountdownTimer. Troubleshoot common issues like table overflow on mobile and chart rendering performance.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          },
+          {
+            "title": "ui-utilities",
+            "name": "Utility Components \u0026 Hooks",
+            "dependent_file": [
+              "src/components/ui/use-toast.ts",
+              "src/lib/utils.ts"
+            ],
+            "prompt": "Create architectural documentation for utility components and functions. Focus on 'cn' from lib/utils.ts for conditional className composition using clsx. Explain its role in theme integration and RTL class switching. Document useToast hook for programmatic toast notifications, including its integration with Sonner and Toaster components. Provide usage patterns from across the codebase, such as showing success messages after language change. Detail type safety with TypeScript interfaces. Address tree-shaking benefits via components.json configuration. Include performance considerations like memoizing cn results and avoiding unnecessary toast stacking. Troubleshoot common issues like class ordering conflicts and toast persistence bugs.",
+            "has_children": "NO",
+            "children_plan": "The feature is too simple. The current document is sufficient to cover the introduction, no need to split."
+          }
+        ],
+        "children_plan": "The module contains multiple features such as feature1, feature2, etc., and needs to be described in detail in the subsections."
+      }
+    ],
+    "children_plan": "The features/modules are too complex for one document to cover all the knowledge, and need to be split section1, section2 into the children section"
+  }
+]
