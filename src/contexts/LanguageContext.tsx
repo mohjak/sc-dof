@@ -34,9 +34,9 @@ const translations: Record<Language, Record<string, string>> = {
     'details.date': 'التاريخ',
     'details.time': 'الوقت',
     'details.location': 'المكان',
-    'details.evening': 'مساءً',
+    'details.evening': 'بتوقيت إسطنبول',
     'details.viewMap': 'عرض الخريطة',
-    'event.time': '4:00 - 7:00 مساءً',
+    'event.time': '14:30 - 17:30',
     
     // Why
     'why.title': 'لماذا الاحتفال؟',
@@ -91,8 +91,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.madeWith': 'صنع بـ ❤️ للجالية السورية',
     
     // Venue
-    'venue.name': 'Gökkuşağı Tesisleri',
-    'venue.address': 'Başak, 34480 Başakşehir/İstanbul',
+    'venue.name': 'Basaksehir Cinar College Campus',
+    'venue.address': 'Başak, Kitabe Sk. No:7, 34480 Başakşehir/İstanbul',
   },
   en: {
     // Nav
@@ -118,9 +118,9 @@ const translations: Record<Language, Record<string, string>> = {
     'details.date': 'Date',
     'details.time': 'Time',
     'details.location': 'Location',
-    'details.evening': 'Evening',
+    'details.evening': 'Istanbul time',
     'details.viewMap': 'View Map',
-    'event.time': '4:00 PM - 7:00 PM',
+    'event.time': '14:30 - 17:30',
     
     // Why
     'why.title': 'Why Celebrate?',
@@ -175,8 +175,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.madeWith': 'Made with ❤️ for the Syrian Community',
     
     // Venue
-    'venue.name': 'Gökkuşağı Tesisleri',
-    'venue.address': 'Başak, 34480 Başakşehir/İstanbul',
+    'venue.name': 'Basaksehir Cinar College Campus',
+    'venue.address': 'Başak, Kitabe Sk. No:7, 34480 Başakşehir/İstanbul',
   },
   tr: {
     // Nav
@@ -202,9 +202,9 @@ const translations: Record<Language, Record<string, string>> = {
     'details.date': 'Tarih',
     'details.time': 'Saat',
     'details.location': 'Konum',
-    'details.evening': 'Akşam',
+    'details.evening': 'İstanbul saati',
     'details.viewMap': 'Haritayı Görüntüle',
-    'event.time': '16:00 - 19:00',
+    'event.time': '14:30 - 17:30',
     
     // Why
     'why.title': 'Neden Kutluyoruz?',
@@ -259,8 +259,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.madeWith': 'Suriye Topluluğu için ❤️ ile yapıldı',
     
     // Venue
-    'venue.name': 'Gökkuşağı Tesisleri',
-    'venue.address': 'Başak, 34480 Başakşehir/İstanbul',
+    'venue.name': 'Basaksehir Cinar College Campus',
+    'venue.address': 'Başak, Kitabe Sk. No:7, 34480 Başakşehir/İstanbul',
   }
 };
 
