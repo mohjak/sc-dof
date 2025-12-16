@@ -5,7 +5,7 @@ const WhySection = () => {
   const { t } = useLanguage();
   
   return (
-    <section id="why" className="py-16 sm:py-24 relative overflow-hidden min-h-[60vh] flex items-center">
+    <section id="why" className="py-20 sm:py-32 relative overflow-hidden min-h-[80vh] flex items-center">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
