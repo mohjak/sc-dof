@@ -116,9 +116,9 @@ const speakers: Speaker[] = [
   },
   {
     id: 10,
-    name: 'سعد الدالي',
-    nameEn: 'Saad Al-Dali',
-    nameTr: 'Saad Al-Dali',
+    name: 'سعيد دالي',
+    nameEn: 'Saeed Dali',
+    nameTr: 'Saeed Dali',
     role: 'فنان ورئيس فرقة موسيقية',
     roleEn: 'Artist & Music Band Leader',
     roleTr: 'Sanatçı ve Müzik Grubu Lideri',
