@@ -6,7 +6,7 @@ export const eventData = {
   
   date: "2025-12-20",
   dateFormatted: "20 ديسمبر 2025",
-  dayName: "الأحد",
+  dayName: "السبت",
   time: "14:30 - 17:30",
   
   venue: {
