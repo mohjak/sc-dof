@@ -7,13 +7,13 @@ export const eventData = {
   date: "2025-12-20",
   dateFormatted: "20 ديسمبر 2025",
   dayName: "الأحد",
-  time: "18:00 - 22:00",
+  time: "14:30 - 17:30",
   
   venue: {
-    name: "Gökkuşağı Tesisleri",
-    address: "Başak, 34480 Başakşehir/İstanbul",
+    name: "Basaksehir Cinar College Campus",
+    address: "Başak, Kitabe Sk. No:7, 34480 Başakşehir/İstanbul",
     details: "باشاكشهير، إسطنبول",
-    googleMapsUrl: "https://maps.app.goo.gl/N2qrooLY1HSj9D7Z8",
+    googleMapsUrl: "https://maps.app.goo.gl/rUKx2mjTGYrHpPi89",
     coordinates: {
       lat: 41.0982,
       lng: 28.8015
