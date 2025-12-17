@@ -14,6 +14,7 @@ import ahmadRamadanImg from '@/assets/speakers/ahmad-ramadan.jpeg';
 import manalAlnajjarImg from '@/assets/speakers/manal-alnajjar.jpeg';
 import abdulqaderAlsukariImg from '@/assets/speakers/abdulqader-alsukari.jpeg';
 import mamdouhAldairiImg from '@/assets/speakers/mamdouh-aldairi.jpeg';
+import mohammadHayaniImg from '@/assets/speakers/mohammad-hayani.jpeg';
 
 interface Speaker {
   id: number;
@@ -174,6 +175,16 @@ const speakers: Speaker[] = [
     roleEn: 'President of National Action Movement & Mada Strategic Vision Foundation',
     roleTr: 'Ulusal Eylem Hareketi ve Mada Stratejik Vizyon Vakfı Başkanı',
     image: ahmadRamadanImg,
+  },
+  {
+    id: 16,
+    name: 'محمد نور حياني',
+    nameEn: 'Mohammad Nour Hayani',
+    nameTr: 'Mohammad Nour Hayani',
+    role: 'رجل أعمال - رئيس لجنة المبادرات وعضو بالمجلس الريادي',
+    roleEn: 'Businessman - Head of Initiatives Committee & Leadership Council Member',
+    roleTr: 'İş Adamı - Girişimler Komitesi Başkanı ve Liderlik Konseyi Üyesi',
+    image: mohammadHayaniImg,
   },
 ];
 
