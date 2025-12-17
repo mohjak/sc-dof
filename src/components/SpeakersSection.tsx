@@ -29,12 +29,12 @@ interface Speaker {
 const speakers: Speaker[] = [
   {
     id: 1,
-    name: 'أ. فاتح حبابة',
-    nameEn: 'Fatih Hababa',
-    nameTr: 'Fatih Hababa',
-    role: 'العريف - مذيع في القناة التاسعة',
-    roleEn: 'Host - TV Presenter at Channel 9',
-    roleTr: 'Sunucu - Kanal 9 TV Sunucusu',
+    name: 'أ. فاتح حبابه',
+    nameEn: 'Fatih Hababeh',
+    nameTr: 'Fatih Hababeh',
+    role: 'إعلامي ومقدم برامج',
+    roleEn: 'Media Personality & TV Host',
+    roleTr: 'Medya Kişiliği ve TV Sunucusu',
     image: fatihHababaImg,
   },
   {
