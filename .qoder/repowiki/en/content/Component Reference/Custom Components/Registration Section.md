@@ -1,14 +1,12 @@
 # Registration Section
 
-<cite>
-**Referenced Files in This Document**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [button.tsx](file://src/components/ui/button.tsx)
-- [index.css](file://src/index.css)
-- [tailwind.config.ts](file://src/tailwind.config.ts)
-- [App.tsx](file://src/App.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [RegistrationSection.tsx](src/components/RegistrationSection.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [button.tsx](src/components/ui/button.tsx)
+> - [index.css](src/index.css)
+> - [tailwind.config.ts](src/tailwind.config.ts)
+> - [App.tsx](src/App.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -45,20 +43,20 @@ APP["App.tsx"] --> LC
 ```
 
 **Diagram sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
+- [App.tsx](src/App.tsx#L1-L43)
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Core Components
 - RegistrationSection: Renders the registration section with QR code and a link to the registration form. It uses conditional logic to render multilingual text based on the current language state from useLanguage. It also renders decorative background blurs, a QR code card with glow and corner accents, and a styled button linking to the registration URL.
@@ -73,11 +71,11 @@ Key responsibilities:
 - Tailwind theme: provides consistent color tokens and gradients.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
 
 ## Architecture Overview
 The RegistrationSection integrates with the internationalization system and UI primitives to deliver a localized, visually cohesive registration experience.
@@ -101,9 +99,9 @@ Browser-->>User : Open registration form in new tab
 ```
 
 **Diagram sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
 
 ## Detailed Component Analysis
 
@@ -118,8 +116,8 @@ The computed texts are rendered conditionally based on the language value. The c
 Accessibility note: The computed text is used as aria-label or screen-reader-friendly text in the surrounding layout, ensuring assistive technologies announce the correct message.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L8-L28)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L8-L28)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### Visual Design and Layout
 - Gradient background: A subtle diagonal gradient from a light Syrian green to the background color creates depth without competing with content.
@@ -134,9 +132,9 @@ Styling tokens:
 - The component uses the custom Syrian green palette defined in the Tailwind theme and CSS variables for consistent colors across the app.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L29-L78)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L29-L78)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
 
 ### QR Code Rendering
 The QR code is generated using QRCodeSVG with:
@@ -148,7 +146,7 @@ The QR code is generated using QRCodeSVG with:
 Optimization tip: Consider caching the QR code SVG or pre-rendering it as a static asset if the URL is static and performance is critical.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L64-L73)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L64-L73)
 
 ### External Link Button Integration
 RegistrationSection renders a Button component with asChild enabled. The Button wraps an anchor tag that:
@@ -173,12 +171,12 @@ Browser-->>Anchor : Open link in new tab
 ```
 
 **Diagram sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L80-L97)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L80-L97)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L80-L97)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L80-L97)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
 
 ### Security Considerations for External Navigation
 - Using rel="noopener noreferrer" prevents the newly opened tab from accessing the original window and avoids potential phishing risks.
@@ -186,7 +184,7 @@ Browser-->>Anchor : Open link in new tab
 - Ensure the REGISTRATION_URL remains valid and monitored for changes.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L88-L91)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L88-L91)
 
 ### Updating the Registration URL
 To update the destination registration URL:
@@ -199,7 +197,7 @@ Guidance:
 - Consider using a URL shortener if the original link is long, but ensure it resolves quickly and reliably.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L6-L6)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L6-L6)
 
 ### Ensuring QR Code Readability Across Devices
 - Maintain a fixed QR code size suitable for mobile scanning.
@@ -208,7 +206,7 @@ Guidance:
 - Test scanning on multiple devices and lighting conditions.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L64-L73)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L64-L73)
 
 ## Dependency Analysis
 RegistrationSection depends on:
@@ -226,20 +224,20 @@ APP["App.tsx"] --> LC
 ```
 
 **Diagram sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
+- [App.tsx](src/App.tsx#L1-L43)
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Performance Considerations
 - QR code rendering: QRCodeSVG generates a vector-based SVG. For static URLs, consider pre-rendering or caching to reduce runtime computation.
@@ -256,11 +254,11 @@ Common issues and resolutions:
 - Styling inconsistencies: Check that the Syrian green palette is defined in the Tailwind theme and CSS variables.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L8-L28)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L64-L73)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L80-L97)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L8-L28)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L64-L73)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L80-L97)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
 
 ## Conclusion
 RegistrationSection delivers a localized, visually engaging registration experience with a QR code and a secure external link. Its design leverages the Syrian green palette, decorative blur effects, and a prominent QR code card. By centralizing language-aware text rendering and using a robust Button component with proper security attributes, the component ensures accessibility and usability across languages and devices. Updating the registration URL and optimizing QR code readability are straightforward tasks that keep the component reliable and user-friendly.

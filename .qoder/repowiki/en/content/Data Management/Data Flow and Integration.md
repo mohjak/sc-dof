@@ -1,21 +1,19 @@
 # Data Flow and Integration
 
-<cite>
-**Referenced Files in This Document**
-- [eventData.ts](file://src/data/eventData.ts)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [App.tsx](file://src/App.tsx)
-- [main.tsx](file://src/main.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx)
-- [WhySection.tsx](file://src/components/WhySection.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [eventData.ts](src/data/eventData.ts)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [App.tsx](src/App.tsx)
+> - [main.tsx](src/main.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [SpeakersSection.tsx](src/components/SpeakersSection.tsx)
+> - [DetailsSection.tsx](src/components/DetailsSection.tsx)
+> - [GoalsSection.tsx](src/components/GoalsSection.tsx)
+> - [WhySection.tsx](src/components/WhySection.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -84,24 +82,24 @@ WHY --> ED
 ```
 
 **Diagram sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 **Section sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Core Components
 - Static event data: Centralized in a single module exporting structured event metadata (title, date, venue, agenda, organizers, highlights).
@@ -114,8 +112,8 @@ Key responsibilities:
 - UI components: Render content using translation keys and static event data.
 
 **Section sources**
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ## Architecture Overview
 The data flow integrates static event data and dynamic translation keys into UI components through a predictable pipeline:
@@ -143,11 +141,11 @@ Note over Provider,Comp : When language changes, Provider updates state and trig
 ```
 
 **Diagram sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ## Detailed Component Analysis
 
@@ -175,12 +173,12 @@ BuildCTA --> End
 ```
 
 **Diagram sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
 
 ### AgendaSection: Mapping agenda items with translated labels
 AgendaSection builds a list of agenda items by combining:
@@ -197,12 +195,12 @@ RenderGrid --> End(["DOM updated"])
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ### SpeakersSection: Language-aware speaker names and roles
 SpeakersSection demonstrates a hybrid approach:
@@ -218,12 +216,12 @@ RenderCards --> End(["DOM updated"])
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
 
 ### Additional UI components consuming translations and static data
 - DetailsSection: Renders venue and schedule details using translation keys and venue keys.
@@ -241,16 +239,16 @@ ED --> WHY
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
 
 ## Dependency Analysis
 - Provider dependency: All components depend on the LanguageContext provider for translations and directionality.
@@ -285,25 +283,25 @@ IDX --> WHY
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [App.tsx](src/App.tsx#L1-L43)
+- [main.tsx](src/main.tsx#L1-L6)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Performance Considerations
 - Translation function cost: The translation function is lightweight and reads from an in-memory map keyed by language and key. It is efficient for typical UI sizes.
@@ -336,8 +334,8 @@ Common issues and resolutions:
   - Resolution: Update the static data module and ensure components re-import the updated values.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ## Conclusion
 The application cleanly separates static event data from dynamic translation data, enabling consistent multilingual rendering across components. The LanguageContext provider centralizes internationalization concerns, while components remain focused on presentation. The rendering lifecycle ensures immediate updates when language changes. For future enhancements—such as migrating to external APIs—the suggested memoization and caching strategies can help maintain responsiveness and data consistency.

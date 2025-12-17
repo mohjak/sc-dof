@@ -1,18 +1,16 @@
 # Routing & Navigation
 
-<cite>
-**Referenced Files in This Document**
-- [App.tsx](file://src/App.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [NotFound.tsx](file://src/pages/NotFound.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx)
-- [NavLink.tsx](file://src/components/NavLink.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [main.tsx](file://src/main.tsx)
-- [utils.ts](file://src/lib/utils.ts)
-- [package.json](file://package.json)
-</cite>
+> **Referenced Files in This Document**
+> - [App.tsx](src/App.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [NotFound.tsx](src/pages/NotFound.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [ScrollToTop.tsx](src/components/ScrollToTop.tsx)
+> - [NavLink.tsx](src/components/NavLink.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [main.tsx](src/main.tsx)
+> - [utils.ts](src/lib/utils.ts)
+> - [package.json](package.json)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -58,19 +56,19 @@ utils_tsx["src/lib/utils.ts<br/>cn utility"] -.-> navlink_tsx
 ```
 
 **Diagram sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [NotFound.tsx](file://src/pages/NotFound.tsx#L1-L25)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L29)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [NotFound.tsx](src/pages/NotFound.tsx#L1-L25)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L29)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Core Components
 - App.tsx: Wraps the app with providers and defines the SPA routes. The root route renders Index, and the catch-all "*" renders NotFound.
@@ -81,12 +79,12 @@ utils_tsx["src/lib/utils.ts<br/>cn utility"] -.-> navlink_tsx
 - HeroSection.tsx: Defines the anchor target for the hero section so Navbar links can scroll to it.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L29)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L29)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
 
 ## Architecture Overview
 The application is a single-page application powered by React Router DOM. BrowserRouter enables client-side routing without full page reloads. The Index page composes all visible sections and integrates navigation helpers.
@@ -107,9 +105,9 @@ Routes-->>NotFound : Render NotFound fallback
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [NotFound.tsx](file://src/pages/NotFound.tsx#L1-L25)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [NotFound.tsx](src/pages/NotFound.tsx#L1-L25)
 
 ## Detailed Component Analysis
 
@@ -132,10 +130,10 @@ Fallback --> End
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [App.tsx](src/App.tsx#L1-L43)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ### Navbar Component Navigation
 - Responsive design:
@@ -161,17 +159,17 @@ User->>Navbar : Click a nav link (e.g., "#why")
 Navbar->>Navbar : preventDefault()
 Navbar->>DOM : querySelector("#why")
 DOM-->>Navbar : Element or null
-Navbar->>Window : Element.scrollIntoView({ behavior : "smooth" })
+Navbar->>Window : Element.scrollIntoView({ behavior : smooth })
 Navbar->>Navbar : setIsMobileMenuOpen(false)
 Window-->>User : Smooth scroll to section
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
 
 ### ScrollToTop Component
 - Visibility logic:
@@ -197,10 +195,10 @@ Cleanup --> End(["Unmounted"])
 ```
 
 **Diagram sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 **Section sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 ### NavLink Component for Active States
 - Wraps react-router-dom’s NavLink to support dynamic className composition
@@ -221,17 +219,17 @@ class RouterNavLink {
 class UtilsCN {
 +cn(...inputs) : string
 }
-NavLinkWrapper --> RouterNavLink : "renders"
-NavLinkWrapper --> UtilsCN : "uses"
+NavLinkWrapper --> RouterNavLink : renders
+NavLinkWrapper --> UtilsCN : uses
 ```
 
 **Diagram sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L29)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L29)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L29)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L29)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ### Navigation Patterns in the SPA
 - Hash-based navigation:
@@ -257,16 +255,16 @@ Router-->>NotFound : Render fallback
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [NotFound.tsx](file://src/pages/NotFound.tsx#L1-L25)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [NotFound.tsx](src/pages/NotFound.tsx#L1-L25)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [NotFound.tsx](file://src/pages/NotFound.tsx#L1-L25)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [App.tsx](src/App.tsx#L1-L43)
+- [NotFound.tsx](src/pages/NotFound.tsx#L1-L25)
 
 ## Dependency Analysis
 - External dependencies:
@@ -292,18 +290,18 @@ navlink["NavLink.tsx"] --> utils
 ```
 
 **Diagram sources**
-- [package.json](file://package.json#L1-L85)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L29)
+- [package.json](package.json#L1-L85)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L29)
 
 **Section sources**
-- [package.json](file://package.json#L1-L85)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [package.json](package.json#L1-L85)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Performance Considerations
 - Scroll event listeners:
@@ -334,8 +332,8 @@ Evidence from code:
 - HeroSection defines the anchor target for the hero section
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
 
 ### Accessibility Compliance
 Common issues:
@@ -360,9 +358,9 @@ Evidence from code:
 - NavLink supports active/pending styling for better focus semantics
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L29)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L29)
 
 ### Route Ordering and Fallback Behavior
 - Place specific routes before the catch-all "*" route to avoid unintended fallbacks
@@ -372,8 +370,8 @@ Evidence from code:
 - App.tsx comments indicate route ordering and fallback handling
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [NotFound.tsx](file://src/pages/NotFound.tsx#L1-L25)
+- [App.tsx](src/App.tsx#L1-L43)
+- [NotFound.tsx](src/pages/NotFound.tsx#L1-L25)
 
 ## Conclusion
 The routing and navigation system combines React Router DOM for SPA behavior with in-page hash-based navigation for smooth scrolling. Navbar and ScrollToTop provide intuitive user experiences, while NavLink enhances visual feedback for active states. By following the patterns outlined here—matching hash anchors to section ids, cleaning up event listeners, and maintaining accessibility—you can extend the navigation system reliably and inclusively.

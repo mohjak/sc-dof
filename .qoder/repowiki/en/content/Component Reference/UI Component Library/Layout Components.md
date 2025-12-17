@@ -1,18 +1,16 @@
 # Layout Components
 
-<cite>
-**Referenced Files in This Document**   
-- [accordion.tsx](file://src/components/ui/accordion.tsx)
-- [aspect-ratio.tsx](file://src/components/ui/aspect-ratio.tsx)
-- [collapsible.tsx](file://src/components/ui/collapsible.tsx)
-- [resizable.tsx](file://src/components/ui/resizable.tsx)
-- [scroll-area.tsx](file://src/components/ui/scroll-area.tsx)
-- [skeleton.tsx](file://src/components/ui/skeleton.tsx)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [utils.ts](file://src/lib/utils.ts)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-</cite>
+> **Referenced Files in This Document**   
+> - [accordion.tsx](src/components/ui/accordion.tsx)
+> - [aspect-ratio.tsx](src/components/ui/aspect-ratio.tsx)
+> - [collapsible.tsx](src/components/ui/collapsible.tsx)
+> - [resizable.tsx](src/components/ui/resizable.tsx)
+> - [scroll-area.tsx](src/components/ui/scroll-area.tsx)
+> - [skeleton.tsx](src/components/ui/skeleton.tsx)
+> - [SpeakersSection.tsx](src/components/SpeakersSection.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [utils.ts](src/lib/utils.ts)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -34,12 +32,12 @@ This document provides comprehensive documentation for the layout utility compon
 The layout utility components are built on top of Radix UI primitives, ensuring accessibility and robust functionality while leveraging Tailwind CSS for styling. These components are located in the `src/components/ui/` directory and are designed to be reusable across the application. They follow a consistent pattern of wrapping Radix primitives with custom styling and additional functionality.
 
 **Section sources**
-- [accordion.tsx](file://src/components/ui/accordion.tsx)
-- [aspect-ratio.tsx](file://src/components/ui/aspect-ratio.tsx)
-- [collapsible.tsx](file://src/components/ui/collapsible.tsx)
-- [resizable.tsx](file://src/components/ui/resizable.tsx)
-- [scroll-area.tsx](file://src/components/ui/scroll-area.tsx)
-- [skeleton.tsx](file://src/components/ui/skeleton.tsx)
+- [accordion.tsx](src/components/ui/accordion.tsx)
+- [aspect-ratio.tsx](src/components/ui/aspect-ratio.tsx)
+- [collapsible.tsx](src/components/ui/collapsible.tsx)
+- [resizable.tsx](src/components/ui/resizable.tsx)
+- [scroll-area.tsx](src/components/ui/scroll-area.tsx)
+- [skeleton.tsx](src/components/ui/skeleton.tsx)
 
 ## Accordion Component
 
@@ -57,15 +55,15 @@ class Accordion {
 +Trigger : AccordionPrimitive.Trigger
 +Content : AccordionPrimitive.Content
 }
-Accordion --> AccordionPrimitive : "uses"
-AccordionTrigger --> ChevronDown : "displays"
+Accordion --> AccordionPrimitive : uses
+AccordionTrigger --> ChevronDown : displays
 ```
 
 **Diagram sources**
-- [accordion.tsx](file://src/components/ui/accordion.tsx#L7-L52)
+- [accordion.tsx](src/components/ui/accordion.tsx#L7-L52)
 
 **Section sources**
-- [accordion.tsx](file://src/components/ui/accordion.tsx#L1-L53)
+- [accordion.tsx](src/components/ui/accordion.tsx#L1-L53)
 
 ## AspectRatio Component
 
@@ -80,15 +78,15 @@ classDiagram
 class AspectRatio {
 +Root : AspectRatioPrimitive.Root
 }
-AspectRatio --> AspectRatioPrimitive : "wraps"
+AspectRatio --> AspectRatioPrimitive : wraps
 ```
 
 **Diagram sources**
-- [aspect-ratio.tsx](file://src/components/ui/aspect-ratio.tsx#L3-L5)
+- [aspect-ratio.tsx](src/components/ui/aspect-ratio.tsx#L3-L5)
 
 **Section sources**
-- [aspect-ratio.tsx](file://src/components/ui/aspect-ratio.tsx#L1-L6)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L209-L214)
+- [aspect-ratio.tsx](src/components/ui/aspect-ratio.tsx#L1-L6)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L209-L214)
 
 ## Collapsible Component
 
@@ -105,14 +103,14 @@ class Collapsible {
 +Trigger : CollapsiblePrimitive.Trigger
 +Content : CollapsiblePrimitive.Content
 }
-Collapsible --> CollapsiblePrimitive : "uses"
+Collapsible --> CollapsiblePrimitive : uses
 ```
 
 **Diagram sources**
-- [collapsible.tsx](file://src/components/ui/collapsible.tsx#L3-L9)
+- [collapsible.tsx](src/components/ui/collapsible.tsx#L3-L9)
 
 **Section sources**
-- [collapsible.tsx](file://src/components/ui/collapsible.tsx#L1-L10)
+- [collapsible.tsx](src/components/ui/collapsible.tsx#L1-L10)
 
 ## Resizable Component
 
@@ -129,15 +127,15 @@ class Resizable {
 +Panel : ResizablePrimitive.Panel
 +Handle : ResizablePrimitive.PanelResizeHandle
 }
-Resizable --> ResizablePrimitive : "uses"
-ResizableHandle --> GripVertical : "displays when withHandle"
+Resizable --> ResizablePrimitive : uses
+ResizableHandle --> GripVertical : displays when withHandle
 ```
 
 **Diagram sources**
-- [resizable.tsx](file://src/components/ui/resizable.tsx#L6-L37)
+- [resizable.tsx](src/components/ui/resizable.tsx#L6-L37)
 
 **Section sources**
-- [resizable.tsx](file://src/components/ui/resizable.tsx#L1-L38)
+- [resizable.tsx](src/components/ui/resizable.tsx#L1-L38)
 
 ## ScrollArea Component
 
@@ -156,14 +154,14 @@ class ScrollArea {
 +Thumb : ScrollAreaPrimitive.ScrollAreaThumb
 +Corner : ScrollAreaPrimitive.Corner
 }
-ScrollArea --> ScrollAreaPrimitive : "uses"
+ScrollArea --> ScrollAreaPrimitive : uses
 ```
 
 **Diagram sources**
-- [scroll-area.tsx](file://src/components/ui/scroll-area.tsx#L6-L38)
+- [scroll-area.tsx](src/components/ui/scroll-area.tsx#L6-L38)
 
 **Section sources**
-- [scroll-area.tsx](file://src/components/ui/scroll-area.tsx#L1-L39)
+- [scroll-area.tsx](src/components/ui/scroll-area.tsx#L1-L39)
 
 ## Skeleton Component
 
@@ -181,17 +179,17 @@ class Skeleton {
 +className : string
 +props : React.HTMLAttributes<HTMLDivElement>
 }
-Skeleton --> "animate-pulse" : "applies"
-Skeleton --> "bg-muted" : "applies"
-Skeleton --> "rounded-md" : "applies"
+Skeleton --> animate-pulse : applies
+Skeleton --> bg-muted : applies
+Skeleton --> rounded-md : applies
 ```
 
 **Diagram sources**
-- [skeleton.tsx](file://src/components/ui/skeleton.tsx#L3-L7)
+- [skeleton.tsx](src/components/ui/skeleton.tsx#L3-L7)
 
 **Section sources**
-- [skeleton.tsx](file://src/components/ui/skeleton.tsx#L1-L8)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L34-L35)
+- [skeleton.tsx](src/components/ui/skeleton.tsx#L1-L8)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L34-L35)
 
 ## Accessibility and Responsive Design
 
@@ -221,9 +219,9 @@ All layout components are designed to be responsive, adapting to different scree
 The components work seamlessly with Tailwind's responsive utilities, allowing developers to easily customize behavior at different breakpoints.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L276-L277)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L36-L37)
-- [utils.ts](file://src/lib/utils.ts#L4-L6)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L276-L277)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L36-L37)
+- [utils.ts](src/lib/utils.ts#L4-L6)
 
 ## Performance Optimization
 
@@ -249,6 +247,6 @@ The components are designed for efficient rendering:
 The combination of Radix primitives and Tailwind CSS ensures that the components are both performant and visually consistent across the application.
 
 **Section sources**
-- [skeleton.tsx](file://src/components/ui/skeleton.tsx#L3-L7)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L43)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L172-L184)
+- [skeleton.tsx](src/components/ui/skeleton.tsx#L3-L7)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L43)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L172-L184)

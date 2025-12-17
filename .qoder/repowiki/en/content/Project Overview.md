@@ -1,19 +1,17 @@
 # Project Overview
 
-<cite>
-**Referenced Files in This Document**   
-- [App.tsx](file://src/App.tsx)
-- [main.tsx](file://src/main.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [eventData.ts](file://src/data/eventData.ts)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [vite.config.ts](file://vite.config.ts)
-- [package.json](file://package.json)
-- [README.md](file://README.md)
-</cite>
+> **Referenced Files in This Document**   
+> - [App.tsx](src/App.tsx)
+> - [main.tsx](src/main.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [eventData.ts](src/data/eventData.ts)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [vite.config.ts](vite.config.ts)
+> - [package.json](package.json)
+> - [README.md](README.md)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -32,8 +30,8 @@ The sc-dof event platform is a multilingual website designed for the Syrian comm
 The website features a clean, responsive design with smooth navigation and interactive elements. It includes sections for event details, program agenda, speaker profiles, organizational information, and a prominent registration section with QR code integration. The application leverages React's component-based architecture for maintainability and scalability, with a focus on accessibility and user experience across different devices and screen sizes.
 
 **Section sources**
-- [README.md](file://README.md#L1-L74)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [README.md](README.md#L1-L74)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ## Project Structure
 
@@ -65,16 +63,16 @@ J --> V[form.tsx]
 ```
 
 **Diagram sources**
-- [src/components](file://src/components)
-- [src/pages](file://src/pages)
-- [src/data](file://src/data)
-- [src/contexts](file://src/contexts)
+- [src/components](src/components)
+- [src/pages](src/pages)
+- [src/data](src/data)
+- [src/contexts](src/contexts)
 
 **Section sources**
-- [src/components](file://src/components)
-- [src/pages](file://src/pages)
-- [src/data](file://src/data)
-- [src/contexts](file://src/contexts)
+- [src/components](src/components)
+- [src/pages](src/pages)
+- [src/data](src/data)
+- [src/contexts](src/contexts)
 
 ## Core Components
 
@@ -83,11 +81,11 @@ The application's core functionality is built around several key components that
 The main content is organized into specialized components such as `HeroSection`, `AgendaSection`, `SpeakersSection`, and `RegistrationSection`, each responsible for presenting specific aspects of the event information. These components consume data from `eventData.ts` and use the translation function from the language context to display content in the selected language. The `RegistrationSection` includes a QR code component that generates a scannable code for event registration, enhancing accessibility for mobile users.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
 
 ## Architecture Overview
 
@@ -113,11 +111,11 @@ P[Translation System] --> N
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [vite.config.ts](file://vite.config.ts#L1-L19)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [package.json](file://package.json#L1-L85)
+- [App.tsx](src/App.tsx#L1-L43)
+- [main.tsx](src/main.tsx#L1-L6)
+- [vite.config.ts](vite.config.ts#L1-L19)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [package.json](package.json#L1-L85)
 
 ## Detailed Component Analysis
 
@@ -141,30 +139,30 @@ class LanguageProvider {
 }
 class LanguageSwitcher {
 +variant : 'floating' | 'navbar'
-+languages : Array{code, label, flag}
++languages : Array~code  label  flag~
 +onClick : setLanguage
 }
 class Navbar {
 +t : function
 +isRTL : boolean
-+navLinks : Array{href, label}
++navLinks : Array~href  label~
 +scrollToSection(href : string) : void
 }
-LanguageProvider --> LanguageContext : "creates context"
-LanguageSwitcher --> LanguageContext : "consumes"
-Navbar --> LanguageContext : "consumes"
-Index --> LanguageSwitcher : "uses"
-Index --> Navbar : "uses"
+LanguageProvider --> LanguageContext : creates context
+LanguageSwitcher --> LanguageContext : consumes
+Navbar --> LanguageContext : consumes
+Index --> LanguageSwitcher : uses
+Index --> Navbar : uses
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 ### User Workflow: Language Switching
 
@@ -187,9 +185,9 @@ UIComponents-->>User : Displays updated interface
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ### Event Information Architecture
 
@@ -220,10 +218,10 @@ I --> P[QR code and registration link]
 ```
 
 **Diagram sources**
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Dependency Analysis
 
@@ -247,20 +245,20 @@ F --> N[UI Components]
 G --> O[Accessible Primitives]
 H --> P[Navigation]
 I --> Q[Data Fetching]
-F --> G : "built on"
+F --> G : built on
 A --> R[Lucide React]
 A --> S[QRCode React]
 A --> T[Next Themes]
 ```
 
 **Diagram sources**
-- [package.json](file://package.json#L1-L85)
-- [vite.config.ts](file://vite.config.ts#L1-L19)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [package.json](package.json#L1-L85)
+- [vite.config.ts](vite.config.ts#L1-L19)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 **Section sources**
-- [package.json](file://package.json#L1-L85)
-- [vite.config.ts](file://vite.config.ts#L1-L19)
+- [package.json](package.json#L1-L85)
+- [vite.config.ts](vite.config.ts#L1-L19)
 
 ## Performance Considerations
 
@@ -271,9 +269,9 @@ The application leverages React's virtual DOM for efficient UI updates and uses 
 Image assets are optimized and loaded only when needed, with fallbacks for missing speaker images. The QR code for registration is generated client-side, eliminating the need for external image requests. The use of CSS variables and Tailwind's utility classes enables efficient styling without the overhead of traditional CSS frameworks.
 
 **Section sources**
-- [vite.config.ts](file://vite.config.ts#L1-L19)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [package.json](file://package.json#L1-L85)
+- [vite.config.ts](vite.config.ts#L1-L19)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [package.json](package.json#L1-L85)
 
 ## Troubleshooting Guide
 
@@ -284,10 +282,10 @@ For responsive layout problems, verify that Tailwind's responsive prefixes (sm:,
 When components fail to render, confirm that all required props are being passed and that there are no TypeScript type errors. For routing issues, ensure that React Router's BrowserRouter is properly configured and that route paths match the navigation links. If the development server fails to start, verify that all dependencies are installed with npm install and that there are no conflicts in package.json.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [vite.config.ts](file://vite.config.ts#L1-L19)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [vite.config.ts](vite.config.ts#L1-L19)
 
 ## Conclusion
 

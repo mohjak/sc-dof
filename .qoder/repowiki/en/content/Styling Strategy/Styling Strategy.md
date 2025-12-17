@@ -1,20 +1,18 @@
 # Styling Strategy
 
-<cite>
-**Referenced Files in This Document**
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [src/index.css](file://src/index.css)
-- [postcss.config.js](file://postcss.config.js)
-- [package.json](file://package.json)
-- [src/lib/utils.ts](file://src/lib/utils.ts)
-- [src/components/LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [src/components/Navbar.tsx](file://src/components/Navbar.tsx)
-- [src/components/HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [src/components/ui/card.tsx](file://src/components/ui/card.tsx)
-- [src/components/ui/button.tsx](file://src/components/ui/button.tsx)
-- [src/components/AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [src/hooks/use-mobile.tsx](file://src/hooks/use-mobile.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [src/index.css](src/index.css)
+> - [postcss.config.js](postcss.config.js)
+> - [package.json](package.json)
+> - [src/lib/utils.ts](src/lib/utils.ts)
+> - [src/components/LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [src/components/Navbar.tsx](src/components/Navbar.tsx)
+> - [src/components/HeroSection.tsx](src/components/HeroSection.tsx)
+> - [src/components/ui/card.tsx](src/components/ui/card.tsx)
+> - [src/components/ui/button.tsx](src/components/ui/button.tsx)
+> - [src/components/AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [src/hooks/use-mobile.tsx](src/hooks/use-mobile.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -54,21 +52,21 @@ M["src/components/AgendaSection.tsx"] --> G
 ```
 
 **Diagram sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [src/index.css](file://src/index.css#L1-L249)
-- [postcss.config.js](file://postcss.config.js#L1-L7)
-- [src/lib/utils.ts](file://src/lib/utils.ts#L1-L7)
-- [src/components/ui/card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [src/components/ui/button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [src/components/LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [src/components/Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [src/components/HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [src/components/AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [src/index.css](src/index.css#L1-L249)
+- [postcss.config.js](postcss.config.js#L1-L7)
+- [src/lib/utils.ts](src/lib/utils.ts#L1-L7)
+- [src/components/ui/card.tsx](src/components/ui/card.tsx#L1-L44)
+- [src/components/ui/button.tsx](src/components/ui/button.tsx#L1-L48)
+- [src/components/LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [src/components/Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [src/components/HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [src/components/AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [src/index.css](file://src/index.css#L1-L249)
-- [postcss.config.js](file://postcss.config.js#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [src/index.css](src/index.css#L1-L249)
+- [postcss.config.js](postcss.config.js#L1-L7)
 
 ## Core Components
 - Tailwind configuration:
@@ -87,11 +85,11 @@ M["src/components/AgendaSection.tsx"] --> G
   - Card and Button components demonstrate utility-first composition and variant systems.
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [src/index.css](file://src/index.css#L1-L249)
-- [src/lib/utils.ts](file://src/lib/utils.ts#L1-L7)
-- [src/components/ui/card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [src/components/ui/button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [src/index.css](src/index.css#L1-L249)
+- [src/lib/utils.ts](src/lib/utils.ts#L1-L7)
+- [src/components/ui/card.tsx](src/components/ui/card.tsx#L1-L44)
+- [src/components/ui/button.tsx](src/components/ui/button.tsx#L1-L48)
 
 ## Architecture Overview
 The styling architecture follows a layered approach:
@@ -132,15 +130,15 @@ Primitives --> Agenda
 ```
 
 **Diagram sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [src/index.css](file://src/index.css#L1-L249)
-- [src/lib/utils.ts](file://src/lib/utils.ts#L1-L7)
-- [src/components/ui/card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [src/components/ui/button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [src/components/LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [src/components/Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [src/components/HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [src/components/AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [src/index.css](src/index.css#L1-L249)
+- [src/lib/utils.ts](src/lib/utils.ts#L1-L7)
+- [src/components/ui/card.tsx](src/components/ui/card.tsx#L1-L44)
+- [src/components/ui/button.tsx](src/components/ui/button.tsx#L1-L48)
+- [src/components/LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [src/components/Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [src/components/HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [src/components/AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ## Detailed Component Analysis
 
@@ -156,7 +154,7 @@ Primitives --> Agenda
   - Ensures only used utilities are generated, keeping the bundle lean.
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ### Global CSS and Base Styles
 - CSS variables define:
@@ -175,7 +173,7 @@ Primitives --> Agenda
   - Staggered delays for sequential animations.
 
 **Section sources**
-- [src/index.css](file://src/index.css#L1-L249)
+- [src/index.css](src/index.css#L1-L249)
 
 ### Utility Composition with cn()
 - Purpose:
@@ -187,9 +185,9 @@ Primitives --> Agenda
   - Components combine static and dynamic classes with confidence.
 
 **Section sources**
-- [src/lib/utils.ts](file://src/lib/utils.ts#L1-L7)
-- [src/components/ui/card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [src/components/ui/button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [src/lib/utils.ts](src/lib/utils.ts#L1-L7)
+- [src/components/ui/card.tsx](src/components/ui/card.tsx#L1-L44)
+- [src/components/ui/button.tsx](src/components/ui/button.tsx#L1-L48)
 
 ### Responsive Design and Breakpoints
 - Breakpoint usage:
@@ -203,10 +201,10 @@ Primitives --> Agenda
   - AgendaSection stacks and tiles cards responsively.
 
 **Section sources**
-- [src/hooks/use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
-- [src/components/Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [src/components/HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [src/components/AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [src/hooks/use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
+- [src/components/Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [src/components/HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [src/components/AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ### Floating Language Switcher: Backdrop Blur Effect
 - Pattern:
@@ -233,12 +231,12 @@ Labels --> End(["Done"])
 ```
 
 **Diagram sources**
-- [src/components/LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [src/index.css](file://src/index.css#L143-L172)
+- [src/components/LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [src/index.css](src/index.css#L143-L172)
 
 **Section sources**
-- [src/components/LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [src/index.css](file://src/index.css#L143-L172)
+- [src/components/LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [src/index.css](src/index.css#L143-L172)
 
 ### Card Component: Shadow and Border Styling
 - Pattern:
@@ -287,21 +285,21 @@ class Button {
 +className
 +props
 }
-Card --> CardHeader : "composes"
-Card --> CardContent : "composes"
-Card --> CardFooter : "composes"
-Card --> CardTitle : "composes"
-Card --> CardDescription : "composes"
-Button --> Card : "uses tokens"
+Card --> CardHeader : composes
+Card --> CardContent : composes
+Card --> CardFooter : composes
+Card --> CardTitle : composes
+Card --> CardDescription : composes
+Button --> Card : uses tokens
 ```
 
 **Diagram sources**
-- [src/components/ui/card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [src/components/ui/button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [src/components/ui/card.tsx](src/components/ui/card.tsx#L1-L44)
+- [src/components/ui/button.tsx](src/components/ui/button.tsx#L1-L48)
 
 **Section sources**
-- [src/components/ui/card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [src/components/ui/button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [src/components/ui/card.tsx](src/components/ui/card.tsx#L1-L44)
+- [src/components/ui/button.tsx](src/components/ui/button.tsx#L1-L48)
 
 ### Hero Section: Complex Styling Patterns
 - Background image with gradient overlay and confetti animation.
@@ -315,22 +313,22 @@ sequenceDiagram
 participant U as "User"
 participant H as "HeroSection"
 participant T as "Tailwind/CSS"
-U->>H : "Load page"
-H->>T : "Apply background image + gradient overlay"
-H->>T : "Render confetti elements with random positions and colors"
-H->>T : "Animate entrance with fade-up + staggered delays"
-H->>T : "Apply glass utility + border + shadow on date badge"
-H->>T : "CTA uses gradient-gold + glow-gold + hover scale"
-T-->>U : "Final styled hero view"
+U->>H : Load page
+H->>T : Apply background image + gradient overlay
+H->>T : Render confetti elements with random positions and colors
+H->>T : Animate entrance with fade-up + staggered delays
+H->>T : Apply glass utility + border + shadow on date badge
+H->>T : CTA uses gradient-gold + glow-gold + hover scale
+T-->>U : Final styled hero view
 ```
 
 **Diagram sources**
-- [src/components/HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [src/index.css](file://src/index.css#L143-L172)
+- [src/components/HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [src/index.css](src/index.css#L143-L172)
 
 **Section sources**
-- [src/components/HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [src/index.css](file://src/index.css#L143-L172)
+- [src/components/HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [src/index.css](src/index.css#L143-L172)
 
 ### Agenda Section: Grid Responsiveness and Hover Effects
 - Responsive grid adapts from single column to triple column based on viewport.
@@ -338,7 +336,7 @@ T-->>U : "Final styled hero view"
 - Gradient accents animate on hover for visual feedback.
 
 **Section sources**
-- [src/components/AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [src/components/AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ## Dependency Analysis
 - Tailwind configuration depends on:
@@ -364,22 +362,22 @@ Prims["ui primitives"] --> Comps
 ```
 
 **Diagram sources**
-- [package.json](file://package.json#L1-L85)
-- [postcss.config.js](file://postcss.config.js#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [src/index.css](file://src/index.css#L1-L249)
-- [src/lib/utils.ts](file://src/lib/utils.ts#L1-L7)
-- [src/components/ui/card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [src/components/ui/button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [package.json](package.json#L1-L85)
+- [postcss.config.js](postcss.config.js#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [src/index.css](src/index.css#L1-L249)
+- [src/lib/utils.ts](src/lib/utils.ts#L1-L7)
+- [src/components/ui/card.tsx](src/components/ui/card.tsx#L1-L44)
+- [src/components/ui/button.tsx](src/components/ui/button.tsx#L1-L48)
 
 **Section sources**
-- [package.json](file://package.json#L1-L85)
-- [postcss.config.js](file://postcss.config.js#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [src/index.css](file://src/index.css#L1-L249)
-- [src/lib/utils.ts](file://src/lib/utils.ts#L1-L7)
-- [src/components/ui/card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [src/components/ui/button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [package.json](package.json#L1-L85)
+- [postcss.config.js](postcss.config.js#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [src/index.css](src/index.css#L1-L249)
+- [src/lib/utils.ts](src/lib/utils.ts#L1-L7)
+- [src/components/ui/card.tsx](src/components/ui/card.tsx#L1-L44)
+- [src/components/ui/button.tsx](src/components/ui/button.tsx#L1-L48)
 
 ## Performance Considerations
 - Keep content scanning scoped:
@@ -412,10 +410,10 @@ Prims["ui primitives"] --> Comps
   - Check that animation utilities are defined and that the elements are not hidden or clipped by overflow.
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [src/lib/utils.ts](file://src/lib/utils.ts#L1-L7)
-- [src/hooks/use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
-- [src/index.css](file://src/index.css#L143-L172)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [src/lib/utils.ts](src/lib/utils.ts#L1-L7)
+- [src/hooks/use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
+- [src/index.css](src/index.css#L143-L172)
 
 ## Conclusion
 The project’s styling strategy centers on a robust Tailwind configuration, a comprehensive set of CSS variables and utilities, and a utility-first component architecture. The cn() utility ensures predictable class composition, while responsive utilities and a dedicated mobile hook enable seamless adaptation across devices. Complex patterns like the floating language switcher’s glass effect and the hero section’s layered animations showcase the power of combining Tailwind utilities with custom CSS. Following the optimization tips and troubleshooting guidance will help maintain a fast, consistent, and scalable design system.

@@ -1,17 +1,15 @@
 # Hero Section
 
-<cite>
-**Referenced Files in This Document**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [App.tsx](file://src/App.tsx)
-- [index.css](file://src/index.css)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [eventData.ts](file://src/data/eventData.ts)
-</cite>
+> **Referenced Files in This Document**
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [CountdownTimer.tsx](src/components/CountdownTimer.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [App.tsx](src/App.tsx)
+> - [index.css](src/index.css)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [eventData.ts](src/data/eventData.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -44,17 +42,17 @@ LangProv --> LangCtx
 ```
 
 **Diagram sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [index.css](file://src/index.css#L174-L249)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [index.css](src/index.css#L174-L249)
 
 **Section sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Core Components
 - HeroSection: Renders the hero view with branding, countdown, and CTA.
@@ -71,11 +69,11 @@ Key responsibilities:
 - Navigation: CTA scrolls to the “Why” section via anchor link.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [index.css](file://src/index.css#L174-L249)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [index.css](src/index.css#L174-L249)
 
 ## Architecture Overview
 The HeroSection composes several pieces:
@@ -102,10 +100,10 @@ Hero->>Why : Scroll to #why anchor
 ```
 
 **Diagram sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Detailed Component Analysis
 
@@ -137,10 +135,10 @@ Accessibility:
 - Smooth scrolling is enabled globally for anchor navigation.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [index.css](file://src/index.css#L174-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [index.css](src/index.css#L174-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ### CountdownTimer Component
 Responsibilities:
@@ -154,8 +152,8 @@ Behavior:
 - Applies hover scaling and subtle background glow for interactivity.
 
 **Section sources**
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### Internationalization and RTL
 Translation resolution:
@@ -172,9 +170,9 @@ LanguageSwitcher:
 - Uses emoji flags for English and Turkish and a custom Syrian flag image for Arabic.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ### Visual Design Tokens and Animations
 Color palette and gradients:
@@ -194,8 +192,8 @@ Staggered delays:
 - delay-100, delay-200, delay-300, delay-400, delay-500 classes apply progressive delays for entrance sequences.
 
 **Section sources**
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ### Scroll Navigation Behavior
 - The CTA button in HeroSection uses an anchor link to navigate to the “Why” section.
@@ -203,9 +201,9 @@ Staggered delays:
 - The WhySection defines the anchor target with an id.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L83-L93)
-- [index.css](file://src/index.css#L135-L142)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L83-L93)
+- [index.css](src/index.css#L135-L142)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Dependency Analysis
 HeroSection depends on:
@@ -226,22 +224,22 @@ Index["Index.tsx"] --> Hero
 ```
 
 **Diagram sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [index.css](file://src/index.css#L174-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [index.css](src/index.css#L174-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [index.css](file://src/index.css#L174-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [index.css](src/index.css#L174-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Performance Considerations
 - Background image handling:
@@ -285,11 +283,11 @@ Index["Index.tsx"] --> Hero
   - Verify the event date is correctly defined and that the interval cleanup occurs on unmount.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [index.css](file://src/index.css#L135-L142)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [index.css](src/index.css#L135-L142)
 
 ## Conclusion
 The HeroSection delivers a rich, multilingual, and animated landing experience for the event platform. It integrates branding, countdown timing, and navigation while leveraging Tailwind utilities and global animations for visual polish. Through LanguageContext, it supports Arabic, English, and Turkish with proper RTL handling and font switching. The component’s responsive design and decorative confetti enhance engagement, while careful performance considerations help maintain smooth interactions across devices.

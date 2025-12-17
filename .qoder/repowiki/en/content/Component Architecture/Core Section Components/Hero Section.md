@@ -1,14 +1,12 @@
 # Hero Section
 
-<cite>
-**Referenced Files in This Document**   
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [eventData.ts](file://src/data/eventData.ts)
-- [index.css](file://src/index.css)
-- [tailwind.config.ts](file://tailwind.config.ts)
-</cite>
+> **Referenced Files in This Document**   
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [CountdownTimer.tsx](src/components/CountdownTimer.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [eventData.ts](src/data/eventData.ts)
+> - [index.css](src/index.css)
+> - [tailwind.config.ts](tailwind.config.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -28,7 +26,7 @@ The HeroSection component serves as the primary landing experience for the event
 The HeroSection is implemented as a React functional component that creates a full-viewport experience with layered visual elements. The component structure follows a z-index hierarchy to manage overlapping elements, with the background image at the lowest level, followed by gradient overlays, decorative elements, and content in the foreground. The component uses the `min-h-screen` class to ensure full viewport height and `flex items-center justify-center` for perfect vertical and horizontal centering of content. It imports three key assets: the main hero image (`hero-celebration.jpg`), the Syrian eagle emblem, and the Syrian flag. The component integrates the CountdownTimer as a child component, positioning it prominently within the content flow. The section is assigned an ID of "hero" to enable programmatic navigation from other parts of the application. The implementation leverages React's component composition pattern, breaking down complex UI into reusable pieces while maintaining a cohesive visual experience.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L6-L97)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L6-L97)
 
 ## Visual Design and Styling
 
@@ -54,8 +52,8 @@ E --> |Z-index| 10
 ```
 
 **Diagram sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L10-L97)
-- [index.css](file://src/index.css#L60-L72)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L10-L97)
+- [index.css](src/index.css#L60-L72)
 
 ## Animation System
 
@@ -89,15 +87,11 @@ Stagger --> delay-500["delay-500: 500ms"]
 Start --> Hover["Hover Animations"]
 Hover --> CTA["CTA Button: hover:scale-105"]
 Hover --> Duration["Duration: 300ms"]
-style Start fill:#f9f,stroke:#333
-style animate-fade-up fill:#bbf,stroke:#333
-style animate-float fill:#bbf,stroke:#333
-style animate-confetti fill:#bbf,stroke:#333
 ```
 
 **Diagram sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L38-L84)
-- [index.css](file://src/index.css#L175-L248)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L38-L84)
+- [index.css](src/index.css#L175-L248)
 
 ## Internationalization Support
 
@@ -126,9 +120,9 @@ class Translations {
 +en : Record~string, string~
 +tr : Record~string, string~
 }
-HeroSection --> LanguageContext : "uses"
-CountdownTimer --> LanguageContext : "uses"
-LanguageContext --> Translations : "contains"
+HeroSection --> LanguageContext : uses
+CountdownTimer --> LanguageContext : uses
+LanguageContext --> Translations : contains
 note right of HeroSection
 Uses translation keys :
 - hero.title
@@ -147,33 +141,33 @@ end note
 ```
 
 **Diagram sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L7-L8)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L12-L264)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L40-L46)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L7-L8)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L12-L264)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L40-L46)
 
 ## Responsive Design
 
 The HeroSection implements a comprehensive responsive design strategy using Tailwind CSS's breakpoint system to ensure optimal viewing across all device sizes. The component uses relative units and flexible layouts to adapt to different screen dimensions, with specific adjustments at key breakpoints (sm: 640px, md: 768px, lg: 1024px). Text elements scale appropriately with viewport size, using classes like `text-4xl sm:text-6xl md:text-7xl` for the main title to ensure readability on both mobile and desktop devices. The content container uses `max-w-5xl mx-auto` to constrain width on larger screens while remaining full-width on smaller devices. Image dimensions are responsive, with the Syrian eagle emblem scaling from `w-24 h-24` on mobile to `w-32 h-32` on larger screens. The layout maintains its vertical centering and visual hierarchy across all breakpoints, with appropriate spacing adjustments using Tailwind's margin and padding utilities. The component also respects the global font family selection based on language, ensuring proper text rendering and layout for both RTL and LTR languages. The responsive design prioritizes content legibility and visual impact on all devices, with careful consideration given to touch target sizes and interaction patterns on mobile devices.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L47-L88)
-- [tailwind.config.ts](file://tailwind.config.ts#L7-L97)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L47-L88)
+- [tailwind.config.ts](tailwind.config.ts#L7-L97)
 
 ## Accessibility and Performance
 
 The HeroSection component addresses key accessibility and performance considerations to ensure an inclusive and efficient user experience. For accessibility, the component includes appropriate alt text for all decorative images, with the Syrian eagle having the Arabic description "العقاب السوري" and the flag described as "علم سوريا الحرة". The full-viewport layout is implemented with proper semantic HTML using the `<section>` element with an ID for programmatic navigation. The animations are designed with user comfort in mind, using moderate durations and easing functions to avoid triggering vestibular disorders. The component avoids auto-playing audio or video that could be distracting for users with attention disorders. For performance, the background image optimization is critical, though specific optimization techniques are not visible in the code. The confetti animation uses CSS transforms and opacity changes rather than layout or paint-intensive properties for smooth 60fps performance. The CountdownTimer component efficiently updates only once per second using setInterval, with proper cleanup in the useEffect cleanup function to prevent memory leaks. The component minimizes re-renders by using stable references and avoiding inline function definitions in the render method. The use of Tailwind's JIT compiler ensures only used utility classes are included in the final CSS bundle, reducing payload size.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L40-L43)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L32-L38)
-- [index.css](file://src/index.css#L175-L248)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L40-L43)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L32-L38)
+- [index.css](src/index.css#L175-L248)
 
 ## Customization Guidelines
 
 Customizing the HeroSection for future events requires modifications to several key areas while maintaining the overall design system. To update the event content, modify the translation strings in the LanguageContext for the hero section keys (hero.title, hero.subtitle, etc.) and update the eventData.ts file with new dates and details. For visual customization, replace the hero image, Syrian eagle, and flag assets with new images while maintaining similar dimensions for consistent layout. The color scheme can be adjusted by modifying the CSS variables in index.css, particularly the --syrian-red, --syrian-green, and --gold variables, which will automatically propagate to all components using these colors. Animation parameters can be customized by editing the keyframe definitions in index.css, such as adjusting the float amplitude or confetti fall speed. The responsive behavior can be fine-tuned by adjusting the Tailwind classes on text elements and containers. When adding new elements, follow the existing animation sequence by using the staggered delay classes (delay-100, delay-200, etc.) to maintain the cascading entrance effect. Ensure any new images are optimized for web delivery to maintain performance, and verify that all interactive elements maintain sufficient contrast ratios for accessibility compliance.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L97)
-- [index.css](file://src/index.css#L60-L72)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L12-L264)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L97)
+- [index.css](src/index.css#L60-L72)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L12-L264)
+- [eventData.ts](src/data/eventData.ts#L1-L109)

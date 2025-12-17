@@ -1,14 +1,12 @@
 # useToast Hook
 
-<cite>
-**Referenced Files in This Document**
-- [use-toast.ts](file://src/hooks/use-toast.ts)
-- [toaster.tsx](file://src/components/ui/toaster.tsx)
-- [toast.tsx](file://src/components/ui/toast.tsx)
-- [sonner.tsx](file://src/components/ui/sonner.tsx)
-- [App.tsx](file://src/App.tsx)
-- [use-toast.ts (UI re-export)](file://src/components/ui/use-toast.ts)
-</cite>
+> **Referenced Files in This Document**
+> - [use-toast.ts](src/hooks/use-toast.ts)
+> - [toaster.tsx](src/components/ui/toaster.tsx)
+> - [toast.tsx](src/components/ui/toast.tsx)
+> - [sonner.tsx](src/components/ui/sonner.tsx)
+> - [App.tsx](src/App.tsx)
+> - [use-toast.ts (UI re-export)](src/components/ui/use-toast.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -49,18 +47,18 @@ App --> SonnerC
 ```
 
 **Diagram sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [App.tsx](src/App.tsx#L1-L43)
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Core Components
 - Reducer and state model
@@ -79,7 +77,7 @@ App --> SonnerC
   - toast.onOpenChange triggers dismissal when the toast closes.
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
 
 ## Architecture Overview
 The hook uses a reducer with a singleton memoryState and a global listeners registry. Components subscribe via useToast() and receive updates through React state. Two providers are available: a Radix-based Toaster and a Sonner-based Toaster.
@@ -92,21 +90,21 @@ participant Provider as "Toaster/Sonner"
 participant UI as "toast.tsx"
 Caller->>Hook : toast({ title, description, ... })
 Hook->>Hook : genId()
-Hook->>Hook : dispatch({ type : "ADD_TOAST", toast })
+Hook->>Hook : dispatch({ type : ADD_TOAST, toast })
 Hook-->>Caller : { id, dismiss, update }
 Hook->>Provider : listeners notify state change
 Provider->>UI : render toasts
 UI-->>Provider : onOpenChange(false)
-Provider->>Hook : dispatch({ type : "DISMISS_TOAST", toastId })
+Provider->>Hook : dispatch({ type : DISMISS_TOAST, toastId })
 Hook->>Hook : addToRemoveQueue(toastId)
-Hook->>Hook : setTimeout -> dispatch({ type : "REMOVE_TOAST", toastId })
+Hook->>Hook : setTimeout -> dispatch({ type : REMOVE_TOAST, toastId })
 ```
 
 **Diagram sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
 
 ## Detailed Component Analysis
 
@@ -139,10 +137,10 @@ Remove --> End
 ```
 
 **Diagram sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L49-L122)
+- [use-toast.ts](src/hooks/use-toast.ts#L49-L122)
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L49-L122)
+- [use-toast.ts](src/hooks/use-toast.ts#L49-L122)
 
 ### Singleton Pattern and Dispatch
 - memoryState: holds the current state snapshot.
@@ -165,12 +163,12 @@ Listener-->>Sub : setState(new memoryState)
 ```
 
 **Diagram sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L124-L133)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L166-L184)
+- [use-toast.ts](src/hooks/use-toast.ts#L124-L133)
+- [use-toast.ts](src/hooks/use-toast.ts#L166-L184)
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L124-L133)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L166-L184)
+- [use-toast.ts](src/hooks/use-toast.ts#L124-L133)
+- [use-toast.ts](src/hooks/use-toast.ts#L166-L184)
 
 ### Imperative API: toast() and Helpers
 - toast(props)
@@ -190,23 +188,23 @@ participant Disp as "dispatch"
 participant Red as "reducer"
 Comp->>Hook : toast({ title, description })
 Hook->>Hook : genId()
-Hook->>Disp : { type : "ADD_TOAST", toast : { id, open : true, onOpenChange } }
+Hook->>Disp : { type : ADD_TOAST, toast : { id, open : true, onOpenChange } }
 Disp->>Red : reducer(memoryState, action)
 Red-->>Disp : new memoryState
 Disp-->>Comp : { id, dismiss, update }
 Comp->>Hook : dismiss(id)
-Hook->>Disp : { type : "DISMISS_TOAST", toastId : id }
+Hook->>Disp : { type : DISMISS_TOAST, toastId : id }
 Disp->>Red : reducer(...)
 Red-->>Disp : new memoryState
 ```
 
 **Diagram sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L135-L164)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L166-L184)
+- [use-toast.ts](src/hooks/use-toast.ts#L135-L164)
+- [use-toast.ts](src/hooks/use-toast.ts#L166-L184)
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L135-L164)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L166-L184)
+- [use-toast.ts](src/hooks/use-toast.ts#L135-L164)
+- [use-toast.ts](src/hooks/use-toast.ts#L166-L184)
 
 ### Timeout Mechanism and Lifecycle
 - addToRemoveQueue
@@ -226,12 +224,12 @@ Store --> Trigger["On timeout: delete from Map<br/>dispatch REMOVE_TOAST"]
 ```
 
 **Diagram sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L53-L69)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L147-L157)
+- [use-toast.ts](src/hooks/use-toast.ts#L53-L69)
+- [use-toast.ts](src/hooks/use-toast.ts#L147-L157)
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L53-L69)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L147-L157)
+- [use-toast.ts](src/hooks/use-toast.ts#L53-L69)
+- [use-toast.ts](src/hooks/use-toast.ts#L147-L157)
 
 ### UI Integration: Toaster and Sonner
 - Toaster component
@@ -252,15 +250,15 @@ U2 --> H
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
+- [App.tsx](src/App.tsx#L1-L43)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
+- [App.tsx](src/App.tsx#L1-L43)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
 
 ### Usage Examples
 - Success toast in a form submission
@@ -299,18 +297,18 @@ App --> SN
 ```
 
 **Diagram sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [App.tsx](src/App.tsx#L1-L43)
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Performance Considerations
 - Memory management
@@ -324,9 +322,9 @@ App --> SN
   - TOAST_REMOVE_DELAY is set to a large value in this implementation. Consider tuning for UX and memory pressure.
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L5-L7)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L71-L122)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L166-L184)
+- [use-toast.ts](src/hooks/use-toast.ts#L5-L7)
+- [use-toast.ts](src/hooks/use-toast.ts#L71-L122)
+- [use-toast.ts](src/hooks/use-toast.ts#L166-L184)
 
 ## Troubleshooting Guide
 - Toasts not disappearing
@@ -344,10 +342,10 @@ App --> SN
   - Ensure useToast() is called inside a component tree that receives state updates.
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L135-L164)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L166-L184)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [use-toast.ts](src/hooks/use-toast.ts#L135-L164)
+- [use-toast.ts](src/hooks/use-toast.ts#L166-L184)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Testing Strategies
 - Jest timers

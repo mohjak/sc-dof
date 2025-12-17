@@ -1,16 +1,14 @@
 # Utility Components & Hooks
 
-<cite>
-**Referenced Files in This Document**   
-- [utils.ts](file://src/lib/utils.ts)
-- [use-toast.ts](file://src/hooks/use-toast.ts)
-- [sonner.tsx](file://src/components/ui/sonner.tsx)
-- [toaster.tsx](file://src/components/ui/toaster.tsx)
-- [toast.tsx](file://src/components/ui/toast.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [App.tsx](file://src/App.tsx)
-- [components.json](file://components.json)
-</cite>
+> **Referenced Files in This Document**   
+> - [utils.ts](src/lib/utils.ts)
+> - [use-toast.ts](src/hooks/use-toast.ts)
+> - [sonner.tsx](src/components/ui/sonner.tsx)
+> - [toaster.tsx](src/components/ui/toaster.tsx)
+> - [toast.tsx](src/components/ui/toast.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [App.tsx](src/App.tsx)
+> - [components.json](components.json)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -33,8 +31,8 @@ This document provides comprehensive architectural documentation for utility com
 The utility system in sc-dof consists of two primary components: the `cn` function for className composition and the `useToast` hook for notification management. These utilities are designed to be lightweight, type-safe, and easily composable across the application.
 
 **Section sources**
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L187)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L187)
 
 ## Conditional Class Composition with cn
 
@@ -49,7 +47,7 @@ TwMerge --> Result["Merged className string"]
 ```
 
 **Diagram sources**
-- [utils.ts](file://src/lib/utils.ts#L4-L6)
+- [utils.ts](src/lib/utils.ts#L4-L6)
 
 ### Theme Integration
 The `cn` function plays a critical role in theme integration by resolving class conflicts that occur when applying theme-specific classes. When components receive className props from both the parent and internal implementation, `cn` ensures that user-provided classes take precedence over default styles while properly merging non-conflicting classes.
@@ -58,8 +56,8 @@ The `cn` function plays a critical role in theme integration by resolving class 
 For RTL (Right-to-Left) support, particularly with Arabic language selection, the `cn` function enables dynamic layout adjustments. When the `isRTL` flag from `LanguageContext` is true, components can conditionally apply RTL-specific classes that are properly merged with existing styles without conflicts.
 
 **Section sources**
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [App.tsx](file://src/App.tsx#L13-L20)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [App.tsx](src/App.tsx#L13-L20)
 
 ## Toast Notification System
 
@@ -89,15 +87,15 @@ class ToasterToast {
 +action : ToastActionElement
 +open : boolean
 }
-useToast --> State : "manages"
-useToast --> toast : "exposes"
-toast --> ToasterToast : "creates"
-useToast --> Toaster : "consumed by"
+useToast --> State : manages
+useToast --> toast : exposes
+toast --> ToasterToast : creates
+useToast --> Toaster : consumed by
 ```
 
 **Diagram sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L166-L186)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L24)
+- [use-toast.ts](src/hooks/use-toast.ts#L166-L186)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L24)
 
 ### Core Components
 The toast system consists of several key components:
@@ -107,9 +105,9 @@ The toast system consists of several key components:
 - `Sonner`: External toast library integration for enhanced styling
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L187)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L24)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L187)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L24)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
 
 ## Integration with Theme and RTL
 
@@ -121,21 +119,21 @@ flowchart TD
 ThemeProvider --> useTheme
 useTheme --> Sonner
 Sonner --> ToastStyles
-ToastStyles --> "group-[.toaster]:bg-background"
-ToastStyles --> "group-[.toaster]:text-foreground"
-ToastStyles --> "group-[.toaster]:border-border"
+ToastStyles --> group-[.toaster]:bg-background
+ToastStyles --> group-[.toaster]:text-foreground
+ToastStyles --> group-[.toaster]:border-border
 ```
 
 **Diagram sources**
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ### RTL Support
 The toast system respects RTL layout when Arabic is selected as the interface language. The `Toaster` component's positioning is adjusted through Tailwind's directional utilities, ensuring that toast notifications appear in the correct location (top-left for RTL, bottom-right for LTR).
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L13-L20)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L276-L277)
+- [App.tsx](src/App.tsx#L13-L20)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L276-L277)
 
 ## Usage Patterns Across Codebase
 
@@ -159,9 +157,9 @@ ToastUI->>User : Display toast notification
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L283)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L137-L164)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L283)
+- [use-toast.ts](src/hooks/use-toast.ts#L137-L164)
 
 ### Common Usage Patterns
 The `cn` function is widely used throughout UI components for conditional class application. Common patterns include:
@@ -171,9 +169,9 @@ The `cn` function is widely used throughout UI components for conditional class 
 - Merging user-provided className props with component defaults
 
 **Section sources**
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [toast.tsx](file://src/components/ui/toast.tsx#L6)
-- [accordion.tsx](file://src/components/ui/accordion.tsx#L12)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [toast.tsx](src/components/ui/toast.tsx#L6)
+- [accordion.tsx](src/components/ui/accordion.tsx#L12)
 
 ## Type Safety and TypeScript Interfaces
 
@@ -192,9 +190,9 @@ The toast system defines several TypeScript interfaces to ensure type safety:
 - `Action`: Union type for toast actions (ADD, UPDATE, DISMISS, REMOVE)
 
 **Section sources**
-- [utils.ts](file://src/lib/utils.ts#L4-L6)
-- [toast.tsx](file://src/components/ui/toast.tsx#L97-L100)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L8-L13)
+- [utils.ts](src/lib/utils.ts#L4-L6)
+- [toast.tsx](src/components/ui/toast.tsx#L97-L100)
+- [use-toast.ts](src/hooks/use-toast.ts#L8-L13)
 
 ## Tree-Shaking and Module Optimization
 
@@ -216,8 +214,8 @@ The `components.json` file enables tree-shaking benefits by defining aliases and
 The alias configuration ensures that imports are resolved consistently and enables better dead code elimination during the build process.
 
 **Section sources**
-- [components.json](file://components.json#L1-L21)
-- [tsconfig.json](file://tsconfig.json)
+- [components.json](components.json#L1-L21)
+- [tsconfig.json](tsconfig.json)
 
 ## Performance Considerations
 
@@ -243,11 +241,11 @@ RemoveToast --> Cleanup["toastTimeouts.delete()"]
 ```
 
 **Diagram sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L5-L7)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L53-L69)
+- [use-toast.ts](src/hooks/use-toast.ts#L5-L7)
+- [use-toast.ts](src/hooks/use-toast.ts#L53-L69)
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L187)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L187)
 
 ## Troubleshooting Common Issues
 
@@ -270,8 +268,8 @@ These issues are addressed through:
 - Ensuring the `listeners` array is properly managed
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L53-L69)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L166-L186)
+- [use-toast.ts](src/hooks/use-toast.ts#L53-L69)
+- [use-toast.ts](src/hooks/use-toast.ts#L166-L186)
 
 ## Conclusion
 The utility components and hooks in sc-dof provide a robust foundation for className composition and user notifications. The `cn` function enables reliable class merging with proper conflict resolution, while the toast system offers a flexible, type-safe mechanism for user feedback. Both systems are deeply integrated with the application's theming, internationalization, and RTL support, ensuring a consistent user experience across all languages and themes. By following the documented patterns and best practices, developers can effectively leverage these utilities while avoiding common pitfalls related to performance and usability.

@@ -1,14 +1,12 @@
 # Language Context Implementation
 
-<cite>
-**Referenced Files in This Document**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [App.tsx](file://src/App.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [Footer.tsx](file://src/components/Footer.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [App.tsx](src/App.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [Footer.tsx](src/components/Footer.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -47,16 +45,16 @@ Provider --> LangSwitcher
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L12-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L12-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L12-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L12-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 ## Core Components
 - LanguageContext provider and hook:
@@ -79,12 +77,12 @@ Provider --> LangSwitcher
   - Navbar, HeroSection, and Footer demonstrate t usage and conditional RTL behavior.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](file://src/App.tsx#L12-L41)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L12-L41)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
 
 ## Architecture Overview
 The language system follows a classic React context pattern: a provider holds state and exposes it to consumers. Consumers subscribe via a custom hook and receive language, translation function, and RTL flag.
@@ -105,10 +103,10 @@ Consumer->>Consumer : Render localized text via t(key)
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L19-L37)
-- [App.tsx](file://src/App.tsx#L12-L31)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [Navbar.tsx](src/components/Navbar.tsx#L19-L37)
+- [App.tsx](src/App.tsx#L12-L31)
 
 ## Detailed Component Analysis
 
@@ -144,11 +142,11 @@ Fallback --> End
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L12-L268)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L12-L268)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### LanguageSwitcher Component
 - Purpose:
@@ -160,8 +158,8 @@ Fallback --> End
   - Renders buttons with flags and labels; clicking a button invokes setLanguage.
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 ### App Root Integration
 - Provider wrapping:
@@ -172,8 +170,8 @@ Fallback --> End
   - Sets font class based on language to use appropriate typography.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L12-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L12-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 ### UI Components Using Translations
 - Navbar:
@@ -187,10 +185,10 @@ Fallback --> End
   - Uses t for rights text and integrates language-aware subtitle and follow-us text.
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 ## Dependency Analysis
 - Provider-to-consumer dependency:
@@ -215,16 +213,16 @@ Provider --> Translations["Translations object"]
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L12-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L12-L268)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L12-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L12-L268)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L12-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L12-L268)
+- [App.tsx](src/App.tsx#L12-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L12-L268)
 
 ## Performance Considerations
 - Minimize re-renders:
@@ -265,8 +263,8 @@ Provider --> Translations["Translations object"]
   - Solution: Ensure the root applies the font class based on language.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L285-L292)
-- [App.tsx](file://src/App.tsx#L12-L31)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L285-L292)
+- [App.tsx](src/App.tsx#L12-L31)
 
 ## Conclusion
 The LanguageContext implementation provides a clean, efficient foundation for multilingual support in the sc-dof platform. It initializes language to Arabic, exposes a stable translation function with fallback behavior, computes RTL support, and integrates seamlessly with UI components. Following the usage patterns shown here ensures consistent localization and responsive layout across languages while avoiding common pitfalls.

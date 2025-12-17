@@ -1,23 +1,21 @@
 # Core Section Components
 
-<cite>
-**Referenced Files in This Document**
-- [eventData.ts](file://src/data/eventData.ts)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [App.tsx](file://src/App.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [WhySection.tsx](file://src/components/WhySection.tsx)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx)
-- [Footer.tsx](file://src/components/Footer.tsx)
-- [button.tsx](file://src/components/ui/button.tsx)
-- [utils.ts](file://src/lib/utils.ts)
-</cite>
+> **Referenced Files in This Document**
+> - [eventData.ts](src/data/eventData.ts)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [App.tsx](src/App.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [WhySection.tsx](src/components/WhySection.tsx)
+> - [GoalsSection.tsx](src/components/GoalsSection.tsx)
+> - [DetailsSection.tsx](src/components/DetailsSection.tsx)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [SpeakersSection.tsx](src/components/SpeakersSection.tsx)
+> - [OrganizersSection.tsx](src/components/OrganizersSection.tsx)
+> - [RegistrationSection.tsx](src/components/RegistrationSection.tsx)
+> - [Footer.tsx](src/components/Footer.tsx)
+> - [button.tsx](src/components/ui/button.tsx)
+> - [utils.ts](src/lib/utils.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -71,13 +69,13 @@ Index --> Footer
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Core Components
 Each section component follows a consistent pattern:
@@ -114,10 +112,10 @@ Best practices for extension:
 - Keep responsive patterns consistent across sections.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Architecture Overview
 The sections are composed in a linear flow on the home page. Each section reads from the LanguageContext for localization and from eventData for content. The app shell sets up routing and the language provider.
@@ -140,9 +138,9 @@ Note over Sections,Provider : Each section renders localized content
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Detailed Component Analysis
 
@@ -175,7 +173,7 @@ Extensibility:
 - Introduce localized hero subtitles or taglines via eventData.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
 
 ### WhySection
 Purpose:
@@ -195,7 +193,7 @@ Accessibility:
 - Semantic headings.
 
 **Section sources**
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
 
 ### GoalsSection
 Purpose:
@@ -215,7 +213,7 @@ Accessibility:
 - Clear typography hierarchy.
 
 **Section sources**
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
 
 ### DetailsSection
 Purpose:
@@ -235,7 +233,7 @@ Accessibility:
 - Clear labels for each detail card.
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
 
 ### AgendaSection
 Purpose:
@@ -253,7 +251,7 @@ Accessibility:
 - Semantic headings and readable text sizes.
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ### SpeakersSection
 Purpose:
@@ -273,7 +271,7 @@ Accessibility:
 - Clear role and name presentation.
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
 
 ### OrganizersSection
 Purpose:
@@ -293,7 +291,7 @@ Accessibility:
 - Interactive chips with hover states.
 
 **Section sources**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
 
 ### RegistrationSection
 Purpose:
@@ -313,8 +311,8 @@ Accessibility:
 - External link handling with rel and target.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
 
 ### Footer
 Purpose:
@@ -334,7 +332,7 @@ Accessibility:
 - Clear footer text and links.
 
 **Section sources**
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
 
 ## Dependency Analysis
 - LanguageContext provides t() and language to all sections.
@@ -368,14 +366,14 @@ Index --> Footer
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Performance Considerations
 - Asset imports: Images are bundled with the build; ensure appropriate sizes and formats for fast loading.
@@ -401,9 +399,9 @@ Index --> Footer
   - Validate that language switching updates all sections.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
 
 ## Conclusion
 The core section components deliver a cohesive, localized, and responsive event website. They share a consistent pattern of consuming translation keys and data from a central source, enabling easy maintenance and extension. By following the outlined responsive techniques, accessibility guidelines, and best practices, teams can adapt the template for future events efficiently.
@@ -418,9 +416,9 @@ The core section components deliver a cohesive, localized, and responsive event 
 - The app shell initializes routing and providers.
 
 **Section sources**
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ### Responsive Layout Techniques
 - Grid: Use grid-cols-{n} utilities to adapt columns across breakpoints.
@@ -429,10 +427,10 @@ The core section components deliver a cohesive, localized, and responsive event 
 - Spacing: Use padding and margin utilities consistently across sections.
 
 **Section sources**
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
 
 ### Extending the Template
 - Add new translation keys to the LanguageContext.
@@ -441,6 +439,6 @@ The core section components deliver a cohesive, localized, and responsive event 
 - Maintain consistent responsive patterns across new sections.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)

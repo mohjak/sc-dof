@@ -1,14 +1,12 @@
 # Goals Section
 
-<cite>
-**Referenced Files in This Document**
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [index.css](file://src/index.css)
-- [utils.ts](file://src/lib/utils.ts)
-- [eventData.ts](file://src/data/eventData.ts)
-- [Index.tsx](file://src/pages/Index.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [GoalsSection.tsx](src/components/GoalsSection.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [index.css](src/index.css)
+> - [utils.ts](src/lib/utils.ts)
+> - [eventData.ts](src/data/eventData.ts)
+> - [Index.tsx](src/pages/Index.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -41,15 +39,15 @@ B --> E["utils.ts<br/>cn() utility"]
 ```
 
 **Diagram sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L163)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L163)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
 
 ## Core Components
 - GoalsSection: Renders a centered title and a responsive grid of four goal cards. Each card displays an icon, a title, and a description. The component uses:
@@ -70,10 +68,10 @@ B --> E["utils.ts<br/>cn() utility"]
 - utils.ts: Provides the cn() utility for merging Tailwind classes safely.
 
 **Section sources**
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L163)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L163)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Architecture Overview
 The GoalsSection component participates in a typical React flow:
@@ -95,10 +93,10 @@ Goals-->>Page : Render responsive grid of goal cards
 ```
 
 **Diagram sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L163)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L163)
 
 ## Detailed Component Analysis
 
@@ -134,13 +132,13 @@ HoverEffects --> End(["Card rendered"])
 ```
 
 **Diagram sources**
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L163)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L163)
 
 **Section sources**
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### Responsive Grid Behavior
 - Columns:
@@ -153,7 +151,7 @@ HoverEffects --> End(["Card rendered"])
   - Title and descriptions use semantic sizes and leading for readability.
 
 **Section sources**
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
 
 ### Tailwind Group-Hover Utilities and Animations
 - Group-hover coordination:
@@ -165,7 +163,7 @@ HoverEffects --> End(["Card rendered"])
   - Cards gain stronger shadows on hover and lift slightly to emphasize interactivity.
 
 **Section sources**
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
 
 ### Color Gradients and Theming
 - Gradient utilities:
@@ -177,8 +175,8 @@ HoverEffects --> End(["Card rendered"])
   - Hover color transitions align with the brand palette (e.g., group-hover:text-syrian-green).
 
 **Section sources**
-- [index.css](file://src/index.css#L55-L163)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
+- [index.css](src/index.css#L55-L163)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
 
 ### Adding or Modifying Goals and Icons
 - Steps to add a new goal:
@@ -205,14 +203,14 @@ Goals-->>Dev : Updated grid with new goal and icon
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [index.css](file://src/index.css#L55-L163)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [index.css](src/index.css#L55-L163)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [index.css](file://src/index.css#L55-L163)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [index.css](src/index.css#L55-L163)
 
 ## Dependency Analysis
 - Internal dependencies:
@@ -234,18 +232,18 @@ Page["Index.tsx"] --> Goals
 ```
 
 **Diagram sources**
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L163)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L163)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 **Section sources**
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L163)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L163)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Performance Considerations
 - Rendering cost:
@@ -274,8 +272,8 @@ Page["Index.tsx"] --> Goals
   - Resolution: Ensure group-hover utilities are applied consistently on the card wrapper and child elements; verify transition durations and easing are uniform.
 
 **Section sources**
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ## Conclusion
 GoalsSection delivers a clean, responsive presentation of event goals with consistent visual language. By leveraging translation keys, Tailwind utilities, and group-hover interactions, it provides an engaging user experience. Extending the component involves updating translations, the goals array, and optional gradient utilities, ensuring a cohesive design system across the application.

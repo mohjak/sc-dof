@@ -1,15 +1,13 @@
 # Why Section
 
-<cite>
-**Referenced Files in This Document**
-- [WhySection.tsx](file://src/components/WhySection.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [index.css](file://src/index.css)
-- [App.tsx](file://src/App.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [Footer.tsx](file://src/components/Footer.tsx)
-- [eventData.ts](file://src/data/eventData.ts)
-</cite>
+> **Referenced Files in This Document**
+> - [WhySection.tsx](src/components/WhySection.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [index.css](src/index.css)
+> - [App.tsx](src/App.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [Footer.tsx](src/components/Footer.tsx)
+> - [eventData.ts](src/data/eventData.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -44,20 +42,20 @@ G["Footer.tsx"] -. "Shared visual language" .- A
 ```
 
 **Diagram sources**
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L104)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [eventData.ts](file://src/data/eventData.ts#L23-L26)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L64)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L103)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L104)
+- [App.tsx](src/App.tsx#L1-L43)
+- [eventData.ts](src/data/eventData.ts#L23-L26)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L64)
+- [Footer.tsx](src/components/Footer.tsx#L1-L103)
 
 **Section sources**
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L104)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [eventData.ts](file://src/data/eventData.ts#L23-L26)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L104)
+- [App.tsx](src/App.tsx#L1-L43)
+- [eventData.ts](src/data/eventData.ts#L23-L26)
 
 ## Core Components
 - WhySection: Renders the full-bleed background image, dark overlay, centered content, and the Syrian flag colors divider. It consumes t() for multilingual title and description.
@@ -75,11 +73,11 @@ Key responsibilities:
 - Multilingual rendering via t()
 
 **Section sources**
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L104)
-- [index.css](file://src/index.css#L161-L248)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L104)
+- [index.css](src/index.css#L161-L248)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Architecture Overview
 The Why Section participates in a layered architecture:
@@ -95,24 +93,24 @@ participant P as "App.tsx"
 participant L as "LanguageContext.tsx"
 participant W as "WhySection.tsx"
 participant S as "index.css"
-U->>P : "Load page"
-P->>L : "Provide language context"
-L-->>P : "language, setLanguage, t(), isRTL"
-P-->>U : "Render with dir and font class"
-U->>W : "Scroll to Why Section"
-W->>L : "Call t('why.title')"
-W->>L : "Call t('why.description')"
-L-->>W : "Localized strings"
-W->>S : "Apply custom colors and animations"
-W-->>U : "Render full-bleed with overlay and centered content"
+U->>P : Load page
+P->>L : Provide language context
+L-->>P : language, setLanguage, t(), isRTL
+P-->>U : Render with dir and font class
+U->>W : Scroll to Why Section
+W->>L : Call t('why.title')
+W->>L : Call t('why.description')
+L-->>W : Localized strings
+W->>S : Apply custom colors and animations
+W-->>U : Render full-bleed with overlay and centered content
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [index.css](file://src/index.css#L55-L104)
-- [index.css](file://src/index.css#L161-L248)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [index.css](src/index.css#L55-L104)
+- [index.css](src/index.css#L161-L248)
 
 ## Detailed Component Analysis
 
@@ -146,11 +144,11 @@ Modifying for different event themes:
 - Modify the emoji to a theme-appropriate symbol if desired.
 
 **Section sources**
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L104)
-- [index.css](file://src/index.css#L161-L248)
-- [eventData.ts](file://src/data/eventData.ts#L23-L26)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L104)
+- [index.css](src/index.css#L161-L248)
+- [eventData.ts](src/data/eventData.ts#L23-L26)
 
 ### Internationalization Integration
 - Translation keys: The component uses t('why.title') and t('why.description').
@@ -163,8 +161,8 @@ Practical usage:
 - Test switching languages to verify content updates seamlessly.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ### Visual Elements and Styling
 - Custom colors: The CSS defines --syrian-green, --syrian-red, and --syrian-black used by the divider and throughout the site.
@@ -175,10 +173,10 @@ Consistency with other sections:
 - HeroSection and Footer share visual motifs (Syrian flag imagery and colors), reinforcing a cohesive design language.
 
 **Section sources**
-- [index.css](file://src/index.css#L55-L104)
-- [index.css](file://src/index.css#L161-L248)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L64)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L103)
+- [index.css](src/index.css#L55-L104)
+- [index.css](src/index.css#L161-L248)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L64)
+- [Footer.tsx](src/components/Footer.tsx#L1-L103)
 
 ### Responsive Behavior Across Screen Sizes
 - Mobile-first approach: Base padding and spacing use small-screen defaults; medium and larger screens receive increased spacing and font sizes.
@@ -190,8 +188,8 @@ Testing tips:
 - Confirm that the divider remains centered and proportionally sized.
 
 **Section sources**
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [index.css](file://src/index.css#L55-L104)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [index.css](src/index.css#L55-L104)
 
 ### Accessibility Considerations
 - Color contrast: The dark overlay with white text meets contrast guidelines for readability.
@@ -204,9 +202,9 @@ Recommendations:
 - Ensure animations can be disabled by users who prefer reduced motion.
 
 **Section sources**
-- [index.css](file://src/index.css#L55-L104)
-- [index.css](file://src/index.css#L161-L248)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [index.css](src/index.css#L55-L104)
+- [index.css](src/index.css#L161-L248)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Dependency Analysis
 The Why Section depends on:
@@ -224,14 +222,14 @@ Why --> Assets["revolution-flag.jpg"]
 ```
 
 **Diagram sources**
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L104)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L104)
 
 **Section sources**
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L104)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L104)
 
 ## Performance Considerations
 - Background image optimization: Ensure the revolution flag image is appropriately sized and compressed to minimize load time.
@@ -256,9 +254,9 @@ Why --> Assets["revolution-flag.jpg"]
   - Check Tailwind breakpoints and ensure max-width constraints are appropriate for the content.
 
 **Section sources**
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L161-L248)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L161-L248)
 
 ## Conclusion
 The Why Section effectively communicates the event’s purpose through a visually striking full-bleed background, a readable dark overlay, and centered content. Its reliance on the t() function ensures multilingual accessibility, while the peace dove emoji and Syrian flag colors divider reinforce national identity. With responsive design and thoughtful accessibility considerations, the component is robust and adaptable for various event themes.
@@ -274,8 +272,8 @@ The Why Section effectively communicates the event’s purpose through a visuall
 These keys are consumed by the Why Section and provided by the LanguageContext.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
 
 ### B. Custom Colors and Animations Reference
 - Custom colors: --syrian-green, --syrian-red, --syrian-black
@@ -284,8 +282,8 @@ These keys are consumed by the Why Section and provided by the LanguageContext.
 These are defined in the global stylesheet and used by the component.
 
 **Section sources**
-- [index.css](file://src/index.css#L55-L104)
-- [index.css](file://src/index.css#L161-L248)
+- [index.css](src/index.css#L55-L104)
+- [index.css](src/index.css#L161-L248)
 
 ### C. Example Message Modification Workflow
 - Update translation keys in LanguageContext.tsx for why.title and why.description.
@@ -293,6 +291,6 @@ These are defined in the global stylesheet and used by the component.
 - Keep the layout and overlay consistent for brand continuity.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [index.css](file://src/index.css#L55-L104)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [index.css](src/index.css#L55-L104)

@@ -1,19 +1,17 @@
 # Responsive Design
 
-<cite>
-**Referenced Files in This Document**
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [index.css](file://src/index.css)
-- [App.tsx](file://src/App.tsx)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx)
-- [drawer.tsx](file://src/components/ui/drawer.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [index.css](src/index.css)
+> - [App.tsx](src/App.tsx)
+> - [use-mobile.tsx](src/hooks/use-mobile.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [sidebar.tsx](src/components/ui/sidebar.tsx)
+> - [drawer.tsx](src/components/ui/drawer.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [DetailsSection.tsx](src/components/DetailsSection.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -56,20 +54,20 @@ K --> E
 ```
 
 **Diagram sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L1-L638)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L1-L88)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L1-L638)
+- [drawer.tsx](src/components/ui/drawer.tsx#L1-L88)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Core Components
 - Tailwind configuration: Defines container widths and theme extensions used by responsive utilities
@@ -81,16 +79,16 @@ K --> E
 - Sections: Demonstrate responsive grids and typography scaling
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L1-L638)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L1-L88)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [App.tsx](src/App.tsx#L1-L43)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L1-L638)
+- [drawer.tsx](src/components/ui/drawer.tsx#L1-L88)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
 
 ## Architecture Overview
 Responsive behavior is layered:
@@ -117,9 +115,9 @@ C->>S : Render desktop sidebar on larger screens
 ```
 
 **Diagram sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L1-L638)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L1-L638)
 
 ## Detailed Component Analysis
 
@@ -137,10 +135,10 @@ Utilities --> Components["Components Apply Styles"]
 ```
 
 **Diagram sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ### Typography Scaling with Font Families
 - Global CSS applies a custom font family for Arabic and a fallback for other languages
@@ -160,18 +158,18 @@ Sec-->>Sec : Use responsive text utilities (sm : , md : )
 ```
 
 **Diagram sources**
-- [index.css](file://src/index.css#L1-L249)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
+- [index.css](src/index.css#L1-L249)
+- [App.tsx](src/App.tsx#L1-L43)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
 
 **Section sources**
-- [index.css](file://src/index.css#L1-L249)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
+- [index.css](src/index.css#L1-L249)
+- [App.tsx](src/App.tsx#L1-L43)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
 
 ### Navbar: Mobile Drawer vs Desktop Navigation
 - Desktop navigation uses Tailwind responsive utilities to hide on smaller screens and show on medium-sized screens and above
@@ -193,12 +191,12 @@ Nav-->>User : Desktop navigation visible on larger screens
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L1-L88)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [drawer.tsx](src/components/ui/drawer.tsx#L1-L88)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L1-L88)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [drawer.tsx](src/components/ui/drawer.tsx#L1-L88)
 
 ### Sidebar: Off-canvas on Mobile, Desktop Sidebar
 - The Sidebar component uses the use-mobile hook to decide between:
@@ -223,13 +221,13 @@ end
 ```
 
 **Diagram sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L1-L638)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L1-L88)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L1-L638)
+- [drawer.tsx](src/components/ui/drawer.tsx#L1-L88)
 
 **Section sources**
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L1-L638)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L1-L638)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
 
 ### Grid Layouts: Responsive Columns
 - Sections use responsive grid utilities to adjust column counts across breakpoints
@@ -245,12 +243,12 @@ F --> G["Columns 3 on medium"]
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
 
 ## Dependency Analysis
 Responsive design depends on coordinated layers:
@@ -277,26 +275,26 @@ Hook --> S
 ```
 
 **Diagram sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L1-L638)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L1-L638)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L1-L638)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L1-L638)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
 
 ## Performance Considerations
 - Prefer CSS-based responsive utilities over runtime calculations for layout changes
@@ -318,10 +316,10 @@ Common responsive design challenges and solutions:
   - Check that grid layouts use appropriate responsive column utilities
 
 **Section sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
 
 ## Conclusion
 The project implements responsive design by combining Tailwind’s breakpoint system with JavaScript-based device detection:

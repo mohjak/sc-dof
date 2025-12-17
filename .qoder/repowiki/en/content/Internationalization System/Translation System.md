@@ -1,17 +1,15 @@
 # Translation System
 
-<cite>
-**Referenced Files in This Document**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [App.tsx](file://src/App.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx)
-- [Footer.tsx](file://src/components/Footer.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [App.tsx](src/App.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [DetailsSection.tsx](src/components/DetailsSection.tsx)
+> - [Footer.tsx](src/components/Footer.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -36,11 +34,11 @@ The translation system is centered around a React Context provider and a small s
 - isRTL: boolean indicating right-to-left layout for Arabic
 
 Key files:
-- Provider and translation logic: [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- Language switcher UI: [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- Application shell applying direction and fonts: [App.tsx](file://src/App.tsx)
-- Page composition: [Index.tsx](file://src/pages/Index.tsx)
-- Example components consuming translations: [Navbar.tsx](file://src/components/Navbar.tsx), [HeroSection.tsx](file://src/components/HeroSection.tsx), [AgendaSection.tsx](file://src/components/AgendaSection.tsx), [DetailsSection.tsx](file://src/components/DetailsSection.tsx), [Footer.tsx](file://src/components/Footer.tsx)
+- Provider and translation logic: [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+- Language switcher UI: [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+- Application shell applying direction and fonts: [App.tsx](src/App.tsx)
+- Page composition: [Index.tsx](src/pages/Index.tsx)
+- Example components consuming translations: [Navbar.tsx](src/components/Navbar.tsx), [HeroSection.tsx](src/components/HeroSection.tsx), [AgendaSection.tsx](src/components/AgendaSection.tsx), [DetailsSection.tsx](src/components/DetailsSection.tsx), [Footer.tsx](src/components/Footer.tsx)
 
 ```mermaid
 graph TB
@@ -70,20 +68,20 @@ NAV --> SWITCH
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Core Components
 - LanguageContext.tsx
@@ -104,10 +102,10 @@ NAV --> SWITCH
   - Composes all page sections and makes them consumers of the translation context.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Architecture Overview
 The translation architecture follows a simple, predictable flow:
@@ -132,10 +130,10 @@ Comp-->>User : Updated localized text
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
 
 ## Detailed Component Analysis
 
@@ -171,14 +169,14 @@ class LanguageProvider {
 +t(key) : string
 +isRTL : boolean
 }
-LanguageProvider --> LanguageContextType : "provides"
+LanguageProvider --> LanguageContextType : provides
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### LanguageSwitcher.tsx
 - Purpose: UI to switch languages and reflect current selection.
@@ -197,11 +195,11 @@ ReRender --> End(["Localized content updated"])
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
 
 ### App.tsx
 - Purpose: Apply global directionality and fonts based on language.
@@ -212,7 +210,7 @@ ReRender --> End(["Localized content updated"])
   - Wraps the app with providers
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ### Example Consumers: Navbar, HeroSection, AgendaSection, DetailsSection, Footer
 - Navbar.tsx
@@ -248,19 +246,19 @@ Ctx-->>Foot : Localized string
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
 
 ## Dependency Analysis
 - Provider-to-consumer dependency:
@@ -284,24 +282,24 @@ APP["App.tsx"] --> LC
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
 
 ## Performance Considerations
 - Minimal re-renders: The provider updates a single state field; consumers only re-render when language changes.
@@ -314,28 +312,28 @@ Common issues and resolutions:
 - Missing translations
   - Symptom: Keys appear as-is in UI (fallback behavior)
   - Resolution: Add the key to all languages in the translations object
-  - Reference: [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L272-L274)
+  - Reference: [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L272-L274)
 - Inconsistent terminology
   - Symptom: Same concept appears differently across languages
   - Resolution: Define canonical keys and review across languages; keep dot-notation grouping consistent
-  - Reference: Functional areas like nav.*, hero.*, agenda.* in [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L12-L264)
+  - Reference: Functional areas like nav.*, hero.*, agenda.* in [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L12-L264)
 - Dynamic content within translations
   - Symptom: Need to insert variables into translated strings
   - Resolution: Use a templating approach outside t() (e.g., pass variables to a helper that substitutes placeholders) or split translatable parts and concatenate safely
-  - Reference: t() returns raw strings; no built-in interpolation in [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L272-L274)
+  - Reference: t() returns raw strings; no built-in interpolation in [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L272-L274)
 - Mixed-language text alignment
   - Symptom: Mixed RTL/LTR text causes layout issues
   - Resolution: Ensure isRTL is applied consistently; wrap mixed-content containers with appropriate direction classes
-  - Reference: App.tsx sets direction based on isRTL [App.tsx](file://src/App.tsx#L12-L20)
+  - Reference: App.tsx sets direction based on isRTL [App.tsx](src/App.tsx#L12-L20)
 - LanguageSwitcher not updating content
   - Symptom: Clicking buttons does nothing
   - Resolution: Verify LanguageProvider wraps the app and components; confirm useLanguage is used inside provider
-  - References: [App.tsx](file://src/App.tsx#L33-L41), [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L39), [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L285-L291)
+  - References: [App.tsx](src/App.tsx#L33-L41), [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L39), [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L285-L291)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L272-L274)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L39)
-- [App.tsx](file://src/App.tsx#L12-L20)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L272-L274)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L39)
+- [App.tsx](src/App.tsx#L12-L20)
 
 ## Conclusion
 The sc-dof translation system is a minimal, robust solution that centralizes localization in a single provider and exposes a simple t() function. The dot-notation key structure organizes content by functional areas, and LanguageSwitcher provides immediate, global updates across the UI. By following the best practices below, teams can maintain consistency, avoid missing translations, and scale the system as needed.
@@ -358,8 +356,8 @@ Steps:
 5. Verify directionality and fonts remain consistent
 
 References:
-- Translations object and t() fallback: [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L12-L274)
-- Consumer usage examples: [Navbar.tsx](file://src/components/Navbar.tsx#L19-L28), [HeroSection.tsx](file://src/components/HeroSection.tsx#L47-L58), [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L8-L16), [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L28-L56), [Footer.tsx](file://src/components/Footer.tsx#L90-L93)
+- Translations object and t() fallback: [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L12-L274)
+- Consumer usage examples: [Navbar.tsx](src/components/Navbar.tsx#L19-L28), [HeroSection.tsx](src/components/HeroSection.tsx#L47-L58), [AgendaSection.tsx](src/components/AgendaSection.tsx#L8-L16), [DetailsSection.tsx](src/components/DetailsSection.tsx#L28-L56), [Footer.tsx](src/components/Footer.tsx#L90-L93)
 
 ### Example Keys in Use
 - Navigation: "nav.home", "nav.why", "nav.goals", "nav.details", "nav.agenda", "nav.speakers", "nav.organizers", "nav.register"
@@ -370,9 +368,9 @@ References:
 - Speakers, Organizers, Footer, Venue: "speakers.*", "organizers.*", "footer.*", "venue.*"
 
 References:
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L12-L264)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L19-L28)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L47-L58)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L8-L16)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L28-L56)
-- [Footer.tsx](file://src/components/Footer.tsx#L90-L93)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L12-L264)
+- [Navbar.tsx](src/components/Navbar.tsx#L19-L28)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L47-L58)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L8-L16)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L28-L56)
+- [Footer.tsx](src/components/Footer.tsx#L90-L93)

@@ -1,17 +1,15 @@
 # Navigation Components
 
-<cite>
-**Referenced Files in This Document**   
-- [navigation-menu.tsx](file://src/components/ui/navigation-menu.tsx)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx)
-- [tabs.tsx](file://src/components/ui/tabs.tsx)
-- [breadcrumb.tsx](file://src/components/ui/breadcrumb.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [NavLink.tsx](file://src/components/NavLink.tsx)
-- [App.tsx](file://src/App.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx)
-</cite>
+> **Referenced Files in This Document**   
+> - [navigation-menu.tsx](src/components/ui/navigation-menu.tsx)
+> - [sidebar.tsx](src/components/ui/sidebar.tsx)
+> - [tabs.tsx](src/components/ui/tabs.tsx)
+> - [breadcrumb.tsx](src/components/ui/breadcrumb.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [NavLink.tsx](src/components/NavLink.tsx)
+> - [App.tsx](src/App.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [use-mobile.tsx](src/hooks/use-mobile.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -35,10 +33,10 @@ This document provides comprehensive documentation for the navigation-related co
 The application implements a comprehensive navigation system using four primary components that work together to create a cohesive user experience. These components are built using Radix UI primitives for accessibility and enhanced with Tailwind CSS for styling. The NavigationMenu serves as the primary navigation in the navbar, the Sidebar provides responsive off-canvas navigation, Tabs enable section switching within pages, and Breadcrumb maintains hierarchy tracking for complex content structures.
 
 **Section sources**
-- [navigation-menu.tsx](file://src/components/ui/navigation-menu.tsx)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx)
-- [tabs.tsx](file://src/components/ui/tabs.tsx)
-- [breadcrumb.tsx](file://src/components/ui/breadcrumb.tsx)
+- [navigation-menu.tsx](src/components/ui/navigation-menu.tsx)
+- [sidebar.tsx](src/components/ui/sidebar.tsx)
+- [tabs.tsx](src/components/ui/tabs.tsx)
+- [breadcrumb.tsx](src/components/ui/breadcrumb.tsx)
 
 ## NavigationMenu Implementation
 
@@ -55,17 +53,17 @@ class NavigationMenu {
 +Link : NavigationMenuPrimitive.Link
 +Viewport : NavigationMenuPrimitive.Viewport
 }
-NavigationMenu --> NavigationMenuPrimitive : "uses"
-NavigationMenu --> cva : "uses for styling"
-NavigationMenu --> cn : "uses for class merging"
+NavigationMenu --> NavigationMenuPrimitive : uses
+NavigationMenu --> cva : uses for styling
+NavigationMenu --> cn : uses for class merging
 ```
 
 **Diagram sources**
-- [navigation-menu.tsx](file://src/components/ui/navigation-menu.tsx)
+- [navigation-menu.tsx](src/components/ui/navigation-menu.tsx)
 
 **Section sources**
-- [navigation-menu.tsx](file://src/components/ui/navigation-menu.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
+- [navigation-menu.tsx](src/components/ui/navigation-menu.tsx)
+- [Navbar.tsx](src/components/Navbar.tsx)
 
 ## Sidebar Functionality
 
@@ -94,11 +92,11 @@ SidebarProvider->>document.cookie : Update sidebar state
 ```
 
 **Diagram sources**
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx)
+- [sidebar.tsx](src/components/ui/sidebar.tsx)
 
 **Section sources**
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx)
+- [sidebar.tsx](src/components/ui/sidebar.tsx)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx)
 
 ## Tabs Component
 
@@ -112,15 +110,15 @@ class Tabs {
 +Trigger : TabsPrimitive.Trigger
 +Content : TabsPrimitive.Content
 }
-Tabs --> TabsPrimitive : "uses"
-Tabs --> cn : "uses for class merging"
+Tabs --> TabsPrimitive : uses
+Tabs --> cn : uses for class merging
 ```
 
 **Diagram sources**
-- [tabs.tsx](file://src/components/ui/tabs.tsx)
+- [tabs.tsx](src/components/ui/tabs.tsx)
 
 **Section sources**
-- [tabs.tsx](file://src/components/ui/tabs.tsx)
+- [tabs.tsx](src/components/ui/tabs.tsx)
 
 ## Breadcrumb Component
 
@@ -137,15 +135,15 @@ class Breadcrumb {
 +Separator : li element
 +Ellipsis : span element
 }
-Breadcrumb --> Slot : "uses for asChild"
-Breadcrumb --> cn : "uses for class merging"
+Breadcrumb --> Slot : uses for asChild
+Breadcrumb --> cn : uses for class merging
 ```
 
 **Diagram sources**
-- [breadcrumb.tsx](file://src/components/ui/breadcrumb.tsx)
+- [breadcrumb.tsx](src/components/ui/breadcrumb.tsx)
 
 **Section sources**
-- [breadcrumb.tsx](file://src/components/ui/breadcrumb.tsx)
+- [breadcrumb.tsx](src/components/ui/breadcrumb.tsx)
 
 ## Integration with React Router
 
@@ -167,11 +165,11 @@ NavLink-->>User : Render link with appropriate styling
 ```
 
 **Diagram sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx)
+- [NavLink.tsx](src/components/NavLink.tsx)
 
 **Section sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx)
-- [App.tsx](file://src/App.tsx)
+- [NavLink.tsx](src/components/NavLink.tsx)
+- [App.tsx](src/App.tsx)
 
 ## Accessibility Features
 
@@ -180,10 +178,10 @@ The navigation components implement comprehensive accessibility features to ensu
 The components also support keyboard shortcuts for enhanced navigation efficiency. The Sidebar can be toggled with Ctrl+B, and all interactive elements are accessible via keyboard tabbing. Navigation menus support arrow key navigation, and tabs can be switched using left/right arrow keys. These features ensure that users who rely on keyboard navigation can efficiently interact with all navigation elements.
 
 **Section sources**
-- [navigation-menu.tsx](file://src/components/ui/navigation-menu.tsx)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx)
-- [tabs.tsx](file://src/components/ui/tabs.tsx)
-- [breadcrumb.tsx](file://src/components/ui/breadcrumb.tsx)
+- [navigation-menu.tsx](src/components/ui/navigation-menu.tsx)
+- [sidebar.tsx](src/components/ui/sidebar.tsx)
+- [tabs.tsx](src/components/ui/tabs.tsx)
+- [breadcrumb.tsx](src/components/ui/breadcrumb.tsx)
 
 ## RTL Layout Support
 
@@ -206,12 +204,12 @@ NavigationMenu --> End([Navigation ready])
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [App.tsx](file://src/App.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+- [App.tsx](src/App.tsx)
+- [Navbar.tsx](src/components/Navbar.tsx)
 
 ## Customization and Theming
 
@@ -220,9 +218,9 @@ The navigation components are highly customizable through Tailwind CSS variants 
 Theme-aware icons from Lucide React are used throughout the navigation components, ensuring visual consistency and proper color application based on the current theme. The components also support customization through props like asChild, which allows wrapping arbitrary content while maintaining navigation semantics and styling.
 
 **Section sources**
-- [navigation-menu.tsx](file://src/components/ui/navigation-menu.tsx)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx)
-- [lib/utils.ts](file://src/lib/utils.ts)
+- [navigation-menu.tsx](src/components/ui/navigation-menu.tsx)
+- [sidebar.tsx](src/components/ui/sidebar.tsx)
+- [lib/utils.ts](src/lib/utils.ts)
 
 ## Common Issues and Troubleshooting
 
@@ -233,9 +231,9 @@ Tab activation problems can occur when dynamic content loading affects the tab s
 Performance issues may arise with complex navigation structures. Implementing lazy loading for navigation content and optimizing re-renders with React.memo can help maintain smooth performance. Additionally, ensuring proper cleanup of event listeners (as seen in the Sidebar's keyboard shortcut implementation) prevents memory leaks.
 
 **Section sources**
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx)
-- [NavLink.tsx](file://src/components/NavLink.tsx)
+- [sidebar.tsx](src/components/ui/sidebar.tsx)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx)
+- [NavLink.tsx](src/components/NavLink.tsx)
 
 ## Conclusion
 The navigation components in the Syrian Community Day of Freedom application provide a robust, accessible, and internationalized navigation system. By leveraging Radix UI primitives, React Router integration, and Tailwind CSS customization, the components deliver a seamless user experience across devices and languages. The implementation demonstrates best practices in accessibility, responsive design, and internationalization, particularly with comprehensive RTL support for Arabic language users. These components form the backbone of the application's user interface, enabling intuitive navigation and content discovery.

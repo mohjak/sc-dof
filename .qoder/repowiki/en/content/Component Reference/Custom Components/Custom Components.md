@@ -1,20 +1,18 @@
 # Custom Components
 
-<cite>
-**Referenced Files in This Document**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [App.tsx](file://src/App.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [eventData.ts](file://src/data/eventData.ts)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [utils.ts](file://src/lib/utils.ts)
-</cite>
+> **Referenced Files in This Document**
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [SpeakersSection.tsx](src/components/SpeakersSection.tsx)
+> - [RegistrationSection.tsx](src/components/RegistrationSection.tsx)
+> - [CountdownTimer.tsx](src/components/CountdownTimer.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [App.tsx](src/App.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [eventData.ts](src/data/eventData.ts)
+> - [ScrollToTop.tsx](src/components/ScrollToTop.tsx)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [utils.ts](src/lib/utils.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -61,19 +59,19 @@ App --> ScrollTop
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Core Components
 This section introduces the four custom components and their roles within the event platform.
@@ -84,10 +82,10 @@ This section introduces the four custom components and their roles within the ev
 - RegistrationSection: Provides a QR code and registration link with localized copy and a prominent call-to-action button. It dynamically chooses localized text based on the current language.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
 
 ## Architecture Overview
 The components integrate with the global language context and are composed by the Index page. The App shell wraps the application with providers that supply language, directionality, routing, and UI utilities.
@@ -115,14 +113,14 @@ Note over App,Page : All components consume useLanguage()
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
 
 ## Detailed Component Analysis
 
@@ -163,9 +161,9 @@ Performance considerations:
 - Animation performance depends on CSS; keep keyframe complexity minimal.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
 
 ### AgendaSection
 Purpose:
@@ -201,8 +199,8 @@ Performance considerations:
 - Consider virtualizing if the agenda grows significantly.
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### SpeakersSection
 Purpose:
@@ -237,8 +235,8 @@ Performance considerations:
 - Lazy-load images if the grid expands significantly.
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### RegistrationSection
 Purpose:
@@ -272,8 +270,8 @@ Performance considerations:
 - QR code generation is lightweight; no significant overhead.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### CountdownTimer (used by HeroSection)
 Purpose:
@@ -306,8 +304,8 @@ Performance considerations:
 - Minimal re-renders; interval cleanup prevents leaks.
 
 **Section sources**
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### Scroll-to-Top Integration
 Purpose:
@@ -331,8 +329,8 @@ Common implementation issues:
 - Test scroll behavior across devices.
 
 **Section sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Dependency Analysis
 This section maps how components depend on each other and on global state.
@@ -359,20 +357,20 @@ App --> ScrollTop
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Performance Considerations
 - Memoization: Consider memoizing speaker lists or agenda arrays if they become dynamic and expensive to compute.
@@ -408,9 +406,9 @@ App --> ScrollTop
   - Add aria-labels for interactive elements without text.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 ## Conclusion
 The custom components—HeroSection, AgendaSection, SpeakersSection, and RegistrationSection—are integral to the event platform’s presentation and localization. They rely on the LanguageProvider for translation and directionality, integrate seamlessly with the Index page, and leverage Tailwind utilities for responsive design and animations. By following the guidance in this document, developers can maintain consistency, improve accessibility, and optimize performance while extending the platform’s internationalization and user experience.

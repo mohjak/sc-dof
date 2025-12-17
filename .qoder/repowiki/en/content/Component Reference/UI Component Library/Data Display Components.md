@@ -1,20 +1,18 @@
 # Data Display Components
 
-<cite>
-**Referenced Files in This Document**   
-- [table.tsx](file://src/components/ui/table.tsx)
-- [chart.tsx](file://src/components/ui/chart.tsx)
-- [badge.tsx](file://src/components/ui/badge.tsx)
-- [avatar.tsx](file://src/components/ui/avatar.tsx)
-- [progress.tsx](file://src/components/ui/progress.tsx)
-- [calendar.tsx](file://src/components/ui/calendar.tsx)
-- [eventData.ts](file://src/data/eventData.ts)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx)
-- [utils.ts](file://src/lib/utils.ts)
-- [tailwind.config.ts](file://tailwind.config.ts)
-</cite>
+> **Referenced Files in This Document**   
+> - [table.tsx](src/components/ui/table.tsx)
+> - [chart.tsx](src/components/ui/chart.tsx)
+> - [badge.tsx](src/components/ui/badge.tsx)
+> - [avatar.tsx](src/components/ui/avatar.tsx)
+> - [progress.tsx](src/components/ui/progress.tsx)
+> - [calendar.tsx](src/components/ui/calendar.tsx)
+> - [eventData.ts](src/data/eventData.ts)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [CountdownTimer.tsx](src/components/CountdownTimer.tsx)
+> - [SpeakersSection.tsx](src/components/SpeakersSection.tsx)
+> - [utils.ts](src/lib/utils.ts)
+> - [tailwind.config.ts](tailwind.config.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -49,7 +47,7 @@ The Table component is used for displaying structured information in a tabular f
 The Table component includes responsive design features, with overflow handling for smaller screens and consistent styling across different table elements.
 
 **Section sources**
-- [table.tsx](file://src/components/ui/table.tsx#L5-L72)
+- [table.tsx](src/components/ui/table.tsx#L5-L72)
 
 ### Chart Component
 The Chart component provides data visualization capabilities using the Recharts library. It offers a wrapper around Recharts components with additional styling and configuration options:
@@ -64,7 +62,7 @@ The Chart component provides data visualization capabilities using the Recharts 
 The component supports theme-based color configuration and provides accessibility features for chart data.
 
 **Section sources**
-- [chart.tsx](file://src/components/ui/chart.tsx#L32-L303)
+- [chart.tsx](src/components/ui/chart.tsx#L32-L303)
 
 ### Badge Component
 The Badge component is used for displaying status tags, labels, and small pieces of information. It supports different visual variants:
@@ -77,7 +75,7 @@ The Badge component is used for displaying status tags, labels, and small pieces
 The component is built using class-variance-authority (cva) for variant management and supports custom class names for additional styling.
 
 **Section sources**
-- [badge.tsx](file://src/components/ui/badge.tsx#L6-L29)
+- [badge.tsx](src/components/ui/badge.tsx#L6-L29)
 
 ### Avatar Component
 The Avatar component displays participant images or fallback representations when images are not available:
@@ -89,7 +87,7 @@ The Avatar component displays participant images or fallback representations whe
 The component uses Radix UI's Avatar primitives for accessible behavior and includes styling for consistent presentation.
 
 **Section sources**
-- [avatar.tsx](file://src/components/ui/avatar.tsx#L6-L38)
+- [avatar.tsx](src/components/ui/avatar.tsx#L6-L38)
 
 ### Progress Component
 The Progress component visualizes completion status or countdowns:
@@ -102,7 +100,7 @@ The Progress component visualizes completion status or countdowns:
 The component is styled with a secondary background and primary fill color, with smooth transitions for value changes.
 
 **Section sources**
-- [progress.tsx](file://src/components/ui/progress.tsx#L6-L23)
+- [progress.tsx](src/components/ui/progress.tsx#L6-L23)
 
 ### Calendar Component
 The Calendar component provides date visualization and selection capabilities:
@@ -116,7 +114,7 @@ The Calendar component provides date visualization and selection capabilities:
 The component integrates with Tailwind CSS for consistent styling and provides theme-aware appearance.
 
 **Section sources**
-- [calendar.tsx](file://src/components/ui/calendar.tsx#L10-L54)
+- [calendar.tsx](src/components/ui/calendar.tsx#L10-L54)
 
 ## Integration with Event Data
 
@@ -185,10 +183,10 @@ EVENT_DATA }o--|| VENUE : held_at
 ```
 
 **Diagram sources**
-- [eventData.ts](file://src/data/eventData.ts#L1-L108)
+- [eventData.ts](src/data/eventData.ts#L1-L108)
 
 **Section sources**
-- [eventData.ts](file://src/data/eventData.ts#L1-L108)
+- [eventData.ts](src/data/eventData.ts#L1-L108)
 
 ## Multilingual Date Support
 
@@ -213,8 +211,8 @@ The application uses a LanguageContext to manage the current language setting, w
 This ensures consistent multilingual support across all date-related components.
 
 **Section sources**
-- [eventData.ts](file://src/data/eventData.ts#L7-L9)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L172-L184)
+- [eventData.ts](src/data/eventData.ts#L7-L9)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L172-L184)
 
 ## Accessibility Implementation
 
@@ -232,7 +230,7 @@ The Table component implements several accessibility features:
 Table headers are properly associated with their corresponding cells, and the table structure is logical and predictable.
 
 **Section sources**
-- [table.tsx](file://src/components/ui/table.tsx#L5-L72)
+- [table.tsx](src/components/ui/table.tsx#L5-L72)
 
 ### Chart Accessibility
 The Chart component provides accessibility features for data visualization:
@@ -246,7 +244,7 @@ The Chart component provides accessibility features for data visualization:
 The ChartTooltipContent component includes semantic HTML structure and proper labeling for tooltip information.
 
 **Section sources**
-- [chart.tsx](file://src/components/ui/chart.tsx#L92-L226)
+- [chart.tsx](src/components/ui/chart.tsx#L92-L226)
 
 ### Avatar Accessibility
 The Avatar component includes accessibility features for participant images:
@@ -259,7 +257,7 @@ The Avatar component includes accessibility features for participant images:
 The AvatarImage component requires alt text to be provided, ensuring that screen readers can properly describe the image content.
 
 **Section sources**
-- [avatar.tsx](file://src/components/ui/avatar.tsx#L19-L23)
+- [avatar.tsx](src/components/ui/avatar.tsx#L19-L23)
 
 ## Styling Customization
 
@@ -331,7 +329,7 @@ class Calendar {
 +dayStyle : object
 +navigation : boolean
 }
-TailwindConfig --> Component : "configures"
+TailwindConfig --> Component : configures
 Component <|-- Table
 Component <|-- Chart
 Component <|-- Badge
@@ -341,13 +339,13 @@ Component <|-- Calendar
 ```
 
 **Diagram sources**
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [utils.ts](file://src/lib/utils.ts#L4-L6)
-- [badge.tsx](file://src/components/ui/badge.tsx#L6-L20)
+- [tailwind.config.ts](tailwind.config.ts)
+- [utils.ts](src/lib/utils.ts#L4-L6)
+- [badge.tsx](src/components/ui/badge.tsx#L6-L20)
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [utils.ts](file://src/lib/utils.ts#L4-L6)
+- [tailwind.config.ts](tailwind.config.ts)
+- [utils.ts](src/lib/utils.ts#L4-L6)
 
 ## Real-World Examples
 
@@ -376,11 +374,11 @@ Badge->>UI : Displays role with consistent styling
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L174-L184)
-- [badge.tsx](file://src/components/ui/badge.tsx)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L174-L184)
+- [badge.tsx](src/components/ui/badge.tsx)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L171-L237)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L171-L237)
 
 ### Avatar Usage in Speakers Section
 The Avatar component is used to display speaker images in the SpeakersSection component:
@@ -403,11 +401,11 @@ ApplyStyling --> End([Render Avatar])
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L209-L219)
-- [avatar.tsx](file://src/components/ui/avatar.tsx)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L209-L219)
+- [avatar.tsx](src/components/ui/avatar.tsx)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L171-L237)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L171-L237)
 
 ### Progress Usage in Countdown Timer
 The Progress component concept is implemented in the CountdownTimer component, which visualizes the time remaining until the event:
@@ -438,10 +436,10 @@ end
 ```
 
 **Diagram sources**
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L11-L77)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L11-L77)
 
 **Section sources**
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L11-L77)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L11-L77)
 
 ## Troubleshooting Common Issues
 
@@ -464,7 +462,7 @@ One common issue is table content overflowing on mobile devices due to limited s
 The current Table implementation already includes overflow handling with the "relative w-full overflow-auto" wrapper, which should prevent most overflow issues.
 
 **Section sources**
-- [table.tsx](file://src/components/ui/table.tsx#L7)
+- [table.tsx](src/components/ui/table.tsx#L7)
 
 ### Chart Rendering Performance
 Complex charts with large datasets may experience performance issues, particularly on lower-end devices.
@@ -483,7 +481,7 @@ Complex charts with large datasets may experience performance issues, particular
 The ChartContainer component uses Recharts' ResponsiveContainer, which helps optimize rendering performance by only rendering when the container is visible.
 
 **Section sources**
-- [chart.tsx](file://src/components/ui/chart.tsx#L54)
+- [chart.tsx](src/components/ui/chart.tsx#L54)
 
 ### Accessibility Issues
 Accessibility problems may occur if components are not used correctly.
@@ -503,8 +501,8 @@ Accessibility problems may occur if components are not used correctly.
 The components are designed with accessibility in mind, but proper usage is essential to maintain accessibility standards.
 
 **Section sources**
-- [avatar.tsx](file://src/components/ui/avatar.tsx#L22)
-- [table.tsx](file://src/components/ui/table.tsx)
+- [avatar.tsx](src/components/ui/avatar.tsx#L22)
+- [table.tsx](src/components/ui/table.tsx)
 
 ## Conclusion
 The data display components in the Syrian Community Liberation Day event website provide a comprehensive set of tools for visualizing structured information, metrics, status tags, participant images, countdowns, and date information. These components are well-integrated with the eventData.ts file and support multilingual date formatting through date-fns. The components include robust accessibility features, support extensive styling customization through Tailwind classes and theme variables, and are used effectively in real-world examples throughout the application. By following the guidance in this documentation, developers can effectively use and extend these components to meet the needs of the event website while maintaining consistency, accessibility, and performance.

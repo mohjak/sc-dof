@@ -1,14 +1,12 @@
 # RTL Support
 
-<cite>
-**Referenced Files in This Document**   
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [App.tsx](file://src/App.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [index.css](file://src/index.css)
-</cite>
+> **Referenced Files in This Document**   
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [App.tsx](src/App.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [index.css](src/index.css)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -35,10 +33,10 @@ D --> F[Apply LTR Layout]
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L276)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L276)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L275-L277)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L275-L277)
 
 ## Application-Level RTL Integration
 The root App component integrates with LanguageContext to apply RTL settings at the application level. The AppContent component consumes the isRTL flag and language state, applying the appropriate direction attribute and font class to the root div element.
@@ -55,10 +53,10 @@ F --> |No| H[font-roboto]
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L12-L19)
+- [App.tsx](src/App.tsx#L12-L19)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L12-L31)
+- [App.tsx](src/App.tsx#L12-L31)
 
 ## Font Switching Mechanism
 The platform implements a font switching mechanism that applies different typography based on the selected language. The Koufiya font is used for Arabic text, while Roboto is applied for English and Turkish content.
@@ -73,14 +71,14 @@ D --> F[Latin Typography]
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L16)
-- [tailwind.config.ts](file://tailwind.config.ts#L17-L19)
-- [index.css](file://src/index.css#L1-L9)
+- [App.tsx](src/App.tsx#L16)
+- [tailwind.config.ts](tailwind.config.ts#L17-L19)
+- [index.css](src/index.css#L1-L9)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L15-L17)
-- [tailwind.config.ts](file://tailwind.config.ts#L16-L19)
-- [index.css](file://src/index.css#L1-L18)
+- [App.tsx](src/App.tsx#L15-L17)
+- [tailwind.config.ts](tailwind.config.ts#L16-L19)
+- [index.css](src/index.css#L1-L18)
 
 ## Component-Level RTL Consumption
 Individual components consume the isRTL flag to adjust their layout and behavior. The Navbar component, for example, applies the direction attribute to ensure proper navigation flow in RTL mode.
@@ -98,12 +96,12 @@ G --> |False| I[Default Font]
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L7)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L36)
+- [Navbar.tsx](src/components/Navbar.tsx#L7)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L36)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L6-L8)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L36)
+- [Navbar.tsx](src/components/Navbar.tsx#L6-L8)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L36)
 
 ## Common RTL Layout Issues
 The platform addresses several common RTL layout challenges:

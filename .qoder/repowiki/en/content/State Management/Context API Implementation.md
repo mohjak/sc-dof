@@ -1,14 +1,12 @@
 # Context API Implementation
 
-<cite>
-**Referenced Files in This Document**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [App.tsx](file://src/App.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [Footer.tsx](file://src/components/Footer.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [App.tsx](src/App.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [Footer.tsx](src/components/Footer.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -55,16 +53,16 @@ NAV --> LS
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Core Components
 - LanguageContext and LanguageContextType: Defines the shape of the context including language, setLanguage, t, and isRTL.
@@ -76,8 +74,8 @@ Key responsibilities:
 - useLanguage ensures consumers are wrapped by LanguageProvider and returns the context object for use in components.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L5-L11)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L5-L11)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
 
 ## Architecture Overview
 The application composes providers in a specific order to ensure global state is available to all components. The LanguageProvider is placed near the top of the tree so that t(), language, and isRTL are accessible anywhere. Global UI behavior such as text direction and font selection are derived from the current language and applied at the root wrapper.
@@ -91,21 +89,21 @@ participant P as "LanguageProvider"
 participant C as "AppContent"
 participant N as "Navbar"
 participant S as "LanguageSwitcher"
-Root->>Q : "wrap children"
-Q->>T : "wrap children"
-T->>P : "wrap children"
-P->>C : "provide context"
-C->>N : "render"
-N->>S : "render"
-S->>P : "consume context via useLanguage"
-N->>P : "consume context via useLanguage"
+Root->>Q : wrap children
+Q->>T : wrap children
+T->>P : wrap children
+P->>C : provide context
+C->>N : render
+N->>S : render
+S->>P : consume context via useLanguage
+N->>P : consume context via useLanguage
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L33-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L33-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 ## Detailed Component Analysis
 
@@ -129,10 +127,10 @@ Expose --> Children["Render children with context"]
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### useLanguage Hook
 - Purpose:
@@ -150,10 +148,10 @@ HasCtx --> |No| Throw["Throw descriptive error"]
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L285-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L285-L292)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L285-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L285-L292)
 
 ### App Shell Integration and Global UI Effects
 - Provider composition:
@@ -168,19 +166,19 @@ participant App as "App.tsx"
 participant L as "LanguageProvider"
 participant C as "AppContent"
 participant UI as "UI Components"
-App->>L : "wrap children"
-L-->>C : "provide { language, setLanguage, t, isRTL }"
-C->>C : "derive fontClass from language"
-C->>C : "set dir from isRTL"
-C-->>UI : "render with global direction and font"
+App->>L : wrap children
+L-->>C : provide { language, setLanguage, t, isRTL }
+C->>C : derive fontClass from language
+C->>C : set dir from isRTL
+C-->>UI : render with global direction and font
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
+- [App.tsx](src/App.tsx#L12-L31)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L12-L31)
+- [App.tsx](src/App.tsx#L12-L31)
 
 ### Consumers Using the Context
 
@@ -191,8 +189,8 @@ C-->>UI : "render with global direction and font"
 - Demonstrates how translation keys map to the translations object and how isRTL influences layout.
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L272-L274)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L272-L274)
 
 #### LanguageSwitcher
 - Consumes useLanguage to:
@@ -201,8 +199,8 @@ C-->>UI : "render with global direction and font"
 - Triggers re-renders across all components using t() and isRTL.
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
 
 #### HeroSection
 - Consumes useLanguage to:
@@ -210,8 +208,8 @@ C-->>UI : "render with global direction and font"
 - Illustrates how t() is used across multiple UI elements.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L272-L274)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L272-L274)
 
 #### Footer
 - Consumes useLanguage to:
@@ -219,8 +217,8 @@ C-->>UI : "render with global direction and font"
   - Uses language to conditionally build localized strings inline.
 
 **Section sources**
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L272-L274)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L272-L274)
 
 ## Dependency Analysis
 - LanguageContext.tsx exports:
@@ -248,16 +246,16 @@ FT["Footer.tsx"] --> HL
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Performance Considerations
 - Context re-renders:
@@ -285,9 +283,9 @@ FT["Footer.tsx"] --> HL
   - Action: Verify asset paths and consider lazy-loading flags or providing fallbacks.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L285-L292)
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L285-L292)
+- [App.tsx](src/App.tsx#L12-L31)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 ## Conclusion
 The Context API implementation provides a clean, centralized way to manage language and internationalization across the application. LanguageProvider encapsulates state and exposes a simple translation function and RTL detection. The useLanguage hook ensures safe consumption of the context and throws helpful errors when misused. The App shell integrates the provider with other providers and applies global UI effects based on language. Components consume the context to render localized content and adapt layout and typography accordingly.

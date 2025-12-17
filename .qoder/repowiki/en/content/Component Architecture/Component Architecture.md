@@ -1,23 +1,21 @@
 # Component Architecture
 
-<cite>
-**Referenced Files in This Document**
-- [App.tsx](file://src/App.tsx)
-- [main.tsx](file://src/main.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx)
-- [Footer.tsx](file://src/components/Footer.tsx)
-- [button.tsx](file://src/components/ui/button.tsx)
-- [dropdown-menu.tsx](file://src/components/ui/dropdown-menu.tsx)
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx)
-- [utils.ts](file://src/lib/utils.ts)
-</cite>
+> **Referenced Files in This Document**
+> - [App.tsx](src/App.tsx)
+> - [main.tsx](src/main.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [SpeakersSection.tsx](src/components/SpeakersSection.tsx)
+> - [CountdownTimer.tsx](src/components/CountdownTimer.tsx)
+> - [Footer.tsx](src/components/Footer.tsx)
+> - [button.tsx](src/components/ui/button.tsx)
+> - [dropdown-menu.tsx](src/components/ui/dropdown-menu.tsx)
+> - [tooltip.tsx](src/components/ui/tooltip.tsx)
+> - [utils.ts](src/lib/utils.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -62,26 +60,26 @@ utils --> tooltip_ui
 ```
 
 **Diagram sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [dropdown-menu.tsx](file://src/components/ui/dropdown-menu.tsx#L1-L180)
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx#L1-L29)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [dropdown-menu.tsx](src/components/ui/dropdown-menu.tsx#L1-L180)
+- [tooltip.tsx](src/components/ui/tooltip.tsx#L1-L29)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Core Components
 - App component: The root container that wires providers for QueryClient, TooltipProvider, and LanguageProvider around the application content. It also renders routing and toasts.
@@ -94,9 +92,9 @@ Key provider stack and routing:
 - The Index page composes sections in a logical flow from top to bottom.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ## Architecture Overview
 The architecture is layered:
@@ -141,18 +139,18 @@ tooltip_provider --> shad_tooltip
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [dropdown-menu.tsx](file://src/components/ui/dropdown-menu.tsx#L1-L180)
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx#L1-L29)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [dropdown-menu.tsx](src/components/ui/dropdown-menu.tsx#L1-L180)
+- [tooltip.tsx](src/components/ui/tooltip.tsx#L1-L29)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Detailed Component Analysis
 
@@ -178,13 +176,13 @@ Router->>Index : render <Route path="/" element={<Index/>}/>
 ```
 
 **Diagram sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [main.tsx](file://src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [main.tsx](src/main.tsx#L1-L6)
 
 ### Index Page Composition
 - The Index page composes the full-page layout by importing and rendering:
@@ -208,10 +206,10 @@ RenderScrollToTop --> End(["Done"])
 ```
 
 **Diagram sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 **Section sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ### Navbar Composition and ShadCN Integration
 - Navbar integrates:
@@ -237,16 +235,16 @@ Navbar->>UI : uses Button/DropdownMenu patterns internally
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [dropdown-menu.tsx](file://src/components/ui/dropdown-menu.tsx#L1-L180)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [dropdown-menu.tsx](src/components/ui/dropdown-menu.tsx#L1-L180)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### HeroSection Composition and Subcomponents
 - HeroSection composes:
@@ -265,14 +263,14 @@ Countdown --> LangCtx["LanguageContext"]
 ```
 
 **Diagram sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
 
 ### AgendaSection Composition Pattern
 - AgendaSection builds a responsive grid of agenda items.
@@ -288,12 +286,12 @@ Agenda --> Utils["utils.cn()"]
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ### SpeakersSection Composition and Internationalization
 - SpeakersSection defines a typed speaker list and renders a responsive grid.
@@ -309,12 +307,12 @@ Speakers --> Utils["utils.cn()"]
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
 
 ### Footer Composition and Social Links
 - Footer renders branding, social links, and localized text.
@@ -329,12 +327,12 @@ Footer --> Utils["utils.cn()"]
 ```
 
 **Diagram sources**
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
 
 ### Relationship Between Custom Components and ShadCN UI
 - Custom components consume ShadCN primitives through:
@@ -366,36 +364,36 @@ class Button
 class DropdownMenu
 class TooltipProvider
 class utils_cn
-App --> LanguageContext : "provides"
-App --> TooltipProvider : "wraps"
-App --> Navbar : "renders"
-Navbar --> LanguageSwitcher : "renders"
-Navbar --> Button : "uses patterns"
-Navbar --> DropdownMenu : "uses patterns"
-LanguageSwitcher --> LanguageContext : "consumes"
-utils_cn <.. Navbar : "used for classes"
-utils_cn <.. LanguageSwitcher : "used for classes"
+App --> LanguageContext : provides
+App --> TooltipProvider : wraps
+App --> Navbar : renders
+Navbar --> LanguageSwitcher : renders
+Navbar --> Button : uses patterns
+Navbar --> DropdownMenu : uses patterns
+LanguageSwitcher --> LanguageContext : consumes
+utils_cn <.. Navbar : used for classes
+utils_cn <.. LanguageSwitcher : used for classes
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [dropdown-menu.tsx](file://src/components/ui/dropdown-menu.tsx#L1-L180)
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx#L1-L29)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [dropdown-menu.tsx](src/components/ui/dropdown-menu.tsx#L1-L180)
+- [tooltip.tsx](src/components/ui/tooltip.tsx#L1-L29)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [dropdown-menu.tsx](file://src/components/ui/dropdown-menu.tsx#L1-L180)
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx#L1-L29)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [dropdown-menu.tsx](src/components/ui/dropdown-menu.tsx#L1-L180)
+- [tooltip.tsx](src/components/ui/tooltip.tsx#L1-L29)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Dependency Analysis
 - Provider dependencies:
@@ -428,23 +426,23 @@ Utils["utils.ts"] --> UI
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [dropdown-menu.tsx](file://src/components/ui/dropdown-menu.tsx#L1-L180)
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx#L1-L29)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [dropdown-menu.tsx](src/components/ui/dropdown-menu.tsx#L1-L180)
+- [tooltip.tsx](src/components/ui/tooltip.tsx#L1-L29)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Performance Considerations
 - Provider layering:
@@ -473,11 +471,11 @@ Common issues and best practices:
   - Use utils.cn() to merge Tailwind classes and avoid duplication.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Conclusion
 The component architecture cleanly separates concerns across provider, composition, and UI layers. The App component serves as a robust root container with essential providers, while the Index page composes high-level sections that encapsulate domain logic. Custom components integrate ShadCN UI primitives thoughtfully, leveraging LanguageContext for internationalization and utils.cn() for consistent styling. Following the outlined composition patterns and best practices will help maintain scalability, readability, and reliability as the application evolves.

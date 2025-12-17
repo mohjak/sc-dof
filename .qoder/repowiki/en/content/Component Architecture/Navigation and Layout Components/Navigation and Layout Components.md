@@ -1,18 +1,16 @@
 # Navigation and Layout Components
 
-<cite>
-**Referenced Files in This Document**
-- [App.tsx](file://src/App.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [NavLink.tsx](file://src/components/NavLink.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [utils.ts](file://src/lib/utils.ts)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [App.tsx](src/App.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [NavLink.tsx](src/components/NavLink.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [ScrollToTop.tsx](src/components/ScrollToTop.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [utils.ts](src/lib/utils.ts)
+> - [use-mobile.tsx](src/hooks/use-mobile.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -66,16 +64,16 @@ Navbar --> NavLinkComp
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [Index.tsx](file://src/pages/Index.tsx#L13-L29)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L38-L119)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L41)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L11-L27)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [App.tsx](src/App.tsx#L12-L31)
+- [Index.tsx](src/pages/Index.tsx#L13-L29)
+- [Navbar.tsx](src/components/Navbar.tsx#L38-L119)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L41)
+- [NavLink.tsx](src/components/NavLink.tsx#L11-L27)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [Index.tsx](file://src/pages/Index.tsx#L13-L29)
+- [App.tsx](src/App.tsx#L12-L31)
+- [Index.tsx](src/pages/Index.tsx#L13-L29)
 
 ## Core Components
 - Navbar: Provides a sticky, scroll-aware navigation bar with desktop and mobile views, a logo link, internal anchor links, and a LanguageSwitcher. It toggles a mobile menu and applies RTL direction when appropriate.
@@ -84,10 +82,10 @@ Navbar --> NavLinkComp
 - ScrollToTop: Shows a floating button when scrolled down far enough and smoothly scrolls to the top on click.
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L38-L119)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L11-L27)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L41)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [Navbar.tsx](src/components/Navbar.tsx#L38-L119)
+- [NavLink.tsx](src/components/NavLink.tsx#L11-L27)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L41)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 ## Architecture Overview
 The application initializes language and routing providers at the root. The Index page composes Navbar and ScrollToTop alongside content sections. Navbar integrates LanguageSwitcher and uses internal anchor links to navigate to sections. LanguageSwitcher updates the language in LanguageContext, which controls translation keys and RTL direction at the app root.
@@ -108,10 +106,10 @@ Navbar-->>User : Updated labels and layout direction
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L291)
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L38-L119)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L291)
+- [App.tsx](src/App.tsx#L12-L31)
+- [Navbar.tsx](src/components/Navbar.tsx#L38-L119)
 
 ## Detailed Component Analysis
 
@@ -142,8 +140,8 @@ Integration points:
 - Uses LanguageContext for isRTL to set dir on the nav element.
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L38-L119)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L291)
+- [Navbar.tsx](src/components/Navbar.tsx#L38-L119)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L291)
 
 ### NavLink
 Purpose:
@@ -158,8 +156,8 @@ Common use cases:
 - Replace standard anchor tags with router-aware links while preserving custom active/pending styles.
 
 **Section sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L11-L27)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [NavLink.tsx](src/components/NavLink.tsx#L11-L27)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ### LanguageSwitcher
 Capabilities:
@@ -176,9 +174,9 @@ RTL implications:
 - Navbar sets dir on the nav element based on isRTL.
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L291)
-- [App.tsx](file://src/App.tsx#L12-L31)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L291)
+- [App.tsx](src/App.tsx#L12-L31)
 
 ### ScrollToTop
 Functionality:
@@ -190,7 +188,7 @@ Accessibility:
 - Provides an aria-label for screen readers.
 
 **Section sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 ### Event-Driven Navigation Patterns and Scroll Position Management
 Patterns:
@@ -206,9 +204,9 @@ Example references:
 - Navbar anchors target these ids for navigation.
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L29-L36)
-- [Index.tsx](file://src/pages/Index.tsx#L13-L29)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L10-L12)
+- [Navbar.tsx](src/components/Navbar.tsx#L29-L36)
+- [Index.tsx](src/pages/Index.tsx#L13-L29)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L10-L12)
 
 ## Dependency Analysis
 The components depend on shared utilities and contexts:
@@ -225,24 +223,24 @@ NavLinkComp["NavLink.tsx"] --> Utils
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L38-L119)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L291)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [Index.tsx](file://src/pages/Index.tsx#L13-L29)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L11-L27)
+- [Navbar.tsx](src/components/Navbar.tsx#L38-L119)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L291)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [App.tsx](src/App.tsx#L12-L31)
+- [Index.tsx](src/pages/Index.tsx#L13-L29)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [NavLink.tsx](src/components/NavLink.tsx#L11-L27)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L38-L119)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L291)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [Index.tsx](file://src/pages/Index.tsx#L13-L29)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L11-L27)
+- [Navbar.tsx](src/components/Navbar.tsx#L38-L119)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L291)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [App.tsx](src/App.tsx#L12-L31)
+- [Index.tsx](src/pages/Index.tsx#L13-L29)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [NavLink.tsx](src/components/NavLink.tsx#L11-L27)
 
 ## Performance Considerations
 - Avoid unnecessary re-renders:
@@ -268,8 +266,8 @@ Common issues and resolutions:
     - Verify the toggle state is controlled by the button’s onClick handler.
     - Confirm the mobile menu block is conditionally rendered based on the state.
   - Related code paths:
-    - Toggle button and state: [Navbar.tsx](file://src/components/Navbar.tsx#L84-L91)
-    - Conditional render of mobile menu: [Navbar.tsx](file://src/components/Navbar.tsx#L95-L116)
+    - Toggle button and state: [Navbar.tsx](src/components/Navbar.tsx#L84-L91)
+    - Conditional render of mobile menu: [Navbar.tsx](src/components/Navbar.tsx#L95-L116)
 
 - Incorrect active link states
   - Symptom: Active class not applied to current route.
@@ -277,7 +275,7 @@ Common issues and resolutions:
     - Ensure the component using NavLink is mounted within a Router.
     - Verify activeClassName and pendingClassName are passed correctly.
   - Related code paths:
-    - NavLink wrapper: [NavLink.tsx](file://src/components/NavLink.tsx#L11-L27)
+    - NavLink wrapper: [NavLink.tsx](src/components/NavLink.tsx#L11-L27)
 
 - Scroll restoration after language changes
   - Symptom: Page jumps or loses scroll position after language switch.
@@ -285,8 +283,8 @@ Common issues and resolutions:
     - The app does not implement explicit scroll restoration on language change.
     - Consider persisting scroll positions or triggering a scroll restoration after language updates.
   - Related code paths:
-    - LanguageContext provider and consumers: [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L291)
-    - App root applying direction and font class: [App.tsx](file://src/App.tsx#L12-L31)
+    - LanguageContext provider and consumers: [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L291)
+    - App root applying direction and font class: [App.tsx](src/App.tsx#L12-L31)
 
 - RTL layout not updating
   - Symptom: Text direction remains LTR after switching to Arabic.
@@ -294,14 +292,14 @@ Common issues and resolutions:
     - Ensure the app root receives isRTL from LanguageContext and applies dir accordingly.
     - Confirm Navbar also respects isRTL for its container.
   - Related code paths:
-    - App root dir binding: [App.tsx](file://src/App.tsx#L12-L31)
-    - Navbar dir binding: [Navbar.tsx](file://src/components/Navbar.tsx#L40-L46)
+    - App root dir binding: [App.tsx](src/App.tsx#L12-L31)
+    - Navbar dir binding: [Navbar.tsx](src/components/Navbar.tsx#L40-L46)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L84-L116)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L11-L27)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L291)
-- [App.tsx](file://src/App.tsx#L12-L31)
+- [Navbar.tsx](src/components/Navbar.tsx#L84-L116)
+- [NavLink.tsx](src/components/NavLink.tsx#L11-L27)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L291)
+- [App.tsx](src/App.tsx#L12-L31)
 
 ## Conclusion
 The navigation and layout utilities provide a cohesive, accessible, and responsive experience:
@@ -329,7 +327,7 @@ Navbar-->>User : View aligned to target section
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L29-L36)
+- [Navbar.tsx](src/components/Navbar.tsx#L29-L36)
 
 ### Example: Language Change Flow
 ```mermaid
@@ -345,6 +343,6 @@ App-->>User : Updated labels and layout direction
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L291)
-- [App.tsx](file://src/App.tsx#L12-L31)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L291)
+- [App.tsx](src/App.tsx#L12-L31)

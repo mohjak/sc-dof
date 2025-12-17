@@ -1,16 +1,14 @@
 # Theme Customization
 
-<cite>
-**Referenced Files in This Document**   
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [index.css](file://src/index.css)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [button.tsx](file://src/components/ui/button.tsx)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx)
-</cite>
+> **Referenced Files in This Document**   
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [index.css](src/index.css)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [RegistrationSection.tsx](src/components/RegistrationSection.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [button.tsx](src/components/ui/button.tsx)
+> - [use-mobile.tsx](src/hooks/use-mobile.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -47,10 +45,10 @@ F --> L[Roboto]
 ```
 
 **Diagram sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Custom Colors and CSS Variables
 
@@ -75,15 +73,15 @@ class ThemeVariables {
 + : root
 +.dark
 }
-ColorSystem --> ThemeVariables : "defined in"
+ColorSystem --> ThemeVariables : defined in
 ```
 
 **Diagram sources**
-- [index.css](file://src/index.css#L25-L127)
+- [index.css](src/index.css#L25-L127)
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L20-L67)
-- [index.css](file://src/index.css#L62-L67)
+- [tailwind.config.ts](tailwind.config.ts#L20-L67)
+- [index.css](src/index.css#L62-L67)
 
 ## Font Integration
 
@@ -109,13 +107,13 @@ L --> N[font-roboto]
 ```
 
 **Diagram sources**
-- [index.css](file://src/index.css#L1-L18)
-- [tailwind.config.ts](file://tailwind.config.ts#L16-L19)
+- [index.css](src/index.css#L1-L18)
+- [tailwind.config.ts](tailwind.config.ts#L16-L19)
 
 **Section sources**
-- [index.css](file://src/index.css#L1-L18)
-- [tailwind.config.ts](file://tailwind.config.ts#L16-L19)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L36)
+- [index.css](src/index.css#L1-L18)
+- [tailwind.config.ts](tailwind.config.ts#L16-L19)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L36)
 
 ## Dark Mode Support
 
@@ -126,19 +124,19 @@ The color variables are defined in HSL format, which facilitates easy adjustment
 ```mermaid
 stateDiagram-v2
 [*] --> LightMode
-LightMode --> DarkMode : "dark class applied"
-DarkMode --> LightMode : "dark class removed"
+LightMode --> DarkMode : dark class applied
+DarkMode --> LightMode : dark class removed
 LightMode : --background : 0 0% 100%<br/>--foreground : 0 0% 10%<br/>--syrian-red : 359 64% 46%
 DarkMode : --background : 0 0% 8%<br/>--foreground : 0 0% 95%<br/>--syrian-red : 359 55% 50%
 ```
 
 **Diagram sources**
-- [index.css](file://src/index.css#L89-L127)
-- [tailwind.config.ts](file://tailwind.config.ts#L4)
+- [index.css](src/index.css#L89-L127)
+- [tailwind.config.ts](tailwind.config.ts#L4)
 
 **Section sources**
-- [index.css](file://src/index.css#L89-L127)
-- [tailwind.config.ts](file://tailwind.config.ts#L4)
+- [index.css](src/index.css#L89-L127)
+- [tailwind.config.ts](tailwind.config.ts#L4)
 
 ## Responsive Design and Breakpoints
 
@@ -160,13 +158,13 @@ D --> J[Horizontal Nav]
 ```
 
 **Diagram sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L3-L19)
-- [tailwind.config.ts](file://tailwind.config.ts#L11-L13)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L3-L19)
+- [tailwind.config.ts](tailwind.config.ts#L11-L13)
 
 **Section sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L3-L19)
-- [tailwind.config.ts](file://tailwind.config.ts#L11-L13)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L62-L77)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L3-L19)
+- [tailwind.config.ts](tailwind.config.ts#L11-L13)
+- [Navbar.tsx](src/components/Navbar.tsx#L62-L77)
 
 ## RTL Compatibility
 
@@ -187,12 +185,12 @@ D --> I[Positioning]
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L45)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L15)
+- [Navbar.tsx](src/components/Navbar.tsx#L45)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L15)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L7-L8)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L15)
+- [Navbar.tsx](src/components/Navbar.tsx#L7-L8)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L15)
 
 ## Utility Classes and Component Styling
 
@@ -219,18 +217,18 @@ class ComponentStyling {
 +HeroSection
 +RegistrationSection
 }
-UtilityClasses --> ComponentStyling : "applied to"
+UtilityClasses --> ComponentStyling : applied to
 ```
 
 **Diagram sources**
-- [index.css](file://src/index.css#L143-L249)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L87)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L85)
+- [index.css](src/index.css#L143-L249)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L87)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L85)
 
 **Section sources**
-- [index.css](file://src/index.css#L143-L249)
-- [lib/utils.ts](file://src/lib/utils.ts#L4-L6)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L27-L28)
+- [index.css](src/index.css#L143-L249)
+- [lib/utils.ts](src/lib/utils.ts#L4-L6)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L27-L28)
 
 ## Best Practices
 
@@ -253,9 +251,9 @@ The theme customization implementation follows several best practices for mainta
 8. **Code Organization**: Custom styles are organized in a logical structure that separates concerns and enables easy maintenance.
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [index.css](file://src/index.css)
-- [components.json](file://components.json)
+- [tailwind.config.ts](tailwind.config.ts)
+- [index.css](src/index.css)
+- [components.json](components.json)
 
 ## Conclusion
 

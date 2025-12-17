@@ -1,16 +1,14 @@
 # Details Section
 
-<cite>
-**Referenced Files in This Document**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [index.css](file://src/index.css)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [card.tsx](file://src/components/ui/card.tsx)
-- [eventData.ts](file://src/data/eventData.ts)
-- [App.tsx](file://src/App.tsx)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [DetailsSection.tsx](src/components/DetailsSection.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [index.css](src/index.css)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [card.tsx](src/components/ui/card.tsx)
+> - [eventData.ts](src/data/eventData.ts)
+> - [App.tsx](src/App.tsx)
+> - [use-mobile.tsx](src/hooks/use-mobile.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -45,15 +43,15 @@ DS --> GRID["Responsive Grid<br/>Tailwind grid-cols-*"]
 ```
 
 **Diagram sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Core Components
 - DetailsSection: Renders three cards with icons and translated content, applies a green background theme, and overlays a decorative Syrian flag watermark. The Location card is implemented as an anchor element linking to Google Maps.
@@ -63,11 +61,11 @@ DS --> GRID["Responsive Grid<br/>Tailwind grid-cols-*"]
 - eventData: Supplies event metadata (date, time, venue) used by the component.
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ## Architecture Overview
 The DetailsSection composes three cards inside a responsive grid. Each card uses Lucide icons and displays translated content from the LanguageContext. The Location card opens an external Google Maps link in a new tab with safe attributes. The section’s background uses the custom green color from the theme, and a watermark image is overlaid behind the content.
@@ -102,11 +100,11 @@ LCTX --> T
 ```
 
 **Diagram sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ## Detailed Component Analysis
 
@@ -120,10 +118,10 @@ Accessibility and responsiveness:
 - Fonts: The application selects a font family based on the current language, aligning with the theme’s typography choices.
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ### Date Card
 - Purpose: Displays the event date and day name.
@@ -131,8 +129,8 @@ Accessibility and responsiveness:
 - Visuals: Hover effect scales the icon container slightly; the card maintains a translucent background with borders for depth.
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L23-L32)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L23-L32)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### Time Card
 - Purpose: Shows the event time range and a timezone note.
@@ -140,8 +138,8 @@ Accessibility and responsiveness:
 - Visuals: Similar hover behavior to the Date card, maintaining consistent interaction patterns.
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L34-L42)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L34-L42)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### Location Card (Google Maps Integration)
 - Purpose: Presents the venue name and address and opens the event location in Google Maps.
@@ -154,46 +152,46 @@ Accessibility and mobile considerations:
 - Mobile behavior: Opening external maps apps depends on device configuration. If the link does not open a map app, users can copy the URL and open it manually in a browser or a dedicated maps app.
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L44-L58)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L44-L58)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ### Icons and Translations
 - Icons: Lucide React icons (Calendar, Clock, MapPin) are used consistently across cards to convey meaning quickly.
 - Translations: The t() function retrieves localized strings for labels and values. The LanguageContext manages translations for Arabic, English, and Turkish.
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### Responsive Text Sizing
 - Typography: Headings and labels use relative sizes with responsive modifiers (e.g., text-3xl on small screens, text-4xl on medium screens). Body text sizes scale accordingly to improve readability on various devices.
 - Font families: The application switches between Bahij Koufiya (Arabic) and Roboto (English/Turkish) based on the current language.
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ### Hover Effects and Interaction Patterns
 - Cards: Each card uses a group hover state to scale the icon container and adjust background opacity, providing clear affordance for interactivity.
 - Consistency: The same hover pattern is applied across all three cards to maintain a cohesive user experience.
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L23-L58)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L23-L58)
 
 ### Watermark Decoration
 - Placement: The Syrian flag watermark is absolutely positioned at the center of the section with reduced opacity and blur to avoid distracting from content.
 - Responsiveness: The watermark remains centered regardless of screen size.
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L9-L13)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L9-L13)
 
 ### Updating Event Details
 - Where to update: Event metadata such as date, time, venue name, and address are defined in the eventData module.
 - How to update: Modify the relevant fields in eventData. The DetailsSection reads these values through the t() function and displays them in the cards.
 
 **Section sources**
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L23-L58)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L23-L58)
 
 ### Customizing the Color Scheme
 - Theme colors: The custom green color is defined in CSS variables and exposed through Tailwind’s theme. You can adjust the green hue/saturation/lightness in index.css to change the overall tone.
@@ -201,9 +199,9 @@ Accessibility and mobile considerations:
 - Gradient utilities: The theme defines gradient utilities; you can reuse or modify these for consistent branding.
 
 **Section sources**
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
 
 ## Dependency Analysis
 The DetailsSection depends on:
@@ -223,18 +221,18 @@ DS --> ICONS["Lucide Icons"]
 ```
 
 **Diagram sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ## Performance Considerations
 - Image watermark: The flag watermark is blurred and scaled down; keep the image optimized to minimize render cost.
@@ -257,8 +255,8 @@ DS --> ICONS["Lucide Icons"]
   - On narrow screens, the cards stack vertically. If alignment looks off, verify Tailwind grid classes and container constraints.
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L44-L58)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L44-L58)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ## Conclusion
 The DetailsSection component delivers a visually coherent, accessible presentation of event essentials. Its green-themed design, translational flexibility, and responsive layout ensure usability across languages and devices. The Location card integrates seamlessly with Google Maps, while hover effects and typography enhance interactivity and readability. By updating eventData and leveraging the theme’s custom colors, you can easily maintain and evolve the section to match evolving branding and content needs.

@@ -1,15 +1,13 @@
 # Language Switcher
 
-<cite>
-**Referenced Files in This Document**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [App.tsx](file://src/App.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [index.css](file://src/index.css)
-- [public/manifest.json](file://public/manifest.json)
-</cite>
+> **Referenced Files in This Document**
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [App.tsx](src/App.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [index.css](src/index.css)
+> - [public/manifest.json](public/manifest.json)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -48,16 +46,16 @@ RootDiv --> Sections
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L122)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
+- [App.tsx](src/App.tsx#L12-L31)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L122)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L122)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
+- [App.tsx](src/App.tsx#L12-L31)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L122)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
 
 ## Core Components
 - LanguageSwitcher: Renders language options with flags and labels, updates the current language on click, and adapts styling based on variant.
@@ -66,10 +64,10 @@ RootDiv --> Sections
 - Navbar: Integrates the LanguageSwitcher in both desktop and mobile layouts.
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L122)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L12-L31)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L122)
 
 ## Architecture Overview
 The LanguageSwitcher reads the current language and setLanguage from the LanguageContext. Clicking a language button invokes setLanguage, which updates the state in LanguageProvider. This causes all components consuming useLanguage to re-render, reflecting the new language and RTL settings. The root App component sets dir and font classes based on isRTL and language, ensuring consistent layout and typography.
@@ -91,9 +89,9 @@ UI-->>User : Updated labels and layout
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L39)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [App.tsx](file://src/App.tsx#L12-L31)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L39)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L12-L31)
 
 ## Detailed Component Analysis
 
@@ -131,10 +129,10 @@ Click --> End(["Re-render app with new language"])
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L39)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L39)
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
 
 ### LanguageContext and Translation System
 - LanguageContext defines the shape of the context: language, setLanguage, t, isRTL.
@@ -157,14 +155,14 @@ class LanguageProvider {
 +t(key) : string
 +isRTL : boolean
 }
-LanguageProvider --> LanguageContextType : "provides"
+LanguageProvider --> LanguageContextType : provides
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### RTL and Typography Integration
 - App applies dir="rtl" or dir="ltr" based on isRTL.
@@ -188,14 +186,14 @@ UseRoboto --> End
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [tailwind.config.ts](file://tailwind.config.ts#L15-L20)
-- [index.css](file://src/index.css#L1-L22)
+- [App.tsx](src/App.tsx#L12-L31)
+- [tailwind.config.ts](tailwind.config.ts#L15-L20)
+- [index.css](src/index.css#L1-L22)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [tailwind.config.ts](file://tailwind.config.ts#L15-L20)
-- [index.css](file://src/index.css#L1-L22)
+- [App.tsx](src/App.tsx#L12-L31)
+- [tailwind.config.ts](tailwind.config.ts#L15-L20)
+- [index.css](src/index.css#L1-L22)
 
 ### Navbar Integration
 - Navbar embeds the LanguageSwitcher in desktop and mobile views.
@@ -216,13 +214,13 @@ Navbar-->>LS : Pass isRTL for layout
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L122)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L39)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L122)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L39)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L122)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L39)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L122)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L39)
 
 ## Dependency Analysis
 - LanguageSwitcher depends on LanguageContext for language state and setLanguage.
@@ -241,20 +239,20 @@ Navbar --> LS
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L122)
-- [tailwind.config.ts](file://tailwind.config.ts#L15-L20)
-- [index.css](file://src/index.css#L1-L22)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L12-L31)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L122)
+- [tailwind.config.ts](tailwind.config.ts#L15-L20)
+- [index.css](src/index.css#L1-L22)
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L122)
-- [tailwind.config.ts](file://tailwind.config.ts#L15-L20)
-- [index.css](file://src/index.css#L1-L22)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L12-L31)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L122)
+- [tailwind.config.ts](tailwind.config.ts#L15-L20)
+- [index.css](src/index.css#L1-L22)
 
 ## Performance Considerations
 - Memoize language options array to avoid recreating the list on each render. Wrap the languages array in useMemo if it becomes dynamic.
@@ -283,10 +281,10 @@ Navbar --> LS
   - The manifest sets dir to rtl and lang to ar. If you add new languages, review the manifest’s lang and dir to reflect the default language.
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L39)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [public/manifest.json](file://public/manifest.json#L1-L19)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L39)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L12-L31)
+- [public/manifest.json](public/manifest.json#L1-L19)
 
 ## Conclusion
 The LanguageSwitcher is a compact, efficient component that integrates tightly with LanguageContext to provide seamless multilingual support. Its dual variants accommodate different UI layouts, while its flag rendering and conditional typography ensure cultural and linguistic fidelity. Combined with the root-level RTL and font logic, it delivers a cohesive internationalization experience across the application.
@@ -304,8 +302,8 @@ The LanguageSwitcher is a compact, efficient component that integrates tightly w
   - The Navbar already integrates the switcher in both contexts.
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L39)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L78-L116)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L39)
+- [Navbar.tsx](src/components/Navbar.tsx#L78-L116)
 
 ### Styling and Accessibility Checklist
 - Ensure each language button has adequate touch target size and spacing.

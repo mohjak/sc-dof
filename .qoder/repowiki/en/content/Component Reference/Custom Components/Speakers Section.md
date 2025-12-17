@@ -1,12 +1,10 @@
 # Speakers Section
 
-<cite>
-**Referenced Files in This Document**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [index.css](file://src/index.css)
-- [eventData.ts](file://src/data/eventData.ts)
-</cite>
+> **Referenced Files in This Document**
+> - [SpeakersSection.tsx](src/components/SpeakersSection.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [index.css](src/index.css)
+> - [eventData.ts](src/data/eventData.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -39,13 +37,13 @@ Card --> Text["Name + Role<br/>Localized"]
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L171-L235)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [index.css](file://src/index.css#L231-L249)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L171-L235)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [index.css](src/index.css#L231-L249)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ## Core Components
 - SpeakersSection: Renders the section header and the grid of speaker cards. It selects localized name and role via helper functions and applies responsive grid and animation classes.
@@ -59,9 +57,9 @@ Key responsibilities:
 - Accessibility: Alt text generated from the localized name; fallback avatar when no image is present.
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L171-L235)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [index.css](file://src/index.css#L185-L249)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L171-L235)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [index.css](src/index.css#L185-L249)
 
 ## Architecture Overview
 The component integrates with the global language provider and Tailwind/CSS animations to deliver a polished, multilingual experience.
@@ -73,19 +71,19 @@ participant Component as "SpeakersSection"
 participant Grid as "Grid Container"
 participant Card as "Speaker Card"
 participant CSS as "index.css"
-Provider->>Component : "t(language)"
-Component->>Component : "getName(speaker)"
-Component->>Component : "getRole(speaker)"
-Component->>Grid : "Render grid with Tailwind classes"
-Grid->>Card : "Render each speaker"
-Card->>CSS : "Apply animate-fade-up + hover effects"
-Card-->>Component : "Alt text from getName(speaker)"
+Provider->>Component : t(language)
+Component->>Component : getName(speaker)
+Component->>Component : getRole(speaker)
+Component->>Grid : Render grid with Tailwind classes
+Grid->>Card : Render each speaker
+Card->>CSS : Apply animate-fade-up + hover effects
+Card-->>Component : Alt text from getName(speaker)
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L171-L235)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [index.css](file://src/index.css#L185-L249)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L171-L235)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [index.css](src/index.css#L185-L249)
 
 ## Detailed Component Analysis
 
@@ -114,19 +112,19 @@ class LanguageContext {
 +language
 +t(key) string
 }
-SpeakersSection --> Speaker : "maps over"
-SpeakersSection --> LanguageContext : "uses t(language)"
+SpeakersSection --> Speaker : maps over
+SpeakersSection --> LanguageContext : uses t(language)
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L18-L27)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L174-L184)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L18-L27)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L174-L184)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L18-L27)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L174-L184)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L12-L96)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L18-L27)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L174-L184)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L12-L96)
 
 ### Responsive Grid Layout
 - The grid uses Tailwind’s responsive column classes to adapt from 1 to 4 columns:
@@ -146,10 +144,10 @@ XL --> End(["Cards arranged"])
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L199-L206)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L199-L206)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L199-L206)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L199-L206)
 
 ### Card Design and Interactions
 - Card container:
@@ -176,10 +174,10 @@ TextNodes --> End(["Card ready"])
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L207-L229)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L207-L229)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L207-L229)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L207-L229)
 
 ### Animations and Staggered Delays
 - Fade-up animation:
@@ -193,21 +191,21 @@ TextNodes --> End(["Card ready"])
 sequenceDiagram
 participant Grid as "Grid"
 participant Card as "Card"
-Grid->>Card : "Render with index"
-Card->>Card : "Set animationDelay = index * 50ms"
-Card->>Card : "Apply animate-fade-up"
-Note over Card : "Cards appear in sequence"
+Grid->>Card : Render with index
+Card->>Card : Set animationDelay = index * 50ms
+Card->>Card : Apply animate-fade-up
+Note over Card : Cards appear in sequence
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L204-L206)
-- [index.css](file://src/index.css#L190-L200)
-- [index.css](file://src/index.css#L231-L233)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L204-L206)
+- [index.css](src/index.css#L190-L200)
+- [index.css](src/index.css#L231-L233)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L204-L206)
-- [index.css](file://src/index.css#L190-L200)
-- [index.css](file://src/index.css#L231-L233)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L204-L206)
+- [index.css](src/index.css#L190-L200)
+- [index.css](src/index.css#L231-L233)
 
 ### Accessibility Features
 - Alt text:
@@ -218,7 +216,7 @@ Note over Card : "Cards appear in sequence"
   - Hover ring and text colors rely on theme tokens; ensure sufficient contrast against backgrounds
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L210-L214)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L210-L214)
 
 ### Internationalization Challenges and Best Practices
 - Name rendering:
@@ -230,8 +228,8 @@ Note over Card : "Cards appear in sequence"
   - Extend the LanguageContext translation map and update the getName/getRole logic if needed
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L272-L274)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L174-L184)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L272-L274)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L174-L184)
 
 ### Speaker Data Structure Example
 Below is the structure used by the component. Add new speakers by extending the speakers array with the same fields.
@@ -251,10 +249,10 @@ string image
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L18-L27)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L18-L27)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L29-L169)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L29-L169)
 
 ## Dependency Analysis
 - Internal dependencies:
@@ -271,14 +269,14 @@ IMG["Speaker Images"] --> SS
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L17)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [index.css](file://src/index.css#L231-L249)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L17)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [index.css](src/index.css#L231-L249)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L17)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [index.css](file://src/index.css#L231-L249)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L17)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [index.css](src/index.css#L231-L249)
 
 ## Performance Considerations
 - Image optimization:
@@ -308,8 +306,8 @@ IMG["Speaker Images"] --> SS
   - Ensure the ring color tokens are available in your theme and that the group hover context is active
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L210-L219)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L272-L274)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L210-L219)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L272-L274)
 
 ## Conclusion
 SpeakersSection delivers a clean, responsive, and accessible showcase of event participants. By leveraging a typed data model, helper functions for localization, and Tailwind-driven animations, it provides a consistent experience across languages and devices. Extending the component involves adding new speakers to the array and ensuring translations and images are available.

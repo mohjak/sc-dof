@@ -1,13 +1,11 @@
 # Customization Guide
 
-<cite>
-**Referenced Files in This Document**   
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [eventData.ts](file://src/data/eventData.ts)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [index.css](file://src/index.css)
-- [App.tsx](file://src/App.tsx)
-</cite>
+> **Referenced Files in This Document**   
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [eventData.ts](src/data/eventData.ts)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [index.css](src/index.css)
+> - [App.tsx](src/App.tsx)
 
 ## Table of Contents
 1. [Theme Customization](#theme-customization)
@@ -26,8 +24,8 @@ When adding new colors, follow the existing pattern of using CSS variables defin
 For font customization, add new font families to the `fontFamily` object in the Tailwind configuration. Ensure that any new Arabic fonts support proper text rendering and are loaded in `src/index.css` using `@font-face` rules. The platform currently uses font swapping to ensure text remains visible during font loading.
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
 
 ## Language Extension
 
@@ -40,8 +38,8 @@ Components access translations through the `useLanguage` hook, which provides th
 When adding a new language, ensure that all existing translation keys are provided with appropriate values. Missing translations will fall back to the key itself, which may not be user-friendly. The platform automatically applies RTL layout for Arabic content by setting the `dir` attribute on the root element, which affects text direction and component layout.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Event Content Updates
 
@@ -54,9 +52,9 @@ For organizer information, the `organizers` array contains details about the hos
 The event date and time are defined in multiple formats to support different display contexts. The `date` field uses ISO format for programmatic use, while `dateFormatted` provides a human-readable version. When updating the event date, ensure both fields are updated consistently.
 
 **Section sources**
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
 
 ## RTL Compatibility and Best Practices
 
@@ -75,6 +73,6 @@ For theme customization, ensure that any new colors have appropriate contrast ra
 When adding new content, provide translations for all supported languages to maintain a consistent user experience. The translation system is hierarchical, so new keys should follow the existing naming convention (e.g., `component.purpose`).
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L1-L249)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L1-L249)

@@ -1,26 +1,24 @@
 # UI Component Library
 
-<cite>
-**Referenced Files in This Document**   
-- [button.tsx](file://src/components/ui/button.tsx)
-- [card.tsx](file://src/components/ui/card.tsx)
-- [dialog.tsx](file://src/components/ui/dialog.tsx)
-- [form.tsx](file://src/components/ui/form.tsx)
-- [input.tsx](file://src/components/ui/input.tsx)
-- [select.tsx](file://src/components/ui/select.tsx)
-- [checkbox.tsx](file://src/components/ui/checkbox.tsx)
-- [textarea.tsx](file://src/components/ui/textarea.tsx)
-- [label.tsx](file://src/components/ui/label.tsx)
-- [badge.tsx](file://src/components/ui/badge.tsx)
-- [toaster.tsx](file://src/components/ui/toaster.tsx)
-- [use-toast.ts](file://src/components/ui/use-toast.ts)
-- [utils.ts](file://src/lib/utils.ts)
-- [components.json](file://components.json)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-</cite>
+> **Referenced Files in This Document**   
+> - [button.tsx](src/components/ui/button.tsx)
+> - [card.tsx](src/components/ui/card.tsx)
+> - [dialog.tsx](src/components/ui/dialog.tsx)
+> - [form.tsx](src/components/ui/form.tsx)
+> - [input.tsx](src/components/ui/input.tsx)
+> - [select.tsx](src/components/ui/select.tsx)
+> - [checkbox.tsx](src/components/ui/checkbox.tsx)
+> - [textarea.tsx](src/components/ui/textarea.tsx)
+> - [label.tsx](src/components/ui/label.tsx)
+> - [badge.tsx](src/components/ui/badge.tsx)
+> - [toaster.tsx](src/components/ui/toaster.tsx)
+> - [use-toast.ts](src/components/ui/use-toast.ts)
+> - [utils.ts](src/lib/utils.ts)
+> - [components.json](components.json)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [DetailsSection.tsx](src/components/DetailsSection.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -38,9 +36,9 @@
 This document provides comprehensive documentation for the ShadCN UI component library implementation in the project. The components are built on Radix UI primitives and styled with Tailwind CSS, following modern React patterns for accessibility, theming, and performance. The library includes foundational components such as Button, Card, Dialog, Form, and Input, which are used throughout the application's section components to create a consistent user interface.
 
 **Section sources**
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L1-L96)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [dialog.tsx](src/components/ui/dialog.tsx#L1-L96)
 
 ## Core Components
 
@@ -79,15 +77,15 @@ Checkbox --> Radix
 ```
 
 **Diagram sources**
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L1-L96)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [dialog.tsx](src/components/ui/dialog.tsx#L1-L96)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L1-L96)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [dialog.tsx](src/components/ui/dialog.tsx#L1-L96)
 
 ## Component Props and Accessibility
 
@@ -123,9 +121,9 @@ The Dialog component implements a fully accessible modal pattern:
 The implementation follows WAI-ARIA authoring practices for dialogs, including focus trapping, proper role attributes, and screen reader announcements.
 
 **Section sources**
-- [button.tsx](file://src/components/ui/button.tsx#L33-L47)
-- [card.tsx](file://src/components/ui/card.tsx#L5-L43)
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L7-L95)
+- [button.tsx](src/components/ui/button.tsx#L33-L47)
+- [card.tsx](src/components/ui/card.tsx#L5-L43)
+- [dialog.tsx](src/components/ui/dialog.tsx#L7-L95)
 
 ## Theming and RTL Integration
 
@@ -163,22 +161,22 @@ class TailwindConfig {
 +plugins : function[]
 }
 class ComponentsJson {
-+style : "default"
++style : default
 +tsx : true
 +tailwind : object
 +aliases : object
 }
-TailwindConfig --> ThemeVariables : "defines"
-ComponentsJson --> TailwindConfig : "references"
+TailwindConfig --> ThemeVariables : defines
+ComponentsJson --> TailwindConfig : references
 ```
 
 **Diagram sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [components.json](file://components.json#L1-L21)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [components.json](components.json#L1-L21)
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [components.json](file://components.json#L1-L21)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [components.json](components.json#L1-L21)
 
 ## Utility Functions
 
@@ -203,7 +201,7 @@ This utility allows developers to:
 The function is imported throughout the component library using the `@/lib/utils` alias defined in `components.json`.
 
 **Section sources**
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Usage Examples
 
@@ -244,9 +242,9 @@ The implementation ensures proper accessibility by:
 - Managing focus states appropriately
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L83-L91)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L25-L58)
-- [form.tsx](file://src/components/ui/form.tsx#L1-L130)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L83-L91)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L25-L58)
+- [form.tsx](src/components/ui/form.tsx#L1-L130)
 
 ## Performance and Bundling
 
@@ -272,8 +270,8 @@ Components are optimized for render performance by:
 The configuration in `components.json` specifies `"rsc": false` indicating these are not React Server Components, making them suitable for client-side rendering with optimal hydration patterns.
 
 **Section sources**
-- [components.json](file://components.json#L1-L21)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [components.json](components.json#L1-L21)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Customization Patterns
 
@@ -335,8 +333,8 @@ theme: {
 These custom colors can then be used throughout the application with standard Tailwind syntax (e.g., `text-syrian-red`, `bg-gold`).
 
 **Section sources**
-- [button.tsx](file://src/components/ui/button.tsx#L7-L31)
-- [tailwind.config.ts](file://tailwind.config.ts#L20-L63)
+- [button.tsx](src/components/ui/button.tsx#L7-L31)
+- [tailwind.config.ts](tailwind.config.ts#L20-L63)
 
 ## Accessibility Features
 
@@ -373,10 +371,10 @@ The component library prioritizes accessibility through several key patterns:
 The implementation follows WCAG 2.1 guidelines and WAI-ARIA best practices, ensuring the interface is usable by people with various disabilities.
 
 **Section sources**
-- [button.tsx](file://src/components/ui/button.tsx#L8-L9)
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L15-L51)
-- [form.tsx](file://src/components/ui/form.tsx#L75-L127)
-- [checkbox.tsx](file://src/components/ui/checkbox.tsx#L7-L23)
+- [button.tsx](src/components/ui/button.tsx#L8-L9)
+- [dialog.tsx](src/components/ui/dialog.tsx#L15-L51)
+- [form.tsx](src/components/ui/form.tsx#L75-L127)
+- [checkbox.tsx](src/components/ui/checkbox.tsx#L7-L23)
 
 ## Conclusion
 The ShadCN UI component library implementation in this project demonstrates a robust, accessible, and maintainable approach to building React components. By leveraging Radix UI primitives for accessibility and behavior, Tailwind CSS for styling, and thoughtful utility functions like `cn`, the library provides a solid foundation for the application's user interface.

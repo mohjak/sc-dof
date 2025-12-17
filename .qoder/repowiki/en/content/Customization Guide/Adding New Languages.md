@@ -1,15 +1,13 @@
 # Adding New Languages
 
-<cite>
-**Referenced Files in This Document**   
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [App.tsx](file://src/App.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx)
-</cite>
+> **Referenced Files in This Document**   
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [App.tsx](src/App.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [DetailsSection.tsx](src/components/DetailsSection.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -54,26 +52,26 @@ LanguageContext --> DetailsSection
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [App.tsx](file://src/App.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+- [App.tsx](src/App.tsx)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+- [Navbar.tsx](src/components/Navbar.tsx)
+- [HeroSection.tsx](src/components/HeroSection.tsx)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [App.tsx](file://src/App.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+- [App.tsx](src/App.tsx)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
 
 ## Core Components
 The internationalization system in sc-dof revolves around three core components: the LanguageContext which manages language state and provides translation functions, the LanguageSwitcher component that allows users to change languages, and the t() function that retrieves translated strings throughout the application. These components work together to provide a seamless multilingual experience.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L3-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L3-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Architecture Overview
 The internationalization architecture in sc-dof follows the React Context pattern, providing a global state management solution for language preferences and translations. The LanguageProvider wraps the entire application, making language state available to all components through the useLanguage hook. When a user selects a new language via the LanguageSwitcher, the context updates, triggering re-renders across all components that consume translations.
@@ -98,9 +96,9 @@ A --> |Provides| L[isRTL]
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L283)
-- [App.tsx](file://src/App.tsx#L36-L38)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L40)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L283)
+- [App.tsx](src/App.tsx#L36-L38)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L40)
 
 ## Detailed Component Analysis
 
@@ -125,16 +123,16 @@ class LanguageProvider {
 class useLanguage {
 +returns : LanguageContextType
 }
-LanguageProvider --> LanguageContextType : "implements"
-useLanguage --> LanguageContextType : "returns"
+LanguageProvider --> LanguageContextType : implements
+useLanguage --> LanguageContextType : returns
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L5-L10)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L291)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L5-L10)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L291)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### Translation System
 The translation system is built around a nested object structure that organizes translations by language and functional area. Each language ('ar', 'en', 'tr') has its own set of key-value pairs following a dot-notation hierarchy (e.g., 'nav.home', 'hero.title'). The t() function serves as the primary interface for retrieving translations, with fallback behavior that returns the key itself when a translation is missing.
@@ -170,18 +168,18 @@ string hero.subtitle
 string details.title
 string agenda.title
 }
-TRANSLATIONS ||--o{ ARABIC : "contains"
-TRANSLATIONS ||--o{ ENGLISH : "contains"
-TRANSLATIONS ||--o{ TURKISH : "contains"
+TRANSLATIONS ||--o{ ARABIC : contains
+TRANSLATIONS ||--o{ ENGLISH : contains
+TRANSLATIONS ||--o{ TURKISH : contains
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L12-L264)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L12-L264)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L12-L264)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L7-L48)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L6-L24)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L12-L264)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L7-L48)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L6-L24)
 
 ### RTL Support
 The platform provides built-in support for right-to-left languages through the isRTL flag in the LanguageContext. This flag is automatically set to true when the language is 'ar' (Arabic), triggering RTL layout throughout the application. The App component uses this flag to set the document direction, while specific components can access it for conditional styling.
@@ -200,12 +198,12 @@ H --> J[Update font to Roboto]
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L276)
-- [App.tsx](file://src/App.tsx#L13-L20)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L276)
+- [App.tsx](src/App.tsx#L13-L20)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L276)
-- [App.tsx](file://src/App.tsx#L13-L20)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L276)
+- [App.tsx](src/App.tsx#L13-L20)
 
 ### Language Switcher Component
 The LanguageSwitcher component provides a user interface for changing languages, with visual indicators for each available language. It supports two presentation modes (floating and navbar) and handles both emoji flags for English and Turkish, and a custom Syrian flag image for Arabic.
@@ -227,13 +225,13 @@ UIComponents->>UIComponents : Change font if needed
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L14-L40)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L7)
-- [App.tsx](file://src/App.tsx#L13-L20)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L14-L40)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L7)
+- [App.tsx](src/App.tsx#L13-L20)
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L4-L8)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [Navbar.tsx](src/components/Navbar.tsx#L4-L8)
 
 ## Dependency Analysis
 The internationalization system has well-defined dependencies between components, with the LanguageContext serving as the central hub. The dependency graph shows how language state flows from the provider to all consuming components, ensuring consistent behavior across the application.
@@ -255,13 +253,13 @@ G --> A
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L36-L38)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L283)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L4-L5)
+- [App.tsx](src/App.tsx#L36-L38)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L283)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L4-L5)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ## Performance Considerations
 The current implementation efficiently manages language state using React Context, with minimal performance overhead. The translation object is defined once at the module level and reused across renders. The t() function provides fast key lookups with O(1) complexity. For large-scale applications, consider lazy-loading translation files or implementing code splitting for language-specific bundles.
@@ -270,8 +268,8 @@ The current implementation efficiently manages language state using React Contex
 Common issues when adding new languages include missing translation keys, incorrect RTL behavior, and font display problems. Always verify that new language entries are added to all relevant sections in the translations object. Test thoroughly with actual content to ensure proper text alignment and layout. Use the fallback behavior of the t() function to identify missing keys during development.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L273)
-- [App.tsx](file://src/App.tsx#L16-L17)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L273)
+- [App.tsx](src/App.tsx#L16-L17)
 
 ## Conclusion
 The sc-dof platform provides a robust foundation for multilingual support through its well-structured LanguageContext system. Adding new languages requires updating the Language type union, expanding the translations object with new key-value pairs, and integrating the language into the LanguageSwitcher component. The system automatically handles RTL support for Arabic and font switching between Koufiya and Roboto. By following the patterns established in the existing implementation, new languages can be added consistently while maintaining UI integrity and accessibility standards.

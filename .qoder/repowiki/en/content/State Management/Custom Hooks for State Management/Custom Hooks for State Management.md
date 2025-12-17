@@ -1,16 +1,14 @@
 # Custom Hooks for State Management
 
-<cite>
-**Referenced Files in This Document**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx)
-- [use-toast.ts](file://src/hooks/use-toast.ts)
-- [toaster.tsx](file://src/components/ui/toaster.tsx)
-- [sonner.tsx](file://src/components/ui/sonner.tsx)
-- [toast.tsx](file://src/components/ui/toast.tsx)
-- [use-toast.ts (UI wrapper)](file://src/components/ui/use-toast.ts)
-- [App.tsx](file://src/App.tsx)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [use-mobile.tsx](src/hooks/use-mobile.tsx)
+> - [use-toast.ts](src/hooks/use-toast.ts)
+> - [toaster.tsx](src/components/ui/toaster.tsx)
+> - [sonner.tsx](src/components/ui/sonner.tsx)
+> - [toast.tsx](src/components/ui/toast.tsx)
+> - [use-toast.ts (UI wrapper)](src/components/ui/use-toast.ts)
+> - [App.tsx](src/App.tsx)
+> - [sidebar.tsx](src/components/ui/sidebar.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -61,32 +59,32 @@ TWR --> S
 ```
 
 **Diagram sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L19)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L24)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [use-toast.ts (UI wrapper)](file://src/components/ui/use-toast.ts#L1-L4)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L1-L638)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L19)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L24)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [use-toast.ts (UI wrapper)](src/components/ui/use-toast.ts#L1-L4)
+- [App.tsx](src/App.tsx#L1-L43)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L1-L638)
 
 **Section sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L19)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L24)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [use-toast.ts (UI wrapper)](file://src/components/ui/use-toast.ts#L1-L4)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L1-L638)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L19)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L24)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [use-toast.ts (UI wrapper)](src/components/ui/use-toast.ts#L1-L4)
+- [App.tsx](src/App.tsx#L1-L43)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L1-L638)
 
 ## Core Components
 - useIsMobile: Returns a boolean indicating mobile viewport and updates on resize via matchMedia.
 - useToast: Provides a reducer-based state machine for toasts, a singleton dispatcher, and imperative helpers (toast, dismiss, update).
 
 **Section sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L19)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L19)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
 
 ## Architecture Overview
 The toast system uses a singleton pattern with a global reducer and listeners. Components subscribe via useToast and receive the latest state. UI components (Toaster and Sonner) render the current toasts.
@@ -111,9 +109,9 @@ L-->>UI : setState(toasts)
 ```
 
 **Diagram sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L24)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L24)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
 
 ## Detailed Component Analysis
 
@@ -140,12 +138,12 @@ Idle --> Cleanup["Cleanup: removeEventListener"]
 ```
 
 **Diagram sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L19)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L1-L638)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L19)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L1-L638)
 
 **Section sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L19)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L1-L638)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L19)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L1-L638)
 
 ### useToast Hook and Reducer-Based State Management
 - State shape: An array of ToasterToast entries with id, title, description, action, and open flag.
@@ -196,21 +194,21 @@ class Dispatcher {
 class Listener {
 +setState(State) void
 }
-Reducer --> State : "returns"
-Dispatcher --> Reducer : "calls"
-Dispatcher --> Listener : "notifies"
-Listener --> State : "updates"
+Reducer --> State : returns
+Dispatcher --> Reducer : calls
+Dispatcher --> Listener : notifies
+Listener --> State : updates
 ```
 
 **Diagram sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L24)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L24)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L24)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L24)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
 
 ### UI Integration: Toaster and Sonner
 - Toaster:
@@ -237,16 +235,16 @@ S->>UT : toast()/dismiss() via exported wrapper
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L24)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
+- [App.tsx](src/App.tsx#L1-L43)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L24)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L24)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [use-toast.ts (UI wrapper)](file://src/components/ui/use-toast.ts#L1-L4)
+- [App.tsx](src/App.tsx#L1-L43)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L24)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [use-toast.ts (UI wrapper)](src/components/ui/use-toast.ts#L1-L4)
 
 ## Dependency Analysis
 - useIsMobile depends on window.matchMedia and React’s useState/useEffect.
@@ -265,18 +263,18 @@ TO --> TP["Radix UI Toast Primitives"]
 ```
 
 **Diagram sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L19)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L24)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L19)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L24)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
 
 **Section sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L19)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L24)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L19)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L24)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
 
 ## Performance Considerations
 - Event listener cleanup:
@@ -291,8 +289,8 @@ TO --> TP["Radix UI Toast Primitives"]
   - TOAST_LIMIT ensures the toast array does not grow indefinitely, keeping renders efficient.
 
 **Section sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L19)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L19)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
 
 ## Troubleshooting Guide
 - Mobile detection not updating on resize:
@@ -309,11 +307,11 @@ TO --> TP["Radix UI Toast Primitives"]
   - Confirm next-themes is configured and theme prop is passed correctly.
 
 **Section sources**
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L19)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L186)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L24)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L19)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L186)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L24)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Conclusion
 useIsMobile provides a lightweight, cleanup-safe way to detect mobile breakpoints and react to resize events. useToast offers a robust, singleton-driven toast system with queue limits, timeout management, and imperative controls. Together with Toaster and Sonner, they enable consistent, performant feedback and responsive UI behavior across the application.

@@ -1,15 +1,13 @@
 # Dialog & Drawer Components
 
-<cite>
-**Referenced Files in This Document**   
-- [dialog.tsx](file://src/components/ui/dialog.tsx)
-- [drawer.tsx](file://src/components/ui/drawer.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx)
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx)
-- [sheet.tsx](file://src/components/ui/sheet.tsx)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx)
-</cite>
+> **Referenced Files in This Document**   
+> - [dialog.tsx](src/components/ui/dialog.tsx)
+> - [drawer.tsx](src/components/ui/drawer.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [RegistrationSection.tsx](src/components/RegistrationSection.tsx)
+> - [sidebar.tsx](src/components/ui/sidebar.tsx)
+> - [sheet.tsx](src/components/ui/sheet.tsx)
+> - [use-mobile.tsx](src/hooks/use-mobile.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -30,8 +28,8 @@ This document provides comprehensive documentation for the Dialog and Drawer com
 The Dialog and Drawer components are fundamental UI elements in the application, designed to handle different interaction patterns based on device type and user context. The Dialog component is implemented using Radix UI's Dialog primitive, while the Drawer component leverages the Vaul library to provide native-like swipeable sheets on mobile devices.
 
 **Section sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L1-L96)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L1-L88)
+- [dialog.tsx](src/components/ui/dialog.tsx#L1-L96)
+- [drawer.tsx](src/components/ui/drawer.tsx#L1-L88)
 
 ## Architecture Overview
 
@@ -55,8 +53,8 @@ L --> N[Mobile-First Design]
 ```
 
 **Diagram sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L1-L96)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L1-L88)
+- [dialog.tsx](src/components/ui/dialog.tsx#L1-L96)
+- [drawer.tsx](src/components/ui/drawer.tsx#L1-L88)
 
 ## Detailed Component Analysis
 
@@ -79,15 +77,15 @@ class DialogSubComponents {
 +Title : DialogPrimitive.Title
 +Description : DialogPrimitive.Description
 }
-Dialog --> DialogSubComponents : "composes"
-Dialog --> "fixed inset-0 z-50" : "positions"
+Dialog --> DialogSubComponents : composes
+Dialog --> fixed inset-0 z-50 : positions
 ```
 
 **Diagram sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L7-L95)
+- [dialog.tsx](src/components/ui/dialog.tsx#L7-L95)
 
 **Section sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L1-L96)
+- [dialog.tsx](src/components/ui/dialog.tsx#L1-L96)
 
 ### Drawer Component Analysis
 The Drawer component is implemented using the Vaul library, which provides swipeable sheet functionality optimized for mobile devices. It's specifically designed for touch interactions and provides a native app-like experience for mobile navigation.
@@ -108,16 +106,16 @@ class DrawerSubComponents {
 +Title : DrawerPrimitive.Title
 +Description : DrawerPrimitive.Description
 }
-Drawer --> DrawerSubComponents : "composes"
-Drawer --> "fixed inset-x-0 bottom-0" : "positions"
-Drawer --> "h-2 w-[100px]" : "handle"
+Drawer --> DrawerSubComponents : composes
+Drawer --> fixed inset-x-0 bottom-0 : positions
+Drawer --> h-2 w-[100px] : handle
 ```
 
 **Diagram sources**
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L6-L87)
+- [drawer.tsx](src/components/ui/drawer.tsx#L6-L87)
 
 **Section sources**
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L1-L88)
+- [drawer.tsx](src/components/ui/drawer.tsx#L1-L88)
 
 ### Responsive Behavior Analysis
 The application implements a responsive design pattern that uses different components based on device type. The sidebar component demonstrates this pattern by using Sheet for mobile devices and a traditional sidebar for desktop.
@@ -140,12 +138,12 @@ class UseSidebar,PositionLeftRight,ClickAway desktop;
 ```
 
 **Diagram sources**
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L153-L171)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L5-L19)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L153-L171)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L5-L19)
 
 **Section sources**
-- [sidebar.tsx](file://src/components/ui/sidebar.tsx#L150-L175)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
+- [sidebar.tsx](src/components/ui/sidebar.tsx#L150-L175)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
 
 ## Integration Examples
 
@@ -165,18 +163,11 @@ DialogContent --> DialogFooter[Dialog Footer]
 DialogFooter --> CancelButton[Cancel Button]
 DialogFooter --> SubmitButton[Submit Button]
 DialogContent --> CloseButton[Dialog Close]
-style DialogRoot fill:#4CAF50,stroke:#333,color:white
-style DialogTrigger fill:#2196F3,stroke:#333,color:white
-style DialogPortal fill:#9C27B0,stroke:#333,color:white
-style DialogOverlay fill:#607D8B,stroke:#333,color:white
-style DialogContent fill:#FF9800,stroke:#333,color:white
-style DialogHeader fill:#795548,stroke:#333,color:white
-style DialogFooter fill:#795548,stroke:#333,color:white
 ```
 
 **Diagram sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L7-L95)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
+- [dialog.tsx](src/components/ui/dialog.tsx#L7-L95)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
 
 ### Mobile Navigation Integration
 The mobile navigation system uses a conditional rendering approach based on screen size, switching between a traditional navbar for desktop and a drawer-like pattern for mobile devices.
@@ -203,11 +194,11 @@ State-->>Navbar : Menu closes
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
 
 ## Accessibility and Interaction Patterns
 
@@ -229,8 +220,8 @@ H --> I[Normal Page Navigation]
 ```
 
 **Diagram sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L30-L52)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L25-L43)
+- [dialog.tsx](src/components/ui/dialog.tsx#L30-L52)
+- [drawer.tsx](src/components/ui/drawer.tsx#L25-L43)
 
 ### Keyboard Navigation
 The components support standard keyboard interactions expected by users, including Esc to close and Tab to navigate through focusable elements.
@@ -252,8 +243,8 @@ end note
 ```
 
 **Diagram sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L15-L28)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L17-L24)
+- [dialog.tsx](src/components/ui/dialog.tsx#L15-L28)
+- [drawer.tsx](src/components/ui/drawer.tsx#L17-L24)
 
 ### Screen Reader Announcements
 The components use appropriate ARIA attributes to ensure screen reader users are properly informed about the state and purpose of the dialogs and drawers.
@@ -280,15 +271,15 @@ DESCRIPTION_COMPONENT {
 string id "Referenced by aria-describedby"
 string text "Additional context/instructions"
 }
-DIALOG_COMPONENT ||--o{ TITLE_COMPONENT : "has"
-DIALOG_COMPONENT ||--o{ DESCRIPTION_COMPONENT : "has"
-DRAWER_COMPONENT ||--o{ TITLE_COMPONENT : "has"
-DRAWER_COMPONENT ||--o{ DESCRIPTION_COMPONENT : "has"
+DIALOG_COMPONENT ||--o{ TITLE_COMPONENT : has
+DIALOG_COMPONENT ||--o{ DESCRIPTION_COMPONENT : has
+DRAWER_COMPONENT ||--o{ TITLE_COMPONENT : has
+DRAWER_COMPONENT ||--o{ DESCRIPTION_COMPONENT : has
 ```
 
 **Diagram sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L64-L82)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L56-L74)
+- [dialog.tsx](src/components/ui/dialog.tsx#L64-L82)
+- [drawer.tsx](src/components/ui/drawer.tsx#L56-L74)
 
 ## Common Issues and Debugging
 
@@ -305,16 +296,11 @@ Check2 --> |Yes| Check3{Any CSS overrides<br>on body element?}
 Check3 --> |Yes| Fix3[Check for !important rules]
 Check3 --> |No| Check4{Is component unmounting<br>properly?}
 Check4 --> |No| Fix4[Ensure cleanup in useEffect]
-style Issue fill:#F44336,stroke:#333,color:white
-style Fix1 fill:#4CAF50,stroke:#333,color:white
-style Fix2 fill:#4CAF50,stroke:#333,color:white
-style Fix3 fill:#4CAF50,stroke:#333,color:white
-style Fix4 fill:#4CAF50,stroke:#333,color:white
 ```
 
 **Section sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L15-L28)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L17-L24)
+- [dialog.tsx](src/components/ui/dialog.tsx#L15-L28)
+- [drawer.tsx](src/components/ui/drawer.tsx#L17-L24)
 
 ### Backdrop Click Issues
 Another common issue is the backdrop click not closing the modal as expected, often due to event propagation problems.
@@ -339,8 +325,8 @@ Note over Handler,State : Ensure onOpenChange prop is properly connected to stat
 ```
 
 **Section sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L7-L95)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L6-L87)
+- [dialog.tsx](src/components/ui/dialog.tsx#L7-L95)
+- [drawer.tsx](src/components/ui/drawer.tsx#L6-L87)
 
 ## Performance Considerations
 
@@ -358,10 +344,6 @@ F --> G[Dialog Fully Interactive]
 G --> H{User Closes Dialog}
 H --> |Keep Mounted| I[Hide but keep in DOM]
 H --> |Unmount| J[Remove from DOM]
-style C fill:#2196F3,stroke:#333,color:white
-style D fill:#4CAF50,stroke:#333,color:white
-style I fill:#FF9800,stroke:#333,color:white
-style J fill:#F44336,stroke:#333,color:white
 note right of H
 Trade-off: Memory vs. Re-mounting cost
 Keep mounted for frequent use
@@ -370,8 +352,8 @@ end note
 ```
 
 **Section sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L34-L51)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L29-L42)
+- [dialog.tsx](src/components/ui/dialog.tsx#L34-L51)
+- [drawer.tsx](src/components/ui/drawer.tsx#L29-L42)
 
 ### Animation Smoothness
 Ensuring smooth animations is critical for user experience, particularly on mobile devices with limited processing power.
@@ -388,14 +370,11 @@ C --> H[will-change: transform]
 D --> I[Batch DOM reads/writes]
 E --> J[Sync with refresh rate]
 F --> K[Use opacity instead of display]
-style A fill:#9C27B0,stroke:#333,color:white
-style B,C,D,E,F fill:#3F51B5,stroke:#333,color:white
-style G,H,I,J,K fill:#2196F3,stroke:#333,color:white
 ```
 
 **Section sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L22-L23)
-- [drawer.tsx](file://src/components/ui/drawer.tsx#L21-L22)
+- [dialog.tsx](src/components/ui/dialog.tsx#L22-L23)
+- [drawer.tsx](src/components/ui/drawer.tsx#L21-L22)
 
 ## Conclusion
 The Dialog and Drawer components provide a robust foundation for modal and mobile sheet experiences in the application. By leveraging Radix UI and Vaul primitives, the implementation ensures accessibility, proper focus management, and intuitive interaction patterns. The responsive design approach allows for optimal user experience across device types, with Dialog used for desktop modals and Drawer (via Sheet) for mobile navigation. Proper implementation of these components requires attention to accessibility, performance, and consistent user experience patterns.
