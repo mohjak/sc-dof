@@ -16,6 +16,7 @@ import abdulqaderAlsukariImg from '@/assets/speakers/abdulqader-alsukari.jpeg';
 import mamdouhAldairiImg from '@/assets/speakers/mamdouh-aldairi.jpeg';
 import mohammadHayaniImg from '@/assets/speakers/mohammad-hayani.jpeg';
 import timShishmanImg from '@/assets/speakers/tim-shishman.jpeg';
+import iyasJaafarImg from '@/assets/speakers/iyas-jaafar.jpeg';
 
 interface Speaker {
   id: number;
@@ -101,12 +102,13 @@ const speakers: Speaker[] = [
   },
   {
     id: 8,
-    name: 'د. محمد حيدر',
-    nameEn: 'Dr. Mohammad Haidar',
-    nameTr: 'Dr. Mohammad Haidar',
-    role: 'رئيس مجلس إدارة شركة آدم القابضة',
-    roleEn: 'Chairman of Adam Holding Company',
-    roleTr: 'Adam Holding Şirketi Yönetim Kurulu Başkanı',
+    name: 'أ. إياس جعفر',
+    nameEn: 'Iyas Jaafar',
+    nameTr: 'Iyas Jaafar',
+    role: 'فنان تشكيلي وصانع محتوى فني',
+    roleEn: 'Visual Artist & Art Content Creator',
+    roleTr: 'Görsel Sanatçı ve Sanat İçerik Üreticisi',
+    image: iyasJaafarImg,
   },
   {
     id: 9,
