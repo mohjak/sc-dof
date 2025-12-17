@@ -15,6 +15,7 @@ import manalAlnajjarImg from '@/assets/speakers/manal-alnajjar.jpeg';
 import abdulqaderAlsukariImg from '@/assets/speakers/abdulqader-alsukari.jpeg';
 import mamdouhAldairiImg from '@/assets/speakers/mamdouh-aldairi.jpeg';
 import mohammadHayaniImg from '@/assets/speakers/mohammad-hayani.jpeg';
+import timShishmanImg from '@/assets/speakers/tim-shishman.jpeg';
 
 interface Speaker {
   id: number;
@@ -40,12 +41,13 @@ const speakers: Speaker[] = [
   },
   {
     id: 2,
-    name: 'قارئ القرآن الكريم',
-    nameEn: 'Quran Reciter',
-    nameTr: 'Kuran Okuyucusu',
-    role: 'تلاوة القرآن الكريم',
-    roleEn: 'Holy Quran Recitation',
-    roleTr: 'Kuran-ı Kerim Tilaveti',
+    name: 'القارئ تيم شيشمان',
+    nameEn: 'Quran Reciter Tim Shishman',
+    nameTr: 'Kuran Okuyucusu Tim Shishman',
+    role: 'تلاوة القرآن الكريم - من مركز أجيال للتنمية المستدامة',
+    roleEn: 'Holy Quran Recitation - Ajyal Center for Sustainable Development',
+    roleTr: 'Kuran-ı Kerim Tilaveti - Ajyal Sürdürülebilir Kalkınma Merkezi',
+    image: timShishmanImg,
   },
   {
     id: 3,
