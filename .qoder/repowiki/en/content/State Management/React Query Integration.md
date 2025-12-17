@@ -1,18 +1,16 @@
 # React Query Integration
 
-<cite>
-**Referenced Files in This Document**
-- [App.tsx](file://src/App.tsx)
-- [main.tsx](file://src/main.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [eventData.ts](file://src/data/eventData.ts)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [use-toast.ts](file://src/hooks/use-toast.ts)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx)
-- [package.json](file://package.json)
-</cite>
+> **Referenced Files in This Document**
+> - [App.tsx](src/App.tsx)
+> - [main.tsx](src/main.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [RegistrationSection.tsx](src/components/RegistrationSection.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [eventData.ts](src/data/eventData.ts)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [use-toast.ts](src/hooks/use-toast.ts)
+> - [use-mobile.tsx](src/hooks/use-mobile.tsx)
+> - [package.json](package.json)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -41,14 +39,14 @@ App --> Providers["Providers Order<br/>QueryClientProvider → TooltipProvider �
 ```
 
 **Diagram sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 **Section sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Core Components
 - QueryClientProvider: Exposes the QueryClient to the entire component tree, enabling useQuery/useMutation hooks anywhere in the app.
@@ -62,9 +60,9 @@ Key integration points:
 - Components like RegistrationSection rely on external resources; React Query can later be used to fetch and cache such data.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
 
 ## Architecture Overview
 The application’s architecture centers around a root-level QueryClientProvider that enables React Query across the app. This setup allows components to leverage caching, background refetching, and optimistic updates without requiring explicit queries today. The Context API manages UI state (language and translations), while React Query manages server state and caching.
@@ -97,12 +95,12 @@ EDATA --> HERO
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ## Detailed Component Analysis
 
@@ -126,13 +124,13 @@ S-->>S : Access language and UI utilities
 ```
 
 **Diagram sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 **Section sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ### How React Query Prepares the App for Future Data Fetching
 - Even without explicit queries, the QueryClient is ready to cache server state and coordinate background refetching.
@@ -171,8 +169,8 @@ NeedData --> |No| End
 These patterns align with the existing structure where components like RegistrationSection and HeroSection can later integrate with external APIs through React Query.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
 
 ### Configuration Options: Cache Time, Stale Time, and Refetching Strategies
 - Cache time: Controls how long cached data remains in memory before being garbage collected.
@@ -202,7 +200,7 @@ These patterns align with the existing structure where components like Registrat
 - Integrate with existing toast utilities to communicate outcomes to users.
 
 **Section sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L187)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L187)
 
 ### Integration with Context API for Cohesive State Management
 - LanguageContext manages UI state (language, translations, RTL) and is provided alongside React Query.
@@ -210,8 +208,8 @@ These patterns align with the existing structure where components like Registrat
 - This dual-layer approach separates UI state (Context) from server state (React Query), keeping concerns distinct and maintainable.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Dependency Analysis
 React Query is included as a dependency and is provided at the root. The app’s routing and component structure are compatible with React Query’s global availability.
@@ -225,14 +223,14 @@ App --> Context["LanguageContext.tsx"]
 ```
 
 **Diagram sources**
-- [package.json](file://package.json#L1-L85)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [package.json](package.json#L1-L85)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 **Section sources**
-- [package.json](file://package.json#L1-L85)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [package.json](package.json#L1-L85)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Performance Considerations
 - Choose appropriate cache and stale times to minimize network usage while keeping data fresh.

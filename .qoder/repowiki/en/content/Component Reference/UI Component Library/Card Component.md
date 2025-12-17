@@ -1,18 +1,16 @@
 # Card Component
 
-<cite>
-**Referenced Files in This Document**
-- [card.tsx](file://src/components/ui/card.tsx)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx)
-- [eventData.ts](file://src/data/eventData.ts)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [index.css](file://src/index.css)
-- [utils.ts](file://src/lib/utils.ts)
-- [components.json](file://components.json)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [card.tsx](src/components/ui/card.tsx)
+> - [SpeakersSection.tsx](src/components/SpeakersSection.tsx)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [OrganizersSection.tsx](src/components/OrganizersSection.tsx)
+> - [eventData.ts](src/data/eventData.ts)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [index.css](src/index.css)
+> - [utils.ts](src/lib/utils.ts)
+> - [components.json](components.json)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -65,25 +63,25 @@ ComponentsJson --> TailwindCfg
 ```
 
 **Diagram sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [components.json](file://components.json#L1-L21)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [components.json](components.json#L1-L21)
 
 **Section sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [components.json](file://components.json#L1-L21)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [components.json](components.json#L1-L21)
 
 ## Core Components
 The Card component family consists of:
@@ -97,7 +95,7 @@ The Card component family consists of:
 These primitives are composed to build structured, accessible cards with consistent spacing and typography.
 
 **Section sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
 
 ## Architecture Overview
 The Card primitives are used by three sections:
@@ -120,13 +118,13 @@ Section-->>UI : Rendered cards with consistent styles
 ```
 
 **Diagram sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
 
 ## Detailed Component Analysis
 
@@ -173,18 +171,18 @@ class CardFooter {
 +className
 +HTMLAttributes
 }
-Card --> CardHeader : "contains"
-Card --> CardTitle : "contains"
-Card --> CardDescription : "contains"
-Card --> CardContent : "contains"
-Card --> CardFooter : "contains"
+Card --> CardHeader : contains
+Card --> CardTitle : contains
+Card --> CardDescription : contains
+Card --> CardContent : contains
+Card --> CardFooter : contains
 ```
 
 **Diagram sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
 
 **Section sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
 
 ### Integration with Tailwind Utilities
 The Card primitives integrate with Tailwind via:
@@ -203,16 +201,16 @@ ApplyShadows --> End(["Render"])
 ```
 
 **Diagram sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
 
 **Section sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
 
 ### Real Code Examples: Rendering Event Data in Cards
 - AgendaSection demonstrates rendering timed agenda segments with icons and localized titles/descriptions. It composes a card-like structure using Tailwind utilities and local data.
@@ -230,16 +228,16 @@ Section-->>Section : Render time, icon, title, description
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ### Accessibility Considerations
 - Semantic structure: Use CardTitle for headings within cards to preserve heading hierarchy.
@@ -248,9 +246,9 @@ Section-->>Section : Render time, icon, title, description
 - Images: Provide alt text for profile and logo images; fallback visuals are present when images are missing.
 
 **Section sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Dependency Analysis
 The Card primitives depend on:
@@ -267,18 +265,18 @@ ComponentsJson["components.json"] --> Tailwind
 ```
 
 **Diagram sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [components.json](file://components.json#L1-L21)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [components.json](components.json#L1-L21)
 
 **Section sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [components.json](file://components.json#L1-L21)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [components.json](components.json#L1-L21)
 
 ## Performance Considerations
 - Prefer className overrides over heavy inline styles to keep DOM lightweight.
@@ -294,9 +292,9 @@ ComponentsJson["components.json"] --> Tailwind
 - Test keyboard navigation and focus visibility.
 
 **Section sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Customization and Theming
 - className overrides: Pass additional classes to Card to adjust padding, margins, or colors without altering the primitive.
@@ -309,10 +307,10 @@ Practical customization examples:
 - Modify shadows: apply shadow-lg or custom shadow utilities via className.
 
 **Section sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Responsive Behavior
 - Grid layouts: Sections use responsive grid classes to adapt from 1 column on small screens to multiple columns on larger screens.
@@ -328,14 +326,14 @@ XL["Extra-large screen"] --> Grid4["4 columns grid"]
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
 
 ## Troubleshooting Guide
 Common issues and resolutions:
@@ -353,9 +351,9 @@ Common issues and resolutions:
   - Resolution: Use text-foreground or theme-aware text utilities; verify CSS variables for dark mode.
 
 **Section sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Conclusion
 The Card component provides a consistent, accessible foundation for displaying content across SpeakersSection, AgendaSection, and OrganizersSection. By leveraging Tailwind’s color tokens, spacing utilities, and responsive grids, developers can compose visually coherent cards with minimal effort. Proper use of className overrides and theme extensions enables flexible customization while maintaining accessibility and responsive behavior.

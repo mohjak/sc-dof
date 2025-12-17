@@ -1,15 +1,13 @@
 # Deployment Guide
 
-<cite>
-**Referenced Files in This Document**   
-- [vite.config.ts](file://vite.config.ts)
-- [package.json](file://package.json)
-- [README.md](file://README.md)
-- [index.html](file://index.html)
-- [App.tsx](file://src/App.tsx)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [tsconfig.app.json](file://tsconfig.app.json)
-</cite>
+> **Referenced Files in This Document**   
+> - [vite.config.ts](vite.config.ts)
+> - [package.json](package.json)
+> - [README.md](README.md)
+> - [index.html](index.html)
+> - [App.tsx](src/App.tsx)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [tsconfig.app.json](tsconfig.app.json)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -31,8 +29,8 @@ The build process leverages Vite's native ES module-based build system, which pr
 A development build variant is also available through the `npm run build:dev` script, which creates a non-optimized build with source maps for debugging purposes. This can be useful for testing deployment configurations without the minification and optimization applied in production builds.
 
 **Section sources**
-- [package.json](file://package.json#L7-L11)
-- [vite.config.ts](file://vite.config.ts)
+- [package.json](package.json#L7-L11)
+- [vite.config.ts](vite.config.ts)
 
 ## Vite Configuration for Production
 The Vite configuration in vite.config.ts defines key settings that affect the build output and development experience. The configuration imports necessary plugins including the React SWC plugin for fast TypeScript and JSX compilation, and path utilities for module resolution.
@@ -55,18 +53,15 @@ Optimize --> Split["Code Splitting<br/>Route-based Bundles"]
 Split --> Hash["Generate Content Hashes<br/>for Cache Busting"]
 Hash --> Output["Output to dist/<br/>index.html, assets/, etc."]
 Output --> End([Build Complete])
-style Start fill:#4CAF50,stroke:#388E3C
-style End fill:#4CAF50,stroke:#388E3C
-style Output fill:#FFC107,stroke:#FFA000
 ```
 
 **Diagram sources**
-- [vite.config.ts](file://vite.config.ts#L1-L18)
-- [tsconfig.app.json](file://tsconfig.app.json#L24-L27)
+- [vite.config.ts](vite.config.ts#L1-L18)
+- [tsconfig.app.json](tsconfig.app.json#L24-L27)
 
 **Section sources**
-- [vite.config.ts](file://vite.config.ts)
-- [tsconfig.app.json](file://tsconfig.app.json)
+- [vite.config.ts](vite.config.ts)
+- [tsconfig.app.json](tsconfig.app.json)
 
 ## Deployment Options
 The sc-dof application can be deployed through multiple channels, with the Lovable platform providing the primary deployment method. According to the README documentation, deployment to Lovable is accomplished through the platform's interface by navigating to Share → Publish within the Lovable project dashboard. This streamlined process automatically builds and deploys the application using the configuration defined in the repository.
@@ -78,9 +73,9 @@ Alternative deployment options include any static hosting service that supports 
 The application's routing is managed by React Router DOM, which uses client-side routing. This requires server configuration to handle the SPA fallback pattern, where all routes serve the index.html file to allow client-side routing to function properly. Most modern hosting platforms provide built-in support for this pattern.
 
 **Section sources**
-- [README.md](file://README.md#L63-L74)
-- [App.tsx](file://src/App.tsx#L5)
-- [index.html](file://index.html)
+- [README.md](README.md#L63-L74)
+- [App.tsx](src/App.tsx#L5)
+- [index.html](index.html)
 
 ## Troubleshooting Common Issues
 ### Routing in SPA Environments
@@ -100,10 +95,10 @@ The build process generates hashed filenames for JavaScript and CSS assets to en
 The application supports RTL layout for Arabic content and uses custom fonts (Bahij Koufiya and Roboto). Ensure that font files are properly hosted and accessible, as missing fonts can affect the visual presentation. The font loading is currently implemented via Google Fonts in the index.html file, which should remain accessible from all deployment environments.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L22-L27)
-- [index.html](file://index.html#L14-L17)
-- [vite.config.ts](file://vite.config.ts)
-- [NotFound.tsx](file://src/pages/NotFound.tsx)
+- [App.tsx](src/App.tsx#L22-L27)
+- [index.html](index.html#L14-L17)
+- [vite.config.ts](vite.config.ts)
+- [NotFound.tsx](src/pages/NotFound.tsx)
 
 ## Performance Optimization Strategies
 ### Code Splitting
@@ -126,10 +121,10 @@ For ongoing optimization, use Vite's build analysis capabilities to identify lar
 Implement a comprehensive caching strategy by configuring appropriate cache headers for different asset types. Static assets with content hashes can be cached for long periods (1 year), while the index.html file should have a shorter cache duration or no caching to ensure users receive updates promptly.
 
 **Section sources**
-- [vite.config.ts](file://vite.config.ts)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [index.html](file://index.html)
-- [package.json](file://package.json)
+- [vite.config.ts](vite.config.ts)
+- [tailwind.config.ts](tailwind.config.ts)
+- [index.html](index.html)
+- [package.json](package.json)
 
 ## Conclusion
 The sc-dof application is designed for straightforward deployment using modern frontend tooling. The Vite-based build process generates optimized static assets in the dist directory when running `npm run build`, making the application suitable for deployment on any static hosting platform. The primary deployment method through Lovable provides a seamless publish experience with automatic handling of routing and domain configuration.

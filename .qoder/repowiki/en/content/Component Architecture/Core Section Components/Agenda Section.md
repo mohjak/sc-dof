@@ -1,15 +1,13 @@
 # Agenda Section
 
-<cite>
-**Referenced Files in This Document**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [index.css](file://src/index.css)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [eventData.ts](file://src/data/eventData.ts)
-- [App.tsx](file://src/App.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [index.css](src/index.css)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [eventData.ts](src/data/eventData.ts)
+> - [App.tsx](src/App.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -59,21 +57,21 @@ EVDATA -. "Alternative data source (not used by AgendaSection)" .-> AG
 ```
 
 **Diagram sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [App.tsx](src/App.tsx#L1-L43)
 
 **Section sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Core Components
 - AgendaSection: Renders a responsive grid of agenda cards, each displaying time, title, description, and an emoji icon. It uses the translation function from LanguageContext to localize content and applies Tailwind utilities for layout, spacing, shadows, and hover effects.
@@ -88,11 +86,11 @@ Key implementation highlights:
 - Emoji icons: Predefined emoji icons are mapped to agenda entries to visually distinguish event types.
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Architecture Overview
 The AgendaSection composes localized content from the LanguageContext and renders a responsive grid of cards. The LanguageContext provides the t() function and language state, while Tailwind utilities and CSS variables define the visual theme and gradients.
@@ -113,11 +111,11 @@ Comp-->>Page : Render responsive grid of cards
 ```
 
 **Diagram sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Detailed Component Analysis
 
@@ -141,12 +139,12 @@ Layering --> End(["Render"])
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### Visual Design Elements
 - Floating gradient accent: A circular gradient element positioned absolutely at the top-right corner of each card scales up on hover, creating a layered effect behind the card content.
@@ -173,20 +171,20 @@ class Theme {
 +card
 +border
 }
-AgendaSection --> LanguageContext : "uses t()"
-AgendaSection --> Theme : "uses color tokens"
+AgendaSection --> LanguageContext : uses t()
+AgendaSection --> Theme : uses color tokens
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ### Data Mapping and Translation Strings
 - Translation keys: The component expects keys under agenda (e.g., agenda.title, agenda.subtitle, agenda.1.time, agenda.1.title, agenda.1.description, ..., agenda.7.time, agenda.7.title, agenda.7.description).
@@ -209,13 +207,13 @@ end
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ### Responsive Grid Layout
 - Columns: 1 column on small screens, 2 on medium, and 3 on large screens.
@@ -223,7 +221,7 @@ end
 - Alignment: The grid is horizontally centered within the section.
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ### Hover Effects and Layered Effects
 - Gradient circle: Positioned absolutely at the top-right of the card, scaled up on hover with a smooth transition.
@@ -231,14 +229,14 @@ end
 - Motion: Cards lift slightly and cast a larger shadow on hover for depth.
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ### Text Truncation and Emoji Consistency
 - Text truncation: The component uses short, concise titles and descriptions. If longer text is introduced, consider adding line clamping utilities or wrapping text in containers with overflow handling.
 - Emoji consistency: Emojis are rendered as Unicode characters. Platform differences may affect appearance; consider using platform-safe emoji sets or fallbacks if cross-platform consistency is critical.
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ### Modifying Agenda Items and Adding New Time Slots
 - Add a new slot: Extend the agenda array with a new object containing time, title, description, and an icon. Ensure the corresponding translation keys exist in the LanguageContext.
@@ -246,8 +244,8 @@ end
 - Icons: Choose or add an appropriate emoji icon to the agendaIcons array or pass a new icon directly in the agenda item.
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### Customizing Visual Design
 - Colors: Adjust syrian-green and accent colors in the theme to match brand guidelines. These are defined in the Tailwind configuration and CSS variables.
@@ -256,9 +254,9 @@ end
 - Animations: Modify hover animation durations or easing to fine-tune motion.
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [index.css](file://src/index.css#L1-L249)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ## Dependency Analysis
 - LanguageContext dependency: AgendaSection depends on the t() function for localization and on the language state for RTL directionality.
@@ -275,18 +273,18 @@ APP["App.tsx"] --> LC
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [App.tsx](src/App.tsx#L1-L43)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Performance Considerations
 - Rendering cost: The component renders a fixed number of cards with minimal DOM nodes. Keep the agenda array size reasonable to avoid excessive re-renders.
@@ -302,8 +300,8 @@ APP["App.tsx"] --> LC
 - Responsive layout not working: Verify Tailwind breakpoints and that the grid classes are applied correctly.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ## Conclusion
 The AgendaSection component delivers a responsive, localized, and visually appealing schedule presentation. It leverages the LanguageContext for translations, Tailwind utilities for responsive layout and theming, and subtle hover animations to enhance user engagement. By following the modification and customization guidance, you can easily adapt the agenda content and visual design to fit evolving event needs.
@@ -317,7 +315,7 @@ The AgendaSection component delivers a responsive, localized, and visually appea
 - Agenda items: agenda.1.time, agenda.1.title, agenda.1.description, …, agenda.n.time, agenda.n.title, agenda.n.description
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### Appendix B: Theming Tokens
 - syrian-green: Used for time badges and hover text color.
@@ -325,5 +323,5 @@ The AgendaSection component delivers a responsive, localized, and visually appea
 - card, border: Used for card backgrounds and borders.
 
 **Section sources**
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)

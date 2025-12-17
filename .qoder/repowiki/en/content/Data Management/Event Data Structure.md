@@ -1,17 +1,15 @@
 # Event Data Structure
 
-<cite>
-**Referenced Files in This Document**
-- [eventData.ts](file://src/data/eventData.ts)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx)
-- [WhySection.tsx](file://src/components/WhySection.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [eventData.ts](src/data/eventData.ts)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [DetailsSection.tsx](src/components/DetailsSection.tsx)
+> - [GoalsSection.tsx](src/components/GoalsSection.tsx)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [OrganizersSection.tsx](src/components/OrganizersSection.tsx)
+> - [WhySection.tsx](src/components/WhySection.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -49,20 +47,20 @@ LC --> WS
 ```
 
 **Diagram sources**
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
 
 **Section sources**
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ## Core Components
 This section documents the event data model and its role in rendering the event page.
@@ -104,13 +102,13 @@ How components consume this data:
 - WhySection renders the “Why” content using translation keys.
 
 **Section sources**
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
 
 ## Architecture Overview
 The event data is a static, centralized object that powers multiple UI sections. Components rely on the translation system to render content in the selected language. The data model is intentionally flat and straightforward to simplify maintenance and reduce coupling.
@@ -180,7 +178,7 @@ Venue --> Coordinates
 ```
 
 **Diagram sources**
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ## Detailed Component Analysis
 
@@ -217,35 +215,35 @@ Venue --> Coordinates
   - Consumption: Not directly used in the provided components
 
 **Section sources**
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
 
 ### Data Consumption by Components
 - HeroSection
   - Uses translation keys for hero.title, hero.subtitle, hero.tagline, hero.date, hero.day
   - Displays countdown timer and date badge
-  - References: [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
+  - References: [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
 - DetailsSection
   - Renders date, time, and venue using translation keys
   - Provides a static link to Google Maps
-  - References: [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
+  - References: [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
 - GoalsSection
   - Renders four goals using translation keys for titles and descriptions
-  - References: [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
+  - References: [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
 - AgendaSection
   - Renders seven agenda items using translation keys and predefined icons
-  - References: [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+  - References: [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 - OrganizersSection
   - Conditionally selects organizers based on language and renders details
-  - References: [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
+  - References: [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
 - WhySection
   - Renders the “Why” content using translation keys
-  - References: [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
+  - References: [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
 
 ```mermaid
 sequenceDiagram
@@ -282,15 +280,15 @@ Why-->>Page : Rendered why
 ```
 
 **Diagram sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ## Dependency Analysis
 - Internal dependencies
@@ -318,20 +316,20 @@ ED --> WS
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ## Performance Considerations
 - Static data model: The event data is a static object, minimizing runtime computation and network overhead.
@@ -345,25 +343,25 @@ Common issues and resolutions:
 - Missing translation keys
   - Symptom: Keys not found in the translation system return the key itself.
   - Resolution: Ensure all keys used by components exist in the LanguageContext translations for all supported languages.
-  - References: [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+  - References: [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 - Incorrect date format
   - Symptom: Date appears inconsistent across components.
   - Resolution: Use the dateFormatted field for display and ensure the date field remains a valid date string.
-  - References: [eventData.ts](file://src/data/eventData.ts#L1-L109)
+  - References: [eventData.ts](src/data/eventData.ts#L1-L109)
 - Broken venue map link
   - Symptom: Clicking the location card opens an outdated or invalid map link.
   - Resolution: Update the Google Maps URL in DetailsSection to match the venue’s current location.
-  - References: [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
+  - References: [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
 - Missing organizer fields
   - Symptom: Some organizers lack mission or activities.
   - Resolution: Add optional fields as needed; components handle missing optional fields gracefully.
-  - References: [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132), [eventData.ts](file://src/data/eventData.ts#L1-L109)
+  - References: [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132), [eventData.ts](src/data/eventData.ts#L1-L109)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L1-L109)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
 
 ## Conclusion
 The event data model is a simple, centralized structure that powers the event page. Its straightforward shape makes it easy to maintain and extend. The translation system ensures multilingual support, and components consume the data through consistent translation keys. By following the best practices outlined here, teams can confidently update and extend the event data for future events.
@@ -375,32 +373,32 @@ The event data model is a simple, centralized structure that powers the event pa
 ### Validation Strategies
 - Type safety with TypeScript
   - Define explicit TypeScript interfaces for each nested object (Venue, Coordinates, Goal, AgendaItem, Organizer, Highlight) and apply them to the event data object.
-  - Example references for structure: [eventData.ts](file://src/data/eventData.ts#L1-L109)
+  - Example references for structure: [eventData.ts](src/data/eventData.ts#L1-L109)
 - Date validation
   - Validate the date field against a strict date format and ensure dateFormatted aligns with the locale.
-  - Example references: [eventData.ts](file://src/data/eventData.ts#L1-L109)
+  - Example references: [eventData.ts](src/data/eventData.ts#L1-L109)
 - Venue integrity
   - Verify that coordinates are valid numeric pairs and that the Google Maps URL is a valid URL.
-  - Example references: [eventData.ts](file://src/data/eventData.ts#L1-L109)
+  - Example references: [eventData.ts](src/data/eventData.ts#L1-L109)
 - Agenda completeness
   - Ensure each agenda item includes time, title, description, and icon; maintain a consistent number of items if the UI expects a fixed count.
-  - Example references: [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64), [eventData.ts](file://src/data/eventData.ts#L1-L109)
+  - Example references: [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64), [eventData.ts](src/data/eventData.ts#L1-L109)
 - Organizers consistency
   - Confirm that organizers include required fields and handle optional fields gracefully.
-  - Example references: [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132), [eventData.ts](file://src/data/eventData.ts#L1-L109)
+  - Example references: [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132), [eventData.ts](src/data/eventData.ts#L1-L109)
 
 ### Extending the Data Model for Future Events
 - Add new agenda items
   - Append new agenda items to the agenda array with consistent fields.
-  - Example references: [eventData.ts](file://src/data/eventData.ts#L1-L109)
+  - Example references: [eventData.ts](src/data/eventData.ts#L1-L109)
 - Introduce new organizers
   - Append new organizer objects to the organizers array with appropriate fields.
-  - Example references: [eventData.ts](file://src/data/eventData.ts#L1-L109)
+  - Example references: [eventData.ts](src/data/eventData.ts#L1-L109)
 - Update venue details
   - Modify venue fields and update the Google Maps URL if the location changes.
-  - Example references: [eventData.ts](file://src/data/eventData.ts#L1-L109)
+  - Example references: [eventData.ts](src/data/eventData.ts#L1-L109)
 - Localization updates
   - Add or update translation keys in the LanguageContext for new fields.
-  - Example references: [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+  - Example references: [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 [No sources needed since this section provides general guidance]

@@ -1,18 +1,16 @@
 # React Router Implementation
 
-<cite>
-**Referenced Files in This Document**
-- [App.tsx](file://src/App.tsx)
-- [main.tsx](file://src/main.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [NotFound.tsx](file://src/pages/NotFound.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx)
-- [NavLink.tsx](file://src/components/NavLink.tsx)
-- [package.json](file://package.json)
-- [manifest.json](file://public/manifest.json)
-</cite>
+> **Referenced Files in This Document**
+> - [App.tsx](src/App.tsx)
+> - [main.tsx](src/main.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [NotFound.tsx](src/pages/NotFound.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [ScrollToTop.tsx](src/components/ScrollToTop.tsx)
+> - [NavLink.tsx](src/components/NavLink.tsx)
+> - [package.json](package.json)
+> - [manifest.json](public/manifest.json)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -45,14 +43,14 @@ RouteFallback --> NotFoundPage["NotFound.tsx"]
 ```
 
 **Diagram sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [NotFound.tsx](file://src/pages/NotFound.tsx#L1-L25)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [NotFound.tsx](src/pages/NotFound.tsx#L1-L25)
 
 **Section sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Core Components
 - BrowserRouter: Enables client-side routing by using the browser’s History API to keep the UI in sync with the URL without reloading the page.
@@ -60,13 +58,13 @@ RouteFallback --> NotFoundPage["NotFound.tsx"]
 - Provider stack: QueryClientProvider (TanStack React Query), TooltipProvider (Radix UI), and LanguageProvider (custom) wrap the router to share state and services across the app.
 
 Practical examples from the codebase:
-- Router wrapping and route definitions: [App.tsx](file://src/App.tsx#L12-L31)
-- SPA behavior: [App.tsx](file://src/App.tsx#L22-L28)
-- Provider composition: [App.tsx](file://src/App.tsx#L33-L41)
+- Router wrapping and route definitions: [App.tsx](src/App.tsx#L12-L31)
+- SPA behavior: [App.tsx](src/App.tsx#L22-L28)
+- Provider composition: [App.tsx](src/App.tsx#L33-L41)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [package.json](file://package.json#L55-L58)
+- [App.tsx](src/App.tsx#L1-L43)
+- [package.json](package.json#L55-L58)
 
 ## Architecture Overview
 The SPA architecture is built on React Router DOM. The application mounts at the root element and delegates navigation to the router. Providers are layered to supply global services and state. The Index page composes multiple sections, and NotFound handles unknown paths.
@@ -92,9 +90,9 @@ Note over Browser,Page : No full page reload occurs
 ```
 
 **Diagram sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Detailed Component Analysis
 
@@ -104,25 +102,25 @@ Note over Browser,Page : No full page reload occurs
 - The provider order ensures QueryClientProvider is outermost, followed by TooltipProvider, then LanguageProvider, and finally AppContent.
 
 Key implementation references:
-- Router and route declarations: [App.tsx](file://src/App.tsx#L22-L28)
-- Provider composition: [App.tsx](file://src/App.tsx#L33-L41)
-- Language integration: [App.tsx](file://src/App.tsx#L12-L21)
+- Router and route declarations: [App.tsx](src/App.tsx#L22-L28)
+- Provider composition: [App.tsx](src/App.tsx#L33-L41)
+- Language integration: [App.tsx](src/App.tsx#L12-L21)
 
 Accessibility and internationalization:
 - The language direction (rtl/ltr) and font selection are derived from the LanguageProvider and applied at the root div.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
 
 ### Route Definitions and Fallback Handling
 - Root route “/” renders the Index page, which contains the hero, sections, speakers, organizers, and footer.
 - Catch-all “*” renders NotFound, which logs the attempted path and provides a link back to home.
 
 Practical examples:
-- Root route definition: [App.tsx](file://src/App.tsx#L24-L24)
-- Fallback route definition: [App.tsx](file://src/App.tsx#L26-L26)
-- NotFound behavior: [NotFound.tsx](file://src/pages/NotFound.tsx#L1-L25)
+- Root route definition: [App.tsx](src/App.tsx#L24-L24)
+- Fallback route definition: [App.tsx](src/App.tsx#L26-L26)
+- NotFound behavior: [NotFound.tsx](src/pages/NotFound.tsx#L1-L25)
 
 Fallback handling flow:
 ```mermaid
@@ -138,12 +136,12 @@ Prompt --> End
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L22-L28)
-- [NotFound.tsx](file://src/pages/NotFound.tsx#L1-L25)
+- [App.tsx](src/App.tsx#L22-L28)
+- [NotFound.tsx](src/pages/NotFound.tsx#L1-L25)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L22-L28)
-- [NotFound.tsx](file://src/pages/NotFound.tsx#L1-L25)
+- [App.tsx](src/App.tsx#L22-L28)
+- [NotFound.tsx](src/pages/NotFound.tsx#L1-L25)
 
 ### Provider Integration
 - QueryClientProvider: TanStack React Query client is initialized at the top level to enable caching and server-state synchronization.
@@ -151,13 +149,13 @@ Prompt --> End
 - LanguageProvider: Supplies language state, translation keys, and RTL detection used by the App shell.
 
 Integration references:
-- Provider initialization and composition: [App.tsx](file://src/App.tsx#L10-L11), [App.tsx](file://src/App.tsx#L33-L41)
-- Language context contract and usage: [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- Provider initialization and composition: [App.tsx](src/App.tsx#L10-L11), [App.tsx](src/App.tsx#L33-L41)
+- Language context contract and usage: [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L10-L11)
-- [App.tsx](file://src/App.tsx#L33-L41)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L10-L11)
+- [App.tsx](src/App.tsx#L33-L41)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### Navigation and Accessibility Considerations
 - The Navbar component uses anchor links with smooth scrolling to sections within the Index page. These are internal anchors and do not trigger route changes; they rely on client-side scrolling.
@@ -165,16 +163,16 @@ Integration references:
 - The NavLink component wraps react-router-dom’s NavLink to support className composition and active/pending states.
 
 References:
-- Navbar anchor navigation: [Navbar.tsx](file://src/components/Navbar.tsx#L19-L28), [Navbar.tsx](file://src/components/Navbar.tsx#L30-L36)
-- Scroll-to-top behavior: [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- Enhanced NavLink wrapper: [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
+- Navbar anchor navigation: [Navbar.tsx](src/components/Navbar.tsx#L19-L28), [Navbar.tsx](src/components/Navbar.tsx#L30-L36)
+- Scroll-to-top behavior: [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- Enhanced NavLink wrapper: [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
 
 Note: The current routing setup does not use react-router-dom’s Link/NavLink for cross-route navigation because the application is a single-page layout with internal anchors. If future enhancements require client-side navigation between distinct pages, replace anchor links with Link/NavLink and adjust route definitions accordingly.
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
 
 ### Extending the Routing System
 To add new routes:
@@ -183,7 +181,7 @@ To add new routes:
 - If the new route requires data fetching, ensure the page component uses TanStack React Query hooks via the QueryClientProvider.
 
 Example reference:
-- Route placement convention: [App.tsx](file://src/App.tsx#L25-L25)
+- Route placement convention: [App.tsx](src/App.tsx#L25-L25)
 
 Handling route parameters:
 - If future pages require path parameters, define them in the Route path and access them using react-router-dom’s hook for parameter extraction.
@@ -204,7 +202,7 @@ External dependencies relevant to routing:
 - Radix UI: Provides TooltipProvider for UI interactions.
 
 References:
-- Dependencies: [package.json](file://package.json#L55-L58)
+- Dependencies: [package.json](package.json#L55-L58)
 
 ```mermaid
 graph TB
@@ -217,12 +215,12 @@ UI --> Tooltip["TooltipProvider"]
 ```
 
 **Diagram sources**
-- [package.json](file://package.json#L55-L58)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [package.json](package.json#L55-L58)
+- [App.tsx](src/App.tsx#L1-L43)
 
 **Section sources**
-- [package.json](file://package.json#L55-L58)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [package.json](package.json#L55-L58)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Performance Considerations
 - Client-side routing avoids full page reloads, reducing network overhead and preserving application state.
@@ -233,17 +231,17 @@ UI --> Tooltip["TooltipProvider"]
 
 ## Troubleshooting Guide
 Common issues and resolutions:
-- Route ordering: Ensure custom routes are defined before the catch-all “*” to prevent unintended masking. Reference: [App.tsx](file://src/App.tsx#L25-L25)
-- Provider boundaries: Verify that providers are correctly nested so that components can access required contexts. Reference: [App.tsx](file://src/App.tsx#L33-L41)
-- Anchor vs. route navigation: Internal anchors within a single-page layout do not trigger route changes; use Link/NavLink for cross-route navigation if needed. References: [Navbar.tsx](file://src/components/Navbar.tsx#L19-L28), [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- Accessibility: Ensure buttons and links have appropriate aria-labels and keyboard navigation support. References: [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L27-L38), [Navbar.tsx](file://src/components/Navbar.tsx#L84-L90)
+- Route ordering: Ensure custom routes are defined before the catch-all “*” to prevent unintended masking. Reference: [App.tsx](src/App.tsx#L25-L25)
+- Provider boundaries: Verify that providers are correctly nested so that components can access required contexts. Reference: [App.tsx](src/App.tsx#L33-L41)
+- Anchor vs. route navigation: Internal anchors within a single-page layout do not trigger route changes; use Link/NavLink for cross-route navigation if needed. References: [Navbar.tsx](src/components/Navbar.tsx#L19-L28), [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- Accessibility: Ensure buttons and links have appropriate aria-labels and keyboard navigation support. References: [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L27-L38), [Navbar.tsx](src/components/Navbar.tsx#L84-L90)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L25-L25)
-- [App.tsx](file://src/App.tsx#L33-L41)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L19-L28)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L27-L38)
+- [App.tsx](src/App.tsx#L25-L25)
+- [App.tsx](src/App.tsx#L33-L41)
+- [Navbar.tsx](src/components/Navbar.tsx#L19-L28)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L27-L38)
 
 ## Conclusion
 The application uses React Router DOM to implement a single-page architecture. BrowserRouter, Routes, and Route provide declarative routing with a root “/” page and a robust fallback. Providers are layered to deliver global services and state. The current design emphasizes internal navigation via anchors within a single page, while maintaining the flexibility to adopt Link/NavLink for cross-route navigation in future enhancements.
@@ -253,17 +251,17 @@ The application uses React Router DOM to implement a single-page architecture. B
 ## Appendices
 
 ### Practical Examples from the Codebase
-- Router and route definitions: [App.tsx](file://src/App.tsx#L22-L28)
-- Provider composition: [App.tsx](file://src/App.tsx#L33-L41)
-- NotFound fallback: [NotFound.tsx](file://src/pages/NotFound.tsx#L1-L25)
-- Internal anchor navigation: [Navbar.tsx](file://src/components/Navbar.tsx#L19-L28)
-- Scroll-to-top behavior: [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- Enhanced NavLink wrapper: [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
+- Router and route definitions: [App.tsx](src/App.tsx#L22-L28)
+- Provider composition: [App.tsx](src/App.tsx#L33-L41)
+- NotFound fallback: [NotFound.tsx](src/pages/NotFound.tsx#L1-L25)
+- Internal anchor navigation: [Navbar.tsx](src/components/Navbar.tsx#L19-L28)
+- Scroll-to-top behavior: [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- Enhanced NavLink wrapper: [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L22-L28)
-- [App.tsx](file://src/App.tsx#L33-L41)
-- [NotFound.tsx](file://src/pages/NotFound.tsx#L1-L25)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L19-L28)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
+- [App.tsx](src/App.tsx#L22-L28)
+- [App.tsx](src/App.tsx#L33-L41)
+- [NotFound.tsx](src/pages/NotFound.tsx#L1-L25)
+- [Navbar.tsx](src/components/Navbar.tsx#L19-L28)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)

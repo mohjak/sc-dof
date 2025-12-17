@@ -1,15 +1,13 @@
 # Button Component
 
-<cite>
-**Referenced Files in This Document**
-- [button.tsx](file://src/components/ui/button.tsx)
-- [utils.ts](file://src/lib/utils.ts)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [App.tsx](file://src/App.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [button.tsx](src/components/ui/button.tsx)
+> - [utils.ts](src/lib/utils.ts)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [RegistrationSection.tsx](src/components/RegistrationSection.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [App.tsx](src/App.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -54,22 +52,22 @@ LC --> APP
 ```
 
 **Diagram sources**
-- [button.tsx](file://src/components/ui/button.tsx#L1-L47)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L80-L99)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [App.tsx](file://src/App.tsx#L11-L30)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
+- [button.tsx](src/components/ui/button.tsx#L1-L47)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L80-L99)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [App.tsx](src/App.tsx#L11-L30)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
 
 **Section sources**
-- [button.tsx](file://src/components/ui/button.tsx#L1-L47)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L80-L99)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [App.tsx](file://src/App.tsx#L11-L30)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
+- [button.tsx](src/components/ui/button.tsx#L1-L47)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L80-L99)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [App.tsx](src/App.tsx#L11-L30)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
 
 ## Core Components
 - Button component: A flexible, accessible button built on Radix Slot and styled with Tailwind CSS. It supports variants (default, destructive, outline, secondary, ghost, link), sizes (default, sm, lg, icon), and an asChild option for composition.
@@ -84,10 +82,10 @@ Key implementation highlights:
 - asChild prop allows rendering a different element (e.g., anchor) while preserving Button styles.
 
 **Section sources**
-- [button.tsx](file://src/components/ui/button.tsx#L7-L31)
-- [button.tsx](file://src/components/ui/button.tsx#L33-L47)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L20-L74)
+- [button.tsx](src/components/ui/button.tsx#L7-L31)
+- [button.tsx](src/components/ui/button.tsx#L33-L47)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L20-L74)
 
 ## Architecture Overview
 The Button component participates in a layered architecture:
@@ -117,13 +115,13 @@ APP-->>NB : Apply dir={isRTL ? 'rtl' : 'ltr'}
 ```
 
 **Diagram sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L80-L99)
-- [button.tsx](file://src/components/ui/button.tsx#L33-L47)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L20-L74)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [App.tsx](file://src/App.tsx#L11-L30)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L80-L99)
+- [button.tsx](src/components/ui/button.tsx#L33-L47)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L20-L74)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [App.tsx](src/App.tsx#L11-L30)
 
 ## Detailed Component Analysis
 
@@ -152,13 +150,13 @@ Integration with theme and RTL:
 - App applies dir={isRTL ? 'rtl' : 'ltr'} based on language context, enabling RTL layout for the entire app.
 
 **Section sources**
-- [button.tsx](file://src/components/ui/button.tsx#L7-L31)
-- [button.tsx](file://src/components/ui/button.tsx#L33-L47)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L80-L99)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [tailwind.config.ts](file://tailwind.config.ts#L20-L74)
-- [App.tsx](file://src/App.tsx#L11-L30)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
+- [button.tsx](src/components/ui/button.tsx#L7-L31)
+- [button.tsx](src/components/ui/button.tsx#L33-L47)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L80-L99)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [tailwind.config.ts](tailwind.config.ts#L20-L74)
+- [App.tsx](src/App.tsx#L11-L30)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
 
 ### Class Composition and Styling
 - cn utility merges multiple class inputs and resolves conflicts using tailwind-merge.
@@ -171,8 +169,8 @@ Common styling pitfalls and solutions:
 - Browser inconsistencies: Ensure Tailwind JIT compiles all variants; verify theme tokens are defined.
 
 **Section sources**
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [button.tsx](file://src/components/ui/button.tsx#L7-L31)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [button.tsx](src/components/ui/button.tsx#L7-L31)
 
 ### Usage Patterns in the Codebase
 - RegistrationSection:
@@ -200,14 +198,14 @@ BTN-->>ANCHOR : Rendered with styles
 ```
 
 **Diagram sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L80-L99)
-- [button.tsx](file://src/components/ui/button.tsx#L33-L47)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L20-L74)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L80-L99)
+- [button.tsx](src/components/ui/button.tsx#L33-L47)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L20-L74)
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L80-L99)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L80-L99)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
 
 ### Accessibility and Keyboard Handling
 - Focus management:
@@ -220,7 +218,7 @@ BTN-->>ANCHOR : Rendered with styles
   - Ensure sufficient color contrast for all variants against backgrounds.
 
 **Section sources**
-- [button.tsx](file://src/components/ui/button.tsx#L7-L31)
+- [button.tsx](src/components/ui/button.tsx#L7-L31)
 
 ### Integration with Global Theme and RTL
 - Tailwind theme:
@@ -231,9 +229,9 @@ BTN-->>ANCHOR : Rendered with styles
   - LanguageContext determines isRTL and language, enabling layout and font adjustments.
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L20-L74)
-- [App.tsx](file://src/App.tsx#L11-L30)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
+- [tailwind.config.ts](tailwind.config.ts#L20-L74)
+- [App.tsx](src/App.tsx#L11-L30)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
 
 ## Dependency Analysis
 The Button component depends on:
@@ -251,14 +249,14 @@ CN --> TW["Tailwind Theme<br/>tailwind.config.ts"]
 ```
 
 **Diagram sources**
-- [button.tsx](file://src/components/ui/button.tsx#L1-L47)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [button.tsx](src/components/ui/button.tsx#L1-L47)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 **Section sources**
-- [button.tsx](file://src/components/ui/button.tsx#L1-L47)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [button.tsx](src/components/ui/button.tsx#L1-L47)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Performance Considerations
 - Avoid inline onClick handlers:
@@ -284,10 +282,10 @@ CN --> TW["Tailwind Theme<br/>tailwind.config.ts"]
   - Check that hover variants are defined in the theme and that focus-visible ring is present.
 
 **Section sources**
-- [button.tsx](file://src/components/ui/button.tsx#L7-L31)
-- [App.tsx](file://src/App.tsx#L11-L30)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [button.tsx](src/components/ui/button.tsx#L7-L31)
+- [App.tsx](src/App.tsx#L11-L30)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Conclusion
 The Button component provides a robust, accessible foundation for interactive elements across the application. Its integration with Radix Slot, class-variance-authority, and Tailwind CSS enables consistent styling and behavior. By following the usage patterns demonstrated in RegistrationSection and Navbar, and adhering to the accessibility and performance recommendations, developers can reliably extend and customize Button for diverse UI needs.

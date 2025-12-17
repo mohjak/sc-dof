@@ -1,20 +1,18 @@
 # Overlay Components
 
-<cite>
-**Referenced Files in This Document**
-- [alert.tsx](file://src/components/ui/alert.tsx)
-- [alert-dialog.tsx](file://src/components/ui/alert-dialog.tsx)
-- [popover.tsx](file://src/components/ui/popover.tsx)
-- [toast.tsx](file://src/components/ui/toast.tsx)
-- [toaster.tsx](file://src/components/ui/toaster.tsx)
-- [sonner.tsx](file://src/components/ui/sonner.tsx)
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx)
-- [use-toast.ts](file://src/hooks/use-toast.ts)
-- [utils.ts](file://src/lib/utils.ts)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx)
-- [App.tsx](file://src/App.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [alert.tsx](src/components/ui/alert.tsx)
+> - [alert-dialog.tsx](src/components/ui/alert-dialog.tsx)
+> - [popover.tsx](src/components/ui/popover.tsx)
+> - [toast.tsx](src/components/ui/toast.tsx)
+> - [toaster.tsx](src/components/ui/toaster.tsx)
+> - [sonner.tsx](src/components/ui/sonner.tsx)
+> - [tooltip.tsx](src/components/ui/tooltip.tsx)
+> - [use-toast.ts](src/hooks/use-toast.ts)
+> - [utils.ts](src/lib/utils.ts)
+> - [use-mobile.tsx](src/hooks/use-mobile.tsx)
+> - [App.tsx](src/App.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -70,16 +68,16 @@ TT --> CU
 ```
 
 **Diagram sources**
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx#L1-L29)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L187)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [tooltip.tsx](src/components/ui/tooltip.tsx#L1-L29)
+- [App.tsx](src/App.tsx#L1-L43)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L187)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Core Components
 - Alert: Status message container with accessible role and semantic title/description parts.
@@ -89,13 +87,13 @@ TT --> CU
 - Tooltip: Helper text overlay with provider and animated content.
 
 **Section sources**
-- [alert.tsx](file://src/components/ui/alert.tsx#L1-L44)
-- [alert-dialog.tsx](file://src/components/ui/alert-dialog.tsx#L1-L105)
-- [popover.tsx](file://src/components/ui/popover.tsx#L1-L30)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx#L1-L29)
+- [alert.tsx](src/components/ui/alert.tsx#L1-L44)
+- [alert-dialog.tsx](src/components/ui/alert-dialog.tsx#L1-L105)
+- [popover.tsx](src/components/ui/popover.tsx#L1-L30)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [tooltip.tsx](src/components/ui/tooltip.tsx#L1-L29)
 
 ## Architecture Overview
 The overlay system relies on:
@@ -119,7 +117,7 @@ Overlay-->>User : Tooltip visible with animation
 ```
 
 **Diagram sources**
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx#L1-L29)
+- [tooltip.tsx](src/components/ui/tooltip.tsx#L1-L29)
 
 ## Detailed Component Analysis
 
@@ -141,15 +139,15 @@ class AlertTitle {
 class AlertDescription {
 +HTMLParagraphElement
 }
-Alert --> AlertTitle : "contains"
-Alert --> AlertDescription : "contains"
+Alert --> AlertTitle : contains
+Alert --> AlertDescription : contains
 ```
 
 **Diagram sources**
-- [alert.tsx](file://src/components/ui/alert.tsx#L1-L44)
+- [alert.tsx](src/components/ui/alert.tsx#L1-L44)
 
 **Section sources**
-- [alert.tsx](file://src/components/ui/alert.tsx#L1-L44)
+- [alert.tsx](src/components/ui/alert.tsx#L1-L44)
 
 ### AlertDialog
 - Purpose: Confirmations and destructive actions with modal behavior.
@@ -174,10 +172,10 @@ Actions-->>Content : Close and cleanup
 ```
 
 **Diagram sources**
-- [alert-dialog.tsx](file://src/components/ui/alert-dialog.tsx#L1-L105)
+- [alert-dialog.tsx](src/components/ui/alert-dialog.tsx#L1-L105)
 
 **Section sources**
-- [alert-dialog.tsx](file://src/components/ui/alert-dialog.tsx#L1-L105)
+- [alert-dialog.tsx](src/components/ui/alert-dialog.tsx#L1-L105)
 
 ### Popover
 - Purpose: Tooltips and dropdown menus with contextual content.
@@ -196,10 +194,10 @@ Close --> Cleanup["Unmount content"]
 ```
 
 **Diagram sources**
-- [popover.tsx](file://src/components/ui/popover.tsx#L1-L30)
+- [popover.tsx](src/components/ui/popover.tsx#L1-L30)
 
 **Section sources**
-- [popover.tsx](file://src/components/ui/popover.tsx#L1-L30)
+- [popover.tsx](src/components/ui/popover.tsx#L1-L30)
 
 ### Toast/Toaster/Sonner
 - Toast: Individual notification item with title, description, close, and optional action.
@@ -224,16 +222,16 @@ Sonner-->>Caller : Dismiss/update APIs
 ```
 
 **Diagram sources**
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L187)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L187)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
 
 **Section sources**
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L187)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L187)
 
 ### Tooltip
 - Purpose: Short helper text overlays.
@@ -250,14 +248,14 @@ class Tooltip {
 +Trigger
 +Content
 }
-TooltipProvider --> Tooltip : "provides context"
+TooltipProvider --> Tooltip : provides context
 ```
 
 **Diagram sources**
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx#L1-L29)
+- [tooltip.tsx](src/components/ui/tooltip.tsx#L1-L29)
 
 **Section sources**
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx#L1-L29)
+- [tooltip.tsx](src/components/ui/tooltip.tsx#L1-L29)
 
 ## Dependency Analysis
 - Shared utilities: cn() merges and normalizes Tailwind classes.
@@ -278,19 +276,19 @@ AP --> SN["sonner.tsx"]
 ```
 
 **Diagram sources**
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [alert-dialog.tsx](file://src/components/ui/alert-dialog.tsx#L1-L105)
-- [popover.tsx](file://src/components/ui/popover.tsx#L1-L30)
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx#L1-L29)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L187)
-- [toaster.tsx](file://src/components/ui/toaster.tsx#L1-L25)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [alert-dialog.tsx](src/components/ui/alert-dialog.tsx#L1-L105)
+- [popover.tsx](src/components/ui/popover.tsx#L1-L30)
+- [tooltip.tsx](src/components/ui/tooltip.tsx#L1-L29)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L187)
+- [toaster.tsx](src/components/ui/toaster.tsx#L1-L25)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [App.tsx](src/App.tsx#L1-L43)
 
 **Section sources**
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Performance Considerations
 - Limit concurrent toasts: The toast store enforces a limit to prevent UI overload.
@@ -316,23 +314,23 @@ AP --> SN["sonner.tsx"]
   - All overlays use data-state selectors to animate in/out with fade/slide/zoom transitions.
 
 **Section sources**
-- [alert.tsx](file://src/components/ui/alert.tsx#L1-L44)
-- [alert-dialog.tsx](file://src/components/ui/alert-dialog.tsx#L1-L105)
-- [popover.tsx](file://src/components/ui/popover.tsx#L1-L30)
-- [tooltip.tsx](file://src/components/ui/tooltip.tsx#L1-L29)
+- [alert.tsx](src/components/ui/alert.tsx#L1-L44)
+- [alert-dialog.tsx](src/components/ui/alert-dialog.tsx#L1-L105)
+- [popover.tsx](src/components/ui/popover.tsx#L1-L30)
+- [tooltip.tsx](src/components/ui/tooltip.tsx#L1-L29)
 
 ## Usage Examples
 - Alert for registration feedback:
   - Display a status message after form submission using Alert, AlertTitle, and AlertDescription.
-  - Example reference: [alert.tsx](file://src/components/ui/alert.tsx#L1-L44)
+  - Example reference: [alert.tsx](src/components/ui/alert.tsx#L1-L44)
 - Toast for language switch confirmation:
   - Use the global toast API to show a brief confirmation after changing language.
-  - Example reference: [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28), [use-toast.ts](file://src/hooks/use-toast.ts#L1-L187)
+  - Example reference: [sonner.tsx](src/components/ui/sonner.tsx#L1-L28), [use-toast.ts](src/hooks/use-toast.ts#L1-L187)
 
 **Section sources**
-- [alert.tsx](file://src/components/ui/alert.tsx#L1-L44)
-- [sonner.tsx](file://src/components/ui/sonner.tsx#L1-L28)
-- [use-toast.ts](file://src/hooks/use-toast.ts#L1-L187)
+- [alert.tsx](src/components/ui/alert.tsx#L1-L44)
+- [sonner.tsx](src/components/ui/sonner.tsx#L1-L28)
+- [use-toast.ts](src/hooks/use-toast.ts#L1-L187)
 
 ## Troubleshooting Guide
 - Overlays not appearing:
@@ -349,10 +347,10 @@ AP --> SN["sonner.tsx"]
   - Avoid heavy computations during open/close transitions; leverage CSS/Tailwind animations.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
-- [popover.tsx](file://src/components/ui/popover.tsx#L1-L30)
-- [use-mobile.tsx](file://src/hooks/use-mobile.tsx#L1-L20)
+- [App.tsx](src/App.tsx#L1-L43)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
+- [popover.tsx](src/components/ui/popover.tsx#L1-L30)
+- [use-mobile.tsx](src/hooks/use-mobile.tsx#L1-L20)
 
 ## Conclusion
 The overlay components provide a cohesive, accessible, and performant foundation for feedback and contextual information. By leveraging Radix UI primitives, portal rendering, and Tailwind animations, the system ensures predictable behavior across devices and assistive technologies. The toast store and Sonner integration offer scalable notification management, while shared patterns like escape key dismissal and click-outside closing improve usability.

@@ -1,20 +1,18 @@
 # Translation System
 
-<cite>
-**Referenced Files in This Document**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [App.tsx](file://src/App.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx)
-- [Footer.tsx](file://src/components/Footer.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [App.tsx](src/App.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [DetailsSection.tsx](src/components/DetailsSection.tsx)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [GoalsSection.tsx](src/components/GoalsSection.tsx)
+> - [SpeakersSection.tsx](src/components/SpeakersSection.tsx)
+> - [OrganizersSection.tsx](src/components/OrganizersSection.tsx)
+> - [Footer.tsx](src/components/Footer.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -67,23 +65,23 @@ Navbar --> LangSwitch
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Core Components
 - LanguageContext.tsx defines:
@@ -98,7 +96,7 @@ Key responsibilities:
 - isRTL: true when language is Arabic, enabling RTL layout direction.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ## Architecture Overview
 The translation architecture is a minimal, centralized system built on React Context. The provider wraps the app and exposes a simple API to consumers.
@@ -124,8 +122,8 @@ Consumer->>Consumer : re-render with new strings
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 ## Detailed Component Analysis
 
@@ -155,15 +153,15 @@ class LanguageProvider {
 class useLanguage {
 +() : LanguageContextType
 }
-LanguageProvider --> LanguageContextType : "provides"
-useLanguage --> LanguageContextType : "returns"
+LanguageProvider --> LanguageContextType : provides
+useLanguage --> LanguageContextType : returns
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### App.tsx
 - Wraps the app with LanguageProvider and TooltipProvider/QueryClientProvider.
@@ -180,11 +178,11 @@ RenderRoutes --> End(["App ready"])
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ### Navbar.tsx
 - Consumes useLanguage to translate nav links and logo text.
@@ -200,35 +198,35 @@ Navbar->>Navbar : apply dir based on isRTL
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
 
 ### HeroSection.tsx
 - Uses t() to translate title, subtitle, tagline, date, day, and discover-more CTA.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
 
 ### DetailsSection.tsx
 - Translates event details cards and venue metadata.
 
 **Section sources**
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx#L1-L65)
+- [DetailsSection.tsx](src/components/DetailsSection.tsx#L1-L65)
 
 ### AgendaSection.tsx
 - Translates agenda segment titles and descriptions.
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ### GoalsSection.tsx
 - Translates goal tiles.
 
 **Section sources**
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
 
 ### SpeakersSection.tsx
 - Uses t() for section headers.
@@ -247,25 +245,25 @@ NameAr --> Render
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
 
 ### OrganizersSection.tsx
 - Uses t() for section headers.
 - Switches organizer content based on language.
 
 **Section sources**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
 
 ### Footer.tsx
 - Uses t() for footer rights and other static strings.
 - Uses language-aware subtitle and follow-us text.
 
 **Section sources**
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
 
 ### LanguageSwitcher.tsx
 - Presents language options and updates language via setLanguage.
@@ -281,11 +279,11 @@ Hook-->>UI : state update triggers re-render
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 ## Dependency Analysis
 - Provider dependency chain:
@@ -310,16 +308,16 @@ Navbar --> LangSwitch["LanguageSwitcher.tsx"]
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Performance Considerations
 - Translation object size: The translations object contains multiple sections and many keys. While simple lookups are O(1), rendering many components with frequent re-renders can still cause overhead.
@@ -351,11 +349,11 @@ Common issues and resolutions:
   - Resolution: Use language-aware getters in components like SpeakersSection.tsx to select the correct localized field based on current language.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
 
 ## Conclusion
 The translation system is intentionally simple and robust: a centralized provider supplies language state, a translation function, and an RTL flag. Components consume translations via a straightforward hook, and the app applies layout direction globally. This design minimizes complexity while enabling easy maintenance and extension. To add a new language, extend the translations object and update LanguageSwitcher options. For dynamic content, prefer language-aware getters or memoization to keep performance predictable.

@@ -1,15 +1,13 @@
 # Agenda Section
 
-<cite>
-**Referenced Files in This Document**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [App.tsx](file://src/App.tsx)
-- [index.css](file://src/index.css)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [eventData.ts](file://src/data/eventData.ts)
-</cite>
+> **Referenced Files in This Document**
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [App.tsx](src/App.tsx)
+> - [index.css](src/index.css)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [eventData.ts](src/data/eventData.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -57,22 +55,22 @@ ED -. alternative data source .-> AS
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://tailwind.config.ts#L44-L84)
-- [eventData.ts](file://src/data/eventData.ts#L47-L84)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L1-L43)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](tailwind.config.ts#L44-L84)
+- [eventData.ts](src/data/eventData.ts#L47-L84)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://tailwind.config.ts#L44-L84)
-- [eventData.ts](file://src/data/eventData.ts#L47-L84)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L1-L43)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](tailwind.config.ts#L44-L84)
+- [eventData.ts](src/data/eventData.ts#L47-L84)
 
 ## Core Components
 - AgendaSection: Renders a responsive grid of agenda cards, sourcing content via t(), mapping icons from a predefined list, and applying interactive hover effects.
@@ -87,10 +85,10 @@ Key responsibilities:
 - App: Global direction and font application.
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Architecture Overview
 The AgendaSection component depends on the LanguageContext for translations and on global styles for colors and responsive breakpoints. The LanguageSwitcher updates the language, which triggers re-renders across the app, including the AgendaSection.
@@ -113,9 +111,9 @@ Agenda-->>User : Updated agenda cards
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
 
 ## Detailed Component Analysis
 
@@ -160,9 +158,9 @@ Translation integration:
 - Icons are mapped from a static array of emojis.
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L56-L80)
-- [App.tsx](file://src/App.tsx#L12-L20)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L56-L80)
+- [App.tsx](src/App.tsx#L12-L20)
 
 ### Translation System (LanguageContext)
 - Provides t(key) that returns the localized string for the current language or falls back to the key itself.
@@ -180,7 +178,7 @@ Fallback behavior:
 - If a translation key is missing, t() returns the key string unchanged.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ### LanguageSwitcher Integration
 - Offers buttons for Arabic, English, and Turkish.
@@ -188,8 +186,8 @@ Fallback behavior:
 - Font switching: The App component applies font-koufiya for Arabic and font-roboto for English/Turkish.
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](file://src/App.tsx#L12-L20)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L12-L20)
 
 ### Styling and Theme
 - Custom color tokens include syrian-green and others defined in CSS variables.
@@ -197,22 +195,22 @@ Fallback behavior:
 - Gradient accents and shadows are configured globally and used in AgendaSection.
 
 **Section sources**
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://tailwind.config.ts#L44-L84)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](tailwind.config.ts#L44-L84)
 
 ### Alternative Data Source (eventData.ts)
 - The eventData.ts file contains an agenda array with time, title, description, and icon fields.
 - While AgendaSection currently sources agenda items from translations, the eventData.ts file demonstrates an alternate data model that could be used to populate the component programmatically.
 
 **Section sources**
-- [eventData.ts](file://src/data/eventData.ts#L47-L84)
+- [eventData.ts](src/data/eventData.ts#L47-L84)
 
 ## Architecture Overview
 
 ```mermaid
 classDiagram
 class LanguageProvider {
-+language : "ar"|"en"|"tr"
++language : ar|"en"|"tr"
 +setLanguage(lang)
 +t(key) : string
 +isRTL : boolean
@@ -227,19 +225,19 @@ class LanguageSwitcher {
 +setLanguage(code)
 }
 class App {
-+dir : "rtl"|"ltr"
-+fontClass : "font-koufiya"|"font-roboto"
++dir : rtl|"ltr"
++fontClass : font-koufiya|"font-roboto"
 }
-AgendaSection --> LanguageProvider : "uses t()"
-LanguageSwitcher --> LanguageProvider : "updates language"
-App --> LanguageProvider : "consumes isRTL"
+AgendaSection --> LanguageProvider : uses t()
+LanguageSwitcher --> LanguageProvider : updates language
+App --> LanguageProvider : consumes isRTL
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](file://src/App.tsx#L12-L20)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L12-L20)
 
 ## Detailed Component Analysis
 
@@ -258,10 +256,10 @@ Hover --> End(["Updated UI"])
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L31-L58)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L31-L58)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L31-L58)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L31-L58)
 
 ### Interactive Hover Effects
 - Shadow elevation increases on hover.
@@ -281,10 +279,10 @@ Card-->>User : Animated visual feedback
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L33-L58)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L33-L58)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L33-L58)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L33-L58)
 
 ### Card Structure and Typography
 - Relative container with rounded corners and border.
@@ -307,10 +305,10 @@ Text --> Desc["Description<br/>Muted"]
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L33-L58)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L33-L58)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L33-L58)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L33-L58)
 
 ### Accessibility Considerations
 - Heading levels: Ensure each agenda item has a proper heading element to convey hierarchy to assistive technologies.
@@ -319,7 +317,7 @@ Text --> Desc["Description<br/>Muted"]
 - Font choice: Arabic uses a specific font class; ensure readable line heights and contrast.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L12-L20)
+- [App.tsx](src/App.tsx#L12-L20)
 
 ### RTL Layout Adaptation
 - The LanguageContext determines isRTL based on the current language.
@@ -327,8 +325,8 @@ Text --> Desc["Description<br/>Muted"]
 - This affects text alignment, icon positions, and layout mirroring across the app.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L272-L278)
-- [App.tsx](file://src/App.tsx#L12-L20)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L272-L278)
+- [App.tsx](src/App.tsx#L12-L20)
 
 ## Dependency Analysis
 
@@ -343,22 +341,22 @@ ED["eventData.ts"] -. alternative data .-> AS
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://tailwind.config.ts#L44-L84)
-- [eventData.ts](file://src/data/eventData.ts#L47-L84)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L1-L43)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](tailwind.config.ts#L44-L84)
+- [eventData.ts](src/data/eventData.ts#L47-L84)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://tailwind.config.ts#L44-L84)
-- [eventData.ts](file://src/data/eventData.ts#L47-L84)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L1-L43)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](tailwind.config.ts#L44-L84)
+- [eventData.ts](src/data/eventData.ts#L47-L84)
 
 ## Performance Considerations
 - Translation resolution is O(1) per key via a lookup map.
@@ -392,10 +390,10 @@ ED["eventData.ts"] -. alternative data .-> AS
     - Verify responsive grid renders correctly across breakpoints.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L8-L16)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](file://src/App.tsx#L12-L20)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L8-L16)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](src/App.tsx#L12-L20)
 
 ## Conclusion
 The AgendaSection component provides a clean, responsive display of event agenda items using the translation system. It leverages Tailwind utilities for responsive grids and interactive hover effects, integrates icons, and adapts to RTL layouts when Arabic is selected. By following the translation key naming convention and ensuring consistent icon mapping, new agenda items can be added reliably across languages.
@@ -408,5 +406,5 @@ The AgendaSection component provides a clean, responsive display of event agenda
 - Keep icon mapping synchronized with agenda entries.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L56-L80)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L8-L16)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L56-L80)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L8-L16)

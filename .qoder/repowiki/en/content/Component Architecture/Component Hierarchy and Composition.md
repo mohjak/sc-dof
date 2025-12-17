@@ -1,24 +1,22 @@
 # Component Hierarchy and Composition
 
-<cite>
-**Referenced Files in This Document**
-- [main.tsx](file://src/main.tsx)
-- [App.tsx](file://src/App.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [WhySection.tsx](file://src/components/WhySection.tsx)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx)
-- [DetailsSection.tsx](file://src/components/DetailsSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx)
-- [Footer.tsx](file://src/components/Footer.tsx)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [main.tsx](src/main.tsx)
+> - [App.tsx](src/App.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [WhySection.tsx](src/components/WhySection.tsx)
+> - [GoalsSection.tsx](src/components/GoalsSection.tsx)
+> - [DetailsSection.tsx](src/components/DetailsSection.tsx)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [SpeakersSection.tsx](src/components/SpeakersSection.tsx)
+> - [RegistrationSection.tsx](src/components/RegistrationSection.tsx)
+> - [OrganizersSection.tsx](src/components/OrganizersSection.tsx)
+> - [Footer.tsx](src/components/Footer.tsx)
+> - [ScrollToTop.tsx](src/components/ScrollToTop.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -48,13 +46,13 @@ Index --> Sections["Sections:<br/>Navbar, HeroSection, WhySection,<br/>GoalsSect
 ```
 
 **Diagram sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 **Section sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Core Components
 - App: The root container that composes global providers for state and UI services.
@@ -69,9 +67,9 @@ Key responsibilities:
 - LanguageContext exposes t(key) for localized strings and isRTL for layout direction.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Architecture Overview
 The component hierarchy establishes a clear provider chain and a single-page layout. The flow is:
@@ -98,9 +96,9 @@ Index->>Sections : render sequentially
 ```
 
 **Diagram sources**
-- [main.tsx](file://src/main.tsx#L1-L6)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [main.tsx](src/main.tsx#L1-L6)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Detailed Component Analysis
 
@@ -112,8 +110,8 @@ Index->>Sections : render sequentially
 These providers are arranged so that AppContent can consume language state to apply direction and fonts, while all child components benefit from global services.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
 
 ### AppContent: Language-Aware Layout and Routing
 AppContent reads the current language and computes:
@@ -128,7 +126,7 @@ It also renders:
 This ensures the entire UI respects language direction and typography consistently.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L12-L31)
+- [App.tsx](src/App.tsx#L12-L31)
 
 ### Index Page: Sequential Section Composition
 Index composes the main layout as a single-column sequence of sections:
@@ -147,7 +145,7 @@ Index composes the main layout as a single-column sequence of sections:
 The main container uses a min-height and overflow-x-hidden to prevent horizontal scrolling during layout transitions.
 
 **Section sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ### Parent-Child Relationships and Propagation
 The parent-child chain is:
@@ -176,17 +174,17 @@ NAV --> LS["LanguageSwitcher.tsx"]
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [WhySection.tsx](file://src/components/WhySection.tsx#L1-L41)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L1-L54)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [App.tsx](src/App.tsx#L12-L31)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [WhySection.tsx](src/components/WhySection.tsx#L1-L41)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L1-L54)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
 
 ### Example: Language Change Flow
 When a user clicks a language option in LanguageSwitcher:
@@ -212,11 +210,11 @@ UI->>UI : re-render with t(key) and isRTL
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [App.tsx](file://src/App.tsx#L12-L31)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L117)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [App.tsx](src/App.tsx#L12-L31)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [Footer.tsx](src/components/Footer.tsx#L1-L117)
 
 ## Dependency Analysis
 - App depends on:
@@ -245,14 +243,14 @@ SECTIONS --> LC
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Performance Considerations
 - Provider depth: The provider chain is shallow and efficient. Keep providers near the root to minimize re-renders.
@@ -271,8 +269,8 @@ Common issues and resolutions:
   - Fix: Ensure LanguageProvider is higher in the tree than any consumer. App already wraps AppContent with LanguageProvider, so verify consumers are rendered under Index.
 
   **Section sources**
-  - [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L285-L292)
-  - [App.tsx](file://src/App.tsx#L33-L41)
+  - [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L285-L292)
+  - [App.tsx](src/App.tsx#L33-L41)
 
 - Routing conflicts
   - Symptom: Unexpected fallback to NotFound or missing Index content.
@@ -280,7 +278,7 @@ Common issues and resolutions:
   - Fix: Place the catch-all route last. Ensure "/" maps to Index and verify no typos in route paths.
 
   **Section sources**
-  - [App.tsx](file://src/App.tsx#L22-L28)
+  - [App.tsx](src/App.tsx#L22-L28)
 
 - Layout overflow management
   - Symptom: Horizontal scrollbar appears or content overflows on mobile.
@@ -288,7 +286,7 @@ Common issues and resolutions:
   - Fix: Use overflow-x-hidden on the main container and ensure absolute overlays are constrained. Index already applies min-h-screen and overflow-x-hidden.
 
   **Section sources**
-  - [Index.tsx](file://src/pages/Index.tsx#L13-L18)
+  - [Index.tsx](src/pages/Index.tsx#L13-L18)
 
 - Direction and font not applying
   - Symptom: Text direction or font does not change when switching languages.
@@ -296,8 +294,8 @@ Common issues and resolutions:
   - Fix: Verify LanguageProvider updates language and that AppContent reads useLanguage to set dir and font class.
 
   **Section sources**
-  - [App.tsx](file://src/App.tsx#L12-L21)
-  - [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
+  - [App.tsx](src/App.tsx#L12-L21)
+  - [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
 
 ## Conclusion
 The component hierarchy cleanly separates concerns: App provides global services, AppContent handles language-aware layout and routing, and Index composes the main UI in a predictable sequence. Context changes propagate efficiently through the tree, enabling dynamic localization and directionality. Following the outlined best practices helps avoid common pitfalls and keeps the app responsive and maintainable.

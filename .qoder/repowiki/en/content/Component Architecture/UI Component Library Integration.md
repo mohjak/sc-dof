@@ -1,25 +1,23 @@
 # UI Component Library Integration
 
-<cite>
-**Referenced Files in This Document**   
-- [utils.ts](file://src/lib/utils.ts)
-- [button.tsx](file://src/components/ui/button.tsx)
-- [card.tsx](file://src/components/ui/card.tsx)
-- [dialog.tsx](file://src/components/ui/dialog.tsx)
-- [dropdown-menu.tsx](file://src/components/ui/dropdown-menu.tsx)
-- [form.tsx](file://src/components/ui/form.tsx)
-- [input.tsx](file://src/components/ui/input.tsx)
-- [label.tsx](file://src/components/ui/label.tsx)
-- [checkbox.tsx](file://src/components/ui/checkbox.tsx)
-- [radio-group.tsx](file://src/components/ui/radio-group.tsx)
-- [select.tsx](file://src/components/ui/select.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [components.json](file://components.json)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [index.css](file://src/index.css)
-- [package.json](file://package.json)
-</cite>
+> **Referenced Files in This Document**   
+> - [utils.ts](src/lib/utils.ts)
+> - [button.tsx](src/components/ui/button.tsx)
+> - [card.tsx](src/components/ui/card.tsx)
+> - [dialog.tsx](src/components/ui/dialog.tsx)
+> - [dropdown-menu.tsx](src/components/ui/dropdown-menu.tsx)
+> - [form.tsx](src/components/ui/form.tsx)
+> - [input.tsx](src/components/ui/input.tsx)
+> - [label.tsx](src/components/ui/label.tsx)
+> - [checkbox.tsx](src/components/ui/checkbox.tsx)
+> - [radio-group.tsx](src/components/ui/radio-group.tsx)
+> - [select.tsx](src/components/ui/select.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [components.json](components.json)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [index.css](src/index.css)
+> - [package.json](package.json)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -65,25 +63,25 @@ custom --> |Uses| lib
 ```
 
 **Diagram sources**
-- [src/components/ui](file://src/components/ui)
-- [src/lib/utils.ts](file://src/lib/utils.ts)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [index.css](file://src/index.css)
+- [src/components/ui](src/components/ui)
+- [src/lib/utils.ts](src/lib/utils.ts)
+- [tailwind.config.ts](tailwind.config.ts)
+- [index.css](src/index.css)
 
 **Section sources**
-- [project_structure](file://project_structure)
-- [src/components](file://src/components)
+- [project_structure](project_structure)
+- [src/components](src/components)
 
 ## Core Components
 
 The ShadCN UI component library provides a collection of pre-built, accessible components that serve as the foundation for the application's user interface. These components are built on Radix UI primitives, ensuring proper accessibility semantics, keyboard navigation, and screen reader compatibility. The core components include Button, Card, Dialog, DropdownMenu, Form, Input, Label, Checkbox, and others, all styled consistently with Tailwind CSS. These components are designed to be composable and extensible through props rather than inheritance, enabling flexible customization while maintaining design system consistency.
 
 **Section sources**
-- [src/components/ui/button.tsx](file://src/components/ui/button.tsx)
-- [src/components/ui/card.tsx](file://src/components/ui/card.tsx)
-- [src/components/ui/dialog.tsx](file://src/components/ui/dialog.tsx)
-- [src/components/ui/dropdown-menu.tsx](file://src/components/ui/dropdown-menu.tsx)
-- [src/components/ui/form.tsx](file://src/components/ui/form.tsx)
+- [src/components/ui/button.tsx](src/components/ui/button.tsx)
+- [src/components/ui/card.tsx](src/components/ui/card.tsx)
+- [src/components/ui/dialog.tsx](src/components/ui/dialog.tsx)
+- [src/components/ui/dropdown-menu.tsx](src/components/ui/dropdown-menu.tsx)
+- [src/components/ui/form.tsx](src/components/ui/form.tsx)
 
 ## Architecture Overview
 
@@ -105,10 +103,10 @@ J --> L[tailwind-merge]
 ```
 
 **Diagram sources**
-- [src/components/ui/*.tsx](file://src/components/ui)
-- [src/lib/utils.ts](file://src/lib/utils.ts)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [index.css](file://src/index.css)
+- [src/components/ui/*.tsx](src/components/ui)
+- [src/lib/utils.ts](src/lib/utils.ts)
+- [tailwind.config.ts](tailwind.config.ts)
+- [index.css](src/index.css)
 
 ## Detailed Component Analysis
 
@@ -133,15 +131,15 @@ class tailwindMerge {
 +...classNames : string[]
 +return : string
 }
-cn --> clsx : "uses"
-cn --> tailwindMerge : "uses"
+cn --> clsx : uses
+cn --> tailwindMerge : uses
 ```
 
 **Diagram sources**
-- [src/lib/utils.ts](file://src/lib/utils.ts#L1-L7)
+- [src/lib/utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [src/lib/utils.ts](file://src/lib/utils.ts#L1-L7)
+- [src/lib/utils.ts](src/lib/utils.ts#L1-L7)
 
 ### UI Component Implementation Patterns
 
@@ -160,15 +158,15 @@ class buttonVariants {
 +variants : { variant, size }
 +defaultVariants : { variant : 'default', size : 'default' }
 }
-Button --> buttonVariants : "uses"
-Button --> cn : "uses"
+Button --> buttonVariants : uses
+Button --> cn : uses
 ```
 
 **Diagram sources**
-- [src/components/ui/button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [src/components/ui/button.tsx](src/components/ui/button.tsx#L1-L48)
 
 **Section sources**
-- [src/components/ui/button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [src/components/ui/button.tsx](src/components/ui/button.tsx#L1-L48)
 
 #### Form Component Architecture
 The Form component system uses React Hook Form for state management and validation, providing a robust foundation for form handling. It implements a context-based architecture with FormField, FormItem, FormLabel, FormControl, FormDescription, and FormMessage components that work together to create accessible forms.
@@ -188,10 +186,10 @@ J --> C
 ```
 
 **Diagram sources**
-- [src/components/ui/form.tsx](file://src/components/ui/form.tsx#L1-L130)
+- [src/components/ui/form.tsx](src/components/ui/form.tsx#L1-L130)
 
 **Section sources**
-- [src/components/ui/form.tsx](file://src/components/ui/form.tsx#L1-L130)
+- [src/components/ui/form.tsx](src/components/ui/form.tsx#L1-L130)
 
 ### Real-World Usage Examples
 
@@ -210,12 +208,12 @@ G --> H[Button-like styling]
 ```
 
 **Diagram sources**
-- [src/components/Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [src/components/LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [src/components/Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [src/components/LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 **Section sources**
-- [src/components/Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [src/components/LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [src/components/Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [src/components/LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 ## Dependency Analysis
 
@@ -233,18 +231,15 @@ C --> H[PostCSS]
 D --> I[TypeScript]
 E --> J[JavaScript Utilities]
 F --> K[Tailwind CSS]
-style A fill:#f9f,stroke:#333
-style B fill:#bbf,stroke:#333
-style C fill:#f96,stroke:#333
 ```
 
 **Diagram sources**
-- [package.json](file://package.json#L1-L85)
-- [components.json](file://components.json#L1-L21)
+- [package.json](package.json#L1-L85)
+- [components.json](components.json#L1-L21)
 
 **Section sources**
-- [package.json](file://package.json#L1-L85)
-- [components.json](file://components.json#L1-L21)
+- [package.json](package.json#L1-L85)
+- [components.json](components.json#L1-L21)
 
 ## Performance Considerations
 
@@ -255,9 +250,9 @@ The component library implementation follows performance best practices includin
 Common issues in the ShadCN UI integration include styling conflicts, version mismatches, and accessibility compliance problems. To address styling conflicts, ensure proper use of the `cn` utility function and avoid direct Tailwind class conflicts. For version mismatches, maintain consistent versions of Radix UI, Tailwind CSS, and related dependencies as specified in package.json. Accessibility issues can be mitigated by following the built-in accessibility patterns of Radix UI components and testing with screen readers and keyboard navigation. When adding new components, use the ShadCN CLI to ensure proper integration with the existing design system.
 
 **Section sources**
-- [package.json](file://package.json#L1-L85)
-- [components.json](file://components.json#L1-L21)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [package.json](package.json#L1-L85)
+- [components.json](components.json#L1-L21)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Conclusion
 

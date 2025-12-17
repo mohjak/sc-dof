@@ -1,16 +1,14 @@
 # Organizers Section
 
-<cite>
-**Referenced Files in This Document**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [eventData.ts](file://src/data/eventData.ts)
-- [index.css](file://src/index.css)
-- [tailwind.config.ts](file://src/tailwind.config.ts)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [Footer.tsx](file://src/components/Footer.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [OrganizersSection.tsx](src/components/OrganizersSection.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [eventData.ts](src/data/eventData.ts)
+> - [index.css](src/index.css)
+> - [tailwind.config.ts](src/tailwind.config.ts)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [Footer.tsx](src/components/Footer.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -60,17 +58,17 @@ Org -. "optional: alternate data source" .-> Data
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L163)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
-- [eventData.ts](file://src/data/eventData.ts#L86-L101)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L163)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
+- [eventData.ts](src/data/eventData.ts#L86-L101)
 
 **Section sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Core Components
 - OrganizersSection: Renders two organization cards with logos, descriptions, and optional mission statements and activity tags. It selects content based on the current language via the LanguageContext.
@@ -85,10 +83,10 @@ Key responsibilities:
 - Optional integration with centralized event data
 
 **Section sources**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L163)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L163)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
 
 ## Architecture Overview
 The component reads the current language and translation function from the LanguageContext, constructs a language-specific data array, and renders two cards. Styling relies on Tailwind utility classes and custom CSS tokens.
@@ -110,11 +108,11 @@ Org-->>Page : Render cards with logos and content
 ```
 
 **Diagram sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L163)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L163)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
 
 ## Detailed Component Analysis
 
@@ -140,10 +138,10 @@ Description --> End
 ```
 
 **Diagram sources**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
 
 **Section sources**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
 
 ### Visual Design and Styling
 - Logos
@@ -169,7 +167,7 @@ class OrganizersSection {
 +responsive layout
 }
 class LanguageContext {
-+language : "ar"|"en"|"tr"
++language : ar|"en"|"tr"
 +t(key) : string
 +isRTL : boolean
 }
@@ -180,20 +178,20 @@ class Theme {
 +gradient-gold
 +gradient-green
 }
-OrganizersSection --> LanguageContext : "consumes"
-OrganizersSection --> Theme : "uses tokens"
+OrganizersSection --> LanguageContext : consumes
+OrganizersSection --> Theme : uses tokens
 ```
 
 **Diagram sources**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L163)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L163)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
 
 **Section sources**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [index.css](file://src/index.css#L55-L163)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [index.css](src/index.css#L55-L163)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
 
 ### Responsive Layout Behavior
 - Desktop-first layout
@@ -214,10 +212,10 @@ Stack --> End
 ```
 
 **Diagram sources**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L64-L128)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L64-L128)
 
 **Section sources**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L64-L128)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L64-L128)
 
 ### Data Sources and Language Integration
 - Language-specific content
@@ -239,14 +237,14 @@ Org-->>Org : Render cards with selected content
 ```
 
 **Diagram sources**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L86-L101)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L86-L101)
 
 **Section sources**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [eventData.ts](file://src/data/eventData.ts#L86-L101)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [eventData.ts](src/data/eventData.ts#L86-L101)
 
 ## Dependency Analysis
 - Internal dependencies
@@ -266,18 +264,18 @@ Org --> Assets["Assets: logos, eagles"]
 ```
 
 **Diagram sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L163)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L163)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
 
 **Section sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L55-L163)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L55-L163)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
 
 ## Performance Considerations
 - Rendering cost
@@ -304,10 +302,10 @@ Common issues and resolutions:
   - On small screens, the logo and text stack vertically within each card. If layout appears off, review Tailwind breakpoint classes and container widths.
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [index.css](file://src/index.css#L55-L163)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [index.css](src/index.css#L55-L163)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
 
 ## Conclusion
 The OrganizersSection component provides a clean, multilingual presentation of organizing institutions with a two-tier card layout. It leverages the LanguageContext for dynamic content, integrates logos and decorative motifs, and applies responsive design with hover effects. The component is easy to customize and extend, and can be aligned with centralized event data for maintainability.
@@ -326,8 +324,8 @@ The OrganizersSection component provides a clean, multilingual presentation of o
   - If using the centralized event data file, mirror changes to the organizers array there to keep content synchronized.
 
 **Section sources**
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
-- [eventData.ts](file://src/data/eventData.ts#L86-L101)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
+- [eventData.ts](src/data/eventData.ts#L86-L101)
 
 ### Customizing Visual Presentation
 - Colors and gradients
@@ -340,14 +338,14 @@ The OrganizersSection component provides a clean, multilingual presentation of o
   - Replace or resize logo and eagle assets to match branding preferences.
 
 **Section sources**
-- [index.css](file://src/index.css#L55-L163)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
-- [OrganizersSection.tsx](file://src/components/OrganizersSection.tsx#L1-L132)
+- [index.css](src/index.css#L55-L163)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
+- [OrganizersSection.tsx](src/components/OrganizersSection.tsx#L1-L132)
 
 ### Related Visual Elements in the Application
 - Hero section and footer also incorporate Syrian eagle and flag imagery, reinforcing thematic consistency.
 - These components demonstrate how decorative assets and color themes are consistently applied across the site.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [Footer.tsx](file://src/components/Footer.tsx#L1-L103)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [Footer.tsx](src/components/Footer.tsx#L1-L103)

@@ -1,17 +1,15 @@
 # Registration Section
 
-<cite>
-**Referenced Files in This Document**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [button.tsx](file://src/components/ui/button.tsx)
-- [index.css](file://src/index.css)
-- [tailwind.config.ts](file://src/tailwind.config.ts)
-- [App.tsx](file://src/App.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [package.json](file://package.json)
-</cite>
+> **Referenced Files in This Document**
+> - [RegistrationSection.tsx](src/components/RegistrationSection.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [button.tsx](src/components/ui/button.tsx)
+> - [index.css](src/index.css)
+> - [tailwind.config.ts](src/tailwind.config.ts)
+> - [App.tsx](src/App.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [package.json](package.json)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -63,20 +61,20 @@ CSS --> TW
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
-- [package.json](file://package.json#L1-L200)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
+- [package.json](package.json#L1-L200)
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Core Components
 - RegistrationSection: Renders multilingual header, subtitle, QR code, and a prominent button linking to the registration URL. It uses decorative background blurs and a QR code card with corner decorations and a glow effect.
@@ -92,12 +90,12 @@ Key implementation highlights:
 - Responsive layout using container and max-width utilities.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
 
 ## Architecture Overview
 The RegistrationSection depends on the LanguageContext for language-aware text and on the Button component for the external link. The QR code is rendered via qrcode.react. Styling is driven by Tailwind CSS with custom color tokens.
@@ -123,11 +121,11 @@ Browser-->>User : Registration form
 ```
 
 **Diagram sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [package.json](file://package.json#L1-L200)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [package.json](package.json#L1-L200)
 
 ## Detailed Component Analysis
 
@@ -168,11 +166,11 @@ RenderButton --> End(["Done"])
 ```
 
 **Diagram sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
 
 ### Multilingual Display and Language Context
 - LanguageContext provides:
@@ -198,19 +196,19 @@ class RegistrationSection {
 class LanguageSwitcher {
 +switches language
 }
-RegistrationSection --> LanguageContext : "useLanguage()"
-LanguageSwitcher --> LanguageContext : "setLanguage()"
+RegistrationSection --> LanguageContext : useLanguage()
+LanguageSwitcher --> LanguageContext : setLanguage()
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 ### Visual Design Elements
 - Colors and Palette:
@@ -227,18 +225,18 @@ LanguageSwitcher --> LanguageContext : "setLanguage()"
   - Inner white padding and shadow for contrast.
 
 **Section sources**
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
 
 ### External Link Integration and Security
 - The button opens the registration URL in a new tab with rel="noopener noreferrer" for security.
 - The link is implemented using the ui/Button component with asChild to render an anchor element.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L80-L97)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L80-L97)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
 
 ## Dependency Analysis
 - Internal Dependencies:
@@ -260,22 +258,22 @@ CSS["index.css"] --> TW["tailwind.config.ts"]
 ```
 
 **Diagram sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
-- [package.json](file://package.json#L1-L200)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
+- [package.json](package.json#L1-L200)
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
-- [package.json](file://package.json#L1-L200)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
+- [package.json](package.json#L1-L200)
 
 ## Performance Considerations
 - QR Code Rendering:
@@ -304,8 +302,8 @@ CSS["index.css"] --> TW["tailwind.config.ts"]
   - Verify that the computed texts reflect the selected language.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 ## Conclusion
 The RegistrationSection provides a clean, multilingual sign-up experience with a prominent QR code and a secure external link. Its design emphasizes visual appeal through decorative blurs, rounded cards, and a cohesive color scheme. By centralizing language handling and leveraging Tailwind CSS, the component remains maintainable and customizable.
@@ -320,7 +318,7 @@ The RegistrationSection provides a clean, multilingual sign-up experience with a
 - Verify that the QR code reflects the updated URL and that the external link opens correctly.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
 
 ### Customizing Colors and Styling
 - Modify the syrian-green palette in the CSS variables.
@@ -328,6 +326,6 @@ The RegistrationSection provides a clean, multilingual sign-up experience with a
 - Adjust button styles, card borders, and glow effects to match brand guidelines.
 
 **Section sources**
-- [index.css](file://src/index.css#L55-L104)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L44-L84)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
+- [index.css](src/index.css#L55-L104)
+- [tailwind.config.ts](src/tailwind.config.ts#L44-L84)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)

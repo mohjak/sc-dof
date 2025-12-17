@@ -1,15 +1,13 @@
 # Internationalization System
 
-<cite>
-**Referenced Files in This Document**   
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [App.tsx](file://src/App.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [index.css](file://src/index.css)
-- [tailwind.config.ts](file://tailwind.config.ts)
-</cite>
+> **Referenced Files in This Document**   
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [App.tsx](src/App.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [index.css](src/index.css)
+> - [tailwind.config.ts](tailwind.config.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -53,15 +51,15 @@ class LanguageProvider {
 class useLanguage {
 +returns : LanguageContextType
 }
-LanguageProvider --> LanguageContextType : "provides"
-useLanguage --> LanguageContextType : "consumes"
+LanguageProvider --> LanguageContextType : provides
+useLanguage --> LanguageContextType : consumes
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L5-L10)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L5-L10)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
 
 ## Translation System
 
@@ -81,10 +79,10 @@ D --> E
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L12-L264)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L12-L264)
 
 **Section sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L272-L274)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L272-L274)
 
 ## Language Switcher Component
 
@@ -113,11 +111,11 @@ UIComponents->>UIComponents : Change font if needed
 ```
 
 **Diagram sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L283)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L283)
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
 
 ## RTL Support and Layout Direction
 
@@ -139,11 +137,11 @@ F --> H[LTR Layout Rendering]
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L13-L20)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L276)
+- [App.tsx](src/App.tsx#L13-L20)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L276)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L13-L20)
+- [App.tsx](src/App.tsx#L13-L20)
 
 ## Font Management System
 
@@ -177,18 +175,18 @@ class CSSClasses {
 class AppLogic {
 +language === 'ar' ? 'font-koufiya' : 'font-roboto'
 }
-FontConfiguration --> CSSClasses : "defines"
-FontFiles --> FontConfiguration : "supports"
-AppLogic --> CSSClasses : "applies"
+FontConfiguration --> CSSClasses : defines
+FontFiles --> FontConfiguration : supports
+AppLogic --> CSSClasses : applies
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L16-L17)
-- [tailwind.config.ts](file://tailwind.config.ts#L16-L19)
-- [index.css](file://src/index.css#L1-L18)
+- [App.tsx](src/App.tsx#L16-L17)
+- [tailwind.config.ts](tailwind.config.ts#L16-L19)
+- [index.css](src/index.css#L1-L18)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L16-L17)
+- [App.tsx](src/App.tsx#L16-L17)
 
 ## Component Integration Examples
 
@@ -210,9 +208,9 @@ H --> I[New translations applied]
 ```
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L7-L28)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L7-L89)
-- [GoalsSection.tsx](file://src/components/GoalsSection.tsx#L7-L47)
+- [Navbar.tsx](src/components/Navbar.tsx#L7-L28)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L7-L89)
+- [GoalsSection.tsx](src/components/GoalsSection.tsx#L7-L47)
 
 ## Common i18n Issues and Troubleshooting
 

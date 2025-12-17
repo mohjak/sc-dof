@@ -1,23 +1,21 @@
 # Technology Stack & Dependencies
 
-<cite>
-**Referenced Files in This Document**   
-- [package.json](file://package.json)
-- [vite.config.ts](file://vite.config.ts)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [components.json](file://components.json)
-- [tsconfig.json](file://tsconfig.json)
-- [App.tsx](file://src/App.tsx)
-- [main.tsx](file://src/main.tsx)
-- [utils.ts](file://src/lib/utils.ts)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [eventData.ts](file://src/data/eventData.ts)
-- [button.tsx](file://src/components/ui/button.tsx)
-- [use-toast.ts](file://src/hooks/use-toast.ts)
-</cite>
+> **Referenced Files in This Document**   
+> - [package.json](package.json)
+> - [vite.config.ts](vite.config.ts)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [components.json](components.json)
+> - [tsconfig.json](tsconfig.json)
+> - [App.tsx](src/App.tsx)
+> - [main.tsx](src/main.tsx)
+> - [utils.ts](src/lib/utils.ts)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [CountdownTimer.tsx](src/components/CountdownTimer.tsx)
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [eventData.ts](src/data/eventData.ts)
+> - [button.tsx](src/components/ui/button.tsx)
+> - [use-toast.ts](src/hooks/use-toast.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -35,8 +33,8 @@
 The sc-dof application is a modern React-based web application designed to commemorate Syria's Liberation Day. Built with a robust technology stack, it leverages contemporary frontend tools and libraries to deliver a responsive, accessible, and maintainable user experience. This document details the core technologies powering the application, including React 18 with TypeScript, Vite, Tailwind CSS, ShadCN UI, React Router DOM, React Query, and date-fns. It also explores how these technologies are integrated and configured to support the application's functionality and design goals.
 
 **Section sources**
-- [package.json](file://package.json)
-- [App.tsx](file://src/App.tsx)
+- [package.json](package.json)
+- [App.tsx](src/App.tsx)
 
 ## Core Frameworks and Libraries
 The foundation of the sc-dof application is built on React 18 and TypeScript, providing a type-safe and component-driven development environment. React enables the creation of reusable UI components, while TypeScript enhances code quality by introducing static typing, reducing runtime errors, and improving developer tooling.
@@ -54,11 +52,11 @@ E --> H[Improved Tooling]
 ```
 
 **Diagram sources**
-- [tsconfig.json](file://tsconfig.json)
+- [tsconfig.json](tsconfig.json)
 
 **Section sources**
-- [package.json](file://package.json#L52-L54)
-- [tsconfig.json](file://tsconfig.json)
+- [package.json](package.json#L52-L54)
+- [tsconfig.json](tsconfig.json)
 
 ## Development and Build Tools
 Vite serves as the development server and build tool for the sc-dof application, offering fast startup times and efficient hot module replacement (HMR). Configured in `vite.config.ts`, Vite integrates with the React SWC plugin for faster compilation and includes a custom component tagger for development mode, enhancing debugging capabilities.
@@ -77,11 +75,11 @@ E --> H[Smaller Bundle Sizes]
 ```
 
 **Diagram sources**
-- [vite.config.ts](file://vite.config.ts)
+- [vite.config.ts](vite.config.ts)
 
 **Section sources**
-- [vite.config.ts](file://vite.config.ts)
-- [package.json](file://package.json#L7-L11)
+- [vite.config.ts](vite.config.ts)
+- [package.json](package.json#L7-L11)
 
 ## Styling and UI Components
 Tailwind CSS provides utility-first styling, enabling developers to apply design tokens directly in JSX. The `tailwind.config.ts` file extends the default theme with custom colors, including Syrian national colors (`syrian-red`, `syrian-green`, `syrian-black`) and gold tones, as well as font families like Bahij Koufiya for Arabic text and Roboto for Latin scripts.
@@ -91,8 +89,8 @@ The application uses ShadCN UI components, which are built on Radix UI primitive
 ```mermaid
 classDiagram
 class Button {
-+variant : "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
-+size : "default" | "sm" | "lg" | "icon"
++variant : default | "destructive" | "outline" | "secondary" | "ghost" | "link"
++size : default | "sm" | "lg" | "icon"
 +asChild : boolean
 +className : string
 }
@@ -100,25 +98,25 @@ class Card {
 +className : string
 }
 class Alert {
-+variant : "default" | "destructive"
++variant : default | "destructive"
 +className : string
 }
-Button --> "1" TailwindCSS : uses
-Card --> "1" TailwindCSS : uses
-Alert --> "1" TailwindCSS : uses
-TailwindCSS --> "1" Theme : extends
-Theme --> "1" tailwind.config.ts : configured in
+Button --> 1 TailwindCSS : uses
+Card --> 1 TailwindCSS : uses
+Alert --> 1 TailwindCSS : uses
+TailwindCSS --> 1 Theme : extends
+Theme --> 1 tailwind.config.ts : configured in
 ```
 
 **Diagram sources**
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [components.json](file://components.json)
-- [button.tsx](file://src/components/ui/button.tsx)
+- [tailwind.config.ts](tailwind.config.ts)
+- [components.json](components.json)
+- [button.tsx](src/components/ui/button.tsx)
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [components.json](file://components.json)
-- [button.tsx](file://src/components/ui/button.tsx)
+- [tailwind.config.ts](tailwind.config.ts)
+- [components.json](components.json)
+- [button.tsx](src/components/ui/button.tsx)
 
 ## Routing and Navigation
 React Router DOM enables client-side routing, allowing navigation between views without full page reloads. In `App.tsx`, `BrowserRouter` wraps the application, and `Routes` define the route configuration. The application uses a catch-all route to handle 404 pages, ensuring a seamless user experience.
@@ -137,12 +135,12 @@ H --> I[scrollIntoView]
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L5-L28)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L30-L36)
+- [App.tsx](src/App.tsx#L5-L28)
+- [Navbar.tsx](src/components/Navbar.tsx#L30-L36)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L5-L28)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
+- [App.tsx](src/App.tsx#L5-L28)
+- [Navbar.tsx](src/components/Navbar.tsx)
 
 ## Data Management and State
 React Query is used for data fetching, caching, and synchronization, reducing the need for manual state management. In `App.tsx`, a `QueryClient` is instantiated and provided to the application via `QueryClientProvider`, making it available to all components.
@@ -164,11 +162,11 @@ QueryClient-->>Component : Provide data
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L4-L10)
+- [App.tsx](src/App.tsx#L4-L10)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L4-L10)
-- [use-toast.ts](file://src/hooks/use-toast.ts)
+- [App.tsx](src/App.tsx#L4-L10)
+- [use-toast.ts](src/hooks/use-toast.ts)
 
 ## Date and Time Utilities
 The `date-fns` library is included as a dependency for date manipulation, though it is not currently used in the codebase. Instead, native JavaScript `Date` objects are used in components like `CountdownTimer.tsx` to calculate time differences for the event countdown.
@@ -187,12 +185,12 @@ F --> I[Calculate Duration]
 ```
 
 **Diagram sources**
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L13-L27)
-- [eventData.ts](file://src/data/eventData.ts#L7)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L13-L27)
+- [eventData.ts](src/data/eventData.ts#L7)
 
 **Section sources**
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx)
-- [eventData.ts](file://src/data/eventData.ts)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx)
+- [eventData.ts](src/data/eventData.ts)
 
 ## Dependency Integration and Usage
 The integration of core libraries is evident in the component structure and configuration files. For example, `AgendaSection.tsx` uses Tailwind classes like `bg-muted`, `text-foreground`, and `grid-cols-1` to style its layout and elements. The `cn` utility from `utils.ts` combines `clsx` and `tailwind-merge` to safely merge Tailwind classes, preventing style conflicts.
@@ -213,13 +211,13 @@ I --> K[Style Conflict Resolution]
 ```
 
 **Diagram sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [utils.ts](file://src/lib/utils.ts)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx)
+- [utils.ts](src/lib/utils.ts)
 
 **Section sources**
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [utils.ts](file://src/lib/utils.ts)
-- [App.tsx](file://src/App.tsx#L1-L3)
+- [AgendaSection.tsx](src/components/AgendaSection.tsx)
+- [utils.ts](src/lib/utils.ts)
+- [App.tsx](src/App.tsx#L1-L3)
 
 ## Common Issues and Optimization Tips
 ### Version Conflicts
@@ -239,8 +237,8 @@ To reduce bundle size:
 - Use `React.lazy` for code splitting in larger applications
 
 **Section sources**
-- [package.json](file://package.json)
-- [vite.config.ts](file://vite.config.ts)
+- [package.json](package.json)
+- [vite.config.ts](vite.config.ts)
 
 ## Conclusion
 The sc-dof application demonstrates a modern, well-structured frontend architecture using React 18, TypeScript, Vite, Tailwind CSS, and supporting libraries. The integration of ShadCN UI with Radix UI ensures accessible and consistent components, while React Router DOM and React Query provide robust navigation and data management. Although `date-fns` is not currently utilized, its inclusion suggests future plans for enhanced date handling. By following best practices in configuration and dependency management, the application is well-positioned for scalability and maintainability.

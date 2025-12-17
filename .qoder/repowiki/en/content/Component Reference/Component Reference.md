@@ -1,26 +1,24 @@
 # Component Reference
 
-<cite>
-**Referenced Files in This Document**   
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx)
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx)
-- [button.tsx](file://src/components/ui/button.tsx)
-- [dialog.tsx](file://src/components/ui/dialog.tsx)
-- [card.tsx](file://src/components/ui/card.tsx)
-- [form.tsx](file://src/components/ui/form.tsx)
-- [input.tsx](file://src/components/ui/input.tsx)
-- [select.tsx](file://src/components/ui/select.tsx)
-- [toast.tsx](file://src/components/ui/toast.tsx)
-- [use-toast.ts](file://src/components/ui/use-toast.ts)
-- [avatar.tsx](file://src/components/ui/avatar.tsx)
-- [badge.tsx](file://src/components/ui/badge.tsx)
-- [table.tsx](file://src/components/ui/table.tsx)
-- [tabs.tsx](file://src/components/ui/tabs.tsx)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [utils.ts](file://src/lib/utils.ts)
-- [App.tsx](file://src/App.tsx)
-</cite>
+> **Referenced Files in This Document**   
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [CountdownTimer.tsx](src/components/CountdownTimer.tsx)
+> - [RegistrationSection.tsx](src/components/RegistrationSection.tsx)
+> - [button.tsx](src/components/ui/button.tsx)
+> - [dialog.tsx](src/components/ui/dialog.tsx)
+> - [card.tsx](src/components/ui/card.tsx)
+> - [form.tsx](src/components/ui/form.tsx)
+> - [input.tsx](src/components/ui/input.tsx)
+> - [select.tsx](src/components/ui/select.tsx)
+> - [toast.tsx](src/components/ui/toast.tsx)
+> - [use-toast.ts](src/components/ui/use-toast.ts)
+> - [avatar.tsx](src/components/ui/avatar.tsx)
+> - [badge.tsx](src/components/ui/badge.tsx)
+> - [table.tsx](src/components/ui/table.tsx)
+> - [tabs.tsx](src/components/ui/tabs.tsx)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [utils.ts](src/lib/utils.ts)
+> - [App.tsx](src/App.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -63,7 +61,7 @@ The HeroSection component serves as the main landing page header, featuring a fu
 **Responsive Design**: The component adjusts font sizes and spacing across breakpoints, with optimized layout for mobile, tablet, and desktop views.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
 
 ### CountdownTimer
 The CountdownTimer component displays a real-time countdown to the event date with days, hours, minutes, and seconds. It updates every second and supports multilingual labels for time units.
@@ -81,7 +79,7 @@ The CountdownTimer component displays a real-time countdown to the event date wi
 **Performance Considerations**: The component efficiently manages the interval timer, cleaning it up on unmount to prevent memory leaks.
 
 **Section sources**
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
 
 ### RegistrationSection
 The RegistrationSection component provides event registration functionality through a QR code and button link. It features a prominent design with visual emphasis on the registration action.
@@ -99,7 +97,7 @@ The RegistrationSection component provides event registration functionality thro
 **Responsive Design**: The component adjusts the size of the QR code and button across breakpoints, ensuring usability on all device sizes.
 
 **Section sources**
-- [RegistrationSection.tsx](file://src/components/RegistrationSection.tsx#L1-L105)
+- [RegistrationSection.tsx](src/components/RegistrationSection.tsx#L1-L105)
 
 ## ShadCN UI Components
 
@@ -129,10 +127,10 @@ class Button {
 ```
 
 **Diagram sources**
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
 
 **Section sources**
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
 
 ### Card
 The Card component provides a container for grouping related content with a consistent visual style, including header, title, description, content, and footer sections.
@@ -183,10 +181,10 @@ CardHeader *-- CardDescription
 ```
 
 **Diagram sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
 
 **Section sources**
-- [card.tsx](file://src/components/ui/card.tsx#L1-L44)
+- [card.tsx](src/components/ui/card.tsx#L1-L44)
 
 ### Dialog
 The Dialog component provides a modal interface for displaying content that requires user attention, built on Radix UI's dialog primitive with enhanced styling.
@@ -258,10 +256,10 @@ DialogContent *-- DialogClose
 ```
 
 **Diagram sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L1-L96)
+- [dialog.tsx](src/components/ui/dialog.tsx#L1-L96)
 
 **Section sources**
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L1-L96)
+- [dialog.tsx](src/components/ui/dialog.tsx#L1-L96)
 
 ### Form
 The Form component provides a comprehensive form handling system built on react-hook-form with accessible styling and validation support.
@@ -318,10 +316,10 @@ FormItem *-- FormMessage
 ```
 
 **Diagram sources**
-- [form.tsx](file://src/components/ui/form.tsx#L1-L130)
+- [form.tsx](src/components/ui/form.tsx#L1-L130)
 
 **Section sources**
-- [form.tsx](file://src/components/ui/form.tsx#L1-L130)
+- [form.tsx](src/components/ui/form.tsx#L1-L130)
 
 ### Input
 The Input component provides a styled text input element with consistent styling and accessibility features.
@@ -335,7 +333,7 @@ The Input component provides a styled text input element with consistent styling
 **Accessibility Features**: Includes proper focus states, placeholder text with appropriate contrast, and support for screen readers.
 
 **Section sources**
-- [input.tsx](file://src/components/ui/input.tsx#L1-L23)
+- [input.tsx](src/components/ui/input.tsx#L1-L23)
 
 ### Select
 The Select component provides a styled dropdown menu built on Radix UI's select primitive with enhanced visual design.
@@ -409,10 +407,10 @@ SelectItem *-- SelectItemIndicator
 ```
 
 **Diagram sources**
-- [select.tsx](file://src/components/ui/select.tsx#L1-L144)
+- [select.tsx](src/components/ui/select.tsx#L1-L144)
 
 **Section sources**
-- [select.tsx](file://src/components/ui/select.tsx#L1-L144)
+- [select.tsx](src/components/ui/select.tsx#L1-L144)
 
 ### Toast
 The Toast component provides a notification system for displaying temporary messages to users, built on Radix UI's toast primitive.
@@ -469,10 +467,10 @@ Toast *-- ToastAction
 ```
 
 **Diagram sources**
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
 
 **Section sources**
-- [toast.tsx](file://src/components/ui/toast.tsx#L1-L112)
+- [toast.tsx](src/components/ui/toast.tsx#L1-L112)
 
 ### Avatar
 The Avatar component displays user profile images with fallback text when images are unavailable.
@@ -489,7 +487,7 @@ The Avatar component displays user profile images with fallback text when images
 **Accessibility Features**: Includes appropriate alt text handling and focus states.
 
 **Section sources**
-- [avatar.tsx](file://src/components/ui/avatar.tsx#L1-L39)
+- [avatar.tsx](src/components/ui/avatar.tsx#L1-L39)
 
 ### Badge
 The Badge component displays small status indicators or labels with different visual styles.
@@ -501,7 +499,7 @@ The Badge component displays small status indicators or labels with different vi
 **Usage Patterns**: Use for categorizing content, showing status, or highlighting information.
 
 **Section sources**
-- [badge.tsx](file://src/components/ui/badge.tsx#L1-L30)
+- [badge.tsx](src/components/ui/badge.tsx#L1-L30)
 
 ### Table
 The Table component provides a styled data table with consistent formatting and responsive behavior.
@@ -521,7 +519,7 @@ The Table component provides a styled data table with consistent formatting and 
 **Responsive Design**: The table scrolls horizontally on small screens to maintain readability.
 
 **Section sources**
-- [table.tsx](file://src/components/ui/table.tsx#L1-L73)
+- [table.tsx](src/components/ui/table.tsx#L1-L73)
 
 ### Tabs
 The Tabs component provides a tabbed interface for organizing content into multiple sections.
@@ -537,7 +535,7 @@ The Tabs component provides a tabbed interface for organizing content into multi
 **Accessibility Features**: Fully keyboard navigable with arrow keys, proper focus management, and ARIA attributes.
 
 **Section sources**
-- [tabs.tsx](file://src/components/ui/tabs.tsx#L1-L54)
+- [tabs.tsx](src/components/ui/tabs.tsx#L1-L54)
 
 ## Theming and Styling System
 The application uses a comprehensive theming system based on CSS variables and Tailwind CSS, with support for the Syrian national colors and event-specific design elements.
@@ -577,13 +575,13 @@ K --> O
 ```
 
 **Diagram sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Accessibility Features
 The component library prioritizes accessibility across all components with comprehensive support for assistive technologies.
@@ -599,10 +597,10 @@ The component library prioritizes accessibility across all components with compr
 **Language Support**: The application supports multiple languages with proper dir attribute handling for RTL (Arabic) and LTR (English, Turkish) layouts.
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L1-L96)
-- [form.tsx](file://src/components/ui/form.tsx#L1-L130)
+- [App.tsx](src/App.tsx#L1-L43)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [dialog.tsx](src/components/ui/dialog.tsx#L1-L96)
+- [form.tsx](src/components/ui/form.tsx#L1-L130)
 
 ## Responsive Design Guidelines
 The component library is designed to be fully responsive across all device sizes with consistent behavior and appearance.
@@ -619,8 +617,8 @@ The component library is designed to be fully responsive across all device sizes
 **Image Handling**: Background images and other media are optimized for different screen sizes with appropriate sizing and positioning.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Performance Optimization Tips
 To ensure optimal performance when using these components, follow these best practices:
@@ -638,9 +636,9 @@ To ensure optimal performance when using these components, follow these best pra
 **Avoid Unnecessary Re-renders**: The components use React.memo and proper dependency arrays in hooks to prevent unnecessary re-renders.
 
 **Section sources**
-- [CountdownTimer.tsx](file://src/components/CountdownTimer.tsx#L1-L78)
-- [button.tsx](file://src/components/ui/button.tsx#L1-L48)
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L1-L96)
+- [CountdownTimer.tsx](src/components/CountdownTimer.tsx#L1-L78)
+- [button.tsx](src/components/ui/button.tsx#L1-L48)
+- [dialog.tsx](src/components/ui/dialog.tsx#L1-L96)
 
 ## Common Implementation Issues
 When working with these components, developers may encounter the following common issues:
@@ -656,7 +654,7 @@ When working with these components, developers may encounter the following commo
 **Theming Inconsistencies**: When overriding styles, use the cn utility function to properly merge classes and avoid conflicts with existing Tailwind classes.
 
 **Section sources**
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L1-L99)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [form.tsx](file://src/components/ui/form.tsx#L1-L130)
-- [dialog.tsx](file://src/components/ui/dialog.tsx#L1-L96)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L1-L99)
+- [App.tsx](src/App.tsx#L1-L43)
+- [form.tsx](src/components/ui/form.tsx#L1-L130)
+- [dialog.tsx](src/components/ui/dialog.tsx#L1-L96)

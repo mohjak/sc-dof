@@ -1,12 +1,10 @@
 # Speakers Section
 
-<cite>
-**Referenced Files in This Document**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [index.css](file://src/index.css)
-- [eventData.ts](file://src/data/eventData.ts)
-</cite>
+> **Referenced Files in This Document**
+> - [SpeakersSection.tsx](src/components/SpeakersSection.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [index.css](src/index.css)
+> - [eventData.ts](src/data/eventData.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -42,14 +40,14 @@ SS --> CSS
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L160-L249)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L160-L249)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L160-L249)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L160-L249)
 
 ## Core Components
 - Typed Speaker interface: Defines fields for identifiers, multilingual names, multilingual roles, and an optional image URL.
@@ -59,10 +57,10 @@ SS --> CSS
 - Card design: Circular image container with ring decoration, hover effects, and typography hierarchy.
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L18-L27)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L171-L185)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L199-L231)
-- [index.css](file://src/index.css#L190-L241)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L18-L27)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L171-L185)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L199-L231)
+- [index.css](src/index.css#L190-L241)
 
 ## Architecture Overview
 The component reads the current language and translation function from the LanguageContext, selects the appropriate name and role fields, and renders a grid of cards. Each card applies a fade-up animation with a staggered delay. The animation keyframes and utilities are defined in the global stylesheet.
@@ -75,21 +73,21 @@ participant Context as "useLanguage()"
 participant Comp as "SpeakersSection"
 participant Grid as "Grid Container"
 participant Card as "Card Item"
-User->>Provider : "App initializes provider"
-Provider-->>Comp : "Provide {language, t}"
-Comp->>Context : "useLanguage()"
-Context-->>Comp : "{language, t}"
-Comp->>Comp : "getName(speaker), getRole(speaker)"
-Comp->>Grid : "Render grid with cards"
-Grid->>Card : "Each card with animation-delay"
-Card-->>User : "Displays profile with image/name/role"
+User->>Provider : App initializes provider
+Provider-->>Comp : Provide {language, t}
+Comp->>Context : useLanguage()
+Context-->>Comp : {language, t}
+Comp->>Comp : getName(speaker), getRole(speaker)
+Comp->>Grid : Render grid with cards
+Grid->>Card : Each card with animation-delay
+Card-->>User : Displays profile with image/name/role
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L171-L185)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L199-L231)
-- [index.css](file://src/index.css#L190-L241)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L171-L185)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L199-L231)
+- [index.css](src/index.css#L190-L241)
 
 ## Detailed Component Analysis
 
@@ -102,7 +100,7 @@ The Speaker interface defines:
 This structure enables consistent data handling and ensures type safety when selecting localized content.
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L18-L27)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L18-L27)
 
 ### Multilingual Name and Role Handling
 The component uses two helper functions:
@@ -112,8 +110,8 @@ The component uses two helper functions:
 These functions rely on the language context provided by the LanguageContext.
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L171-L185)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L171-L185)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 ### Conditional Image Rendering
 Each card conditionally renders either:
@@ -123,7 +121,7 @@ Each card conditionally renders either:
 Alt text is generated from the selected name to ensure accessibility.
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L208-L219)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L208-L219)
 
 ### Responsive Grid Layout (1–2–3–4 Columns)
 The grid adapts across breakpoints:
@@ -135,7 +133,7 @@ The grid adapts across breakpoints:
 Spacing is controlled via a consistent gap between cards.
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L199-L200)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L199-L200)
 
 ### Animation Sequence and Staggered Delays
 Cards apply a fade-up animation with a staggered delay. The delay increases incrementally per card index, creating a cascading effect.
@@ -150,8 +148,8 @@ Animate --> End(["Cards appear in sequence"])
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L202-L206)
-- [index.css](file://src/index.css#L190-L241)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L202-L206)
+- [index.css](src/index.css#L190-L241)
 
 ### Card Design, Hover Effects, and Ring Decorations
 - Card container: Rounded corners, border, subtle background, and hover enhancements (border and shadow).
@@ -160,8 +158,8 @@ Animate --> End(["Cards appear in sequence"])
 - Typography: Bold name and muted role text with relaxed line height for readability.
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L202-L227)
-- [index.css](file://src/index.css#L190-L241)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L202-L227)
+- [index.css](src/index.css#L190-L241)
 
 ### Accessibility and Internationalization Notes
 - Alt text for images is derived from the selected name, ensuring meaningful alternatives.
@@ -169,9 +167,9 @@ Animate --> End(["Cards appear in sequence"])
 - The language context determines directionality and language selection for names and roles.
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L190-L197)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L211-L214)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L190-L197)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L211-L214)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 ## Dependency Analysis
 SpeakersSection depends on:
@@ -185,14 +183,14 @@ CSS["index.css"] --> SS
 ```
 
 **Diagram sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L160-L249)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L160-L249)
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L160-L249)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L160-L249)
 
 ## Performance Considerations
 - Image optimization: Ensure speaker images are appropriately sized and compressed to minimize load times.
@@ -209,27 +207,27 @@ Common issues and resolutions:
   - Resolution: Add an image URL for the speaker or ensure the asset path is correct and the image is present.
   - Reference: Conditional rendering for image vs fallback.
   - Section sources
-    - [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L208-L219)
+    - [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L208-L219)
 
 - Text overflow in role descriptions
   - Symptom: Long role text wraps awkwardly or clips unexpectedly.
   - Resolution: Adjust line height or consider truncating long roles. Ensure adequate spacing around the text.
   - Section sources
-    - [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L224-L226)
+    - [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L224-L226)
 
 - Incorrect language selection
   - Symptom: Names or roles display in the wrong language.
   - Resolution: Verify the current language in the LanguageContext and ensure translation keys exist for the selected language.
   - Section sources
-    - [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L171-L185)
-    - [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L269-L292)
+    - [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L171-L185)
+    - [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L269-L292)
 
 - Animation not triggering
   - Symptom: Cards appear instantly without fade-up effect.
   - Resolution: Confirm the animation keyframes and utility classes are included and that the delay is applied to each card.
   - Section sources
-    - [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L202-L206)
-    - [index.css](file://src/index.css#L190-L241)
+    - [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L202-L206)
+    - [index.css](src/index.css#L190-L241)
 
 ## Conclusion
 SpeakersSection delivers a clean, responsive, and accessible showcase of event participants. Its typed data model, robust multilingual handling, and polished animations contribute to a professional presentation. Following the guidance here will help maintain and extend the component effectively.
@@ -250,12 +248,12 @@ References:
 - Image imports and conditional rendering
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L18-L27)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L29-L169)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L17)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L81-L84)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L165-L168)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L249-L252)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L18-L27)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L29-L169)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L17)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L81-L84)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L165-L168)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L249-L252)
 
 ### Managing Image Assets
 - Place speaker photos under the assets directory and import them at the top of the component.
@@ -266,8 +264,8 @@ Reference:
 - Image imports and conditional rendering
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L17)
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L208-L219)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L17)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L208-L219)
 
 ### Customizing Layout and Animations
 - Grid columns: Adjust Tailwind grid classes to change breakpoint thresholds.
@@ -280,5 +278,5 @@ References:
 - Animation keyframes and utilities
 
 **Section sources**
-- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L199-L206)
-- [index.css](file://src/index.css#L190-L241)
+- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L199-L206)
+- [index.css](src/index.css#L190-L241)

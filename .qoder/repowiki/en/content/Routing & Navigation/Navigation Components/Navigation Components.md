@@ -1,16 +1,14 @@
 # Navigation Components
 
-<cite>
-**Referenced Files in This Document**
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [App.tsx](file://src/App.tsx)
-- [index.css](file://src/index.css)
-- [utils.ts](file://src/lib/utils.ts)
-</cite>
+> **Referenced Files in This Document**
+> - [Navbar.tsx](src/components/Navbar.tsx)
+> - [ScrollToTop.tsx](src/components/ScrollToTop.tsx)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [App.tsx](src/App.tsx)
+> - [index.css](src/index.css)
+> - [utils.ts](src/lib/utils.ts)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -64,26 +62,26 @@ ScrollToTop --> Utils
 ```
 
 **Diagram sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [index.css](file://src/index.css#L130-L142)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [App.tsx](src/App.tsx#L1-L43)
+- [index.css](src/index.css#L130-L142)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [App.tsx](file://src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [App.tsx](src/App.tsx#L1-L43)
 
 ## Core Components
 - Navbar: Fixed header with logo, desktop navigation links, mobile menu toggle, and LanguageSwitcher integration. Uses hash-based navigation via scrollIntoView and preventDefault to smoothly scroll to sections.
 - ScrollToTop: Floating button that appears when the user scrolls beyond a threshold, enabling smooth scroll-to-top with animated transitions.
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 ## Architecture Overview
 The Navbar and ScrollToTop components are composed within the main Index page. Navbar listens to scroll events to update its visual state and manages mobile menu visibility. Both components rely on the LanguageContext for i18n and directionality, and on Tailwind utilities for styling and transitions.
@@ -98,7 +96,7 @@ participant Page as "Index.tsx"
 participant Window as "Window"
 User->>Navbar : Click desktop/mobile link
 Navbar->>Navbar : preventDefault()
-Navbar->>Window : scrollToSection(href) -> scrollIntoView({ behavior : "smooth" })
+Navbar->>Window : scrollToSection(href) -> scrollIntoView({ behavior : smooth })
 Navbar->>Lang : Render LanguageSwitcher (variant="navbar")
 Lang->>LangCtx : useLanguage()
 LangCtx-->>Lang : language, t(), isRTL
@@ -106,10 +104,10 @@ Navbar-->>Page : Renders sections below
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L30-L76)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [Navbar.tsx](src/components/Navbar.tsx#L30-L76)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
 
 ## Detailed Component Analysis
 
@@ -143,9 +141,9 @@ CloseMenu --> End(["Done"])
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L11-L17)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L30-L76)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L95-L116)
+- [Navbar.tsx](src/components/Navbar.tsx#L11-L17)
+- [Navbar.tsx](src/components/Navbar.tsx#L30-L76)
+- [Navbar.tsx](src/components/Navbar.tsx#L95-L116)
 
 Implementation highlights:
 - State and effects: useState for scrolled and mobile menu state; useEffect for scroll listener and cleanup.
@@ -163,11 +161,11 @@ Integration points:
 - Uses t() from LanguageContext for localized labels.
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L130-L142)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L130-L142)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ### ScrollToTop Component
 Responsibilities:
@@ -195,11 +193,11 @@ ScrollTop --> End(["Done"])
 ```
 
 **Diagram sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 **Section sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [index.css](file://src/index.css#L130-L142)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [index.css](src/index.css#L130-L142)
 
 ### LanguageSwitcher Integration
 - Navbar renders LanguageSwitcher in both desktop and mobile contexts.
@@ -207,9 +205,9 @@ ScrollTop --> End(["Done"])
 - The Navbar passes variant="navbar" to align styling with the navigation bar.
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L78-L116)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L267-L292)
+- [Navbar.tsx](src/components/Navbar.tsx#L78-L116)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L267-L292)
 
 ## Dependency Analysis
 - Navbar depends on:
@@ -235,20 +233,20 @@ ScrollToTop --> Utils
 ```
 
 **Diagram sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L130-L142)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L130-L142)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
-- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
-- [index.css](file://src/index.css#L130-L142)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
+- [index.css](src/index.css#L130-L142)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Performance Considerations
 - Scroll listeners: Both Navbar and ScrollToTop attach scroll listeners in useEffect. Ensure cleanup removes listeners to prevent memory leaks.
@@ -275,8 +273,8 @@ Common issues and resolutions:
   - Resolution: Confirm aria-label presence on the toggle button and ensure focus moves appropriately when the menu opens.
 
 **Section sources**
-- [Navbar.tsx](file://src/components/Navbar.tsx#L30-L76)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [Navbar.tsx](src/components/Navbar.tsx#L30-L76)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 ## Conclusion
 The Navbar and ScrollToTop components provide a cohesive navigation experience with responsive design, internationalization, and smooth scrolling. Their modular structure allows easy maintenance and extension. Following the outlined state/event patterns, accessibility practices, and performance tips ensures a robust and user-friendly interface.

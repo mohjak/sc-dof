@@ -1,17 +1,15 @@
 # Theme Customization
 
-<cite>
-**Referenced Files in This Document**
-- [index.css](file://src/index.css)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [utils.ts](file://src/lib/utils.ts)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx)
-- [AgendaSection.tsx](file://src/components/AgendaSection.tsx)
-- [card.tsx](file://src/components/ui/card.tsx)
-- [App.tsx](file://src/App.tsx)
-- [main.tsx](file://src/main.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [index.css](src/index.css)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [utils.ts](src/lib/utils.ts)
+> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
+> - [HeroSection.tsx](src/components/HeroSection.tsx)
+> - [AgendaSection.tsx](src/components/AgendaSection.tsx)
+> - [card.tsx](src/components/ui/card.tsx)
+> - [App.tsx](src/App.tsx)
+> - [main.tsx](src/main.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -51,15 +49,15 @@ E --> C
 ```
 
 **Diagram sources**
-- [index.css](file://src/index.css#L20-L128)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [main.tsx](file://src/main.tsx#L1-L6)
+- [index.css](src/index.css#L20-L128)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [main.tsx](src/main.tsx#L1-L6)
 
 **Section sources**
-- [index.css](file://src/index.css#L20-L128)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [main.tsx](file://src/main.tsx#L1-L6)
+- [index.css](src/index.css#L20-L128)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [main.tsx](src/main.tsx#L1-L6)
 
 ## Core Components
 - CSS Variables in :root define the color palette, gradients, shadows, and radius tokens. Dark mode toggles these variables under a .dark selector.
@@ -69,9 +67,9 @@ E --> C
 - cn() merges conditional class names safely, preventing conflicts and ensuring predictable overrides.
 
 **Section sources**
-- [index.css](file://src/index.css#L20-L128)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [index.css](src/index.css#L20-L128)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Architecture Overview
 The theme pipeline connects CSS variables to Tailwind utilities and component rendering:
@@ -92,9 +90,9 @@ Comp-->>Browser : Render themed UI
 ```
 
 **Diagram sources**
-- [index.css](file://src/index.css#L20-L128)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [index.css](src/index.css#L20-L128)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Detailed Component Analysis
 
@@ -109,8 +107,8 @@ Practical implications:
 - Dark mode is controlled by applying the .dark class to the root element (via Tailwind’s darkMode setting).
 
 **Section sources**
-- [index.css](file://src/index.css#L20-L128)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L20-L128)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ### Tailwind Color Resolution via hsl(var(--token))
 - Tailwind maps each semantic color to a CSS variable using hsl(var(--token)).
@@ -122,7 +120,7 @@ Effects:
 - Accordion animations leverage a CSS variable for content height.
 
 **Section sources**
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ### Custom Utility Classes
 - Gradient utilities: .gradient-hero, .gradient-gold, .gradient-green, and .text-gradient provide consistent hero and text treatments.
@@ -135,9 +133,9 @@ Usage examples:
 - LanguageSwitcher uses .glass and backdrop blur for floating controls.
 
 **Section sources**
-- [index.css](file://src/index.css#L143-L172)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L74-L93)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L19-L41)
+- [index.css](src/index.css#L143-L172)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L74-L93)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L19-L41)
 
 ### Animation Utilities and Staggered Delays
 - Keyframes define float, pulse-glow, shimmer, fade-up, scale-in, and confetti-fall.
@@ -149,9 +147,9 @@ Usage examples:
 - HeroSection decoratively animates confetti particles with .animate-confetti and random colors from CSS variables.
 
 **Section sources**
-- [index.css](file://src/index.css#L174-L249)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L20-L33)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L36-L68)
+- [index.css](src/index.css#L174-L249)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L20-L33)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L36-L68)
 
 ### Conditional Class Composition with cn()
 - The cn() utility merges clsx inputs and deduplicates conflicting Tailwind classes using tailwind-merge.
@@ -162,9 +160,9 @@ Usage examples:
 - LanguageSwitcher conditionally applies active/inactive states and hover effects.
 
 **Section sources**
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [card.tsx](file://src/components/ui/card.tsx#L1-L10)
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L20-L41)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [card.tsx](src/components/ui/card.tsx#L1-L10)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L20-L41)
 
 ### Example Components Using Theme Tokens
 - LanguageSwitcher:
@@ -176,8 +174,8 @@ Usage examples:
   - Randomly colors confetti using hsl(var(--syrian-red)), hsl(var(--syrian-green)), and hsl(var(--gold)).
 
 **Section sources**
-- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L19-L41)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L36-L93)
+- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L19-L41)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L36-L93)
 
 ### Adding New Theme Colors
 Steps:
@@ -193,8 +191,8 @@ Guidance:
 - Test both light and dark modes to ensure readability.
 
 **Section sources**
-- [index.css](file://src/index.css#L20-L128)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L20-L128)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ### Modifying Gradients
 Steps:
@@ -204,9 +202,9 @@ Steps:
 4. Verify both light and dark mode gradients adapt to theme changes.
 
 **Section sources**
-- [index.css](file://src/index.css#L69-L73)
-- [index.css](file://src/index.css#L144-L154)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L84-L93)
+- [index.css](src/index.css#L69-L73)
+- [index.css](src/index.css#L144-L154)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L84-L93)
 
 ### Creating Custom Animation Patterns
 Steps:
@@ -221,8 +219,8 @@ Best practices:
 - Prefer subtle motion to maintain accessibility.
 
 **Section sources**
-- [index.css](file://src/index.css#L174-L249)
-- [HeroSection.tsx](file://src/components/HeroSection.tsx#L36-L68)
+- [index.css](src/index.css#L174-L249)
+- [HeroSection.tsx](src/components/HeroSection.tsx#L36-L68)
 
 ## Dependency Analysis
 The theme system depends on:
@@ -241,16 +239,16 @@ Entry --> Comp
 ```
 
 **Diagram sources**
-- [index.css](file://src/index.css#L20-L128)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [main.tsx](file://src/main.tsx#L1-L6)
+- [index.css](src/index.css#L20-L128)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [main.tsx](src/main.tsx#L1-L6)
 
 **Section sources**
-- [index.css](file://src/index.css#L20-L128)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [main.tsx](file://src/main.tsx#L1-L6)
+- [index.css](src/index.css#L20-L128)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [main.tsx](src/main.tsx#L1-L6)
 
 ## Performance Considerations
 - CSS variables reduce duplication and improve maintainability; Tailwind’s JIT compilation ensures only used utilities are generated.
@@ -272,9 +270,9 @@ Common issues and resolutions:
   - Ensure the component applies the animation class and that the element is visible.
 
 **Section sources**
-- [index.css](file://src/index.css#L20-L128)
-- [index.css](file://src/index.css#L143-L249)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [index.css](src/index.css#L20-L128)
+- [index.css](src/index.css#L143-L249)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Conclusion
 The theme system centers on a single source of truth: CSS variables in :root. Tailwind consumes these variables to expose semantic color classes, while custom utilities and animations provide cohesive design patterns. The cn() utility ensures predictable class composition. By following the steps outlined, you can extend the palette, adjust gradients, and introduce new animations while maintaining consistency across light and dark modes.
@@ -289,6 +287,6 @@ The theme system centers on a single source of truth: CSS variables in :root. Ta
 - Staggered Delays: .delay-100, .delay-200, .delay-300, .delay-400, .delay-500
 
 **Section sources**
-- [index.css](file://src/index.css#L20-L128)
-- [index.css](file://src/index.css#L143-L249)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [index.css](src/index.css#L20-L128)
+- [index.css](src/index.css#L143-L249)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)

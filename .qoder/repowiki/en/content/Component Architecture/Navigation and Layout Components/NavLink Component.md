@@ -1,13 +1,11 @@
 # NavLink Component
 
-<cite>
-**Referenced Files in This Document**
-- [NavLink.tsx](file://src/components/NavLink.tsx)
-- [utils.ts](file://src/lib/utils.ts)
-- [tailwind.config.ts](file://tailwind.config.ts)
-- [App.tsx](file://src/App.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [NavLink.tsx](src/components/NavLink.tsx)
+> - [utils.ts](src/lib/utils.ts)
+> - [tailwind.config.ts](tailwind.config.ts)
+> - [App.tsx](src/App.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -42,18 +40,18 @@ D --> E
 ```
 
 **Diagram sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 **Section sources**
-- [App.tsx](file://src/App.tsx#L1-L43)
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [App.tsx](src/App.tsx#L1-L43)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Core Components
 - NavLink: A thin wrapper around React Router’s NavLink that adds className composition via cn and supports activeClassName and pendingClassName for dynamic styling based on isActive and isPending states.
@@ -67,9 +65,9 @@ Key implementation highlights:
 - Accessibility: Inherits native anchor semantics and supports aria attributes via props.
 
 **Section sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Architecture Overview
 The NavLink component sits between the application’s routing layer and the UI styling layer. It receives routing props from React Router, computes active/pending classes via cn, and renders a native anchor element with proper ref forwarding.
@@ -90,12 +88,12 @@ DOM-->>User : Updated active state styling
 ```
 
 **Diagram sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ## Detailed Component Analysis
 
@@ -133,17 +131,17 @@ class NavLink {
 class Utils_cn {
 +cn(...inputs) string
 }
-NavLink --> NavLinkCompatProps : "accepts"
-NavLink --> Utils_cn : "uses"
+NavLink --> NavLinkCompatProps : accepts
+NavLink --> Utils_cn : uses
 ```
 
 **Diagram sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 **Section sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- [utils.ts](src/lib/utils.ts#L1-L7)
 
 ### Practical Usage Examples
 - Active link styling in navigation menus:
@@ -157,7 +155,7 @@ NavLink --> Utils_cn : "uses"
 Note: Specific code examples are referenced by file path and line ranges rather than pasted content.
 
 **Section sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
 
 ### Common Issues and Solutions
 - Broken ref forwarding:
@@ -174,8 +172,8 @@ Note: Specific code examples are referenced by file path and line ranges rather 
   - Fixes: Use static class names for active/pending states or configure content globs to include dynamic usage.
 
 **Section sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Dependency Analysis
 NavLink depends on:
@@ -191,14 +189,14 @@ TW["tailwind.config.ts"] --> NLC
 ```
 
 **Diagram sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 **Section sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- [utils.ts](file://src/lib/utils.ts#L1-L7)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- [utils.ts](src/lib/utils.ts#L1-L7)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Performance Considerations
 - Minimize re-renders by avoiding inline function creation for className when props are static.
@@ -216,8 +214,8 @@ TW["tailwind.config.ts"] --> NLC
   - Ensure the component remains an anchor element and retains focus management if needed.
 
 **Section sources**
-- [NavLink.tsx](file://src/components/NavLink.tsx#L1-L28)
-- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [NavLink.tsx](src/components/NavLink.tsx#L1-L28)
+- [tailwind.config.ts](tailwind.config.ts#L1-L98)
 
 ## Conclusion
 The NavLink component provides a clean, extensible way to style active and pending navigation states while preserving React Router’s routing behavior and accessibility. By leveraging cn for class composition and forwardRef for DOM access, it integrates seamlessly with Tailwind CSS and the broader application architecture. Following the best practices and troubleshooting guidance outlined here will help ensure reliable, accessible navigation across all user contexts.

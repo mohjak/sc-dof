@@ -1,13 +1,11 @@
 # ScrollToTop Component
 
-<cite>
-**Referenced Files in This Document**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx)
-- [Index.tsx](file://src/pages/Index.tsx)
-- [index.css](file://src/index.css)
-- [tailwind.config.ts](file://src/tailwind.config.ts)
-- [Navbar.tsx](file://src/components/Navbar.tsx)
-</cite>
+> **Referenced Files in This Document**
+> - [ScrollToTop.tsx](src/components/ScrollToTop.tsx)
+> - [Index.tsx](src/pages/Index.tsx)
+> - [index.css](src/index.css)
+> - [tailwind.config.ts](src/tailwind.config.ts)
+> - [Navbar.tsx](src/components/Navbar.tsx)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -44,16 +42,16 @@ ST --> TW
 ```
 
 **Diagram sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L1-L98)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](src/tailwind.config.ts#L1-L98)
 
 **Section sources**
-- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L1-L98)
+- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](src/tailwind.config.ts#L1-L98)
 
 ## Core Components
 - ScrollToTop: A floating button that toggles visibility based on scroll position and triggers smooth scroll to the top on click.
@@ -67,8 +65,8 @@ Key implementation highlights:
 - Cleanup: Removes the scroll event listener in the effect cleanup to avoid memory leaks.
 
 **Section sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [Index.tsx](file://src/pages/Index.tsx#L10-L26)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [Index.tsx](src/pages/Index.tsx#L10-L26)
 
 ## Architecture Overview
 The component participates in the page lifecycle and interacts with the browser’s scroll system and DOM.
@@ -79,17 +77,17 @@ participant User as "User"
 participant Window as "Window"
 participant ST as "ScrollToTop"
 participant DOM as "DOM"
-User->>Window : "Scroll"
-Window->>ST : "scroll event"
-ST->>ST : "toggle visibility based on scrollY"
-ST->>DOM : "update className (opacity/transform)"
-User->>ST : "Click button"
-ST->>Window : "scrollTo({ top : 0, behavior : 'smooth' })"
-Window-->>User : "Smooth scroll to top"
+User->>Window : Scroll
+Window->>ST : scroll event
+ST->>ST : toggle visibility based on scrollY
+ST->>DOM : update className (opacity/transform)
+User->>ST : Click button
+ST->>Window : scrollTo({ top : 0, behavior : 'smooth' })
+Window-->>User : Smooth scroll to top
 ```
 
 **Diagram sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 ## Detailed Component Analysis
 
@@ -112,10 +110,10 @@ RemoveListener --> End(["Unmount"])
 ```
 
 **Diagram sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 **Section sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
 
 ### Smooth Scrolling Behavior
 - The component triggers window.scrollTo with smooth behavior to return to the top of the page.
@@ -125,17 +123,17 @@ RemoveListener --> End(["Unmount"])
 sequenceDiagram
 participant ST as "ScrollToTop"
 participant Window as "Window"
-ST->>Window : "scrollTo({ top : 0, behavior : 'smooth' })"
-Window-->>ST : "Scroll animation completes"
+ST->>Window : scrollTo({ top : 0, behavior : 'smooth' })
+Window-->>ST : Scroll animation completes
 ```
 
 **Diagram sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L20-L25)
-- [index.css](file://src/index.css#L130-L142)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L20-L25)
+- [index.css](src/index.css#L130-L142)
 
 **Section sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L20-L25)
-- [index.css](file://src/index.css#L130-L142)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L20-L25)
+- [index.css](src/index.css#L130-L142)
 
 ### Animated Appearance and Disappearance
 - Conditional Tailwind classes control opacity and vertical translation to animate the button’s entrance and exit.
@@ -148,23 +146,23 @@ Visible --> Hidden
 ```
 
 **Diagram sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L27-L37)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L27-L37)
 
 **Section sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L27-L37)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L27-L37)
 
 ### Accessibility Considerations
 - aria-label provides a screen-reader-friendly label for the button.
 - Keyboard navigation: The button is a standard HTML button and receives focus via tab order; ensure focus styles align with the project’s design system.
 
 **Section sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L28-L36)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L28-L36)
 
 ### Integration with the Page Layout
 - The component is included in the main page layout so it remains visible across routes.
 
 **Section sources**
-- [Index.tsx](file://src/pages/Index.tsx#L10-L26)
+- [Index.tsx](src/pages/Index.tsx#L10-L26)
 
 ## Dependency Analysis
 - Internal dependencies:
@@ -188,14 +186,14 @@ GLOBALCSS --> SCROLL["scroll-behavior smooth"]
 ```
 
 **Diagram sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L1-L98)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](src/tailwind.config.ts#L1-L98)
 
 **Section sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L1-L41)
-- [index.css](file://src/index.css#L1-L249)
-- [tailwind.config.ts](file://src/tailwind.config.ts#L1-L98)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L1-L41)
+- [index.css](src/index.css#L1-L249)
+- [tailwind.config.ts](src/tailwind.config.ts#L1-L98)
 
 ## Performance Considerations
 - Scroll event frequency: Scroll events fire frequently and can cause layout thrashing if not optimized. The current implementation performs a simple comparison and state update, which is lightweight.
@@ -206,12 +204,12 @@ GLOBALCSS --> SCROLL["scroll-behavior smooth"]
 - Memory leak prevention: The effect already removes the scroll listener on unmount, which is essential.
 
 Practical example references:
-- Event listener setup and cleanup in useEffect: [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L7-L18)
-- Similar pattern in Navbar: [Navbar.tsx](file://src/components/Navbar.tsx#L14-L16)
+- Event listener setup and cleanup in useEffect: [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L7-L18)
+- Similar pattern in Navbar: [Navbar.tsx](src/components/Navbar.tsx#L14-L16)
 
 **Section sources**
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L7-L18)
-- [Navbar.tsx](file://src/components/Navbar.tsx#L14-L16)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L7-L18)
+- [Navbar.tsx](src/components/Navbar.tsx#L14-L16)
 
 ## Troubleshooting Guide
 - Button does not appear:
@@ -227,12 +225,12 @@ Practical example references:
   - Test keyboard focus and ensure focus visibility is adequate.
 
 Integration references:
-- Component inclusion in the page: [Index.tsx](file://src/pages/Index.tsx#L10-L26)
-- Scroll listener pattern: [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L7-L18)
+- Component inclusion in the page: [Index.tsx](src/pages/Index.tsx#L10-L26)
+- Scroll listener pattern: [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L7-L18)
 
 **Section sources**
-- [Index.tsx](file://src/pages/Index.tsx#L10-L26)
-- [ScrollToTop.tsx](file://src/components/ScrollToTop.tsx#L7-L18)
+- [Index.tsx](src/pages/Index.tsx#L10-L26)
+- [ScrollToTop.tsx](src/components/ScrollToTop.tsx#L7-L18)
 
 ## Conclusion
 The ScrollToTop component provides a simple yet effective way to improve navigation on long pages. It uses React hooks for state and side effects, Tailwind for smooth animations and layout, and Lucide for a clear visual indicator. With proper cleanup and potential performance enhancements like debouncing, it integrates cleanly into the application’s UI and supports accessibility standards.
