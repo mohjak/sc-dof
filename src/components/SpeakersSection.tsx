@@ -81,9 +81,9 @@ const speakers: Speaker[] = [
     name: 'أ. حسان الجاجة',
     nameEn: 'Hassan Al-Jaja',
     nameTr: 'Hassan Al-Jaja',
-    role: 'شاعر سوري',
-    roleEn: 'Syrian Poet',
-    roleTr: 'Suriyeli Şair',
+    role: 'داعية ومربي وشاعر سوري',
+    roleEn: 'Islamic Preacher, Educator & Syrian Poet',
+    roleTr: 'İslami Davetçi, Eğitimci ve Suriyeli Şair',
     image: hassanAljjajaImg,
   },
   {
