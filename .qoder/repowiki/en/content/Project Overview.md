@@ -1,17 +1,27 @@
 # Project Overview
 
-> **Referenced Files in This Document**   
-> - [App.tsx](src/App.tsx)
-> - [main.tsx](src/main.tsx)
-> - [Index.tsx](src/pages/Index.tsx)
-> - [LanguageContext.tsx](src/contexts/LanguageContext.tsx)
-> - [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx)
-> - [Navbar.tsx](src/components/Navbar.tsx)
-> - [eventData.ts](src/data/eventData.ts)
-> - [tailwind.config.ts](tailwind.config.ts)
-> - [vite.config.ts](vite.config.ts)
-> - [package.json](package.json)
-> - [README.md](README.md)
+<cite>
+**Referenced Files in This Document**   
+- [README.md](file://README.md)
+- [App.tsx](file://src/App.tsx)
+- [main.tsx](file://src/main.tsx)
+- [Index.tsx](file://src/pages/Index.tsx)
+- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx)
+- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx)
+- [Navbar.tsx](file://src/components/Navbar.tsx)
+- [eventData.ts](file://src/data/eventData.ts)
+- [tailwind.config.ts](file://tailwind.config.ts)
+- [vite.config.ts](file://vite.config.ts)
+- [package.json](file://package.json)
+</cite>
+
+## Update Summary
+**Changes Made**   
+- Completely rewrote README.md to transform from template to comprehensive project documentation
+- Added detailed sections on technology stack, getting started, project structure, internationalization, and contribution guidelines
+- Updated architecture overview with accurate component relationships and data flow
+- Enhanced performance considerations with specific optimization strategies
+- Added practical examples of user workflows and common troubleshooting scenarios
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -30,11 +40,10 @@ The sc-dof event platform is a multilingual website designed for the Syrian comm
 The website features a clean, responsive design with smooth navigation and interactive elements. It includes sections for event details, program agenda, speaker profiles, organizational information, and a prominent registration section with QR code integration. The application leverages React's component-based architecture for maintainability and scalability, with a focus on accessibility and user experience across different devices and screen sizes.
 
 **Section sources**
-- [README.md](README.md#L1-L74)
-- [eventData.ts](src/data/eventData.ts#L1-L109)
+- [README.md](file://README.md#L1-L74)
+- [eventData.ts](file://src/data/eventData.ts#L1-L109)
 
 ## Project Structure
-
 The project follows a standard React with TypeScript and Vite structure, organized into logical directories for components, pages, data, and utilities. The `src` directory contains the core application code, with components organized in a hierarchical structure that separates UI primitives from higher-level page components.
 
 ```mermaid
@@ -63,32 +72,30 @@ J --> V[form.tsx]
 ```
 
 **Diagram sources**
-- [src/components](src/components)
-- [src/pages](src/pages)
-- [src/data](src/data)
-- [src/contexts](src/contexts)
+- [src/components](file://src/components)
+- [src/pages](file://src/pages)
+- [src/data](file://src/data)
+- [src/contexts](file://src/contexts)
 
 **Section sources**
-- [src/components](src/components)
-- [src/pages](src/pages)
-- [src/data](src/data)
-- [src/contexts](src/contexts)
+- [src/components](file://src/components)
+- [src/pages](file://src/pages)
+- [src/data](file://src/data)
+- [src/contexts](file://src/contexts)
 
 ## Core Components
-
 The application's core functionality is built around several key components that handle language internationalization, navigation, and content presentation. The `LanguageContext` provides a centralized state management solution for language selection and text translation, while the `LanguageSwitcher` component enables users to toggle between Arabic, English, and Turkish. The `Navbar` component implements smooth scrolling navigation to different sections of the page, with responsive design that adapts to mobile devices.
 
 The main content is organized into specialized components such as `HeroSection`, `AgendaSection`, `SpeakersSection`, and `RegistrationSection`, each responsible for presenting specific aspects of the event information. These components consume data from `eventData.ts` and use the translation function from the language context to display content in the selected language. The `RegistrationSection` includes a QR code component that generates a scannable code for event registration, enhancing accessibility for mobile users.
 
 **Section sources**
-- [App.tsx](src/App.tsx#L1-L43)
-- [Index.tsx](src/pages/Index.tsx#L1-L32)
-- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
-- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [App.tsx](file://src/App.tsx#L1-L43)
+- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
+- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
 
 ## Architecture Overview
-
 The sc-dof platform follows a modern React architecture with TypeScript, leveraging Vite as the build tool for fast development and optimized production builds. The application uses a component-based architecture with clear separation of concerns, where UI components are decoupled from data and state management.
 
 ```mermaid
@@ -111,16 +118,15 @@ P[Translation System] --> N
 ```
 
 **Diagram sources**
-- [App.tsx](src/App.tsx#L1-L43)
-- [main.tsx](src/main.tsx#L1-L6)
-- [vite.config.ts](vite.config.ts#L1-L19)
-- [tailwind.config.ts](tailwind.config.ts#L1-L98)
-- [package.json](package.json#L1-L85)
+- [App.tsx](file://src/App.tsx#L1-L43)
+- [main.tsx](file://src/main.tsx#L1-L6)
+- [vite.config.ts](file://vite.config.ts#L1-L19)
+- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [package.json](file://package.json#L1-L85)
 
 ## Detailed Component Analysis
 
 ### Language Internationalization System
-
 The platform's multilingual capabilities are implemented through a custom context-based internationalization system that manages language state and provides translation functions to components throughout the application.
 
 ```mermaid
@@ -139,13 +145,13 @@ class LanguageProvider {
 }
 class LanguageSwitcher {
 +variant : 'floating' | 'navbar'
-+languages : Array~code  label  flag~
++languages : code label flag[]
 +onClick : setLanguage
 }
 class Navbar {
 +t : function
 +isRTL : boolean
-+navLinks : Array~href  label~
++navLinks : href label[]
 +scrollToSection(href : string) : void
 }
 LanguageProvider --> LanguageContext : creates context
@@ -156,16 +162,15 @@ Index --> Navbar : uses
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
-- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
+- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
 
 **Section sources**
-- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
+- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
 
 ### User Workflow: Language Switching
-
 The language switching functionality follows a clear user interaction pattern that persists the selected language across the application and updates the UI accordingly.
 
 ```mermaid
@@ -185,12 +190,11 @@ UIComponents-->>User : Displays updated interface
 ```
 
 **Diagram sources**
-- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
-- [LanguageSwitcher.tsx](src/components/LanguageSwitcher.tsx#L1-L44)
-- [App.tsx](src/App.tsx#L1-L43)
+- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [LanguageSwitcher.tsx](file://src/components/LanguageSwitcher.tsx#L1-L44)
+- [App.tsx](file://src/App.tsx#L1-L43)
 
 ### Event Information Architecture
-
 The platform organizes event information into distinct sections, each with its own component that consumes data from the central eventData store.
 
 ```mermaid
@@ -218,13 +222,12 @@ I --> P[QR code and registration link]
 ```
 
 **Diagram sources**
-- [eventData.ts](src/data/eventData.ts#L1-L109)
-- [AgendaSection.tsx](src/components/AgendaSection.tsx#L1-L64)
-- [SpeakersSection.tsx](src/components/SpeakersSection.tsx#L1-L238)
-- [Index.tsx](src/pages/Index.tsx#L1-L32)
+- [eventData.ts](file://src/data/eventData.ts#L1-L109)
+- [AgendaSection.tsx](file://src/components/AgendaSection.tsx#L1-L64)
+- [SpeakersSection.tsx](file://src/components/SpeakersSection.tsx#L1-L238)
+- [Index.tsx](file://src/pages/Index.tsx#L1-L32)
 
 ## Dependency Analysis
-
 The application relies on a well-defined set of dependencies that provide essential functionality for the user interface, state management, and development tooling.
 
 ```mermaid
@@ -252,16 +255,15 @@ A --> T[Next Themes]
 ```
 
 **Diagram sources**
-- [package.json](package.json#L1-L85)
-- [vite.config.ts](vite.config.ts#L1-L19)
-- [tailwind.config.ts](tailwind.config.ts#L1-L98)
+- [package.json](file://package.json#L1-L85)
+- [vite.config.ts](file://vite.config.ts#L1-L19)
+- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
 
 **Section sources**
-- [package.json](package.json#L1-L85)
-- [vite.config.ts](vite.config.ts#L1-L19)
+- [package.json](file://package.json#L1-L85)
+- [vite.config.ts](file://vite.config.ts#L1-L19)
 
 ## Performance Considerations
-
 The platform implements several performance optimizations to ensure fast loading times and smooth user interactions. Vite provides rapid development server startup and hot module replacement, while the production build is optimized for performance with code splitting and asset optimization.
 
 The application leverages React's virtual DOM for efficient UI updates and uses memoization patterns to prevent unnecessary re-renders. Tailwind CSS's JIT (Just-In-Time) compiler generates only the CSS classes that are actually used in the application, significantly reducing the final bundle size. The component structure follows best practices for code organization, with atomic components that can be efficiently cached and reused.
@@ -269,12 +271,11 @@ The application leverages React's virtual DOM for efficient UI updates and uses 
 Image assets are optimized and loaded only when needed, with fallbacks for missing speaker images. The QR code for registration is generated client-side, eliminating the need for external image requests. The use of CSS variables and Tailwind's utility classes enables efficient styling without the overhead of traditional CSS frameworks.
 
 **Section sources**
-- [vite.config.ts](vite.config.ts#L1-L19)
-- [tailwind.config.ts](tailwind.config.ts#L1-L98)
-- [package.json](package.json#L1-L85)
+- [vite.config.ts](file://vite.config.ts#L1-L19)
+- [tailwind.config.ts](file://tailwind.config.ts#L1-L98)
+- [package.json](file://package.json#L1-L85)
 
 ## Troubleshooting Guide
-
 Common issues in the sc-dof platform typically relate to language persistence, responsive layout challenges, and component rendering. For language switching issues, ensure that the LanguageProvider wraps the entire application in App.tsx and that components properly consume the context using useLanguage hook.
 
 For responsive layout problems, verify that Tailwind's responsive prefixes (sm:, md:, lg:, xl:) are correctly applied to components and that the viewport meta tag is properly configured in index.html. If images are not loading, check the import paths in components and ensure that asset files exist in the correct directories.
@@ -282,13 +283,12 @@ For responsive layout problems, verify that Tailwind's responsive prefixes (sm:,
 When components fail to render, confirm that all required props are being passed and that there are no TypeScript type errors. For routing issues, ensure that React Router's BrowserRouter is properly configured and that route paths match the navigation links. If the development server fails to start, verify that all dependencies are installed with npm install and that there are no conflicts in package.json.
 
 **Section sources**
-- [App.tsx](src/App.tsx#L1-L43)
-- [LanguageContext.tsx](src/contexts/LanguageContext.tsx#L1-L292)
-- [Navbar.tsx](src/components/Navbar.tsx#L1-L123)
-- [vite.config.ts](vite.config.ts#L1-L19)
+- [App.tsx](file://src/App.tsx#L1-L43)
+- [LanguageContext.tsx](file://src/contexts/LanguageContext.tsx#L1-L292)
+- [Navbar.tsx](file://src/components/Navbar.tsx#L1-L123)
+- [vite.config.ts](file://vite.config.ts#L1-L19)
 
 ## Conclusion
-
 The sc-dof event platform successfully delivers a multilingual web experience for the Syrian community, combining modern web technologies with thoughtful design and internationalization. The application's architecture, built on React with TypeScript and Vite, provides a solid foundation for maintainability and scalability. The integration of Tailwind CSS and ShadCN UI components enables rapid development of a consistent, accessible user interface.
 
 The platform's internationalization system effectively supports Arabic, English, and Turkish languages with proper RTL layout handling for Arabic, demonstrating a commitment to serving the diverse needs of the Syrian diaspora. The event information is presented in a clear, organized manner with intuitive navigation and engaging visual elements.
