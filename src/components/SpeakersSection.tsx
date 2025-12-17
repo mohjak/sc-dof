@@ -17,6 +17,7 @@ import mamdouhAldairiImg from '@/assets/speakers/mamdouh-aldairi.jpeg';
 import mohammadHayaniImg from '@/assets/speakers/mohammad-hayani.jpeg';
 import timShishmanImg from '@/assets/speakers/tim-shishman.jpeg';
 import iyasJaafarImg from '@/assets/speakers/iyas-jaafar.jpeg';
+import aliaaShakerImg from '@/assets/speakers/aliaa-shaker.jpeg';
 
 interface Speaker {
   id: number;
@@ -189,6 +190,16 @@ const speakers: Speaker[] = [
     roleEn: 'Businessman - Head of Initiatives Committee & Leadership Council Member',
     roleTr: 'İş Adamı - Girişimler Komitesi Başkanı ve Liderlik Konseyi Üyesi',
     image: mohammadHayaniImg,
+  },
+  {
+    id: 17,
+    name: 'علياء شاكر',
+    nameEn: 'Aliaa Shaker',
+    nameTr: 'Aliaa Shaker',
+    role: 'إعلامية ومقدمة برامج تلفزيونية',
+    roleEn: 'Media Personality & TV Presenter',
+    roleTr: 'Medya Kişiliği ve TV Sunucusu',
+    image: aliaaShakerImg,
   },
 ];
 
