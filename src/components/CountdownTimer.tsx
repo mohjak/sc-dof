@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 interface TimeLeft {
@@ -10,9 +10,9 @@ interface TimeLeft {
 
 const CountdownTimer = () => {
   const { language } = useLanguage();
-  const eventDate = new Date('2025-12-20T18:00:00');
   
-  const calculateTimeLeft = (): TimeLeft => {
+  const calculateTimeLeft = useCallback((): TimeLeft => {
+    const eventDate = new Date('2025-12-20T14:30:00');
     const difference = eventDate.getTime() - new Date().getTime();
     
     if (difference <= 0) {
@@ -25,7 +25,7 @@ const CountdownTimer = () => {
       minutes: Math.floor((difference / 1000 / 60) % 60),
       seconds: Math.floor((difference / 1000) % 60),
     };
-  };
+  }, []);
   
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
   
@@ -35,7 +35,7 @@ const CountdownTimer = () => {
     }, 1000);
     
     return () => clearInterval(timer);
-  }, []);
+  }, [calculateTimeLeft]);
   
   const labels = {
     ar: { days: 'يوم', hours: 'ساعة', minutes: 'دقيقة', seconds: 'ثانية' },
